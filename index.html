@@ -191,7 +191,7 @@
 
 
         /* =========================================
-           MENÚS DESPLEGABLES
+           EMPRESA
         ========================================== */
 
         .menu-dropdown {
@@ -233,7 +233,7 @@
 
             transform: translateX(-50%) translateY(8px);
 
-            min-width: 215px;
+            min-width: 205px;
 
             background: white;
 
@@ -278,7 +278,6 @@
             color: var(--black);
 
             font-size: 15px;
-
             font-weight: 600;
 
             white-space: nowrap;
@@ -296,30 +295,118 @@
 
 
         /* =========================================
-           BOTÓN EXPLORAR
+           SELECTOR DE IDIOMA
         ========================================== */
 
-        .explore-button {
+        .language-selector {
+            position: relative;
+        }
+
+
+        .language-button {
+            border: none;
+
             background: var(--blue);
 
             color: white;
 
-            text-decoration: none;
-
-            padding: 13px 28px;
+            padding: 13px 24px;
 
             border-radius: 30px;
 
+            font-family: inherit;
+
+            font-size: 15px;
+
             font-weight: bold;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
 
             transition: 0.25s;
         }
 
 
-        .explore-button:hover {
+        .language-button:hover {
             background: var(--blue-dark);
 
             transform: translateY(-2px);
+        }
+
+
+        .language-options {
+            position: absolute;
+
+            top: 55px;
+            right: 0;
+
+            width: 155px;
+
+            background: white;
+
+            border: 1px solid #e8e8e8;
+
+            border-radius: 12px;
+
+            padding: 8px;
+
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transform: translateY(8px);
+
+            transition: 0.2s;
+        }
+
+
+        .language-selector.open .language-options {
+            opacity: 1;
+
+            visibility: visible;
+
+            transform: translateY(0);
+        }
+
+
+        .language-options button {
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            text-align: left;
+
+            padding: 12px 13px;
+
+            border-radius: 8px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: var(--black);
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .language-options button:hover {
+            background: #f3f6fb;
+
+            color: var(--blue);
         }
 
 
@@ -334,6 +421,7 @@
             padding: 85px 7% 55px;
 
             display: grid;
+
             grid-template-columns: 1fr 1fr;
 
             align-items: center;
@@ -355,6 +443,7 @@
 
         .small-title {
             display: flex;
+
             align-items: center;
 
             gap: 18px;
@@ -381,7 +470,7 @@
 
 
         /* =========================================
-           TÍTULOS PRINCIPALES
+           TÍTULOS
         ========================================== */
 
         .hero h1 {
@@ -403,6 +492,7 @@
             line-height: 1;
 
             margin-top: 10px;
+
             margin-bottom: 28px;
 
             color: var(--black);
@@ -452,6 +542,7 @@
 
         .btn-primary {
             background: var(--blue);
+
             color: white;
         }
 
@@ -479,7 +570,7 @@
 
 
         /* =========================================
-           ÁREA PIONEER
+           PIONEER
         ========================================== */
 
         .robot-area {
@@ -606,17 +697,17 @@
 
 
         /* =========================================
-           SECCIONES GENERALES
+           SECCIONES
         ========================================== */
 
-        .section-block {
-            padding: 85px 7%;
+        .section {
+            padding: 100px 7%;
 
             text-align: center;
         }
 
 
-        .section-light {
+        .section-white {
             background: white;
         }
 
@@ -635,26 +726,147 @@
         }
 
 
-        .section-block h2 {
+        .section h2 {
             margin-top: 14px;
 
-            font-size: 36px;
+            font-size: 40px;
         }
 
 
-        .section-block h2 strong {
+        .section h2 strong {
             color: var(--blue);
         }
 
 
         .section-description {
-            max-width: 700px;
+            max-width: 750px;
 
-            margin: 18px auto 0;
+            margin: 20px auto 0;
 
             color: var(--gray);
 
-            font-size: 17px;
+            font-size: 18px;
+
+            line-height: 1.65;
+        }
+
+
+
+        /* =========================================
+           APLICACIONES
+        ========================================== */
+
+        .applications-grid {
+            max-width: 1100px;
+
+            margin: 45px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .application-card {
+            padding: 35px;
+
+            background: white;
+
+            border: 1px solid #e6e9ee;
+
+            border-radius: 16px;
+
+            text-align: left;
+
+            transition: 0.25s;
+        }
+
+
+        .application-card:hover {
+            transform: translateY(-4px);
+
+            border-color: var(--blue);
+
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        }
+
+
+        .application-card h3 {
+            color: var(--blue);
+
+            font-size: 21px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .application-card p {
+            color: var(--gray);
+
+            line-height: 1.55;
+
+            font-size: 15px;
+        }
+
+
+
+        /* =========================================
+           EMPRESA
+        ========================================== */
+
+        .company-content {
+            max-width: 900px;
+
+            margin: 40px auto 0;
+
+            text-align: left;
+        }
+
+
+        .company-content p {
+            color: var(--gray);
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            margin-bottom: 20px;
+        }
+
+
+
+        /* =========================================
+           CONTACTO
+        ========================================== */
+
+        .contact-box {
+            max-width: 800px;
+
+            margin: 40px auto 0;
+
+            padding: 45px;
+
+            border: 1px solid #e6e9ee;
+
+            border-radius: 18px;
+
+            background: white;
+        }
+
+
+        .contact-box h3 {
+            color: var(--blue);
+
+            font-size: 26px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .contact-box p {
+            color: var(--gray);
 
             line-height: 1.6;
         }
@@ -662,79 +874,12 @@
 
 
         /* =========================================
-           SOPORTE
-        ========================================== */
-
-        .support-grid {
-            max-width: 1100px;
-
-            margin: 40px auto 0;
-
-            display: grid;
-
-            grid-template-columns: repeat(5, 1fr);
-
-            gap: 16px;
-        }
-
-
-        .support-card {
-            border: 1px solid #e7e7e7;
-
-            border-radius: 14px;
-
-            padding: 25px 15px;
-
-            background: white;
-
-            text-decoration: none;
-
-            color: var(--black);
-
-            transition: 0.25s;
-        }
-
-
-        .support-card:hover {
-            border-color: var(--blue);
-
-            transform: translateY(-3px);
-
-            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-        }
-
-
-        .support-card strong {
-            display: block;
-
-            color: var(--blue);
-
-            margin-bottom: 7px;
-        }
-
-
-        .support-card span {
-            color: var(--gray);
-
-            font-size: 13px;
-
-            line-height: 1.4;
-        }
-
-
-
-        /* =========================================
-           TABLETS
+           RESPONSIVE
         ========================================== */
 
         @media (max-width: 900px) {
 
             nav {
-                display: none;
-            }
-
-
-            .explore-button {
                 display: none;
             }
 
@@ -763,17 +908,13 @@
             }
 
 
-            .support-grid {
-                grid-template-columns: 1fr 1fr;
+            .applications-grid {
+                grid-template-columns: 1fr;
             }
 
         }
 
 
-
-        /* =========================================
-           CELULARES
-        ========================================== */
 
         @media (max-width: 550px) {
 
@@ -781,6 +922,7 @@
                 height: 70px;
 
                 padding-left: 5%;
+
                 padding-right: 5%;
             }
 
@@ -804,6 +946,13 @@
 
             .brand-name {
                 font-size: 25px;
+            }
+
+
+            .language-button {
+                padding: 11px 15px;
+
+                font-size: 13px;
             }
 
 
@@ -841,16 +990,12 @@
 
             .robot-placeholder {
                 width: 290px;
+
                 height: 290px;
             }
 
 
             .features {
-                grid-template-columns: 1fr;
-            }
-
-
-            .support-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -870,8 +1015,6 @@
 
     <header>
 
-
-        <!-- LOGO -->
 
         <a
             class="brand"
@@ -900,159 +1043,62 @@
 
 
 
-        <!-- =====================================
-             MENÚ PRINCIPAL
-        ====================================== -->
+        <!-- MENÚ -->
 
         <nav>
 
 
-            <!-- INICIO -->
-
-            <a href="#inicio">
+            <a
+                href="#inicio"
+                data-i18n="navHome"
+            >
 
                 Inicio
 
             </a>
 
 
+            <a
+                href="productos.html"
+                data-i18n="navProducts"
+            >
 
-            <!-- =================================
-                 PRODUCTOS
-            ================================== -->
+                Productos
 
-            <div class="menu-dropdown">
-
-
-                <a href="#productos">
-
-                    Productos
-
-                    <span class="dropdown-arrow">
-
-                        ▼
-
-                    </span>
-
-                </a>
+            </a>
 
 
-                <div class="dropdown-menu">
-
-
-                    <a href="#robots">
-
-                        Robots
-
-                    </a>
-
-
-                    <a href="#herramientas">
-
-                        Herramientas robóticas
-
-                    </a>
-
-
-                    <a href="#software">
-
-                        Software SRC
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- APLICACIONES -->
-
-            <a href="#aplicaciones">
+            <a
+                href="#aplicaciones"
+                data-i18n="navApplications"
+            >
 
                 Aplicaciones
 
             </a>
 
 
+            <a
+                href="soporte.html"
+                data-i18n="navSupport"
+            >
 
-            <!-- =================================
-                 SOPORTE
-            ================================== -->
+                Soporte
 
-            <div class="menu-dropdown">
-
-
-                <a href="#soporte">
-
-                    Soporte
-
-                    <span class="dropdown-arrow">
-
-                        ▼
-
-                    </span>
-
-                </a>
+            </a>
 
 
-                <div class="dropdown-menu">
-
-
-                    <a href="#soporte-software">
-
-                        Software SRC
-
-                    </a>
-
-
-                    <a href="#manuales">
-
-                        Manuales y guías
-
-                    </a>
-
-
-                    <a href="#mantenimiento">
-
-                        Mantenimiento
-
-                    </a>
-
-
-                    <a href="#descargas">
-
-                        Descargas
-
-                    </a>
-
-
-                    <a href="#tutoriales">
-
-                        Tutoriales
-
-                    </a>
-
-
-                </div>
-
-
-            </div>
-
-
-
-            <!-- =================================
-                 EMPRESA
-            ================================== -->
 
             <div class="menu-dropdown">
 
 
                 <a href="#empresa">
 
-                    Empresa
+                    <span data-i18n="navCompany">
+
+                        Empresa
+
+                    </span>
 
                     <span class="dropdown-arrow">
 
@@ -1063,17 +1109,24 @@
                 </a>
 
 
+
                 <div class="dropdown-menu">
 
 
-                    <a href="#empresa">
+                    <a
+                        href="#empresa"
+                        data-i18n="aboutUs"
+                    >
 
-                        Acerca de SRC
+                        Acerca de nosotros
 
                     </a>
 
 
-                    <a href="#contacto">
+                    <a
+                        href="#contacto"
+                        data-i18n="contactUs"
+                    >
 
                         Contáctanos
 
@@ -1090,16 +1143,60 @@
 
 
 
-        <!-- BOTÓN EXPLORAR -->
+        <!-- =====================================
+             IDIOMA
+        ====================================== -->
 
-        <a
-            class="explore-button"
-            href="#productos"
-        >
+        <div class="language-selector" id="languageSelector">
 
-            Explorar →
 
-        </a>
+            <button
+                class="language-button"
+                id="languageButton"
+                type="button"
+            >
+
+                🌐
+
+                <span id="languageButtonText">
+
+                    Idioma
+
+                </span>
+
+                ▾
+
+            </button>
+
+
+
+            <div class="language-options">
+
+
+                <button
+                    type="button"
+                    data-language="es"
+                >
+
+                    🇲🇽 Español
+
+                </button>
+
+
+                <button
+                    type="button"
+                    data-language="en"
+                >
+
+                    🇺🇸 English
+
+                </button>
+
+
+            </div>
+
+
+        </div>
 
 
     </header>
@@ -1119,7 +1216,10 @@
         <div class="hero-content">
 
 
-            <div class="small-title">
+            <div
+                class="small-title"
+                data-i18n="heroSmall"
+            >
 
                 ROBÓTICA PARA UN MEJOR FUTURO
 
@@ -1143,7 +1243,10 @@
 
 
 
-            <p class="hero-description">
+            <p
+                class="hero-description"
+                data-i18n="heroDescription"
+            >
 
                 Diseñamos y desarrollamos soluciones robóticas
                 en México, integrando innovación, educación
@@ -1158,7 +1261,8 @@
 
                 <a
                     class="btn-primary"
-                    href="#productos"
+                    href="productos.html"
+                    data-i18n="productsButton"
                 >
 
                     Conoce nuestros productos →
@@ -1170,6 +1274,7 @@
                 <a
                     class="btn-secondary"
                     href="#empresa"
+                    data-i18n="aboutButton"
                 >
 
                     Sobre SRC
@@ -1183,8 +1288,6 @@
         </div>
 
 
-
-        <!-- PIONEER -->
 
         <div class="robot-area">
 
@@ -1210,7 +1313,11 @@
                     </strong>
 
 
-                    Aquí colocaremos el render del robot
+                    <span data-i18n="pioneerPlaceholder">
+
+                        Aquí colocaremos el render del robot
+
+                    </span>
 
 
                 </div>
@@ -1236,17 +1343,23 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 ⚙
+
             </div>
 
 
-            <h3>
+            <h3 data-i18n="designTitle">
+
                 Diseño
+
             </h3>
 
 
-            <p>
+            <p data-i18n="designDescription">
+
                 Mecánico, electrónico y de control
+
             </p>
 
         </div>
@@ -1256,17 +1369,23 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 🎓
+
             </div>
 
 
-            <h3>
+            <h3 data-i18n="educationTitle">
+
                 Educación
+
             </h3>
 
 
-            <p>
+            <p data-i18n="educationDescription">
+
                 Robots para aprender y crear
+
             </p>
 
         </div>
@@ -1276,17 +1395,23 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 💡
+
             </div>
 
 
-            <h3>
+            <h3 data-i18n="innovationTitle">
+
                 Innovación
+
             </h3>
 
 
-            <p>
+            <p data-i18n="innovationDescription">
+
                 Soluciones para la industria y más
+
             </p>
 
         </div>
@@ -1296,136 +1421,27 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 ↗
+
             </div>
 
 
-            <h3>
+            <h3 data-i18n="mexicoTitle">
+
                 Desarrollo en México
+
             </h3>
 
 
-            <p>
+            <p data-i18n="mexicoDescription">
+
                 Talento y tecnología nacional
+
             </p>
 
         </div>
 
-
-    </section>
-
-
-
-    <!-- =========================================
-         PRODUCTOS
-    ========================================== -->
-
-    <section
-        class="section-block section-gray"
-        id="productos"
-    >
-
-
-        <span class="section-label">
-
-            NUESTROS PRODUCTOS
-
-        </span>
-
-
-        <h2>
-
-            Robótica desarrollada por
-
-            <strong>
-
-                SRC
-
-            </strong>
-
-        </h2>
-
-
-        <p class="section-description">
-
-            Robots, herramientas robóticas y software
-            desarrollados para educación, investigación
-            y aplicaciones de automatización.
-
-        </p>
-
-
-    </section>
-
-
-
-    <!-- ROBOTS -->
-
-    <section
-        class="section-block section-light"
-        id="robots"
-    >
-
-        <span class="section-label">
-
-            PRODUCTOS
-
-        </span>
-
-
-        <h2>
-
-            Robots SRC
-
-        </h2>
-
-    </section>
-
-
-
-    <!-- HERRAMIENTAS -->
-
-    <section
-        class="section-block section-gray"
-        id="herramientas"
-    >
-
-        <span class="section-label">
-
-            PRODUCTOS
-
-        </span>
-
-
-        <h2>
-
-            Herramientas robóticas
-
-        </h2>
-
-    </section>
-
-
-
-    <!-- SOFTWARE -->
-
-    <section
-        class="section-block section-light"
-        id="software"
-    >
-
-        <span class="section-label">
-
-            PRODUCTOS
-
-        </span>
-
-
-        <h2>
-
-            Software SRC
-
-        </h2>
 
     </section>
 
@@ -1436,180 +1452,108 @@
     ========================================== -->
 
     <section
-        class="section-block section-gray"
+        class="section section-gray"
         id="aplicaciones"
     >
 
 
-        <span class="section-label">
+        <span
+            class="section-label"
+            data-i18n="applicationsLabel"
+        >
 
             APLICACIONES
 
         </span>
 
 
-        <h2>
+        <h2 data-i18n="applicationsTitle">
 
-            Tecnología para diferentes necesidades
-
-        </h2>
-
-
-        <p class="section-description">
-
-            Soluciones orientadas a educación,
-            investigación, automatización y robótica.
-
-        </p>
-
-
-    </section>
-
-
-
-    <!-- =========================================
-         SOPORTE
-    ========================================== -->
-
-    <section
-        class="section-block section-light"
-        id="soporte"
-    >
-
-
-        <span class="section-label">
-
-            CENTRO DE SOPORTE SRC
-
-        </span>
-
-
-        <h2>
-
-            Documentación y asistencia
+            Robótica para diferentes necesidades
 
         </h2>
 
 
-        <p class="section-description">
+        <p
+            class="section-description"
+            data-i18n="applicationsDescription"
+        >
 
-            Información para instalar, utilizar,
-            mantener y aprovechar nuestros productos.
+            Los sistemas desarrollados por SRC están orientados
+            a diferentes áreas de la robótica, automatización,
+            educación e investigación.
 
         </p>
 
 
 
-        <div class="support-grid">
+        <div class="applications-grid">
 
 
-            <a
-                class="support-card"
-                id="soporte-software"
-                href="#soporte-software"
-            >
-
-                <strong>
-
-                    Software SRC
-
-                </strong>
-
-                <span>
-
-                    Configuración y uso del software
-
-                </span>
-
-            </a>
+            <div class="application-card">
 
 
+                <h3 data-i18n="automationTitle">
 
-            <a
-                class="support-card"
-                id="manuales"
-                href="#manuales"
-            >
+                    Automatización
 
-                <strong>
+                </h3>
 
-                    Manuales y guías
 
-                </strong>
+                <p data-i18n="automationDescription">
 
-                <span>
+                    Sistemas robóticos para manipulación,
+                    movimientos programados y automatización
+                    de procesos.
 
-                    Operación, instalación y configuración
+                </p>
 
-                </span>
 
-            </a>
+            </div>
 
 
 
-            <a
-                class="support-card"
-                id="mantenimiento"
-                href="#mantenimiento"
-            >
-
-                <strong>
-
-                    Mantenimiento
-
-                </strong>
-
-                <span>
-
-                    Cuidados y mantenimiento preventivo
-
-                </span>
-
-            </a>
+            <div class="application-card">
 
 
+                <h3 data-i18n="applicationEducationTitle">
 
-            <a
-                class="support-card"
-                id="descargas"
-                href="#descargas"
-            >
+                    Educación
 
-                <strong>
+                </h3>
 
-                    Descargas
 
-                </strong>
+                <p data-i18n="applicationEducationDescription">
 
-                <span>
+                    Plataformas para aprendizaje de robótica,
+                    programación, control y mecatrónica.
 
-                    Software, PDFs y archivos disponibles
+                </p>
 
-                </span>
 
-            </a>
+            </div>
 
 
 
-            <a
-                class="support-card"
-                id="tutoriales"
-                href="#tutoriales"
-            >
+            <div class="application-card">
 
-                <strong>
 
-                    Tutoriales
+                <h3 data-i18n="researchTitle">
 
-                </strong>
+                    Investigación
 
-                <span>
+                </h3>
 
-                    Instrucciones paso a paso
 
-                </span>
+                <p data-i18n="researchDescription">
 
-            </a>
+                    Plataformas y herramientas para desarrollo,
+                    experimentación y proyectos de investigación.
+
+                </p>
+
+
+            </div>
 
 
         </div>
@@ -1624,12 +1568,15 @@
     ========================================== -->
 
     <section
-        class="section-block section-gray"
+        class="section section-white"
         id="empresa"
     >
 
 
-        <span class="section-label">
+        <span
+            class="section-label"
+            data-i18n="companyLabel"
+        >
 
             EMPRESA
 
@@ -1638,7 +1585,11 @@
 
         <h2>
 
-            Acerca de
+            <span data-i18n="aboutTitle">
+
+                Acerca de
+
+            </span>
 
             <strong>
 
@@ -1647,6 +1598,39 @@
             </strong>
 
         </h2>
+
+
+
+        <div class="company-content">
+
+
+            <p data-i18n="companyParagraph1">
+
+                Sakuta Robotics Company (SRC) desarrolla
+                soluciones enfocadas en robótica,
+                automatización y tecnología.
+
+            </p>
+
+
+            <p data-i18n="companyParagraph2">
+
+                Nuestro objetivo es diseñar y desarrollar
+                sistemas robóticos funcionales para
+                aplicaciones educativas, de investigación
+                y de automatización.
+
+            </p>
+
+
+            <p data-i18n="companyParagraph3">
+
+                Diseñado y desarrollado en México por SRC.
+
+            </p>
+
+
+        </div>
 
 
     </section>
@@ -1658,34 +1642,381 @@
     ========================================== -->
 
     <section
-        class="section-block section-light"
+        class="section section-gray"
         id="contacto"
     >
 
 
-        <span class="section-label">
+        <span
+            class="section-label"
+            data-i18n="contactLabel"
+        >
 
             CONTACTO
 
         </span>
 
 
-        <h2>
+        <h2 data-i18n="contactTitle">
 
             Contáctanos
 
         </h2>
 
 
-        <p class="section-description">
 
-            Próximamente agregaremos aquí
-            los medios oficiales de contacto de SRC.
+        <div class="contact-box">
 
-        </p>
+
+            <h3>
+
+                Sakuta Robotics Company
+
+            </h3>
+
+
+            <p data-i18n="contactDescription">
+
+                Próximamente agregaremos aquí
+                los medios oficiales de contacto,
+                redes sociales y atención de SRC.
+
+            </p>
+
+
+        </div>
 
 
     </section>
+
+
+
+    <!-- =========================================
+         CAMBIO DE IDIOMA
+    ========================================== -->
+
+    <script>
+
+        const translations = {
+
+            es: {
+
+                navHome: "Inicio",
+                navProducts: "Productos",
+                navApplications: "Aplicaciones",
+                navSupport: "Soporte",
+                navCompany: "Empresa",
+
+                aboutUs: "Acerca de nosotros",
+                contactUs: "Contáctanos",
+
+                heroSmall: "ROBÓTICA PARA UN MEJOR FUTURO",
+
+                heroDescription:
+                    "Diseñamos y desarrollamos soluciones robóticas en México, integrando innovación, educación y aplicaciones reales.",
+
+                productsButton:
+                    "Conoce nuestros productos →",
+
+                aboutButton:
+                    "Sobre SRC",
+
+                pioneerPlaceholder:
+                    "Aquí colocaremos el render del robot",
+
+                designTitle:
+                    "Diseño",
+
+                designDescription:
+                    "Mecánico, electrónico y de control",
+
+                educationTitle:
+                    "Educación",
+
+                educationDescription:
+                    "Robots para aprender y crear",
+
+                innovationTitle:
+                    "Innovación",
+
+                innovationDescription:
+                    "Soluciones para la industria y más",
+
+                mexicoTitle:
+                    "Desarrollo en México",
+
+                mexicoDescription:
+                    "Talento y tecnología nacional",
+
+                applicationsLabel:
+                    "APLICACIONES",
+
+                applicationsTitle:
+                    "Robótica para diferentes necesidades",
+
+                applicationsDescription:
+                    "Los sistemas desarrollados por SRC están orientados a diferentes áreas de la robótica, automatización, educación e investigación.",
+
+                automationTitle:
+                    "Automatización",
+
+                automationDescription:
+                    "Sistemas robóticos para manipulación, movimientos programados y automatización de procesos.",
+
+                applicationEducationTitle:
+                    "Educación",
+
+                applicationEducationDescription:
+                    "Plataformas para aprendizaje de robótica, programación, control y mecatrónica.",
+
+                researchTitle:
+                    "Investigación",
+
+                researchDescription:
+                    "Plataformas y herramientas para desarrollo, experimentación y proyectos de investigación.",
+
+                companyLabel:
+                    "EMPRESA",
+
+                aboutTitle:
+                    "Acerca de",
+
+                companyParagraph1:
+                    "Sakuta Robotics Company (SRC) desarrolla soluciones enfocadas en robótica, automatización y tecnología.",
+
+                companyParagraph2:
+                    "Nuestro objetivo es diseñar y desarrollar sistemas robóticos funcionales para aplicaciones educativas, de investigación y de automatización.",
+
+                companyParagraph3:
+                    "Diseñado y desarrollado en México por SRC.",
+
+                contactLabel:
+                    "CONTACTO",
+
+                contactTitle:
+                    "Contáctanos",
+
+                contactDescription:
+                    "Próximamente agregaremos aquí los medios oficiales de contacto, redes sociales y atención de SRC.",
+
+                languageButton:
+                    "Idioma"
+
+            },
+
+
+            en: {
+
+                navHome: "Home",
+                navProducts: "Products",
+                navApplications: "Applications",
+                navSupport: "Support",
+                navCompany: "Company",
+
+                aboutUs: "About us",
+                contactUs: "Contact us",
+
+                heroSmall:
+                    "ROBOTICS FOR A BETTER FUTURE",
+
+                heroDescription:
+                    "We design and develop robotic solutions in Mexico, integrating innovation, education and real-world applications.",
+
+                productsButton:
+                    "Explore our products →",
+
+                aboutButton:
+                    "About SRC",
+
+                pioneerPlaceholder:
+                    "Pioneer robot render will be placed here",
+
+                designTitle:
+                    "Design",
+
+                designDescription:
+                    "Mechanical, electronic and control",
+
+                educationTitle:
+                    "Education",
+
+                educationDescription:
+                    "Robots to learn and create",
+
+                innovationTitle:
+                    "Innovation",
+
+                innovationDescription:
+                    "Solutions for industry and beyond",
+
+                mexicoTitle:
+                    "Developed in Mexico",
+
+                mexicoDescription:
+                    "National talent and technology",
+
+                applicationsLabel:
+                    "APPLICATIONS",
+
+                applicationsTitle:
+                    "Robotics for different needs",
+
+                applicationsDescription:
+                    "SRC systems are designed for different areas of robotics, automation, education and research.",
+
+                automationTitle:
+                    "Automation",
+
+                automationDescription:
+                    "Robotic systems for manipulation, programmed movements and process automation.",
+
+                applicationEducationTitle:
+                    "Education",
+
+                applicationEducationDescription:
+                    "Platforms for learning robotics, programming, control and mechatronics.",
+
+                researchTitle:
+                    "Research",
+
+                researchDescription:
+                    "Platforms and tools for development, experimentation and research projects.",
+
+                companyLabel:
+                    "COMPANY",
+
+                aboutTitle:
+                    "About",
+
+                companyParagraph1:
+                    "Sakuta Robotics Company (SRC) develops solutions focused on robotics, automation and technology.",
+
+                companyParagraph2:
+                    "Our goal is to design and develop functional robotic systems for educational, research and automation applications.",
+
+                companyParagraph3:
+                    "Designed and developed in Mexico by SRC.",
+
+                contactLabel:
+                    "CONTACT",
+
+                contactTitle:
+                    "Contact us",
+
+                contactDescription:
+                    "Official SRC contact information, social media and support channels will be added here soon.",
+
+                languageButton:
+                    "Language"
+
+            }
+
+        };
+
+
+
+        const languageSelector =
+            document.getElementById("languageSelector");
+
+
+        const languageButton =
+            document.getElementById("languageButton");
+
+
+        const languageButtonText =
+            document.getElementById("languageButtonText");
+
+
+
+        languageButton.addEventListener("click", function(event) {
+
+            event.stopPropagation();
+
+            languageSelector.classList.toggle("open");
+
+        });
+
+
+
+        document.addEventListener("click", function() {
+
+            languageSelector.classList.remove("open");
+
+        });
+
+
+
+        document
+            .querySelectorAll("[data-language]")
+            .forEach(function(button) {
+
+
+                button.addEventListener("click", function() {
+
+
+                    const language =
+                        button.dataset.language;
+
+
+                    setLanguage(language);
+
+
+                });
+
+
+            });
+
+
+
+        function setLanguage(language) {
+
+
+            document.documentElement.lang = language;
+
+
+            document
+                .querySelectorAll("[data-i18n]")
+                .forEach(function(element) {
+
+
+                    const key =
+                        element.dataset.i18n;
+
+
+                    if (translations[language][key]) {
+
+                        element.textContent =
+                            translations[language][key];
+
+                    }
+
+
+                });
+
+
+            languageButtonText.textContent =
+                translations[language].languageButton;
+
+
+            localStorage.setItem(
+                "srcLanguage",
+                language
+            );
+
+
+            languageSelector.classList.remove("open");
+
+        }
+
+
+
+        const savedLanguage =
+            localStorage.getItem("srcLanguage") || "es";
+
+
+        setLanguage(savedLanguage);
+
+    </script>
 
 
 </body>
