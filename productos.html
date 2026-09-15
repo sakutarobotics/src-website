@@ -9,7 +9,6 @@
 
     <title>Productos | SAKUTA Robotics Company</title>
 
-    <!-- FAVICON SRC -->
     <link
         rel="icon"
         type="image/svg+xml"
@@ -43,6 +42,8 @@
             color: var(--black);
         }
 
+
+
         /* =========================================
            HEADER
         ========================================== */
@@ -66,7 +67,11 @@
             z-index: 1000;
         }
 
-        /* LOGO */
+
+
+        /* =========================================
+           LOGO
+        ========================================== */
 
         .brand {
             display: flex;
@@ -112,6 +117,8 @@
 
             white-space: nowrap;
         }
+
+
 
         /* =========================================
            NAVEGACIÓN
@@ -165,7 +172,11 @@
             width: 100%;
         }
 
-        /* MENÚ DESPLEGABLE */
+
+
+        /* =========================================
+           MENÚS DESPLEGABLES
+        ========================================== */
 
         .menu-dropdown {
             position: relative;
@@ -179,6 +190,7 @@
         .menu-dropdown > a {
             display: flex;
             align-items: center;
+
             gap: 7px;
         }
 
@@ -221,7 +233,6 @@
 
         .menu-dropdown:hover .dropdown-menu {
             opacity: 1;
-
             visibility: visible;
             pointer-events: auto;
 
@@ -253,32 +264,120 @@
             color: var(--blue);
         }
 
-        /* BOTÓN */
 
-        .explore-button {
+
+        /* =========================================
+           IDIOMA
+        ========================================== */
+
+        .language-selector {
+            position: relative;
+        }
+
+        .language-button {
+            border: none;
+
             background: var(--blue);
 
             color: white;
 
-            text-decoration: none;
-
-            padding: 13px 28px;
+            padding: 13px 24px;
 
             border-radius: 30px;
 
+            font-family: inherit;
+
+            font-size: 15px;
             font-weight: bold;
+
+            cursor: pointer;
+
+            display: flex;
+            align-items: center;
+
+            gap: 8px;
 
             transition: 0.25s;
         }
 
-        .explore-button:hover {
+        .language-button:hover {
             background: var(--blue-dark);
 
             transform: translateY(-2px);
         }
 
+        .language-options {
+            position: absolute;
+
+            top: 55px;
+            right: 0;
+
+            width: 165px;
+
+            background: white;
+
+            border: 1px solid #e8e8e8;
+
+            border-radius: 12px;
+
+            padding: 8px;
+
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            transform: translateY(8px);
+
+            transition: 0.2s;
+
+            z-index: 2000;
+        }
+
+        .language-selector.open .language-options {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+
+            transform: translateY(0);
+        }
+
+        .language-options button {
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            text-align: left;
+
+            padding: 12px 13px;
+
+            border-radius: 8px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+            font-weight: 600;
+
+            color: var(--black);
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .language-options button:hover {
+            background: #f3f6fb;
+
+            color: var(--blue);
+        }
+
+
+
         /* =========================================
-           HERO PRODUCTOS
+           HERO
         ========================================== */
 
         .page-hero {
@@ -319,8 +418,10 @@
             color: var(--gray);
         }
 
+
+
         /* =========================================
-           CATEGORÍAS
+           PRODUCTOS
         ========================================== */
 
         .products-grid {
@@ -393,8 +494,10 @@
             font-weight: bold;
         }
 
+
+
         /* =========================================
-           SECCIONES TEMPORALES
+           SECCIONES
         ========================================== */
 
         .product-section {
@@ -435,6 +538,8 @@
             line-height: 1.6;
         }
 
+
+
         /* =========================================
            RESPONSIVE
         ========================================== */
@@ -445,13 +550,10 @@
                 display: none;
             }
 
-            .explore-button {
-                display: none;
-            }
-
             .products-grid {
                 grid-template-columns: 1fr;
             }
+
         }
 
         @media (max-width: 550px) {
@@ -481,6 +583,12 @@
                 font-size: 25px;
             }
 
+            .language-button {
+                padding: 11px 15px;
+
+                font-size: 13px;
+            }
+
             .page-hero {
                 padding-left: 6%;
                 padding-right: 6%;
@@ -496,428 +604,764 @@
 <body>
 
 
-    <!-- HEADER -->
+<header>
 
-    <header>
+
+    <a
+        class="brand"
+        href="index.html"
+    >
+
+        <div class="brand-logo-crop">
+
+            <img
+                src="logoooweb.PNG"
+                alt="Logo SAKUTA"
+            >
+
+        </div>
+
+
+        <div class="brand-name">
+
+            SAKUTA
+
+        </div>
+
+    </a>
+
+
+
+    <nav>
 
 
         <a
-            class="brand"
-            href="index.html"
+            href="index.html#inicio"
+            data-i18n="navHome"
         >
-
-
-            <div class="brand-logo-crop">
-
-                <img
-                    src="logoooweb.PNG"
-                    alt="Logo SAKUTA"
-                >
-
-            </div>
-
-
-            <div class="brand-name">
-
-                SAKUTA
-
-            </div>
-
-
+            Inicio
         </a>
 
 
 
-        <nav>
+        <div class="menu-dropdown">
 
 
-            <a href="index.html#inicio">
+            <a href="productos.html">
 
-                Inicio
-
-            </a>
-
-
-
-            <div class="menu-dropdown">
-
-
-                <a href="productos.html">
-
+                <span data-i18n="navProducts">
                     Productos
+                </span>
 
-                    <span class="dropdown-arrow">
+                <span class="dropdown-arrow">
+                    ▼
+                </span>
 
-                        ▼
+            </a>
 
-                    </span>
 
+            <div class="dropdown-menu">
+
+
+                <a
+                    href="#robots"
+                    data-i18n="robots"
+                >
+                    Robots
                 </a>
 
 
-                <div class="dropdown-menu">
+                <a
+                    href="#herramientas"
+                    data-i18n="tools"
+                >
+                    Herramientas robóticas
+                </a>
 
 
-                    <a href="#robots">
-
-                        Robots
-
-                    </a>
-
-
-                    <a href="#herramientas">
-
-                        Herramientas robóticas
-
-                    </a>
-
-
-                    <a href="#software">
-
-                        Software SRC
-
-                    </a>
-
-
-                </div>
+                <a
+                    href="#software"
+                    data-i18n="software"
+                >
+                    Software SRC
+                </a>
 
 
             </div>
 
 
-
-            <a href="index.html#aplicaciones">
-
-                Aplicaciones
-
-            </a>
+        </div>
 
 
 
-            <a href="soporte.html">
-
-                Soporte
-
-            </a>
-
-
-
-            <div class="menu-dropdown">
+        <a
+            href="index.html#aplicaciones"
+            data-i18n="navApplications"
+        >
+            Aplicaciones
+        </a>
 
 
-                <a href="index.html#empresa">
 
+        <a
+            href="soporte.html"
+            data-i18n="navSupport"
+        >
+            Soporte
+        </a>
+
+
+
+        <div class="menu-dropdown">
+
+
+            <a href="index.html#empresa">
+
+                <span data-i18n="navCompany">
                     Empresa
+                </span>
 
-                    <span class="dropdown-arrow">
+                <span class="dropdown-arrow">
+                    ▼
+                </span>
 
-                        ▼
+            </a>
 
-                    </span>
 
+            <div class="dropdown-menu">
+
+
+                <a
+                    href="index.html#empresa"
+                    data-i18n="aboutUs"
+                >
+                    Acerca de nosotros
                 </a>
 
 
-                <div class="dropdown-menu">
-
-
-                    <a href="index.html#empresa">
-
-                        Acerca de nosotros
-
-                    </a>
-
-
-                    <a href="index.html#contacto">
-
-                        Contáctanos
-
-                    </a>
-
-
-                </div>
+                <a
+                    href="index.html#contacto"
+                    data-i18n="contactUs"
+                >
+                    Contáctanos
+                </a>
 
 
             </div>
 
 
-        </nav>
+        </div>
+
+
+    </nav>
 
 
 
-        <a
-            class="explore-button"
-            href="#categorias"
-        >
+    <!-- IDIOMA - REEMPLAZA AL BOTÓN EXPLORAR -->
 
-            Explorar →
-
-        </a>
-
-
-    </header>
-
-
-
-    <!-- HERO -->
-
-    <section class="page-hero">
-
-
-        <span class="page-label">
-
-            SAKUTA ROBOTICS COMPANY
-
-        </span>
-
-
-        <h1>
-
-            Productos
-
-        </h1>
-
-
-        <p>
-
-            Conoce las soluciones desarrolladas por SRC:
-            robots, herramientas robóticas y software
-            para diferentes aplicaciones.
-
-        </p>
-
-
-    </section>
-
-
-
-    <!-- CATEGORÍAS -->
-
-    <section
-        class="products-grid"
-        id="categorias"
+    <div
+        class="language-selector"
+        id="languageSelector"
     >
 
 
-        <a
-            class="product-card"
-            href="#robots"
+        <button
+            class="language-button"
+            id="languageButton"
+            type="button"
         >
 
+            🌐
 
-            <div class="product-number">
-
-                01
-
-            </div>
-
-
-            <h2>
-
-                Robots
-
-            </h2>
-
-
-            <p>
-
-                Plataformas robóticas desarrolladas por SRC
-                para educación, investigación y automatización.
-
-            </p>
-
-
-            <span class="product-link">
-
-                Explorar robots →
-
+            <span id="languageButtonText">
+                Idioma
             </span>
 
+            ▾
 
-        </a>
-
-
-
-        <a
-            class="product-card"
-            href="#herramientas"
-        >
+        </button>
 
 
-            <div class="product-number">
-
-                02
-
-            </div>
+        <div class="language-options">
 
 
-            <h2>
-
-                Herramientas robóticas
-
-            </h2>
-
-
-            <p>
-
-                Grippers, efectores finales y herramientas
-                desarrolladas para distintas aplicaciones robóticas.
-
-            </p>
+            <button
+                type="button"
+                data-language="es"
+            >
+                🇲🇽 Español
+            </button>
 
 
-            <span class="product-link">
+            <button
+                type="button"
+                data-language="en"
+            >
+                🇺🇸 English
+            </button>
 
-                Ver herramientas →
 
-            </span>
+            <button
+                type="button"
+                data-language="zh"
+            >
+                🇨🇳 中文
+            </button>
 
 
-        </a>
+        </div>
+
+
+    </div>
+
+
+</header>
 
 
 
-        <a
-            class="product-card"
-            href="#software"
-        >
+<!-- =========================================
+     HERO
+========================================== -->
+
+<section class="page-hero">
 
 
-            <div class="product-number">
-
-                03
-
-            </div>
-
-
-            <h2>
-
-                Software SRC
-
-            </h2>
+    <span
+        class="page-label"
+        data-i18n="companyLabel"
+    >
+        SAKUTA ROBOTICS COMPANY
+    </span>
 
 
-            <p>
+    <h1 data-i18n="pageTitle">
 
-                Software desarrollado para programación,
-                control y operación de nuestros sistemas robóticos.
+        Productos
 
-            </p>
-
-
-            <span class="product-link">
-
-                Conocer software →
-
-            </span>
+    </h1>
 
 
-        </a>
+    <p data-i18n="pageDescription">
+
+        Conoce las soluciones desarrolladas por SRC:
+        robots, herramientas robóticas y software
+        para diferentes aplicaciones.
+
+    </p>
 
 
-    </section>
+</section>
 
 
 
-    <!-- ROBOTS -->
+<!-- =========================================
+     CATEGORÍAS
+========================================== -->
 
-    <section
-        class="product-section"
-        id="robots"
+<section
+    class="products-grid"
+    id="categorias"
+>
+
+
+    <a
+        class="product-card"
+        href="#robots"
     >
 
 
-        <span>
-
-            PRODUCTOS
-
-        </span>
+        <div class="product-number">
+            01
+        </div>
 
 
-        <h2>
-
+        <h2 data-i18n="robots">
             Robots
-
         </h2>
 
 
-        <p>
-
-            Aquí agregaremos posteriormente los robots
-            desarrollados por SRC, incluyendo Pioneer.
-
+        <p data-i18n="robotsDescription">
+            Plataformas robóticas desarrolladas por SRC
+            para educación, investigación y automatización.
         </p>
 
 
-    </section>
-
-
-
-    <!-- HERRAMIENTAS -->
-
-    <section
-        class="product-section"
-        id="herramientas"
-    >
-
-
-        <span>
-
-            PRODUCTOS
-
+        <span
+            class="product-link"
+            data-i18n="robotsLink"
+        >
+            Explorar robots →
         </span>
 
 
-        <h2>
+    </a>
 
+
+
+    <a
+        class="product-card"
+        href="#herramientas"
+    >
+
+
+        <div class="product-number">
+            02
+        </div>
+
+
+        <h2 data-i18n="tools">
             Herramientas robóticas
-
         </h2>
 
 
-        <p>
-
-            Aquí colocaremos grippers, herramientas,
-            accesorios y efectores finales de SRC.
-
+        <p data-i18n="toolsDescription">
+            Grippers, efectores finales y herramientas
+            desarrolladas para distintas aplicaciones robóticas.
         </p>
 
 
-    </section>
-
-
-
-    <!-- SOFTWARE -->
-
-    <section
-        class="product-section"
-        id="software"
-    >
-
-
-        <span>
-
-            PRODUCTOS
-
+        <span
+            class="product-link"
+            data-i18n="toolsLink"
+        >
+            Ver herramientas →
         </span>
 
 
-        <h2>
+    </a>
 
+
+
+    <a
+        class="product-card"
+        href="#software"
+    >
+
+
+        <div class="product-number">
+            03
+        </div>
+
+
+        <h2 data-i18n="software">
             Software SRC
-
         </h2>
 
 
-        <p>
-
-            Aquí presentaremos el software desarrollado
-            para los robots y sistemas SRC.
-
+        <p data-i18n="softwareDescription">
+            Software desarrollado para programación,
+            control y operación de nuestros sistemas robóticos.
         </p>
 
 
-    </section>
+        <span
+            class="product-link"
+            data-i18n="softwareLink"
+        >
+            Conocer software →
+        </span>
+
+
+    </a>
+
+
+</section>
+
+
+
+<!-- =========================================
+     ROBOTS
+========================================== -->
+
+<section
+    class="product-section"
+    id="robots"
+>
+
+
+    <span data-i18n="productsLabel">
+        PRODUCTOS
+    </span>
+
+
+    <h2 data-i18n="robots">
+        Robots
+    </h2>
+
+
+    <p data-i18n="robotsSectionDescription">
+        Aquí agregaremos posteriormente los robots
+        desarrollados por SRC, incluyendo Pioneer.
+    </p>
+
+
+</section>
+
+
+
+<!-- =========================================
+     HERRAMIENTAS
+========================================== -->
+
+<section
+    class="product-section"
+    id="herramientas"
+>
+
+
+    <span data-i18n="productsLabel">
+        PRODUCTOS
+    </span>
+
+
+    <h2 data-i18n="tools">
+        Herramientas robóticas
+    </h2>
+
+
+    <p data-i18n="toolsSectionDescription">
+        Aquí colocaremos grippers, herramientas,
+        accesorios y efectores finales de SRC.
+    </p>
+
+
+</section>
+
+
+
+<!-- =========================================
+     SOFTWARE
+========================================== -->
+
+<section
+    class="product-section"
+    id="software"
+>
+
+
+    <span data-i18n="productsLabel">
+        PRODUCTOS
+    </span>
+
+
+    <h2 data-i18n="software">
+        Software SRC
+    </h2>
+
+
+    <p data-i18n="softwareSectionDescription">
+        Aquí presentaremos el software desarrollado
+        para los robots y sistemas SRC.
+    </p>
+
+
+</section>
+
+
+
+<script>
+
+    const translations = {
+
+
+        es: {
+
+            navHome: "Inicio",
+            navProducts: "Productos",
+            navApplications: "Aplicaciones",
+            navSupport: "Soporte",
+            navCompany: "Empresa",
+
+            aboutUs: "Acerca de nosotros",
+            contactUs: "Contáctanos",
+
+            companyLabel: "SAKUTA ROBOTICS COMPANY",
+
+            pageTitle: "Productos",
+
+            pageDescription:
+                "Conoce las soluciones desarrolladas por SRC: robots, herramientas robóticas y software para diferentes aplicaciones.",
+
+            robots: "Robots",
+
+            tools:
+                "Herramientas robóticas",
+
+            software:
+                "Software SRC",
+
+            robotsDescription:
+                "Plataformas robóticas desarrolladas por SRC para educación, investigación y automatización.",
+
+            toolsDescription:
+                "Grippers, efectores finales y herramientas desarrolladas para distintas aplicaciones robóticas.",
+
+            softwareDescription:
+                "Software desarrollado para programación, control y operación de nuestros sistemas robóticos.",
+
+            robotsLink:
+                "Explorar robots →",
+
+            toolsLink:
+                "Ver herramientas →",
+
+            softwareLink:
+                "Conocer software →",
+
+            productsLabel:
+                "PRODUCTOS",
+
+            robotsSectionDescription:
+                "Aquí agregaremos posteriormente los robots desarrollados por SRC, incluyendo Pioneer.",
+
+            toolsSectionDescription:
+                "Aquí colocaremos grippers, herramientas, accesorios y efectores finales de SRC.",
+
+            softwareSectionDescription:
+                "Aquí presentaremos el software desarrollado para los robots y sistemas SRC.",
+
+            languageButton:
+                "Idioma"
+
+        },
+
+
+        en: {
+
+            navHome: "Home",
+            navProducts: "Products",
+            navApplications: "Applications",
+            navSupport: "Support",
+            navCompany: "Company",
+
+            aboutUs: "About us",
+            contactUs: "Contact us",
+
+            companyLabel: "SAKUTA ROBOTICS COMPANY",
+
+            pageTitle: "Products",
+
+            pageDescription:
+                "Discover SRC solutions: robots, robotic tools and software for different applications.",
+
+            robots: "Robots",
+
+            tools:
+                "Robotic tools",
+
+            software:
+                "SRC Software",
+
+            robotsDescription:
+                "Robotic platforms developed by SRC for education, research and automation.",
+
+            toolsDescription:
+                "Grippers, end effectors and tools developed for different robotic applications.",
+
+            softwareDescription:
+                "Software developed for programming, control and operation of our robotic systems.",
+
+            robotsLink:
+                "Explore robots →",
+
+            toolsLink:
+                "View robotic tools →",
+
+            softwareLink:
+                "Explore software →",
+
+            productsLabel:
+                "PRODUCTS",
+
+            robotsSectionDescription:
+                "SRC robots, including Pioneer, will be presented here.",
+
+            toolsSectionDescription:
+                "SRC grippers, robotic tools, accessories and end effectors will be presented here.",
+
+            softwareSectionDescription:
+                "Software developed for SRC robots and systems will be presented here.",
+
+            languageButton:
+                "Language"
+
+        },
+
+
+        zh: {
+
+            navHome: "首页",
+            navProducts: "产品",
+            navApplications: "应用",
+            navSupport: "支持",
+            navCompany: "公司",
+
+            aboutUs: "关于我们",
+            contactUs: "联系我们",
+
+            companyLabel:
+                "SAKUTA ROBOTICS COMPANY",
+
+            pageTitle:
+                "产品",
+
+            pageDescription:
+                "探索 SRC 开发的机器人、机器人工具和软件解决方案。",
+
+            robots:
+                "机器人",
+
+            tools:
+                "机器人工具",
+
+            software:
+                "SRC 软件",
+
+            robotsDescription:
+                "SRC 开发的机器人平台，适用于教育、科研和自动化。",
+
+            toolsDescription:
+                "面向不同机器人应用开发的夹具、末端执行器和机器人工具。",
+
+            softwareDescription:
+                "用于机器人系统编程、控制和操作的软件。",
+
+            robotsLink:
+                "探索机器人 →",
+
+            toolsLink:
+                "查看机器人工具 →",
+
+            softwareLink:
+                "了解软件 →",
+
+            productsLabel:
+                "产品",
+
+            robotsSectionDescription:
+                "这里将展示 SRC 开发的机器人，包括 Pioneer。",
+
+            toolsSectionDescription:
+                "这里将展示 SRC 的夹具、机器人工具、附件和末端执行器。",
+
+            softwareSectionDescription:
+                "这里将展示为 SRC 机器人和系统开发的软件。",
+
+            languageButton:
+                "语言"
+
+        }
+
+    };
+
+
+
+    const languageSelector =
+        document.getElementById("languageSelector");
+
+    const languageButton =
+        document.getElementById("languageButton");
+
+    const languageButtonText =
+        document.getElementById("languageButtonText");
+
+
+
+    languageButton.addEventListener(
+        "click",
+        function(event) {
+
+            event.stopPropagation();
+
+            languageSelector.classList.toggle("open");
+
+        }
+    );
+
+
+
+    document.addEventListener(
+        "click",
+        function() {
+
+            languageSelector.classList.remove("open");
+
+        }
+    );
+
+
+
+    document
+        .querySelectorAll("[data-language]")
+        .forEach(function(button) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    setLanguage(
+                        button.dataset.language
+                    );
+
+                }
+            );
+
+        });
+
+
+
+    function setLanguage(language) {
+
+
+        if (!translations[language]) {
+            language = "es";
+        }
+
+
+        document.documentElement.lang =
+            language;
+
+
+        document
+            .querySelectorAll("[data-i18n]")
+            .forEach(function(element) {
+
+                const key =
+                    element.dataset.i18n;
+
+                if (translations[language][key]) {
+
+                    element.textContent =
+                        translations[language][key];
+
+                }
+
+            });
+
+
+        languageButtonText.textContent =
+            translations[language].languageButton;
+
+
+        localStorage.setItem(
+            "srcLanguage",
+            language
+        );
+
+
+        languageSelector.classList.remove("open");
+
+    }
+
+
+
+    const savedLanguage =
+        localStorage.getItem("srcLanguage") || "es";
+
+
+    setLanguage(savedLanguage);
+
+</script>
 
 
 </body>
