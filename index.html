@@ -123,6 +123,7 @@
         nav {
             display: flex;
             align-items: center;
+
             gap: 35px;
         }
 
@@ -182,12 +183,15 @@
 
         .menu-dropdown > a {
             display: flex;
+
             align-items: center;
+
             gap: 7px;
         }
 
         .dropdown-arrow {
             font-size: 10px;
+
             transition: transform 0.25s;
         }
 
@@ -376,6 +380,7 @@
             padding: 85px 7% 55px;
 
             display: grid;
+
             grid-template-columns: 1fr 1fr;
 
             align-items: center;
@@ -395,6 +400,7 @@
 
         .small-title {
             display: flex;
+
             align-items: center;
 
             gap: 18px;
@@ -719,13 +725,13 @@
         }
 
         /* =========================================
-           EMPRESA
+           EMPRESA / ACERCA DE SRC
         ========================================== */
 
         .company-content {
-            max-width: 900px;
+            max-width: 950px;
 
-            margin: 40px auto 0;
+            margin: 45px auto 0;
 
             text-align: left;
         }
@@ -735,9 +741,35 @@
 
             font-size: 18px;
 
-            line-height: 1.7;
+            line-height: 1.75;
 
-            margin-bottom: 20px;
+            margin-bottom: 22px;
+        }
+
+        .company-content h3 {
+            color: var(--blue);
+
+            font-size: 24px;
+
+            margin-top: 42px;
+
+            margin-bottom: 14px;
+        }
+
+        .company-closing {
+            margin-top: 42px !important;
+
+            margin-bottom: 0 !important;
+
+            padding-top: 28px;
+
+            border-top: 1px solid #e3e7ec;
+
+            color: var(--blue) !important;
+
+            font-weight: 700;
+
+            font-size: 19px !important;
         }
 
         /* =========================================
@@ -785,7 +817,7 @@
         }
 
         /* =========================================
-           CONTACTOS
+           CONTACTOS FOOTER
         ========================================== */
 
         .footer-contact-grid {
@@ -1082,6 +1114,14 @@
                 grid-template-columns: 1fr;
             }
 
+            .company-content p {
+                font-size: 16px;
+            }
+
+            .company-content h3 {
+                font-size: 21px;
+            }
+
             .site-footer {
                 padding-left: 6%;
 
@@ -1105,6 +1145,10 @@
 
 <body>
 
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
 
     <header>
 
@@ -1221,6 +1265,8 @@
         </nav>
 
 
+
+        <!-- IDIOMA -->
 
         <div
             class="language-selector"
@@ -1352,6 +1398,8 @@
         </div>
 
 
+
+        <!-- PIONEER -->
 
         <div class="robot-area">
 
@@ -1564,7 +1612,7 @@
 
 
     <!-- =========================================
-         EMPRESA
+         EMPRESA / ACERCA DE SRC
     ========================================== -->
 
     <section
@@ -1602,21 +1650,78 @@
 
 
             <p data-i18n="companyParagraph1">
-                Sakuta Robotics Company (SRC) desarrolla
-                soluciones enfocadas en robótica,
-                automatización y tecnología.
+                Sakuta Robotics Company (SRC) es una iniciativa mexicana
+                enfocada en el diseño y desarrollo de soluciones de
+                robótica, automatización y mecatrónica.
             </p>
 
 
             <p data-i18n="companyParagraph2">
-                Nuestro objetivo es diseñar y desarrollar
-                sistemas robóticos funcionales para
-                aplicaciones educativas, de investigación
-                y de automatización.
+                Desarrollamos robots, herramientas robóticas, mecanismos
+                y software orientados a diversas aplicaciones educativas,
+                de investigación, de automatización semiindustrial y de uso
+                industrial. Nuestro enfoque integra diseño mecánico,
+                electrónica, programación y control para transformar ideas
+                en sistemas robóticos funcionales.
             </p>
 
 
             <p data-i18n="companyParagraph3">
+                En SRC buscamos crear tecnología eficiente, modular y
+                adaptable, desarrollando soluciones que puedan utilizarse
+                tanto para el aprendizaje y la experimentación como para
+                aplicaciones reales de automatización en el sector industrial.
+            </p>
+
+
+
+            <h3 data-i18n="objectiveTitle">
+                Nuestro objetivo
+            </h3>
+
+
+            <p data-i18n="objectiveText">
+                Diseñar y desarrollar tecnología robótica propia,
+                fortaleciendo progresivamente las capacidades de SRC en
+                robots, herramientas robóticas, software y sistemas de
+                automatización.
+            </p>
+
+
+
+            <h3 data-i18n="historyTitle">
+                Nuestra historia
+            </h3>
+
+
+            <p data-i18n="historyText">
+                Sakuta Robotics Company (SRC) fue fundada el 21 de noviembre
+                de 2024 con el objetivo de desarrollar tecnología propia en
+                robótica, automatización y mecatrónica. Desde entonces, SRC
+                ha enfocado su desarrollo en robots, herramientas robóticas,
+                mecanismos y software para aplicaciones educativas, de
+                investigación, semiindustriales e industriales.
+            </p>
+
+
+
+            <h3 data-i18n="developmentMexicoTitle">
+                Desarrollo en México
+            </h3>
+
+
+            <p data-i18n="developmentMexicoText">
+                Nuestros proyectos son diseñados y desarrollados en México,
+                combinando ingeniería, manufactura digital, electrónica,
+                programación y control.
+            </p>
+
+
+
+            <p
+                class="company-closing"
+                data-i18n="companyClosing"
+            >
                 Diseñado y desarrollado en México por SRC.
             </p>
 
@@ -1925,6 +2030,10 @@
         const translations = {
 
 
+            /* =====================================
+               ESPAÑOL
+            ====================================== */
+
             es: {
 
                 navHome: "Inicio",
@@ -2009,12 +2118,33 @@
                     "Acerca de",
 
                 companyParagraph1:
-                    "Sakuta Robotics Company (SRC) desarrolla soluciones enfocadas en robótica, automatización y tecnología.",
+                    "Sakuta Robotics Company (SRC) es una iniciativa mexicana enfocada en el diseño y desarrollo de soluciones de robótica, automatización y mecatrónica.",
 
                 companyParagraph2:
-                    "Nuestro objetivo es diseñar y desarrollar sistemas robóticos funcionales para aplicaciones educativas, de investigación y de automatización.",
+                    "Desarrollamos robots, herramientas robóticas, mecanismos y software orientados a diversas aplicaciones educativas, de investigación, de automatización semiindustrial y de uso industrial. Nuestro enfoque integra diseño mecánico, electrónica, programación y control para transformar ideas en sistemas robóticos funcionales.",
 
                 companyParagraph3:
+                    "En SRC buscamos crear tecnología eficiente, modular y adaptable, desarrollando soluciones que puedan utilizarse tanto para el aprendizaje y la experimentación como para aplicaciones reales de automatización en el sector industrial.",
+
+                objectiveTitle:
+                    "Nuestro objetivo",
+
+                objectiveText:
+                    "Diseñar y desarrollar tecnología robótica propia, fortaleciendo progresivamente las capacidades de SRC en robots, herramientas robóticas, software y sistemas de automatización.",
+
+                historyTitle:
+                    "Nuestra historia",
+
+                historyText:
+                    "Sakuta Robotics Company (SRC) fue fundada el 21 de noviembre de 2024 con el objetivo de desarrollar tecnología propia en robótica, automatización y mecatrónica. Desde entonces, SRC ha enfocado su desarrollo en robots, herramientas robóticas, mecanismos y software para aplicaciones educativas, de investigación, semiindustriales e industriales.",
+
+                developmentMexicoTitle:
+                    "Desarrollo en México",
+
+                developmentMexicoText:
+                    "Nuestros proyectos son diseñados y desarrollados en México, combinando ingeniería, manufactura digital, electrónica, programación y control.",
+
+                companyClosing:
                     "Diseñado y desarrollado en México por SRC.",
 
                 footerLabel:
@@ -2037,6 +2167,10 @@
 
             },
 
+
+            /* =====================================
+               ENGLISH
+            ====================================== */
 
             en: {
 
@@ -2122,12 +2256,33 @@
                     "About",
 
                 companyParagraph1:
-                    "Sakuta Robotics Company (SRC) develops solutions focused on robotics, automation and technology.",
+                    "Sakuta Robotics Company (SRC) is a Mexican initiative focused on the design and development of robotics, automation and mechatronics solutions.",
 
                 companyParagraph2:
-                    "Our goal is to design and develop functional robotic systems for educational, research and automation applications.",
+                    "We develop robots, robotic tools, mechanisms and software for a variety of educational, research, semi-industrial automation and industrial applications. Our approach integrates mechanical design, electronics, programming and control to transform ideas into functional robotic systems.",
 
                 companyParagraph3:
+                    "At SRC, we seek to create efficient, modular and adaptable technology, developing solutions that can be used for learning and experimentation as well as real automation applications in the industrial sector.",
+
+                objectiveTitle:
+                    "Our objective",
+
+                objectiveText:
+                    "To design and develop our own robotic technology, progressively strengthening SRC's capabilities in robots, robotic tools, software and automation systems.",
+
+                historyTitle:
+                    "Our history",
+
+                historyText:
+                    "Sakuta Robotics Company (SRC) was founded on November 21, 2024 with the goal of developing proprietary technology in robotics, automation and mechatronics. Since then, SRC has focused its development on robots, robotic tools, mechanisms and software for educational, research, semi-industrial and industrial applications.",
+
+                developmentMexicoTitle:
+                    "Development in Mexico",
+
+                developmentMexicoText:
+                    "Our projects are designed and developed in Mexico, combining engineering, digital manufacturing, electronics, programming and control.",
+
+                companyClosing:
                     "Designed and developed in Mexico by SRC.",
 
                 footerLabel:
@@ -2150,6 +2305,10 @@
 
             },
 
+
+            /* =====================================
+               中文
+            ====================================== */
 
             zh: {
 
@@ -2247,12 +2406,33 @@
                     "关于",
 
                 companyParagraph1:
-                    "Sakuta Robotics Company（SRC）专注于机器人、自动化和技术解决方案的开发。",
+                    "Sakuta Robotics Company（SRC）是一项墨西哥机器人技术计划，专注于机器人、自动化和机电一体化解决方案的设计与开发。",
 
                 companyParagraph2:
-                    "我们的目标是设计和开发适用于教育、科研和自动化应用的实用机器人系统。",
+                    "我们开发机器人、机器人工具、机械机构和软件，应用于教育、科研、半工业自动化以及工业领域。我们的开发方式融合机械设计、电子技术、编程和控制，将想法转化为功能完善的机器人系统。",
 
                 companyParagraph3:
+                    "SRC 致力于开发高效、模块化且具有适应性的技术，使其既可用于学习和实验，也可用于工业领域的实际自动化应用。",
+
+                objectiveTitle:
+                    "我们的目标",
+
+                objectiveText:
+                    "设计和开发自主机器人技术，并逐步增强 SRC 在机器人、机器人工具、软件和自动化系统方面的能力。",
+
+                historyTitle:
+                    "我们的历史",
+
+                historyText:
+                    "Sakuta Robotics Company（SRC）成立于 2024 年 11 月 21 日，目标是开发机器人、自动化和机电一体化领域的自主技术。自成立以来，SRC 一直专注于机器人、机器人工具、机械机构和软件的开发，服务于教育、科研、半工业和工业应用。",
+
+                developmentMexicoTitle:
+                    "墨西哥研发",
+
+                developmentMexicoText:
+                    "我们的项目在墨西哥设计和开发，融合工程、数字制造、电子技术、编程和控制。",
+
+                companyClosing:
                     "由 SRC 在墨西哥设计和开发。",
 
                 footerLabel:
