@@ -10,8 +10,6 @@
     <title>Soporte | SAKUTA Robotics Company</title>
 
 
-    <!-- FAVICON SRC -->
-
     <link
         rel="icon"
         type="image/svg+xml"
@@ -76,7 +74,9 @@
 
 
 
-        /* LOGO */
+        /* =========================================
+           LOGO
+        ========================================== */
 
         .brand {
             display: flex;
@@ -189,7 +189,9 @@
 
 
 
-        /* MENÚ DESPLEGABLE */
+        /* =========================================
+           DROPDOWN
+        ========================================== */
 
         .menu-dropdown {
             position: relative;
@@ -291,29 +293,125 @@
 
 
 
-        /* BOTÓN */
+        /* =========================================
+           IDIOMA
+        ========================================== */
 
-        .explore-button {
+        .language-selector {
+            position: relative;
+        }
+
+
+        .language-button {
+            border: none;
+
             background: var(--blue);
 
             color: white;
 
-            text-decoration: none;
-
-            padding: 13px 28px;
+            padding: 13px 24px;
 
             border-radius: 30px;
 
+            font-family: inherit;
+
+            font-size: 15px;
+
             font-weight: bold;
+
+            cursor: pointer;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
 
             transition: 0.25s;
         }
 
 
-        .explore-button:hover {
+        .language-button:hover {
             background: var(--blue-dark);
 
             transform: translateY(-2px);
+        }
+
+
+        .language-options {
+            position: absolute;
+
+            top: 55px;
+            right: 0;
+
+            width: 165px;
+
+            background: white;
+
+            border: 1px solid #e8e8e8;
+
+            border-radius: 12px;
+
+            padding: 8px;
+
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+            transform: translateY(8px);
+
+            transition: 0.2s;
+
+            z-index: 2000;
+        }
+
+
+        .language-selector.open .language-options {
+            opacity: 1;
+
+            visibility: visible;
+
+            pointer-events: auto;
+
+            transform: translateY(0);
+        }
+
+
+        .language-options button {
+            width: 100%;
+
+            border: none;
+
+            background: transparent;
+
+            text-align: left;
+
+            padding: 12px 13px;
+
+            border-radius: 8px;
+
+            font-family: inherit;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: var(--black);
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+
+        .language-options button:hover {
+            background: #f3f6fb;
+
+            color: var(--blue);
         }
 
 
@@ -366,7 +464,7 @@
 
 
         /* =========================================
-           CENTRO DE SOPORTE
+           SOPORTE
         ========================================== */
 
         .support-grid {
@@ -448,7 +546,7 @@
 
 
         /* =========================================
-           SECCIONES TEMPORALES
+           SECCIONES
         ========================================== */
 
         .support-section {
@@ -506,11 +604,6 @@
             }
 
 
-            .explore-button {
-                display: none;
-            }
-
-
             .support-grid {
                 grid-template-columns: 1fr 1fr;
             }
@@ -550,6 +643,13 @@
             }
 
 
+            .language-button {
+                padding: 11px 15px;
+
+                font-size: 13px;
+            }
+
+
             .support-grid {
                 grid-template-columns: 1fr;
             }
@@ -570,588 +670,978 @@
 <body>
 
 
-    <!-- HEADER -->
+<header>
 
-    <header>
+
+    <a
+        class="brand"
+        href="index.html"
+    >
+
+
+        <div class="brand-logo-crop">
+
+            <img
+                src="logoooweb.PNG"
+                alt="Logo SAKUTA"
+            >
+
+        </div>
+
+
+        <div class="brand-name">
+            SAKUTA
+        </div>
+
+
+    </a>
+
+
+
+    <nav>
 
 
         <a
-            class="brand"
-            href="index.html"
+            href="index.html#inicio"
+            data-i18n="navHome"
         >
+            Inicio
+        </a>
 
 
-            <div class="brand-logo-crop">
-
-                <img
-                    src="logoooweb.PNG"
-                    alt="Logo SAKUTA"
-                >
-
-            </div>
+        <a
+            href="productos.html"
+            data-i18n="navProducts"
+        >
+            Productos
+        </a>
 
 
-            <div class="brand-name">
-
-                SAKUTA
-
-            </div>
-
-
+        <a
+            href="index.html#aplicaciones"
+            data-i18n="navApplications"
+        >
+            Aplicaciones
         </a>
 
 
 
-        <nav>
+        <div class="menu-dropdown">
 
 
-            <a href="index.html#inicio">
+            <a href="soporte.html">
 
-                Inicio
-
-            </a>
-
-
-
-            <a href="productos.html">
-
-                Productos
-
-            </a>
-
-
-
-            <a href="index.html#aplicaciones">
-
-                Aplicaciones
-
-            </a>
-
-
-
-            <div class="menu-dropdown">
-
-
-                <a href="soporte.html">
-
+                <span data-i18n="navSupport">
                     Soporte
+                </span>
 
-                    <span class="dropdown-arrow">
+                <span class="dropdown-arrow">
+                    ▼
+                </span>
 
-                        ▼
+            </a>
 
-                    </span>
 
+            <div class="dropdown-menu">
+
+
+                <a
+                    href="#software"
+                    data-i18n="software"
+                >
+                    Software SRC
                 </a>
 
 
-                <div class="dropdown-menu">
+                <a
+                    href="#manuales"
+                    data-i18n="manuals"
+                >
+                    Manuales y guías
+                </a>
 
 
-                    <a href="#software">
-
-                        Software SRC
-
-                    </a>
-
-
-                    <a href="#manuales">
-
-                        Manuales y guías
-
-                    </a>
+                <a
+                    href="#mantenimiento"
+                    data-i18n="maintenance"
+                >
+                    Mantenimiento
+                </a>
 
 
-                    <a href="#mantenimiento">
-
-                        Mantenimiento
-
-                    </a>
-
-
-                    <a href="#descargas">
-
-                        Descargas
-
-                    </a>
+                <a
+                    href="#descargas"
+                    data-i18n="downloads"
+                >
+                    Descargas
+                </a>
 
 
-                    <a href="#tutoriales">
-
-                        Tutoriales
-
-                    </a>
-
-
-                </div>
+                <a
+                    href="#tutoriales"
+                    data-i18n="tutorials"
+                >
+                    Tutoriales
+                </a>
 
 
             </div>
 
 
+        </div>
 
-            <div class="menu-dropdown">
 
 
-                <a href="index.html#empresa">
+        <div class="menu-dropdown">
 
+
+            <a href="index.html#empresa">
+
+                <span data-i18n="navCompany">
                     Empresa
+                </span>
 
-                    <span class="dropdown-arrow">
+                <span class="dropdown-arrow">
+                    ▼
+                </span>
 
-                        ▼
+            </a>
 
-                    </span>
 
+            <div class="dropdown-menu">
+
+
+                <a
+                    href="index.html#empresa"
+                    data-i18n="aboutUs"
+                >
+                    Acerca de nosotros
                 </a>
 
 
-                <div class="dropdown-menu">
-
-
-                    <a href="index.html#empresa">
-
-                        Acerca de nosotros
-
-                    </a>
-
-
-                    <a href="index.html#contacto">
-
-                        Contáctanos
-
-                    </a>
-
-
-                </div>
+                <a
+                    href="index.html#contacto"
+                    data-i18n="contactUs"
+                >
+                    Contáctanos
+                </a>
 
 
             </div>
 
 
-        </nav>
+        </div>
+
+
+    </nav>
 
 
 
-        <a
-            class="explore-button"
-            href="#centro-soporte"
-        >
-
-            Explorar →
-
-        </a>
-
-
-    </header>
-
-
-
-    <!-- HERO -->
-
-    <section class="page-hero">
-
-
-        <span class="page-label">
-
-            CENTRO DE SOPORTE SRC
-
-        </span>
-
-
-        <h1>
-
-            Soporte
-
-        </h1>
-
-
-        <p>
-
-            Encuentra información sobre software,
-            documentación, mantenimiento, descargas
-            y uso de los productos SRC.
-
-        </p>
-
-
-    </section>
-
-
-
-    <!-- OPCIONES -->
-
-    <section
-        class="support-grid"
-        id="centro-soporte"
+    <div
+        class="language-selector"
+        id="languageSelector"
     >
 
 
-        <a
-            class="support-card"
-            href="#software"
+        <button
+            class="language-button"
+            id="languageButton"
+            type="button"
         >
 
+            🌐
 
-            <div class="support-number">
-
-                01
-
-            </div>
-
-
-            <h2>
-
-                Software SRC
-
-            </h2>
-
-
-            <p>
-
-                Aprende a instalar, configurar y utilizar
-                el software desarrollado para nuestros robots.
-
-            </p>
-
-
-            <span class="support-link">
-
-                Ver software →
-
+            <span id="languageButtonText">
+                Idioma
             </span>
 
+            ▾
 
-        </a>
+        </button>
 
 
 
-        <a
-            class="support-card"
-            href="#manuales"
-        >
+        <div class="language-options">
 
 
-            <div class="support-number">
+            <button
+                type="button"
+                data-language="es"
+            >
+                🇲🇽 Español
+            </button>
 
-                02
 
-            </div>
+            <button
+                type="button"
+                data-language="en"
+            >
+                🇺🇸 English
+            </button>
 
 
-            <h2>
+            <button
+                type="button"
+                data-language="zh"
+            >
+                🇨🇳 中文
+            </button>
 
-                Manuales y guías
 
-            </h2>
+        </div>
 
 
-            <p>
+    </div>
 
-                Documentación para instalación,
-                configuración y operación de productos SRC.
 
-            </p>
+</header>
 
 
-            <span class="support-link">
 
-                Ver manuales →
+<!-- =========================================
+     HERO
+========================================== -->
 
-            </span>
+<section class="page-hero">
 
 
-        </a>
+    <span
+        class="page-label"
+        data-i18n="supportCenter"
+    >
+        CENTRO DE SOPORTE SRC
+    </span>
 
 
+    <h1 data-i18n="pageTitle">
+        Soporte
+    </h1>
 
-        <a
-            class="support-card"
-            href="#mantenimiento"
-        >
 
+    <p data-i18n="pageDescription">
+        Encuentra información sobre software,
+        documentación, mantenimiento, descargas
+        y uso de los productos SRC.
+    </p>
 
-            <div class="support-number">
 
-                03
+</section>
 
-            </div>
 
 
-            <h2>
+<!-- =========================================
+     OPCIONES
+========================================== -->
 
-                Mantenimiento
+<section
+    class="support-grid"
+    id="centro-soporte"
+>
 
-            </h2>
 
-
-            <p>
-
-                Información sobre mantenimiento preventivo,
-                revisión y cuidado de nuestros equipos.
-
-            </p>
-
-
-            <span class="support-link">
-
-                Ver mantenimiento →
-
-            </span>
-
-
-        </a>
-
-
-
-        <a
-            class="support-card"
-            href="#descargas"
-        >
-
-
-            <div class="support-number">
-
-                04
-
-            </div>
-
-
-            <h2>
-
-                Descargas
-
-            </h2>
-
-
-            <p>
-
-                Software, documentos, archivos
-                y recursos disponibles para usuarios SRC.
-
-            </p>
-
-
-            <span class="support-link">
-
-                Ir a descargas →
-
-            </span>
-
-
-        </a>
-
-
-
-        <a
-            class="support-card"
-            href="#tutoriales"
-        >
-
-
-            <div class="support-number">
-
-                05
-
-            </div>
-
-
-            <h2>
-
-                Tutoriales
-
-            </h2>
-
-
-            <p>
-
-                Guías paso a paso para aprender
-                a utilizar productos y software SRC.
-
-            </p>
-
-
-            <span class="support-link">
-
-                Ver tutoriales →
-
-            </span>
-
-
-        </a>
-
-
-    </section>
-
-
-
-    <!-- SOFTWARE -->
-
-    <section
-        class="support-section"
-        id="software"
+    <a
+        class="support-card"
+        href="#software"
     >
 
-
-        <span>
-
-            SOPORTE
-
-        </span>
+        <div class="support-number">
+            01
+        </div>
 
 
-        <h2>
-
+        <h2 data-i18n="software">
             Software SRC
-
         </h2>
 
 
-        <p>
-
-            Aquí agregaremos posteriormente información,
-            instalación y documentación del software SRC.
-
+        <p data-i18n="softwareDescription">
+            Aprende a instalar, configurar y utilizar
+            el software desarrollado para nuestros robots.
         </p>
 
 
-    </section>
-
-
-
-    <!-- MANUALES -->
-
-    <section
-        class="support-section"
-        id="manuales"
-    >
-
-
-        <span>
-
-            DOCUMENTACIÓN
-
+        <span
+            class="support-link"
+            data-i18n="softwareLink"
+        >
+            Ver software →
         </span>
 
 
-        <h2>
+    </a>
 
+
+
+    <a
+        class="support-card"
+        href="#manuales"
+    >
+
+        <div class="support-number">
+            02
+        </div>
+
+
+        <h2 data-i18n="manuals">
             Manuales y guías
-
         </h2>
 
 
-        <p>
-
-            Aquí podremos colocar PDFs, manuales
-            de usuario y documentación técnica.
-
+        <p data-i18n="manualsDescription">
+            Documentación para instalación,
+            configuración y operación de productos SRC.
         </p>
 
 
-    </section>
-
-
-
-    <!-- MANTENIMIENTO -->
-
-    <section
-        class="support-section"
-        id="mantenimiento"
-    >
-
-
-        <span>
-
-            SOPORTE
-
+        <span
+            class="support-link"
+            data-i18n="manualsLink"
+        >
+            Ver manuales →
         </span>
 
 
-        <h2>
+    </a>
 
+
+
+    <a
+        class="support-card"
+        href="#mantenimiento"
+    >
+
+        <div class="support-number">
+            03
+        </div>
+
+
+        <h2 data-i18n="maintenance">
             Mantenimiento
-
         </h2>
 
 
-        <p>
-
-            Información para mantener nuestros robots
-            y herramientas en buenas condiciones.
-
+        <p data-i18n="maintenanceDescription">
+            Información sobre mantenimiento preventivo,
+            revisión y cuidado de nuestros equipos.
         </p>
 
 
-    </section>
-
-
-
-    <!-- DESCARGAS -->
-
-    <section
-        class="support-section"
-        id="descargas"
-    >
-
-
-        <span>
-
-            RECURSOS
-
+        <span
+            class="support-link"
+            data-i18n="maintenanceLink"
+        >
+            Ver mantenimiento →
         </span>
 
 
-        <h2>
+    </a>
 
+
+
+    <a
+        class="support-card"
+        href="#descargas"
+    >
+
+        <div class="support-number">
+            04
+        </div>
+
+
+        <h2 data-i18n="downloads">
             Descargas
-
         </h2>
 
 
-        <p>
-
-            Aquí agregaremos software,
-            actualizaciones, archivos y documentación.
-
+        <p data-i18n="downloadsDescription">
+            Software, documentos, archivos
+            y recursos disponibles para usuarios SRC.
         </p>
 
 
-    </section>
-
-
-
-    <!-- TUTORIALES -->
-
-    <section
-        class="support-section"
-        id="tutoriales"
-    >
-
-
-        <span>
-
-            APRENDIZAJE
-
+        <span
+            class="support-link"
+            data-i18n="downloadsLink"
+        >
+            Ir a descargas →
         </span>
 
 
-        <h2>
+    </a>
 
+
+
+    <a
+        class="support-card"
+        href="#tutoriales"
+    >
+
+        <div class="support-number">
+            05
+        </div>
+
+
+        <h2 data-i18n="tutorials">
             Tutoriales
-
         </h2>
 
 
-        <p>
-
-            Aquí podremos agregar videos,
-            instrucciones y tutoriales paso a paso.
-
+        <p data-i18n="tutorialsDescription">
+            Guías paso a paso para aprender
+            a utilizar productos y software SRC.
         </p>
 
 
-    </section>
+        <span
+            class="support-link"
+            data-i18n="tutorialsLink"
+        >
+            Ver tutoriales →
+        </span>
+
+
+    </a>
+
+
+</section>
+
+
+
+<section
+    class="support-section"
+    id="software"
+>
+
+    <span data-i18n="supportLabel">
+        SOPORTE
+    </span>
+
+    <h2 data-i18n="software">
+        Software SRC
+    </h2>
+
+    <p data-i18n="softwareSection">
+        Aquí agregaremos posteriormente información,
+        instalación y documentación del software SRC.
+    </p>
+
+</section>
+
+
+
+<section
+    class="support-section"
+    id="manuales"
+>
+
+    <span data-i18n="documentationLabel">
+        DOCUMENTACIÓN
+    </span>
+
+    <h2 data-i18n="manuals">
+        Manuales y guías
+    </h2>
+
+    <p data-i18n="manualsSection">
+        Aquí podremos colocar PDFs, manuales
+        de usuario y documentación técnica.
+    </p>
+
+</section>
+
+
+
+<section
+    class="support-section"
+    id="mantenimiento"
+>
+
+    <span data-i18n="supportLabel">
+        SOPORTE
+    </span>
+
+    <h2 data-i18n="maintenance">
+        Mantenimiento
+    </h2>
+
+    <p data-i18n="maintenanceSection">
+        Información para mantener nuestros robots
+        y herramientas en buenas condiciones.
+    </p>
+
+</section>
+
+
+
+<section
+    class="support-section"
+    id="descargas"
+>
+
+    <span data-i18n="resourcesLabel">
+        RECURSOS
+    </span>
+
+    <h2 data-i18n="downloads">
+        Descargas
+    </h2>
+
+    <p data-i18n="downloadsSection">
+        Aquí agregaremos software,
+        actualizaciones, archivos y documentación.
+    </p>
+
+</section>
+
+
+
+<section
+    class="support-section"
+    id="tutoriales"
+>
+
+    <span data-i18n="learningLabel">
+        APRENDIZAJE
+    </span>
+
+    <h2 data-i18n="tutorials">
+        Tutoriales
+    </h2>
+
+    <p data-i18n="tutorialsSection">
+        Aquí podremos agregar videos,
+        instrucciones y tutoriales paso a paso.
+    </p>
+
+</section>
+
+
+
+<script>
+
+    const translations = {
+
+
+        es: {
+
+            navHome: "Inicio",
+            navProducts: "Productos",
+            navApplications: "Aplicaciones",
+            navSupport: "Soporte",
+            navCompany: "Empresa",
+
+            aboutUs: "Acerca de nosotros",
+            contactUs: "Contáctanos",
+
+            supportCenter:
+                "CENTRO DE SOPORTE SRC",
+
+            pageTitle:
+                "Soporte",
+
+            pageDescription:
+                "Encuentra información sobre software, documentación, mantenimiento, descargas y uso de los productos SRC.",
+
+            software:
+                "Software SRC",
+
+            manuals:
+                "Manuales y guías",
+
+            maintenance:
+                "Mantenimiento",
+
+            downloads:
+                "Descargas",
+
+            tutorials:
+                "Tutoriales",
+
+            softwareDescription:
+                "Aprende a instalar, configurar y utilizar el software desarrollado para nuestros robots.",
+
+            manualsDescription:
+                "Documentación para instalación, configuración y operación de productos SRC.",
+
+            maintenanceDescription:
+                "Información sobre mantenimiento preventivo, revisión y cuidado de nuestros equipos.",
+
+            downloadsDescription:
+                "Software, documentos, archivos y recursos disponibles para usuarios SRC.",
+
+            tutorialsDescription:
+                "Guías paso a paso para aprender a utilizar productos y software SRC.",
+
+            softwareLink:
+                "Ver software →",
+
+            manualsLink:
+                "Ver manuales →",
+
+            maintenanceLink:
+                "Ver mantenimiento →",
+
+            downloadsLink:
+                "Ir a descargas →",
+
+            tutorialsLink:
+                "Ver tutoriales →",
+
+            supportLabel:
+                "SOPORTE",
+
+            documentationLabel:
+                "DOCUMENTACIÓN",
+
+            resourcesLabel:
+                "RECURSOS",
+
+            learningLabel:
+                "APRENDIZAJE",
+
+            softwareSection:
+                "Aquí agregaremos posteriormente información, instalación y documentación del software SRC.",
+
+            manualsSection:
+                "Aquí podremos colocar PDFs, manuales de usuario y documentación técnica.",
+
+            maintenanceSection:
+                "Información para mantener nuestros robots y herramientas en buenas condiciones.",
+
+            downloadsSection:
+                "Aquí agregaremos software, actualizaciones, archivos y documentación.",
+
+            tutorialsSection:
+                "Aquí podremos agregar videos, instrucciones y tutoriales paso a paso.",
+
+            languageButton:
+                "Idioma"
+
+        },
+
+
+        en: {
+
+            navHome: "Home",
+            navProducts: "Products",
+            navApplications: "Applications",
+            navSupport: "Support",
+            navCompany: "Company",
+
+            aboutUs: "About us",
+            contactUs: "Contact us",
+
+            supportCenter:
+                "SRC SUPPORT CENTER",
+
+            pageTitle:
+                "Support",
+
+            pageDescription:
+                "Find information about software, documentation, maintenance, downloads and the use of SRC products.",
+
+            software:
+                "SRC Software",
+
+            manuals:
+                "Manuals and guides",
+
+            maintenance:
+                "Maintenance",
+
+            downloads:
+                "Downloads",
+
+            tutorials:
+                "Tutorials",
+
+            softwareDescription:
+                "Learn how to install, configure and use the software developed for our robots.",
+
+            manualsDescription:
+                "Documentation for installation, configuration and operation of SRC products.",
+
+            maintenanceDescription:
+                "Information about preventive maintenance, inspection and care of our equipment.",
+
+            downloadsDescription:
+                "Software, documents, files and resources available for SRC users.",
+
+            tutorialsDescription:
+                "Step-by-step guides for learning how to use SRC products and software.",
+
+            softwareLink:
+                "View software →",
+
+            manualsLink:
+                "View manuals →",
+
+            maintenanceLink:
+                "View maintenance →",
+
+            downloadsLink:
+                "Go to downloads →",
+
+            tutorialsLink:
+                "View tutorials →",
+
+            supportLabel:
+                "SUPPORT",
+
+            documentationLabel:
+                "DOCUMENTATION",
+
+            resourcesLabel:
+                "RESOURCES",
+
+            learningLabel:
+                "LEARNING",
+
+            softwareSection:
+                "Software information, installation instructions and documentation will be added here.",
+
+            manualsSection:
+                "PDFs, user manuals and technical documentation will be available here.",
+
+            maintenanceSection:
+                "Information for keeping our robots and robotic tools in good condition.",
+
+            downloadsSection:
+                "Software, updates, files and documentation will be available here.",
+
+            tutorialsSection:
+                "Videos, instructions and step-by-step tutorials will be available here.",
+
+            languageButton:
+                "Language"
+
+        },
+
+
+        zh: {
+
+            navHome:
+                "首页",
+
+            navProducts:
+                "产品",
+
+            navApplications:
+                "应用",
+
+            navSupport:
+                "支持",
+
+            navCompany:
+                "公司",
+
+            aboutUs:
+                "关于我们",
+
+            contactUs:
+                "联系我们",
+
+            supportCenter:
+                "SRC 支持中心",
+
+            pageTitle:
+                "支持",
+
+            pageDescription:
+                "查找 SRC 产品的软件、文档、维护、下载和使用信息。",
+
+            software:
+                "SRC 软件",
+
+            manuals:
+                "手册与指南",
+
+            maintenance:
+                "维护",
+
+            downloads:
+                "下载",
+
+            tutorials:
+                "教程",
+
+            softwareDescription:
+                "了解如何安装、配置和使用为我们的机器人开发的软件。",
+
+            manualsDescription:
+                "SRC 产品安装、配置和操作相关文档。",
+
+            maintenanceDescription:
+                "有关设备预防性维护、检查和保养的信息。",
+
+            downloadsDescription:
+                "SRC 用户可获取的软件、文档、文件和资源。",
+
+            tutorialsDescription:
+                "学习如何使用 SRC 产品和软件的分步指南。",
+
+            softwareLink:
+                "查看软件 →",
+
+            manualsLink:
+                "查看手册 →",
+
+            maintenanceLink:
+                "查看维护信息 →",
+
+            downloadsLink:
+                "前往下载 →",
+
+            tutorialsLink:
+                "查看教程 →",
+
+            supportLabel:
+                "支持",
+
+            documentationLabel:
+                "文档",
+
+            resourcesLabel:
+                "资源",
+
+            learningLabel:
+                "学习",
+
+            softwareSection:
+                "这里将提供 SRC 软件的信息、安装说明和相关文档。",
+
+            manualsSection:
+                "这里将提供 PDF、用户手册和技术文档。",
+
+            maintenanceSection:
+                "这里将提供保持机器人和机器人工具良好状态的相关信息。",
+
+            downloadsSection:
+                "这里将提供软件、更新、文件和相关文档。",
+
+            tutorialsSection:
+                "这里将提供视频、操作说明和分步教程。",
+
+            languageButton:
+                "语言"
+
+        }
+
+    };
+
+
+
+    const languageSelector =
+        document.getElementById("languageSelector");
+
+
+    const languageButton =
+        document.getElementById("languageButton");
+
+
+    const languageButtonText =
+        document.getElementById("languageButtonText");
+
+
+
+    languageButton.addEventListener(
+        "click",
+        function(event) {
+
+            event.stopPropagation();
+
+            languageSelector.classList.toggle("open");
+
+        }
+    );
+
+
+
+    document.addEventListener(
+        "click",
+        function() {
+
+            languageSelector.classList.remove("open");
+
+        }
+    );
+
+
+
+    document
+        .querySelectorAll("[data-language]")
+        .forEach(function(button) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    setLanguage(
+                        button.dataset.language
+                    );
+
+                }
+            );
+
+        });
+
+
+
+    function setLanguage(language) {
+
+
+        if (!translations[language]) {
+
+            language = "es";
+
+        }
+
+
+        document.documentElement.lang =
+            language;
+
+
+        document
+            .querySelectorAll("[data-i18n]")
+            .forEach(function(element) {
+
+                const key =
+                    element.dataset.i18n;
+
+
+                if (translations[language][key]) {
+
+                    element.textContent =
+                        translations[language][key];
+
+                }
+
+            });
+
+
+        languageButtonText.textContent =
+            translations[language].languageButton;
+
+
+        localStorage.setItem(
+            "srcLanguage",
+            language
+        );
+
+
+        languageSelector.classList.remove("open");
+
+    }
+
+
+
+    const savedLanguage =
+        localStorage.getItem("srcLanguage") || "es";
+
+
+    setLanguage(savedLanguage);
+
+</script>
 
 
 </body>
