@@ -1,1 +1,1159 @@
+<!DOCTYPE html>
+<html lang="es">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Soporte | SAKUTA Robotics Company</title>
+
+
+    <!-- FAVICON SRC -->
+
+    <link
+        rel="icon"
+        type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='white'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='39' font-weight='900' fill='%2324579b'%3ESRC%3C/text%3E%3C/svg%3E"
+    >
+
+
+    <style>
+
+        :root {
+            --blue: #24579b;
+            --blue-dark: #183f78;
+            --black: #111111;
+            --gray: #666666;
+            --light-gray: #f7f8fa;
+            --white: #ffffff;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--white);
+            color: var(--black);
+        }
+
+
+
+        /* =========================================
+           HEADER
+        ========================================== */
+
+        header {
+            width: 100%;
+            height: 82px;
+
+            background: white;
+            border-bottom: 1px solid #e8e8e8;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            position: sticky;
+            top: 0;
+
+            z-index: 1000;
+        }
+
+
+
+        /* LOGO */
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            text-decoration: none;
+        }
+
+
+        .brand-logo-crop {
+            width: 62px;
+            height: 70px;
+
+            position: relative;
+
+            overflow: hidden;
+
+            flex-shrink: 0;
+
+            transform: translateY(-8px);
+        }
+
+
+        .brand-logo-crop img {
+            position: absolute;
+
+            width: 118px;
+
+            max-width: none;
+
+            left: -27px;
+
+            top: -10px;
+
+            display: block;
+        }
+
+
+        .brand-name {
+            font-size: 32px;
+            font-weight: 800;
+
+            font-style: italic;
+
+            color: var(--blue);
+
+            letter-spacing: -1px;
+
+            white-space: nowrap;
+        }
+
+
+
+        /* =========================================
+           NAVEGACIÓN
+        ========================================== */
+
+        nav {
+            display: flex;
+            align-items: center;
+
+            gap: 35px;
+        }
+
+
+        nav > a,
+        .menu-dropdown > a {
+            color: var(--black);
+
+            text-decoration: none;
+
+            font-size: 16px;
+            font-weight: 600;
+
+            position: relative;
+
+            transition: 0.2s;
+        }
+
+
+        nav > a:hover,
+        .menu-dropdown > a:hover {
+            color: var(--blue);
+        }
+
+
+        nav > a::after,
+        .menu-dropdown > a::after {
+            content: "";
+
+            position: absolute;
+
+            left: 0;
+            bottom: -10px;
+
+            width: 0;
+            height: 2px;
+
+            background: var(--blue);
+
+            transition: 0.25s;
+        }
+
+
+        nav > a:hover::after,
+        .menu-dropdown:hover > a::after {
+            width: 100%;
+        }
+
+
+
+        /* MENÚ DESPLEGABLE */
+
+        .menu-dropdown {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            height: 82px;
+        }
+
+
+        .menu-dropdown > a {
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+        }
+
+
+        .dropdown-arrow {
+            font-size: 10px;
+
+            transition: transform 0.25s;
+        }
+
+
+        .menu-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+
+        .dropdown-menu {
+            position: absolute;
+
+            top: 70px;
+            left: 50%;
+
+            transform: translateX(-50%) translateY(8px);
+
+            min-width: 220px;
+
+            background: white;
+
+            border: 1px solid #e9e9e9;
+
+            border-radius: 12px;
+
+            padding: 8px;
+
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+            transition: 0.2s;
+        }
+
+
+        .menu-dropdown:hover .dropdown-menu {
+            opacity: 1;
+
+            visibility: visible;
+
+            pointer-events: auto;
+
+            transform: translateX(-50%) translateY(0);
+        }
+
+
+        .dropdown-menu a {
+            display: block;
+
+            padding: 13px 15px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            color: var(--black);
+
+            font-size: 15px;
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            transition: 0.2s;
+        }
+
+
+        .dropdown-menu a:hover {
+            background: #f3f6fb;
+
+            color: var(--blue);
+        }
+
+
+
+        /* BOTÓN */
+
+        .explore-button {
+            background: var(--blue);
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 13px 28px;
+
+            border-radius: 30px;
+
+            font-weight: bold;
+
+            transition: 0.25s;
+        }
+
+
+        .explore-button:hover {
+            background: var(--blue-dark);
+
+            transform: translateY(-2px);
+        }
+
+
+
+        /* =========================================
+           HERO
+        ========================================== */
+
+        .page-hero {
+            padding: 105px 7% 90px;
+
+            text-align: center;
+
+            background: white;
+        }
+
+
+        .page-label {
+            color: #777777;
+
+            letter-spacing: 5px;
+
+            font-size: 13px;
+        }
+
+
+        .page-hero h1 {
+            margin-top: 16px;
+
+            font-size: clamp(48px, 7vw, 82px);
+
+            color: var(--blue);
+
+            font-style: italic;
+        }
+
+
+        .page-hero p {
+            max-width: 740px;
+
+            margin: 22px auto 0;
+
+            color: var(--gray);
+
+            font-size: 19px;
+
+            line-height: 1.6;
+        }
+
+
+
+        /* =========================================
+           CENTRO DE SOPORTE
+        ========================================== */
+
+        .support-grid {
+            padding: 25px 7% 100px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 22px;
+        }
+
+
+        .support-card {
+            min-height: 230px;
+
+            padding: 32px;
+
+            background: white;
+
+            border: 1px solid #e5e8ed;
+
+            border-radius: 18px;
+
+            color: var(--black);
+
+            text-decoration: none;
+
+            transition: 0.25s;
+        }
+
+
+        .support-card:hover {
+            border-color: var(--blue);
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+        }
+
+
+        .support-number {
+            color: var(--blue);
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            margin-bottom: 28px;
+        }
+
+
+        .support-card h2 {
+            font-size: 24px;
+
+            margin-bottom: 13px;
+        }
+
+
+        .support-card p {
+            color: var(--gray);
+
+            font-size: 15px;
+
+            line-height: 1.55;
+        }
+
+
+        .support-link {
+            display: block;
+
+            margin-top: 23px;
+
+            color: var(--blue);
+
+            font-weight: bold;
+        }
+
+
+
+        /* =========================================
+           SECCIONES TEMPORALES
+        ========================================== */
+
+        .support-section {
+            padding: 100px 7%;
+
+            text-align: center;
+
+            border-top: 1px solid #eeeeee;
+        }
+
+
+        .support-section:nth-child(even) {
+            background: var(--light-gray);
+        }
+
+
+        .support-section span {
+            color: #777;
+
+            letter-spacing: 5px;
+
+            font-size: 13px;
+        }
+
+
+        .support-section h2 {
+            margin-top: 14px;
+
+            font-size: 40px;
+
+            color: var(--blue);
+        }
+
+
+        .support-section p {
+            max-width: 650px;
+
+            margin: 17px auto;
+
+            color: var(--gray);
+
+            line-height: 1.6;
+        }
+
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================== */
+
+        @media (max-width: 900px) {
+
+            nav {
+                display: none;
+            }
+
+
+            .explore-button {
+                display: none;
+            }
+
+
+            .support-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 550px) {
+
+            header {
+                height: 70px;
+
+                padding-left: 5%;
+                padding-right: 5%;
+            }
+
+
+            .brand-logo-crop {
+                width: 52px;
+                height: 58px;
+
+                transform: translateY(-7px);
+            }
+
+
+            .brand-logo-crop img {
+                width: 100px;
+
+                left: -23px;
+
+                top: -8px;
+            }
+
+
+            .brand-name {
+                font-size: 25px;
+            }
+
+
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .page-hero {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+
+        <a
+            class="brand"
+            href="index.html"
+        >
+
+
+            <div class="brand-logo-crop">
+
+                <img
+                    src="logoooweb.PNG"
+                    alt="Logo SAKUTA"
+                >
+
+            </div>
+
+
+            <div class="brand-name">
+
+                SAKUTA
+
+            </div>
+
+
+        </a>
+
+
+
+        <nav>
+
+
+            <a href="index.html#inicio">
+
+                Inicio
+
+            </a>
+
+
+
+            <a href="productos.html">
+
+                Productos
+
+            </a>
+
+
+
+            <a href="index.html#aplicaciones">
+
+                Aplicaciones
+
+            </a>
+
+
+
+            <div class="menu-dropdown">
+
+
+                <a href="soporte.html">
+
+                    Soporte
+
+                    <span class="dropdown-arrow">
+
+                        ▼
+
+                    </span>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+
+                    <a href="#software">
+
+                        Software SRC
+
+                    </a>
+
+
+                    <a href="#manuales">
+
+                        Manuales y guías
+
+                    </a>
+
+
+                    <a href="#mantenimiento">
+
+                        Mantenimiento
+
+                    </a>
+
+
+                    <a href="#descargas">
+
+                        Descargas
+
+                    </a>
+
+
+                    <a href="#tutoriales">
+
+                        Tutoriales
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="menu-dropdown">
+
+
+                <a href="index.html#empresa">
+
+                    Empresa
+
+                    <span class="dropdown-arrow">
+
+                        ▼
+
+                    </span>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+
+                    <a href="index.html#empresa">
+
+                        Acerca de nosotros
+
+                    </a>
+
+
+                    <a href="index.html#contacto">
+
+                        Contáctanos
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+        </nav>
+
+
+
+        <a
+            class="explore-button"
+            href="#centro-soporte"
+        >
+
+            Explorar →
+
+        </a>
+
+
+    </header>
+
+
+
+    <!-- HERO -->
+
+    <section class="page-hero">
+
+
+        <span class="page-label">
+
+            CENTRO DE SOPORTE SRC
+
+        </span>
+
+
+        <h1>
+
+            Soporte
+
+        </h1>
+
+
+        <p>
+
+            Encuentra información sobre software,
+            documentación, mantenimiento, descargas
+            y uso de los productos SRC.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- OPCIONES -->
+
+    <section
+        class="support-grid"
+        id="centro-soporte"
+    >
+
+
+        <a
+            class="support-card"
+            href="#software"
+        >
+
+
+            <div class="support-number">
+
+                01
+
+            </div>
+
+
+            <h2>
+
+                Software SRC
+
+            </h2>
+
+
+            <p>
+
+                Aprende a instalar, configurar y utilizar
+                el software desarrollado para nuestros robots.
+
+            </p>
+
+
+            <span class="support-link">
+
+                Ver software →
+
+            </span>
+
+
+        </a>
+
+
+
+        <a
+            class="support-card"
+            href="#manuales"
+        >
+
+
+            <div class="support-number">
+
+                02
+
+            </div>
+
+
+            <h2>
+
+                Manuales y guías
+
+            </h2>
+
+
+            <p>
+
+                Documentación para instalación,
+                configuración y operación de productos SRC.
+
+            </p>
+
+
+            <span class="support-link">
+
+                Ver manuales →
+
+            </span>
+
+
+        </a>
+
+
+
+        <a
+            class="support-card"
+            href="#mantenimiento"
+        >
+
+
+            <div class="support-number">
+
+                03
+
+            </div>
+
+
+            <h2>
+
+                Mantenimiento
+
+            </h2>
+
+
+            <p>
+
+                Información sobre mantenimiento preventivo,
+                revisión y cuidado de nuestros equipos.
+
+            </p>
+
+
+            <span class="support-link">
+
+                Ver mantenimiento →
+
+            </span>
+
+
+        </a>
+
+
+
+        <a
+            class="support-card"
+            href="#descargas"
+        >
+
+
+            <div class="support-number">
+
+                04
+
+            </div>
+
+
+            <h2>
+
+                Descargas
+
+            </h2>
+
+
+            <p>
+
+                Software, documentos, archivos
+                y recursos disponibles para usuarios SRC.
+
+            </p>
+
+
+            <span class="support-link">
+
+                Ir a descargas →
+
+            </span>
+
+
+        </a>
+
+
+
+        <a
+            class="support-card"
+            href="#tutoriales"
+        >
+
+
+            <div class="support-number">
+
+                05
+
+            </div>
+
+
+            <h2>
+
+                Tutoriales
+
+            </h2>
+
+
+            <p>
+
+                Guías paso a paso para aprender
+                a utilizar productos y software SRC.
+
+            </p>
+
+
+            <span class="support-link">
+
+                Ver tutoriales →
+
+            </span>
+
+
+        </a>
+
+
+    </section>
+
+
+
+    <!-- SOFTWARE -->
+
+    <section
+        class="support-section"
+        id="software"
+    >
+
+
+        <span>
+
+            SOPORTE
+
+        </span>
+
+
+        <h2>
+
+            Software SRC
+
+        </h2>
+
+
+        <p>
+
+            Aquí agregaremos posteriormente información,
+            instalación y documentación del software SRC.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- MANUALES -->
+
+    <section
+        class="support-section"
+        id="manuales"
+    >
+
+
+        <span>
+
+            DOCUMENTACIÓN
+
+        </span>
+
+
+        <h2>
+
+            Manuales y guías
+
+        </h2>
+
+
+        <p>
+
+            Aquí podremos colocar PDFs, manuales
+            de usuario y documentación técnica.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- MANTENIMIENTO -->
+
+    <section
+        class="support-section"
+        id="mantenimiento"
+    >
+
+
+        <span>
+
+            SOPORTE
+
+        </span>
+
+
+        <h2>
+
+            Mantenimiento
+
+        </h2>
+
+
+        <p>
+
+            Información para mantener nuestros robots
+            y herramientas en buenas condiciones.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- DESCARGAS -->
+
+    <section
+        class="support-section"
+        id="descargas"
+    >
+
+
+        <span>
+
+            RECURSOS
+
+        </span>
+
+
+        <h2>
+
+            Descargas
+
+        </h2>
+
+
+        <p>
+
+            Aquí agregaremos software,
+            actualizaciones, archivos y documentación.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- TUTORIALES -->
+
+    <section
+        class="support-section"
+        id="tutoriales"
+    >
+
+
+        <span>
+
+            APRENDIZAJE
+
+        </span>
+
+
+        <h2>
+
+            Tutoriales
+
+        </h2>
+
+
+        <p>
+
+            Aquí podremos agregar videos,
+            instrucciones y tutoriales paso a paso.
+
+        </p>
+
+
+    </section>
+
+
+</body>
+
+</html>
