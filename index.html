@@ -89,7 +89,6 @@
 
 
         .brand-logo-crop {
-
             width: 62px;
             height: 70px;
 
@@ -99,13 +98,11 @@
 
             flex-shrink: 0;
 
-            /* 2 PX MÁS ARRIBA */
             transform: translateY(-8px);
         }
 
 
         .brand-logo-crop img {
-
             position: absolute;
 
             width: 118px;
@@ -143,11 +140,12 @@
             display: flex;
             align-items: center;
 
-            gap: 38px;
+            gap: 35px;
         }
 
 
-        nav a {
+        nav > a,
+        .menu-dropdown > a {
             color: var(--black);
 
             text-decoration: none;
@@ -161,12 +159,14 @@
         }
 
 
-        nav a:hover {
+        nav > a:hover,
+        .menu-dropdown > a:hover {
             color: var(--blue);
         }
 
 
-        nav a::after {
+        nav > a::after,
+        .menu-dropdown > a::after {
             content: "";
 
             position: absolute;
@@ -183,8 +183,114 @@
         }
 
 
-        nav a:hover::after {
+        nav > a:hover::after,
+        .menu-dropdown:hover > a::after {
             width: 100%;
+        }
+
+
+
+        /* =========================================
+           MENÚS DESPLEGABLES
+        ========================================== */
+
+        .menu-dropdown {
+            position: relative;
+
+            display: flex;
+            align-items: center;
+
+            height: 82px;
+        }
+
+
+        .menu-dropdown > a {
+            display: flex;
+
+            align-items: center;
+
+            gap: 7px;
+        }
+
+
+        .dropdown-arrow {
+            font-size: 10px;
+
+            transition: transform 0.25s;
+        }
+
+
+        .menu-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+
+        .dropdown-menu {
+            position: absolute;
+
+            top: 70px;
+            left: 50%;
+
+            transform: translateX(-50%) translateY(8px);
+
+            min-width: 215px;
+
+            background: white;
+
+            border: 1px solid #e9e9e9;
+
+            border-radius: 12px;
+
+            padding: 8px;
+
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+            transition: 0.20s;
+        }
+
+
+        .menu-dropdown:hover .dropdown-menu {
+            opacity: 1;
+
+            visibility: visible;
+
+            pointer-events: auto;
+
+            transform: translateX(-50%) translateY(0);
+        }
+
+
+        .dropdown-menu a {
+            display: block;
+
+            padding: 13px 15px;
+
+            border-radius: 8px;
+
+            text-decoration: none;
+
+            color: var(--black);
+
+            font-size: 15px;
+
+            font-weight: 600;
+
+            white-space: nowrap;
+
+            transition: 0.2s;
+        }
+
+
+        .dropdown-menu a:hover {
+            background: #f3f6fb;
+
+            color: var(--blue);
         }
 
 
@@ -500,19 +606,27 @@
 
 
         /* =========================================
-           PRODUCTOS
+           SECCIONES GENERALES
         ========================================== */
 
-        .products-title {
-            padding: 55px 20px 90px;
+        .section-block {
+            padding: 85px 7%;
 
             text-align: center;
+        }
 
+
+        .section-light {
+            background: white;
+        }
+
+
+        .section-gray {
             background: #fafafa;
         }
 
 
-        .products-title span {
+        .section-label {
             color: #777777;
 
             letter-spacing: 5px;
@@ -521,15 +635,90 @@
         }
 
 
-        .products-title h2 {
-            margin-top: 13px;
+        .section-block h2 {
+            margin-top: 14px;
 
             font-size: 36px;
         }
 
 
-        .products-title h2 strong {
+        .section-block h2 strong {
             color: var(--blue);
+        }
+
+
+        .section-description {
+            max-width: 700px;
+
+            margin: 18px auto 0;
+
+            color: var(--gray);
+
+            font-size: 17px;
+
+            line-height: 1.6;
+        }
+
+
+
+        /* =========================================
+           SOPORTE
+        ========================================== */
+
+        .support-grid {
+            max-width: 1100px;
+
+            margin: 40px auto 0;
+
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            gap: 16px;
+        }
+
+
+        .support-card {
+            border: 1px solid #e7e7e7;
+
+            border-radius: 14px;
+
+            padding: 25px 15px;
+
+            background: white;
+
+            text-decoration: none;
+
+            color: var(--black);
+
+            transition: 0.25s;
+        }
+
+
+        .support-card:hover {
+            border-color: var(--blue);
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+        }
+
+
+        .support-card strong {
+            display: block;
+
+            color: var(--blue);
+
+            margin-bottom: 7px;
+        }
+
+
+        .support-card span {
+            color: var(--gray);
+
+            font-size: 13px;
+
+            line-height: 1.4;
         }
 
 
@@ -571,6 +760,11 @@
                 border-right: none !important;
 
                 margin-bottom: 30px;
+            }
+
+
+            .support-grid {
+                grid-template-columns: 1fr 1fr;
             }
 
         }
@@ -655,6 +849,11 @@
                 grid-template-columns: 1fr;
             }
 
+
+            .support-grid {
+                grid-template-columns: 1fr;
+            }
+
         }
 
     </style>
@@ -665,10 +864,14 @@
 <body>
 
 
-    <!-- HEADER -->
+    <!-- =========================================
+         HEADER
+    ========================================== -->
 
     <header>
 
+
+        <!-- LOGO -->
 
         <a
             class="brand"
@@ -697,37 +900,197 @@
 
 
 
+        <!-- =====================================
+             MENÚ PRINCIPAL
+        ====================================== -->
+
         <nav>
 
 
+            <!-- INICIO -->
+
             <a href="#inicio">
+
                 Inicio
+
             </a>
 
 
-            <a href="#productos">
-                Productos
+
+            <!-- =================================
+                 PRODUCTOS
+            ================================== -->
+
+            <div class="menu-dropdown">
+
+
+                <a href="#productos">
+
+                    Productos
+
+                    <span class="dropdown-arrow">
+
+                        ▼
+
+                    </span>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+
+                    <a href="#robots">
+
+                        Robots
+
+                    </a>
+
+
+                    <a href="#herramientas">
+
+                        Herramientas robóticas
+
+                    </a>
+
+
+                    <a href="#software">
+
+                        Software SRC
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- APLICACIONES -->
+
+            <a href="#aplicaciones">
+
+                Aplicaciones
+
             </a>
 
 
-            <a href="#proyectos">
-                Proyectos
-            </a>
+
+            <!-- =================================
+                 SOPORTE
+            ================================== -->
+
+            <div class="menu-dropdown">
 
 
-            <a href="#nosotros">
-                Nosotros
-            </a>
+                <a href="#soporte">
+
+                    Soporte
+
+                    <span class="dropdown-arrow">
+
+                        ▼
+
+                    </span>
+
+                </a>
 
 
-            <a href="#contacto">
-                Contacto
-            </a>
+                <div class="dropdown-menu">
+
+
+                    <a href="#soporte-software">
+
+                        Software SRC
+
+                    </a>
+
+
+                    <a href="#manuales">
+
+                        Manuales y guías
+
+                    </a>
+
+
+                    <a href="#mantenimiento">
+
+                        Mantenimiento
+
+                    </a>
+
+
+                    <a href="#descargas">
+
+                        Descargas
+
+                    </a>
+
+
+                    <a href="#tutoriales">
+
+                        Tutoriales
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================
+                 EMPRESA
+            ================================== -->
+
+            <div class="menu-dropdown">
+
+
+                <a href="#empresa">
+
+                    Empresa
+
+                    <span class="dropdown-arrow">
+
+                        ▼
+
+                    </span>
+
+                </a>
+
+
+                <div class="dropdown-menu">
+
+
+                    <a href="#empresa">
+
+                        Acerca de SRC
+
+                    </a>
+
+
+                    <a href="#contacto">
+
+                        Contáctanos
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
 
 
         </nav>
 
 
+
+        <!-- BOTÓN EXPLORAR -->
 
         <a
             class="explore-button"
@@ -743,7 +1106,9 @@
 
 
 
-    <!-- INICIO -->
+    <!-- =========================================
+         INICIO
+    ========================================== -->
 
     <section
         class="hero"
@@ -793,10 +1158,10 @@
 
                 <a
                     class="btn-primary"
-                    href="#proyectos"
+                    href="#productos"
                 >
 
-                    Conoce nuestros proyectos →
+                    Conoce nuestros productos →
 
                 </a>
 
@@ -804,7 +1169,7 @@
 
                 <a
                     class="btn-secondary"
-                    href="#nosotros"
+                    href="#empresa"
                 >
 
                     Sobre SRC
@@ -861,7 +1226,9 @@
 
 
 
-    <!-- CARACTERÍSTICAS -->
+    <!-- =========================================
+         CARACTERÍSTICAS
+    ========================================== -->
 
     <section class="features">
 
@@ -869,23 +1236,17 @@
         <div class="feature">
 
             <div class="feature-icon">
-
                 ⚙
-
             </div>
 
 
             <h3>
-
                 Diseño
-
             </h3>
 
 
             <p>
-
                 Mecánico, electrónico y de control
-
             </p>
 
         </div>
@@ -895,23 +1256,17 @@
         <div class="feature">
 
             <div class="feature-icon">
-
                 🎓
-
             </div>
 
 
             <h3>
-
                 Educación
-
             </h3>
 
 
             <p>
-
                 Robots para aprender y crear
-
             </p>
 
         </div>
@@ -921,23 +1276,17 @@
         <div class="feature">
 
             <div class="feature-icon">
-
                 💡
-
             </div>
 
 
             <h3>
-
                 Innovación
-
             </h3>
 
 
             <p>
-
                 Soluciones para la industria y más
-
             </p>
 
         </div>
@@ -947,23 +1296,17 @@
         <div class="feature">
 
             <div class="feature-icon">
-
                 ↗
-
             </div>
 
 
             <h3>
-
                 Desarrollo en México
-
             </h3>
 
 
             <p>
-
                 Talento y tecnología nacional
-
             </p>
 
         </div>
@@ -973,15 +1316,17 @@
 
 
 
-    <!-- PRODUCTOS -->
+    <!-- =========================================
+         PRODUCTOS
+    ========================================== -->
 
     <section
-        class="products-title"
+        class="section-block section-gray"
         id="productos"
     >
 
 
-        <span>
+        <span class="section-label">
 
             NUESTROS PRODUCTOS
 
@@ -999,6 +1344,345 @@
             </strong>
 
         </h2>
+
+
+        <p class="section-description">
+
+            Robots, herramientas robóticas y software
+            desarrollados para educación, investigación
+            y aplicaciones de automatización.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- ROBOTS -->
+
+    <section
+        class="section-block section-light"
+        id="robots"
+    >
+
+        <span class="section-label">
+
+            PRODUCTOS
+
+        </span>
+
+
+        <h2>
+
+            Robots SRC
+
+        </h2>
+
+    </section>
+
+
+
+    <!-- HERRAMIENTAS -->
+
+    <section
+        class="section-block section-gray"
+        id="herramientas"
+    >
+
+        <span class="section-label">
+
+            PRODUCTOS
+
+        </span>
+
+
+        <h2>
+
+            Herramientas robóticas
+
+        </h2>
+
+    </section>
+
+
+
+    <!-- SOFTWARE -->
+
+    <section
+        class="section-block section-light"
+        id="software"
+    >
+
+        <span class="section-label">
+
+            PRODUCTOS
+
+        </span>
+
+
+        <h2>
+
+            Software SRC
+
+        </h2>
+
+    </section>
+
+
+
+    <!-- =========================================
+         APLICACIONES
+    ========================================== -->
+
+    <section
+        class="section-block section-gray"
+        id="aplicaciones"
+    >
+
+
+        <span class="section-label">
+
+            APLICACIONES
+
+        </span>
+
+
+        <h2>
+
+            Tecnología para diferentes necesidades
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Soluciones orientadas a educación,
+            investigación, automatización y robótica.
+
+        </p>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         SOPORTE
+    ========================================== -->
+
+    <section
+        class="section-block section-light"
+        id="soporte"
+    >
+
+
+        <span class="section-label">
+
+            CENTRO DE SOPORTE SRC
+
+        </span>
+
+
+        <h2>
+
+            Documentación y asistencia
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Información para instalar, utilizar,
+            mantener y aprovechar nuestros productos.
+
+        </p>
+
+
+
+        <div class="support-grid">
+
+
+            <a
+                class="support-card"
+                id="soporte-software"
+                href="#soporte-software"
+            >
+
+                <strong>
+
+                    Software SRC
+
+                </strong>
+
+                <span>
+
+                    Configuración y uso del software
+
+                </span>
+
+            </a>
+
+
+
+            <a
+                class="support-card"
+                id="manuales"
+                href="#manuales"
+            >
+
+                <strong>
+
+                    Manuales y guías
+
+                </strong>
+
+                <span>
+
+                    Operación, instalación y configuración
+
+                </span>
+
+            </a>
+
+
+
+            <a
+                class="support-card"
+                id="mantenimiento"
+                href="#mantenimiento"
+            >
+
+                <strong>
+
+                    Mantenimiento
+
+                </strong>
+
+                <span>
+
+                    Cuidados y mantenimiento preventivo
+
+                </span>
+
+            </a>
+
+
+
+            <a
+                class="support-card"
+                id="descargas"
+                href="#descargas"
+            >
+
+                <strong>
+
+                    Descargas
+
+                </strong>
+
+                <span>
+
+                    Software, PDFs y archivos disponibles
+
+                </span>
+
+            </a>
+
+
+
+            <a
+                class="support-card"
+                id="tutoriales"
+                href="#tutoriales"
+            >
+
+                <strong>
+
+                    Tutoriales
+
+                </strong>
+
+                <span>
+
+                    Instrucciones paso a paso
+
+                </span>
+
+            </a>
+
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         EMPRESA
+    ========================================== -->
+
+    <section
+        class="section-block section-gray"
+        id="empresa"
+    >
+
+
+        <span class="section-label">
+
+            EMPRESA
+
+        </span>
+
+
+        <h2>
+
+            Acerca de
+
+            <strong>
+
+                SRC
+
+            </strong>
+
+        </h2>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONTACTO
+    ========================================== -->
+
+    <section
+        class="section-block section-light"
+        id="contacto"
+    >
+
+
+        <span class="section-label">
+
+            CONTACTO
+
+        </span>
+
+
+        <h2>
+
+            Contáctanos
+
+        </h2>
+
+
+        <p class="section-description">
+
+            Próximamente agregaremos aquí
+            los medios oficiales de contacto de SRC.
+
+        </p>
 
 
     </section>
