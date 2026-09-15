@@ -10,7 +10,9 @@
     <title>SAKUTA | Sakuta Robotics Company</title>
 
 
-    <!-- FAVICON SRC -->
+    <!-- =========================================
+         FAVICON SRC
+    ========================================== -->
 
     <link
         rel="icon"
@@ -82,6 +84,7 @@
         .brand {
             display: flex;
             align-items: center;
+
             gap: 10px;
 
             text-decoration: none;
@@ -138,6 +141,7 @@
 
         nav {
             display: flex;
+
             align-items: center;
 
             gap: 35px;
@@ -151,6 +155,7 @@
             text-decoration: none;
 
             font-size: 16px;
+
             font-weight: 600;
 
             position: relative;
@@ -172,9 +177,11 @@
             position: absolute;
 
             left: 0;
+
             bottom: -10px;
 
             width: 0;
+
             height: 2px;
 
             background: var(--blue);
@@ -191,13 +198,14 @@
 
 
         /* =========================================
-           EMPRESA
+           MENÚ EMPRESA
         ========================================== */
 
         .menu-dropdown {
             position: relative;
 
             display: flex;
+
             align-items: center;
 
             height: 82px;
@@ -229,6 +237,7 @@
             position: absolute;
 
             top: 70px;
+
             left: 50%;
 
             transform: translateX(-50%) translateY(8px);
@@ -278,6 +287,7 @@
             color: var(--black);
 
             font-size: 15px;
+
             font-weight: 600;
 
             white-space: nowrap;
@@ -343,9 +353,10 @@
             position: absolute;
 
             top: 55px;
+
             right: 0;
 
-            width: 155px;
+            width: 165px;
 
             background: white;
 
@@ -361,9 +372,13 @@
 
             visibility: hidden;
 
+            pointer-events: none;
+
             transform: translateY(8px);
 
             transition: 0.2s;
+
+            z-index: 2000;
         }
 
 
@@ -371,6 +386,8 @@
             opacity: 1;
 
             visibility: visible;
+
+            pointer-events: auto;
 
             transform: translateY(0);
         }
@@ -462,6 +479,7 @@
             content: "";
 
             width: 38px;
+
             height: 3px;
 
             background: var(--blue);
@@ -579,6 +597,7 @@
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             position: relative;
@@ -608,11 +627,13 @@
             z-index: 2;
 
             width: 380px;
+
             height: 380px;
 
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             border: 2px dashed #d7dce2;
@@ -697,7 +718,7 @@
 
 
         /* =========================================
-           SECCIONES
+           SECCIONES GENERALES
         ========================================== */
 
         .section {
@@ -929,6 +950,7 @@
 
             .brand-logo-crop {
                 width: 52px;
+
                 height: 58px;
 
                 transform: translateY(-7px);
@@ -953,6 +975,11 @@
                 padding: 11px 15px;
 
                 font-size: 13px;
+            }
+
+
+            .language-options {
+                width: 150px;
             }
 
 
@@ -1016,6 +1043,8 @@
     <header>
 
 
+        <!-- LOGO -->
+
         <a
             class="brand"
             href="#inicio"
@@ -1043,7 +1072,9 @@
 
 
 
-        <!-- MENÚ -->
+        <!-- =========================================
+             MENÚ
+        ========================================== -->
 
         <nav>
 
@@ -1100,6 +1131,7 @@
 
                     </span>
 
+
                     <span class="dropdown-arrow">
 
                         ▼
@@ -1143,11 +1175,14 @@
 
 
 
-        <!-- =====================================
-             IDIOMA
-        ====================================== -->
+        <!-- =========================================
+             SELECTOR DE IDIOMA
+        ========================================== -->
 
-        <div class="language-selector" id="languageSelector">
+        <div
+            class="language-selector"
+            id="languageSelector"
+        >
 
 
             <button
@@ -1189,6 +1224,16 @@
                 >
 
                     🇺🇸 English
+
+                </button>
+
+
+                <button
+                    type="button"
+                    data-language="zh"
+                >
+
+                    🇨🇳 中文
 
                 </button>
 
@@ -1289,6 +1334,10 @@
 
 
 
+        <!-- =========================================
+             PIONEER
+        ========================================== -->
+
         <div class="robot-area">
 
 
@@ -1342,6 +1391,7 @@
 
         <div class="feature">
 
+
             <div class="feature-icon">
 
                 ⚙
@@ -1362,11 +1412,13 @@
 
             </p>
 
+
         </div>
 
 
 
         <div class="feature">
+
 
             <div class="feature-icon">
 
@@ -1388,11 +1440,13 @@
 
             </p>
 
+
         </div>
 
 
 
         <div class="feature">
+
 
             <div class="feature-icon">
 
@@ -1414,11 +1468,13 @@
 
             </p>
 
+
         </div>
 
 
 
         <div class="feature">
+
 
             <div class="feature-icon">
 
@@ -1439,6 +1495,7 @@
                 Talento y tecnología nacional
 
             </p>
+
 
         </div>
 
@@ -1585,17 +1642,20 @@
 
         <h2>
 
+
             <span data-i18n="aboutTitle">
 
                 Acerca de
 
             </span>
 
+
             <strong>
 
                 SRC
 
             </strong>
+
 
         </h2>
 
@@ -1692,112 +1752,155 @@
 
 
     <!-- =========================================
-         CAMBIO DE IDIOMA
+         JAVASCRIPT - IDIOMAS
     ========================================== -->
 
     <script>
 
+
         const translations = {
+
+
+            /* =====================================
+               ESPAÑOL
+            ====================================== */
 
             es: {
 
                 navHome: "Inicio",
+
                 navProducts: "Productos",
+
                 navApplications: "Aplicaciones",
+
                 navSupport: "Soporte",
+
                 navCompany: "Empresa",
 
                 aboutUs: "Acerca de nosotros",
+
                 contactUs: "Contáctanos",
 
-                heroSmall: "ROBÓTICA PARA UN MEJOR FUTURO",
+
+                heroSmall:
+                    "ROBÓTICA PARA UN MEJOR FUTURO",
+
 
                 heroDescription:
                     "Diseñamos y desarrollamos soluciones robóticas en México, integrando innovación, educación y aplicaciones reales.",
 
+
                 productsButton:
                     "Conoce nuestros productos →",
+
 
                 aboutButton:
                     "Sobre SRC",
 
+
                 pioneerPlaceholder:
                     "Aquí colocaremos el render del robot",
+
 
                 designTitle:
                     "Diseño",
 
+
                 designDescription:
                     "Mecánico, electrónico y de control",
+
 
                 educationTitle:
                     "Educación",
 
+
                 educationDescription:
                     "Robots para aprender y crear",
+
 
                 innovationTitle:
                     "Innovación",
 
+
                 innovationDescription:
                     "Soluciones para la industria y más",
+
 
                 mexicoTitle:
                     "Desarrollo en México",
 
+
                 mexicoDescription:
                     "Talento y tecnología nacional",
+
 
                 applicationsLabel:
                     "APLICACIONES",
 
+
                 applicationsTitle:
                     "Robótica para diferentes necesidades",
+
 
                 applicationsDescription:
                     "Los sistemas desarrollados por SRC están orientados a diferentes áreas de la robótica, automatización, educación e investigación.",
 
+
                 automationTitle:
                     "Automatización",
+
 
                 automationDescription:
                     "Sistemas robóticos para manipulación, movimientos programados y automatización de procesos.",
 
+
                 applicationEducationTitle:
                     "Educación",
+
 
                 applicationEducationDescription:
                     "Plataformas para aprendizaje de robótica, programación, control y mecatrónica.",
 
+
                 researchTitle:
                     "Investigación",
+
 
                 researchDescription:
                     "Plataformas y herramientas para desarrollo, experimentación y proyectos de investigación.",
 
+
                 companyLabel:
                     "EMPRESA",
+
 
                 aboutTitle:
                     "Acerca de",
 
+
                 companyParagraph1:
                     "Sakuta Robotics Company (SRC) desarrolla soluciones enfocadas en robótica, automatización y tecnología.",
+
 
                 companyParagraph2:
                     "Nuestro objetivo es diseñar y desarrollar sistemas robóticos funcionales para aplicaciones educativas, de investigación y de automatización.",
 
+
                 companyParagraph3:
                     "Diseñado y desarrollado en México por SRC.",
+
 
                 contactLabel:
                     "CONTACTO",
 
+
                 contactTitle:
                     "Contáctanos",
 
+
                 contactDescription:
                     "Próximamente agregaremos aquí los medios oficiales de contacto, redes sociales y atención de SRC.",
+
 
                 languageButton:
                     "Idioma"
@@ -1805,115 +1908,315 @@
             },
 
 
+
+            /* =====================================
+               ENGLISH
+            ====================================== */
+
             en: {
 
                 navHome: "Home",
+
                 navProducts: "Products",
+
                 navApplications: "Applications",
+
                 navSupport: "Support",
+
                 navCompany: "Company",
 
                 aboutUs: "About us",
+
                 contactUs: "Contact us",
+
 
                 heroSmall:
                     "ROBOTICS FOR A BETTER FUTURE",
 
+
                 heroDescription:
                     "We design and develop robotic solutions in Mexico, integrating innovation, education and real-world applications.",
+
 
                 productsButton:
                     "Explore our products →",
 
+
                 aboutButton:
                     "About SRC",
+
 
                 pioneerPlaceholder:
                     "Pioneer robot render will be placed here",
 
+
                 designTitle:
                     "Design",
+
 
                 designDescription:
                     "Mechanical, electronic and control",
 
+
                 educationTitle:
                     "Education",
+
 
                 educationDescription:
                     "Robots to learn and create",
 
+
                 innovationTitle:
                     "Innovation",
+
 
                 innovationDescription:
                     "Solutions for industry and beyond",
 
+
                 mexicoTitle:
                     "Developed in Mexico",
+
 
                 mexicoDescription:
                     "National talent and technology",
 
+
                 applicationsLabel:
                     "APPLICATIONS",
+
 
                 applicationsTitle:
                     "Robotics for different needs",
 
+
                 applicationsDescription:
                     "SRC systems are designed for different areas of robotics, automation, education and research.",
+
 
                 automationTitle:
                     "Automation",
 
+
                 automationDescription:
                     "Robotic systems for manipulation, programmed movements and process automation.",
+
 
                 applicationEducationTitle:
                     "Education",
 
+
                 applicationEducationDescription:
                     "Platforms for learning robotics, programming, control and mechatronics.",
+
 
                 researchTitle:
                     "Research",
 
+
                 researchDescription:
                     "Platforms and tools for development, experimentation and research projects.",
+
 
                 companyLabel:
                     "COMPANY",
 
+
                 aboutTitle:
                     "About",
+
 
                 companyParagraph1:
                     "Sakuta Robotics Company (SRC) develops solutions focused on robotics, automation and technology.",
 
+
                 companyParagraph2:
                     "Our goal is to design and develop functional robotic systems for educational, research and automation applications.",
+
 
                 companyParagraph3:
                     "Designed and developed in Mexico by SRC.",
 
+
                 contactLabel:
                     "CONTACT",
+
 
                 contactTitle:
                     "Contact us",
 
+
                 contactDescription:
                     "Official SRC contact information, social media and support channels will be added here soon.",
 
+
                 languageButton:
                     "Language"
+
+            },
+
+
+
+            /* =====================================
+               中文 - CHINO SIMPLIFICADO
+            ====================================== */
+
+            zh: {
+
+                navHome:
+                    "首页",
+
+                navProducts:
+                    "产品",
+
+                navApplications:
+                    "应用",
+
+                navSupport:
+                    "支持",
+
+                navCompany:
+                    "公司",
+
+                aboutUs:
+                    "关于我们",
+
+                contactUs:
+                    "联系我们",
+
+
+                heroSmall:
+                    "机器人技术，共创美好未来",
+
+
+                heroDescription:
+                    "我们在墨西哥设计和开发机器人解决方案，融合创新、教育与实际应用。",
+
+
+                productsButton:
+                    "了解我们的产品 →",
+
+
+                aboutButton:
+                    "关于 SRC",
+
+
+                pioneerPlaceholder:
+                    "这里将放置 Pioneer 机器人的渲染图",
+
+
+                designTitle:
+                    "设计",
+
+
+                designDescription:
+                    "机械、电子与控制",
+
+
+                educationTitle:
+                    "教育",
+
+
+                educationDescription:
+                    "用于学习与创造的机器人",
+
+
+                innovationTitle:
+                    "创新",
+
+
+                innovationDescription:
+                    "面向工业及更多领域的解决方案",
+
+
+                mexicoTitle:
+                    "墨西哥研发",
+
+
+                mexicoDescription:
+                    "本土人才与技术",
+
+
+                applicationsLabel:
+                    "应用",
+
+
+                applicationsTitle:
+                    "面向不同需求的机器人技术",
+
+
+                applicationsDescription:
+                    "SRC 系统面向机器人、自动化、教育和科研等多个领域。",
+
+
+                automationTitle:
+                    "自动化",
+
+
+                automationDescription:
+                    "用于操作、编程运动和流程自动化的机器人系统。",
+
+
+                applicationEducationTitle:
+                    "教育",
+
+
+                applicationEducationDescription:
+                    "用于学习机器人技术、编程、控制和机电一体化的平台。",
+
+
+                researchTitle:
+                    "科研",
+
+
+                researchDescription:
+                    "用于开发、实验和科研项目的平台与工具。",
+
+
+                companyLabel:
+                    "公司",
+
+
+                aboutTitle:
+                    "关于",
+
+
+                companyParagraph1:
+                    "Sakuta Robotics Company（SRC）专注于机器人、自动化和技术解决方案的开发。",
+
+
+                companyParagraph2:
+                    "我们的目标是设计和开发适用于教育、科研和自动化应用的实用机器人系统。",
+
+
+                companyParagraph3:
+                    "由 SRC 在墨西哥设计和开发。",
+
+
+                contactLabel:
+                    "联系",
+
+
+                contactTitle:
+                    "联系我们",
+
+
+                contactDescription:
+                    "我们将在这里添加 SRC 的官方联系方式、社交媒体和支持渠道。",
+
+
+                languageButton:
+                    "语言"
 
             }
 
         };
 
 
+
+        /* =========================================
+           ELEMENTOS
+        ========================================== */
 
         const languageSelector =
             document.getElementById("languageSelector");
@@ -1928,47 +2231,75 @@
 
 
 
-        languageButton.addEventListener("click", function(event) {
+        /* =========================================
+           ABRIR / CERRAR MENÚ DE IDIOMA
+        ========================================== */
 
-            event.stopPropagation();
+        languageButton.addEventListener(
+            "click",
+            function(event) {
 
-            languageSelector.classList.toggle("open");
+                event.stopPropagation();
 
-        });
+                languageSelector.classList.toggle("open");
 
-
-
-        document.addEventListener("click", function() {
-
-            languageSelector.classList.remove("open");
-
-        });
+            }
+        );
 
 
+
+        document.addEventListener(
+            "click",
+            function() {
+
+                languageSelector.classList.remove("open");
+
+            }
+        );
+
+
+
+        /* =========================================
+           BOTONES DE IDIOMA
+        ========================================== */
 
         document
             .querySelectorAll("[data-language]")
             .forEach(function(button) {
 
 
-                button.addEventListener("click", function() {
+                button.addEventListener(
+                    "click",
+                    function() {
 
 
-                    const language =
-                        button.dataset.language;
+                        const language =
+                            button.dataset.language;
 
 
-                    setLanguage(language);
+                        setLanguage(language);
 
 
-                });
+                    }
+                );
 
 
             });
 
 
 
+        /* =========================================
+           FUNCIÓN PARA CAMBIAR IDIOMA
+        ========================================== */
+
         function setLanguage(language) {
+
+
+            if (!translations[language]) {
+
+                language = "es";
+
+            }
 
 
             document.documentElement.lang = language;
@@ -1994,8 +2325,10 @@
                 });
 
 
+
             languageButtonText.textContent =
                 translations[language].languageButton;
+
 
 
             localStorage.setItem(
@@ -2004,17 +2337,23 @@
             );
 
 
+
             languageSelector.classList.remove("open");
 
         }
 
 
 
+        /* =========================================
+           RECORDAR IDIOMA
+        ========================================== */
+
         const savedLanguage =
             localStorage.getItem("srcLanguage") || "es";
 
 
         setLanguage(savedLanguage);
+
 
     </script>
 
