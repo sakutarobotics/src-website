@@ -12,117 +12,104 @@
     <style>
 
         :root {
-
             --blue: #24579b;
             --blue-dark: #183f78;
-
             --black: #111111;
-
             --gray: #666666;
-
-            --light-gray: #f4f6f8;
-
             --white: #ffffff;
-
         }
-
 
         * {
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
         }
-
 
         html {
-
             scroll-behavior: smooth;
-
         }
-
 
         body {
-
             font-family: Arial, Helvetica, sans-serif;
-
-            background-color: var(--white);
-
+            background: var(--white);
             color: var(--black);
-
         }
-
 
 
         /* =========================================
            HEADER
         ========================================= */
 
-
         header {
-
             width: 100%;
-
             height: 82px;
 
-            background-color: white;
-
+            background: white;
             border-bottom: 1px solid #e8e8e8;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
-            padding-left: 7%;
-
-            padding-right: 7%;
+            padding: 0 7%;
 
             position: sticky;
-
             top: 0;
-
             z-index: 1000;
-
         }
 
 
-
-        /* LOGO SAKUTA */
-
+        /* =========================================
+           LOGO
+        ========================================= */
 
         .brand {
-
             display: flex;
-
             align-items: center;
+            gap: 11px;
 
-            gap: 12px;
-
+            text-decoration: none;
         }
 
 
-        .brand-logo {
+        /*
+           Esta caja recorta la imagen original.
+           Solo deja visible el brazo robótico.
+        */
 
-            width: 48px;
+        .brand-logo-crop {
+            width: 58px;
+            height: 58px;
 
-            height: 48px;
+            position: relative;
 
-            object-fit: contain;
+            overflow: hidden;
+
+            flex-shrink: 0;
+        }
+
+
+        /*
+           La imagen completa se hace más grande
+           y la movemos hasta mostrar únicamente
+           el brazo robótico.
+        */
+
+        .brand-logo-crop img {
+            position: absolute;
+
+            width: 180px;
+            max-width: none;
+
+            left: -62px;
+            top: -33px;
 
             display: block;
-
         }
 
 
         .brand-name {
-
             font-size: 32px;
-
             font-weight: 800;
 
             font-style: italic;
@@ -131,83 +118,69 @@
 
             letter-spacing: -1px;
 
+            white-space: nowrap;
         }
 
 
-
-        /* NAVEGACIÓN */
-
+        /* =========================================
+           MENÚ
+        ========================================= */
 
         nav {
-
             display: flex;
-
             align-items: center;
 
             gap: 38px;
-
         }
 
 
         nav a {
-
             color: var(--black);
 
             text-decoration: none;
 
             font-size: 16px;
-
             font-weight: 600;
 
             position: relative;
 
             transition: 0.2s;
-
         }
 
 
         nav a:hover {
-
             color: var(--blue);
-
         }
 
 
         nav a::after {
-
             content: "";
 
             position: absolute;
 
             left: 0;
-
             bottom: -10px;
 
             width: 0;
-
             height: 2px;
 
-            background-color: var(--blue);
+            background: var(--blue);
 
             transition: 0.25s;
-
         }
 
 
         nav a:hover::after {
-
             width: 100%;
-
         }
 
 
-
-        /* BOTÓN EXPLORAR */
-
+        /* =========================================
+           BOTÓN EXPLORAR
+        ========================================= */
 
         .explore-button {
-
-            background-color: var(--blue);
+            background: var(--blue);
 
             color: white;
 
@@ -220,27 +193,21 @@
             font-weight: bold;
 
             transition: 0.25s;
-
         }
 
 
         .explore-button:hover {
-
-            background-color: var(--blue-dark);
+            background: var(--blue-dark);
 
             transform: translateY(-2px);
-
         }
-
 
 
         /* =========================================
            HERO
         ========================================= */
 
-
         .hero {
-
             min-height: 650px;
 
             padding: 85px 7% 55px;
@@ -254,59 +221,50 @@
             position: relative;
 
             overflow: hidden;
-
         }
-
 
 
         .hero-content {
-
             max-width: 650px;
 
-            z-index: 2;
+            position: relative;
 
+            z-index: 2;
         }
 
 
-
         .small-title {
-
             display: flex;
 
             align-items: center;
 
             gap: 18px;
 
-            color: #777777;
+            color: #777;
 
             letter-spacing: 5px;
 
             font-size: 13px;
 
             margin-bottom: 25px;
-
         }
 
 
         .small-title::before {
-
             content: "";
 
             width: 38px;
-
             height: 3px;
 
-            background-color: var(--blue);
-
+            background: var(--blue);
         }
 
 
-
-        /* TÍTULO PRINCIPAL */
-
+        /* =========================================
+           TÍTULO
+        ========================================= */
 
         .hero h1 {
-
             font-size: clamp(55px, 6vw, 90px);
 
             line-height: 0.92;
@@ -316,28 +274,22 @@
             font-style: italic;
 
             letter-spacing: -3px;
-
         }
 
 
         .hero h2 {
-
             font-size: clamp(35px, 4vw, 62px);
 
             line-height: 1;
 
             margin-top: 10px;
-
             margin-bottom: 28px;
 
             color: var(--black);
-
         }
 
 
-
         .hero-description {
-
             max-width: 590px;
 
             font-size: 21px;
@@ -345,28 +297,24 @@
             line-height: 1.55;
 
             color: var(--gray);
-
         }
 
 
-
-        /* BOTONES HERO */
-
+        /* =========================================
+           BOTONES HERO
+        ========================================= */
 
         .hero-buttons {
-
             display: flex;
 
             gap: 22px;
 
             margin-top: 38px;
-
         }
 
 
         .btn-primary,
         .btn-secondary {
-
             padding: 16px 30px;
 
             border-radius: 30px;
@@ -378,73 +326,54 @@
             font-size: 16px;
 
             transition: 0.25s;
-
         }
 
 
         .btn-primary {
-
-            background-color: var(--blue);
+            background: var(--blue);
 
             color: white;
-
         }
 
 
         .btn-primary:hover {
-
-            background-color: var(--blue-dark);
+            background: var(--blue-dark);
 
             transform: translateY(-2px);
-
         }
 
 
         .btn-secondary {
-
             color: var(--blue);
 
             border: 2px solid var(--blue);
-
         }
 
 
         .btn-secondary:hover {
-
-            background-color: var(--blue);
+            background: var(--blue);
 
             color: white;
-
         }
 
 
-
         /* =========================================
-           ÁREA DEL ROBOT
+           ZONA PIONEER
         ========================================= */
 
-
         .robot-area {
-
             min-height: 480px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             position: relative;
-
         }
 
 
-
-        /* SAKUTA GRANDE DE FONDO */
-
-
         .background-word {
-
             position: absolute;
 
             font-size: clamp(100px, 12vw, 210px);
@@ -458,47 +387,37 @@
             z-index: 0;
 
             user-select: none;
-
         }
 
 
-
-        /* TEMPORALMENTE AQUÍ IRÁ PIONEER */
-
-
         .robot-placeholder {
-
             position: relative;
 
             z-index: 2;
 
             width: 380px;
-
             height: 380px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             border: 2px dashed #d7dce2;
 
             border-radius: 30px;
 
-            color: #999999;
+            color: #999;
 
             text-align: center;
 
             padding: 40px;
 
-            background-color: rgba(255,255,255,0.7);
-
+            background: rgba(255, 255, 255, 0.65);
         }
 
 
         .robot-placeholder strong {
-
             display: block;
 
             color: var(--blue);
@@ -506,18 +425,14 @@
             font-size: 25px;
 
             margin-bottom: 10px;
-
         }
-
 
 
         /* =========================================
            CARACTERÍSTICAS
         ========================================= */
 
-
         .features {
-
             width: 86%;
 
             margin: 0 auto 70px;
@@ -529,256 +444,190 @@
             border-top: 1px solid #eeeeee;
 
             padding-top: 35px;
-
         }
 
 
         .feature {
-
             text-align: center;
 
             padding: 15px 25px;
-
         }
 
 
         .feature:not(:last-child) {
-
             border-right: 1px solid #e3e3e3;
-
         }
 
 
         .feature-icon {
-
             font-size: 34px;
 
             margin-bottom: 13px;
-
         }
 
 
         .feature h3 {
-
             font-size: 19px;
 
             margin-bottom: 7px;
-
         }
 
 
         .feature p {
-
-            color: #777777;
+            color: #777;
 
             font-size: 15px;
 
             line-height: 1.4;
-
         }
-
 
 
         /* =========================================
            PRODUCTOS
         ========================================= */
 
-
         .products-title {
-
             padding: 55px 20px 90px;
 
             text-align: center;
 
-            background-color: #fafafa;
-
+            background: #fafafa;
         }
 
 
         .products-title span {
-
-            color: #777777;
+            color: #777;
 
             letter-spacing: 5px;
 
             font-size: 13px;
-
         }
 
 
         .products-title h2 {
-
             margin-top: 13px;
 
             font-size: 36px;
-
         }
 
 
         .products-title h2 strong {
-
             color: var(--blue);
-
         }
-
 
 
         /* =========================================
            RESPONSIVE
         ========================================= */
 
-
         @media (max-width: 900px) {
 
             nav {
-
                 display: none;
-
             }
 
 
             .explore-button {
-
                 display: none;
-
             }
 
 
             .hero {
-
                 grid-template-columns: 1fr;
 
                 padding-top: 65px;
-
-            }
-
-
-            .hero h1 {
-
-                font-size: 60px;
-
-            }
-
-
-            .hero h2 {
-
-                font-size: 40px;
-
             }
 
 
             .robot-area {
-
                 margin-top: 40px;
-
             }
 
 
             .features {
-
                 grid-template-columns: 1fr 1fr;
-
             }
 
 
             .feature {
-
                 border-right: none !important;
 
                 margin-bottom: 30px;
-
             }
 
         }
 
 
-
         @media (max-width: 550px) {
 
             header {
-
                 height: 70px;
 
                 padding-left: 5%;
 
                 padding-right: 5%;
-
             }
 
 
-            .brand-logo {
+            .brand-logo-crop {
+                width: 48px;
+                height: 48px;
+            }
 
-                width: 40px;
 
-                height: 40px;
+            .brand-logo-crop img {
+                width: 150px;
 
+                left: -52px;
+                top: -28px;
             }
 
 
             .brand-name {
-
                 font-size: 25px;
-
             }
 
 
             .hero {
-
                 padding-left: 6%;
 
                 padding-right: 6%;
-
             }
 
 
             .hero h1 {
-
                 font-size: 48px;
-
             }
 
 
             .hero h2 {
-
                 font-size: 33px;
-
             }
 
 
             .hero-description {
-
                 font-size: 17px;
-
             }
 
 
             .hero-buttons {
-
                 flex-direction: column;
-
             }
 
 
             .hero-buttons a {
-
                 text-align: center;
-
             }
 
 
             .robot-placeholder {
-
                 width: 290px;
-
                 height: 290px;
-
             }
 
 
             .features {
-
                 grid-template-columns: 1fr;
-
             }
 
         }
@@ -795,23 +644,30 @@
          HEADER
     ========================================== -->
 
-
     <header>
 
 
-        <div class="brand">
+        <a class="brand" href="#inicio">
 
-            <img
-                src="logoooweb.PNG"
-                alt="Logo SAKUTA"
-                class="brand-logo"
-            >
 
-            <div class="brand-name">
-                SAKUTA
+            <div class="brand-logo-crop">
+
+                <img
+                    src="logoooweb.PNG"
+                    alt="Logo SAKUTA"
+                >
+
             </div>
 
-        </div>
+
+            <div class="brand-name">
+
+                SAKUTA
+
+            </div>
+
+
+        </a>
 
 
 
@@ -858,7 +714,6 @@
     <!-- =========================================
          INICIO
     ========================================== -->
-
 
     <section
         class="hero"
@@ -935,9 +790,8 @@
 
 
         <!-- =====================================
-             AQUÍ COLOCAREMOS PIONEER
+             PIONEER
         ====================================== -->
-
 
         <div class="robot-area">
 
@@ -955,11 +809,12 @@
                 <div>
 
                     <strong>
+
                         PIONEER
+
                     </strong>
 
-                    Próximamente colocaremos aquí
-                    el render oficial del robot.
+                    Aquí colocaremos el render del robot
 
                 </div>
 
@@ -977,22 +832,27 @@
          CARACTERÍSTICAS
     ========================================== -->
 
-
     <section class="features">
 
 
         <div class="feature">
 
             <div class="feature-icon">
+
                 ⚙
+
             </div>
 
             <h3>
+
                 Diseño
+
             </h3>
 
             <p>
+
                 Mecánico, electrónico y de control
+
             </p>
 
         </div>
@@ -1002,15 +862,21 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 🎓
+
             </div>
 
             <h3>
+
                 Educación
+
             </h3>
 
             <p>
+
                 Robots para aprender y crear
+
             </p>
 
         </div>
@@ -1020,15 +886,21 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 💡
+
             </div>
 
             <h3>
+
                 Innovación
+
             </h3>
 
             <p>
+
                 Soluciones para la industria y más
+
             </p>
 
         </div>
@@ -1038,15 +910,21 @@
         <div class="feature">
 
             <div class="feature-icon">
+
                 ↗
+
             </div>
 
             <h3>
+
                 Desarrollo en México
+
             </h3>
 
             <p>
+
                 Talento y tecnología nacional
+
             </p>
 
         </div>
@@ -1059,7 +937,6 @@
     <!-- =========================================
          PRODUCTOS
     ========================================== -->
-
 
     <section
         class="products-title"
@@ -1079,7 +956,9 @@
             Robótica desarrollada por
 
             <strong>
+
                 SRC
+
             </strong>
 
         </h2>
