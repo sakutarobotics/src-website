@@ -1,64 +1,531 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SRC | Sakuta Robotics Company</title>
+<title>SAKUTA | Sakuta Robotics Company</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+<style>
+    :root {
+        --blue: #24579b;
+        --blue-dark: #17447f;
+        --black: #111111;
+        --gray: #666666;
+        --light-gray: #f4f6f8;
+        --white: #ffffff;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: var(--white);
+        color: var(--black);
+    }
+
+    /* =========================
+       HEADER
+    ========================== */
+
+    header {
+        width: 100%;
+        height: 82px;
+        background: white;
+        border-bottom: 1px solid #e8e8e8;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 7%;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+    }
+
+    .brand-icon {
+        font-size: 34px;
+    }
+
+    .brand-name {
+        font-size: 32px;
+        font-weight: 800;
+        font-style: italic;
+        color: var(--blue);
+        letter-spacing: -1px;
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        gap: 38px;
+    }
+
+    nav a {
+        color: var(--black);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        transition: 0.2s;
+    }
+
+    nav a:hover {
+        color: var(--blue);
+    }
+
+    .explore-button {
+        background: var(--blue);
+        color: white;
+        text-decoration: none;
+
+        padding: 13px 27px;
+        border-radius: 30px;
+
+        font-weight: bold;
+        transition: 0.2s;
+    }
+
+    .explore-button:hover {
+        background: var(--blue-dark);
+        transform: translateY(-2px);
+    }
+
+    /* =========================
+       HERO
+    ========================== */
+
+    .hero {
+        min-height: 650px;
+        padding: 90px 7% 55px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-content {
+        max-width: 650px;
+        z-index: 2;
+    }
+
+    .small-title {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+
+        color: #777;
+        letter-spacing: 5px;
+        font-size: 13px;
+
+        margin-bottom: 25px;
+    }
+
+    .small-title::before {
+        content: "";
+        width: 38px;
+        height: 3px;
+        background: var(--blue);
+    }
+
+    .hero h1 {
+        font-size: clamp(55px, 6vw, 90px);
+        line-height: 0.92;
+        color: var(--blue);
+        font-style: italic;
+        letter-spacing: -3px;
+    }
+
+    .hero h2 {
+        font-size: clamp(35px, 4vw, 62px);
+        line-height: 1;
+        margin-top: 10px;
+        margin-bottom: 28px;
+    }
+
+    .hero-description {
+        max-width: 590px;
+
+        font-size: 21px;
+        line-height: 1.55;
+
+        color: var(--gray);
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 22px;
+        margin-top: 38px;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        padding: 16px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+
+        transition: 0.2s;
+    }
+
+    .btn-primary {
+        background: var(--blue);
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: var(--blue-dark);
+        transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+        color: var(--blue);
+        border: 2px solid var(--blue);
+    }
+
+    .btn-secondary:hover {
+        background: var(--blue);
+        color: white;
+    }
+
+    /* =========================
+       ROBOT AREA
+    ========================== */
+
+    .robot-area {
+        min-height: 480px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: relative;
+    }
+
+    .background-word {
+        position: absolute;
+
+        font-size: clamp(100px, 12vw, 210px);
+        font-weight: 900;
+        font-style: italic;
+
+        color: #f0f2f5;
+
+        z-index: 0;
+        user-select: none;
+    }
+
+    .robot-placeholder {
+        position: relative;
+        z-index: 2;
+
+        width: 380px;
+        height: 380px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border: 2px dashed #d7dce2;
+        border-radius: 30px;
+
+        color: #999;
+        text-align: center;
+
+        padding: 40px;
+    }
+
+    .robot-placeholder strong {
+        display: block;
+        color: var(--blue);
+        font-size: 22px;
+        margin-bottom: 8px;
+    }
+
+    /* =========================
+       FEATURES
+    ========================== */
+
+    .features {
+        width: 86%;
+        margin: 0 auto 70px;
+
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        border-top: 1px solid #eeeeee;
+        padding-top: 35px;
+    }
+
+    .feature {
+        text-align: center;
+        padding: 15px 25px;
+    }
+
+    .feature:not(:last-child) {
+        border-right: 1px solid #e3e3e3;
+    }
+
+    .feature-icon {
+        font-size: 34px;
+        margin-bottom: 13px;
+    }
+
+    .feature h3 {
+        font-size: 19px;
+        margin-bottom: 7px;
+    }
+
+    .feature p {
+        color: #777;
+        font-size: 15px;
+    }
+
+    /* =========================
+       NEXT SECTION
+    ========================== */
+
+    .products-title {
+        padding: 45px 20px 90px;
+        text-align: center;
+        background: #fafafa;
+    }
+
+    .products-title span {
+        color: #777;
+        letter-spacing: 5px;
+        font-size: 13px;
+    }
+
+    .products-title h2 {
+        margin-top: 13px;
+        font-size: 36px;
+    }
+
+    .products-title h2 strong {
+        color: var(--blue);
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================== */
+
+    @media (max-width: 900px) {
+
+        nav {
+            display: none;
         }
 
-        body {
-            background-color: #ffffff;
-            color: #111111;
-            font-family: Arial, Helvetica, sans-serif;
-
-            min-height: 100vh;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .explore-button {
+            display: none;
         }
 
-        .container {
+        .hero {
+            grid-template-columns: 1fr;
+            padding-top: 65px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+        }
+
+        .hero h2 {
+            font-size: 40px;
+        }
+
+        .robot-area {
+            margin-top: 40px;
+        }
+
+        .features {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .feature {
+            border-right: none !important;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 550px) {
+
+        header {
+            height: 70px;
+        }
+
+        .brand-name {
+            font-size: 25px;
+        }
+
+        .hero {
+            padding-left: 6%;
+            padding-right: 6%;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .hero h2 {
+            font-size: 33px;
+        }
+
+        .hero-description {
+            font-size: 17px;
+        }
+
+        .hero-buttons {
+            flex-direction: column;
+        }
+
+        .hero-buttons a {
             text-align: center;
         }
 
-        .logo {
-            font-size: 80px;
-            font-weight: bold;
-            color: #168cff;
-            margin-bottom: 10px;
+        .robot-placeholder {
+            width: 290px;
+            height: 290px;
         }
 
-        h1 {
-            font-size: 26px;
-            margin-bottom: 14px;
+        .features {
+            grid-template-columns: 1fr;
         }
+    }
 
-        p {
-            font-size: 17px;
-            color: #555555;
-        }
-    </style>
+</style>
 </head>
 
 <body>
 
-    <main class="container">
+<header>
 
-        <div class="logo">SRC</div>
+    <div class="brand">
+        <div class="brand-icon">⚙</div>
+        <div class="brand-name">SAKUTA</div>
+    </div>
 
-        <h1>Sakuta Robotics Company</h1>
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
 
-        <p>Robótica diseñada y desarrollada en México.</p>
+    <a class="explore-button" href="#productos">
+        Explorar →
+    </a>
 
-    </main>
+</header>
+
+
+<section class="hero" id="inicio">
+
+    <div class="hero-content">
+
+        <div class="small-title">
+            ROBÓTICA PARA UN MEJOR FUTURO
+        </div>
+
+        <h1>SAKUTA</h1>
+
+        <h2>Robotics Company</h2>
+
+        <p class="hero-description">
+            Diseñamos y desarrollamos soluciones robóticas
+            en México, integrando innovación, educación
+            y aplicaciones reales.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a class="btn-primary" href="#proyectos">
+                Conoce nuestros proyectos →
+            </a>
+
+            <a class="btn-secondary" href="#nosotros">
+                Sobre SRC
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="robot-area">
+
+        <div class="background-word">
+            SAKUTA
+        </div>
+
+        <div class="robot-placeholder">
+            <div>
+                <strong>PIONEER</strong>
+                Aquí colocaremos el render del robot
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="features">
+
+    <div class="feature">
+        <div class="feature-icon">⚙</div>
+        <h3>Diseño</h3>
+        <p>Mecánico, electrónico y de control</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">🎓</div>
+        <h3>Educación</h3>
+        <p>Robots para aprender y crear</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">💡</div>
+        <h3>Innovación</h3>
+        <p>Soluciones para la industria y más</p>
+    </div>
+
+    <div class="feature">
+        <div class="feature-icon">↗</div>
+        <h3>Desarrollo en México</h3>
+        <p>Talento y tecnología nacional</p>
+    </div>
+
+</section>
+
+
+<section class="products-title" id="productos">
+
+    <span>NUESTROS PRODUCTOS</span>
+
+    <h2>
+        Robótica desarrollada por <strong>SRC</strong>
+    </h2>
+
+</section>
 
 </body>
 </html>
