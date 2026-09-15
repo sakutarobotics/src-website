@@ -10,9 +10,7 @@
     <title>SAKUTA | Sakuta Robotics Company</title>
 
 
-    <!-- =========================================
-         FAVICON SRC
-    ========================================== -->
+    <!-- FAVICON SRC -->
 
     <link
         rel="icon"
@@ -78,13 +76,12 @@
 
 
         /* =========================================
-           LOGO SAKUTA
+           LOGO
         ========================================== */
 
         .brand {
             display: flex;
             align-items: center;
-
             gap: 10px;
 
             text-decoration: none;
@@ -96,7 +93,6 @@
             height: 70px;
 
             position: relative;
-
             overflow: hidden;
 
             flex-shrink: 0;
@@ -109,11 +105,9 @@
             position: absolute;
 
             width: 118px;
-
             max-width: none;
 
             left: -27px;
-
             top: -10px;
 
             display: block;
@@ -141,7 +135,6 @@
 
         nav {
             display: flex;
-
             align-items: center;
 
             gap: 35px;
@@ -155,7 +148,6 @@
             text-decoration: none;
 
             font-size: 16px;
-
             font-weight: 600;
 
             position: relative;
@@ -177,11 +169,9 @@
             position: absolute;
 
             left: 0;
-
             bottom: -10px;
 
             width: 0;
-
             height: 2px;
 
             background: var(--blue);
@@ -198,14 +188,13 @@
 
 
         /* =========================================
-           MENÚ EMPRESA
+           EMPRESA - DROPDOWN
         ========================================== */
 
         .menu-dropdown {
             position: relative;
 
             display: flex;
-
             align-items: center;
 
             height: 82px;
@@ -214,7 +203,6 @@
 
         .menu-dropdown > a {
             display: flex;
-
             align-items: center;
 
             gap: 7px;
@@ -237,7 +225,6 @@
             position: absolute;
 
             top: 70px;
-
             left: 50%;
 
             transform: translateX(-50%) translateY(8px);
@@ -255,9 +242,7 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
 
             opacity: 0;
-
             visibility: hidden;
-
             pointer-events: none;
 
             transition: 0.20s;
@@ -266,9 +251,7 @@
 
         .menu-dropdown:hover .dropdown-menu {
             opacity: 1;
-
             visibility: visible;
-
             pointer-events: auto;
 
             transform: translateX(-50%) translateY(0);
@@ -287,7 +270,6 @@
             color: var(--black);
 
             font-size: 15px;
-
             font-weight: 600;
 
             white-space: nowrap;
@@ -317,7 +299,6 @@
             border: none;
 
             background: var(--blue);
-
             color: white;
 
             padding: 13px 24px;
@@ -327,13 +308,11 @@
             font-family: inherit;
 
             font-size: 15px;
-
             font-weight: bold;
 
             cursor: pointer;
 
             display: flex;
-
             align-items: center;
 
             gap: 8px;
@@ -353,7 +332,6 @@
             position: absolute;
 
             top: 55px;
-
             right: 0;
 
             width: 165px;
@@ -369,9 +347,7 @@
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
 
             opacity: 0;
-
             visibility: hidden;
-
             pointer-events: none;
 
             transform: translateY(8px);
@@ -384,9 +360,7 @@
 
         .language-selector.open .language-options {
             opacity: 1;
-
             visibility: visible;
-
             pointer-events: auto;
 
             transform: translateY(0);
@@ -409,7 +383,6 @@
             font-family: inherit;
 
             font-size: 14px;
-
             font-weight: 600;
 
             color: var(--black);
@@ -438,7 +411,6 @@
             padding: 85px 7% 55px;
 
             display: grid;
-
             grid-template-columns: 1fr 1fr;
 
             align-items: center;
@@ -460,7 +432,6 @@
 
         .small-title {
             display: flex;
-
             align-items: center;
 
             gap: 18px;
@@ -479,17 +450,11 @@
             content: "";
 
             width: 38px;
-
             height: 3px;
 
             background: var(--blue);
         }
 
-
-
-        /* =========================================
-           TÍTULOS
-        ========================================== */
 
         .hero h1 {
             font-size: clamp(55px, 6vw, 90px);
@@ -510,7 +475,6 @@
             line-height: 1;
 
             margin-top: 10px;
-
             margin-bottom: 28px;
 
             color: var(--black);
@@ -597,7 +561,6 @@
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             position: relative;
@@ -627,13 +590,11 @@
             z-index: 2;
 
             width: 380px;
-
             height: 380px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             border: 2px dashed #d7dce2;
@@ -646,7 +607,7 @@
 
             padding: 40px;
 
-            background: rgba(255, 255, 255, 0.65);
+            background: rgba(255,255,255,0.65);
         }
 
 
@@ -859,37 +820,232 @@
 
 
         /* =========================================
-           CONTACTO
+           FOOTER SRC
         ========================================== */
 
-        .contact-box {
-            max-width: 800px;
+        .site-footer {
+            background: var(--blue);
 
-            margin: 40px auto 0;
+            color: white;
 
-            padding: 45px;
-
-            border: 1px solid #e6e9ee;
-
-            border-radius: 18px;
-
-            background: white;
+            padding: 80px 7% 0;
         }
 
 
-        .contact-box h3 {
-            color: var(--blue);
+        .footer-heading {
+            text-align: center;
 
-            font-size: 26px;
+            max-width: 760px;
+
+            margin: 0 auto 55px;
+        }
+
+
+        .footer-label {
+            font-size: 13px;
+
+            letter-spacing: 5px;
+
+            opacity: 0.75;
+        }
+
+
+        .footer-heading h2 {
+            font-size: 42px;
+
+            margin-top: 14px;
 
             margin-bottom: 15px;
         }
 
 
-        .contact-box p {
-            color: var(--gray);
+        .footer-heading p {
+            font-size: 17px;
 
             line-height: 1.6;
+
+            color: rgba(255,255,255,0.82);
+        }
+
+
+
+        /* =========================================
+           CONTACTOS FOOTER
+        ========================================== */
+
+        .footer-contact-grid {
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            display: grid;
+
+            grid-template-columns: repeat(5, 1fr);
+
+            gap: 18px;
+        }
+
+
+        .footer-contact {
+            min-height: 190px;
+
+            padding: 28px 18px;
+
+            border: 1px solid rgba(255,255,255,0.22);
+
+            border-radius: 18px;
+
+            text-decoration: none;
+
+            color: white;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            transition: 0.25s;
+        }
+
+
+        .footer-contact:hover {
+            background: white;
+
+            color: var(--blue);
+
+            transform: translateY(-5px);
+
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+
+
+        .footer-icon {
+            width: 52px;
+            height: 52px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.35);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            margin-bottom: 17px;
+
+            transition: 0.25s;
+        }
+
+
+        .footer-contact:hover .footer-icon {
+            border-color: var(--blue);
+
+            background: rgba(36,87,155,0.08);
+        }
+
+
+        .footer-icon svg {
+            width: 26px;
+            height: 26px;
+
+            fill: none;
+
+            stroke: currentColor;
+
+            stroke-width: 2;
+
+            stroke-linecap: round;
+
+            stroke-linejoin: round;
+        }
+
+
+        .footer-contact h3 {
+            font-size: 17px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .footer-contact p {
+            font-size: 13px;
+
+            color: rgba(255,255,255,0.78);
+
+            line-height: 1.45;
+
+            overflow-wrap: anywhere;
+        }
+
+
+        .footer-contact:hover p {
+            color: var(--blue-dark);
+        }
+
+
+
+        /* =========================================
+           PARTE INFERIOR FOOTER
+        ========================================== */
+
+        .footer-bottom {
+            margin-top: 65px;
+
+            padding: 30px 0;
+
+            border-top: 1px solid rgba(255,255,255,0.22);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 30px;
+        }
+
+
+        .footer-brand {
+            font-size: 27px;
+
+            font-weight: 800;
+
+            font-style: italic;
+
+            letter-spacing: -1px;
+        }
+
+
+        .footer-brand span {
+            display: block;
+
+            margin-top: 4px;
+
+            font-size: 11px;
+
+            font-weight: 500;
+
+            font-style: normal;
+
+            letter-spacing: 2px;
+
+            opacity: 0.7;
+        }
+
+
+        .footer-copyright {
+            color: rgba(255,255,255,0.72);
+
+            font-size: 13px;
+
+            text-align: right;
         }
 
 
@@ -897,6 +1053,15 @@
         /* =========================================
            RESPONSIVE
         ========================================== */
+
+        @media (max-width: 1050px) {
+
+            .footer-contact-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+        }
+
 
         @media (max-width: 900px) {
 
@@ -936,6 +1101,26 @@
         }
 
 
+        @media (max-width: 700px) {
+
+            .footer-contact-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            .footer-bottom {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+
+            .footer-copyright {
+                text-align: center;
+            }
+
+        }
+
 
         @media (max-width: 550px) {
 
@@ -943,14 +1128,12 @@
                 height: 70px;
 
                 padding-left: 5%;
-
                 padding-right: 5%;
             }
 
 
             .brand-logo-crop {
                 width: 52px;
-
                 height: 58px;
 
                 transform: translateY(-7px);
@@ -961,7 +1144,6 @@
                 width: 100px;
 
                 left: -23px;
-
                 top: -8px;
             }
 
@@ -978,14 +1160,8 @@
             }
 
 
-            .language-options {
-                width: 150px;
-            }
-
-
             .hero {
                 padding-left: 6%;
-
                 padding-right: 6%;
             }
 
@@ -1017,13 +1193,28 @@
 
             .robot-placeholder {
                 width: 290px;
-
                 height: 290px;
             }
 
 
             .features {
                 grid-template-columns: 1fr;
+            }
+
+
+            .site-footer {
+                padding-left: 6%;
+                padding-right: 6%;
+            }
+
+
+            .footer-contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .footer-heading h2 {
+                font-size: 34px;
             }
 
         }
@@ -1042,8 +1233,6 @@
 
     <header>
 
-
-        <!-- LOGO -->
 
         <a
             class="brand"
@@ -1072,10 +1261,6 @@
 
 
 
-        <!-- =========================================
-             MENÚ
-        ========================================== -->
-
         <nav>
 
 
@@ -1083,9 +1268,7 @@
                 href="#inicio"
                 data-i18n="navHome"
             >
-
                 Inicio
-
             </a>
 
 
@@ -1093,9 +1276,7 @@
                 href="productos.html"
                 data-i18n="navProducts"
             >
-
                 Productos
-
             </a>
 
 
@@ -1103,9 +1284,7 @@
                 href="#aplicaciones"
                 data-i18n="navApplications"
             >
-
                 Aplicaciones
-
             </a>
 
 
@@ -1113,9 +1292,7 @@
                 href="soporte.html"
                 data-i18n="navSupport"
             >
-
                 Soporte
-
             </a>
 
 
@@ -1131,15 +1308,11 @@
 
                     </span>
 
-
                     <span class="dropdown-arrow">
-
                         ▼
-
                     </span>
 
                 </a>
-
 
 
                 <div class="dropdown-menu">
@@ -1149,9 +1322,7 @@
                         href="#empresa"
                         data-i18n="aboutUs"
                     >
-
                         Acerca de nosotros
-
                     </a>
 
 
@@ -1159,9 +1330,7 @@
                         href="#contacto"
                         data-i18n="contactUs"
                     >
-
                         Contáctanos
-
                     </a>
 
 
@@ -1175,9 +1344,7 @@
 
 
 
-        <!-- =========================================
-             SELECTOR DE IDIOMA
-        ========================================== -->
+        <!-- IDIOMA -->
 
         <div
             class="language-selector"
@@ -1204,7 +1371,6 @@
             </button>
 
 
-
             <div class="language-options">
 
 
@@ -1212,9 +1378,7 @@
                     type="button"
                     data-language="es"
                 >
-
                     🇲🇽 Español
-
                 </button>
 
 
@@ -1222,9 +1386,7 @@
                     type="button"
                     data-language="en"
                 >
-
                     🇺🇸 English
-
                 </button>
 
 
@@ -1232,9 +1394,7 @@
                     type="button"
                     data-language="zh"
                 >
-
                     🇨🇳 中文
-
                 </button>
 
 
@@ -1265,38 +1425,27 @@
                 class="small-title"
                 data-i18n="heroSmall"
             >
-
                 ROBÓTICA PARA UN MEJOR FUTURO
-
             </div>
 
 
-
             <h1>
-
                 SAKUTA
-
             </h1>
 
 
-
             <h2>
-
                 Robotics Company
-
             </h2>
-
 
 
             <p
                 class="hero-description"
                 data-i18n="heroDescription"
             >
-
                 Diseñamos y desarrollamos soluciones robóticas
                 en México, integrando innovación, educación
                 y aplicaciones reales.
-
             </p>
 
 
@@ -1309,11 +1458,8 @@
                     href="productos.html"
                     data-i18n="productsButton"
                 >
-
                     Conoce nuestros productos →
-
                 </a>
-
 
 
                 <a
@@ -1321,9 +1467,7 @@
                     href="#empresa"
                     data-i18n="aboutButton"
                 >
-
                     Sobre SRC
-
                 </a>
 
 
@@ -1334,9 +1478,7 @@
 
 
 
-        <!-- =========================================
-             PIONEER
-        ========================================== -->
+        <!-- PIONEER -->
 
         <div class="robot-area">
 
@@ -1348,7 +1490,6 @@
             </div>
 
 
-
             <div class="robot-placeholder">
 
 
@@ -1356,16 +1497,12 @@
 
 
                     <strong>
-
                         PIONEER
-
                     </strong>
 
 
                     <span data-i18n="pioneerPlaceholder">
-
                         Aquí colocaremos el render del robot
-
                     </span>
 
 
@@ -1391,27 +1528,17 @@
 
         <div class="feature">
 
-
             <div class="feature-icon">
-
                 ⚙
-
             </div>
-
 
             <h3 data-i18n="designTitle">
-
                 Diseño
-
             </h3>
-
 
             <p data-i18n="designDescription">
-
                 Mecánico, electrónico y de control
-
             </p>
-
 
         </div>
 
@@ -1419,27 +1546,17 @@
 
         <div class="feature">
 
-
             <div class="feature-icon">
-
                 🎓
-
             </div>
-
 
             <h3 data-i18n="educationTitle">
-
                 Educación
-
             </h3>
-
 
             <p data-i18n="educationDescription">
-
                 Robots para aprender y crear
-
             </p>
-
 
         </div>
 
@@ -1447,27 +1564,17 @@
 
         <div class="feature">
 
-
             <div class="feature-icon">
-
                 💡
-
             </div>
-
 
             <h3 data-i18n="innovationTitle">
-
                 Innovación
-
             </h3>
 
-
             <p data-i18n="innovationDescription">
-
                 Soluciones para la industria y más
-
             </p>
-
 
         </div>
 
@@ -1475,27 +1582,17 @@
 
         <div class="feature">
 
-
             <div class="feature-icon">
-
                 ↗
-
             </div>
 
-
             <h3 data-i18n="mexicoTitle">
-
                 Desarrollo en México
-
             </h3>
 
-
             <p data-i18n="mexicoDescription">
-
                 Talento y tecnología nacional
-
             </p>
-
 
         </div>
 
@@ -1518,16 +1615,12 @@
             class="section-label"
             data-i18n="applicationsLabel"
         >
-
             APLICACIONES
-
         </span>
 
 
         <h2 data-i18n="applicationsTitle">
-
             Robótica para diferentes necesidades
-
         </h2>
 
 
@@ -1535,11 +1628,9 @@
             class="section-description"
             data-i18n="applicationsDescription"
         >
-
             Los sistemas desarrollados por SRC están orientados
             a diferentes áreas de la robótica, automatización,
             educación e investigación.
-
         </p>
 
 
@@ -1549,44 +1640,30 @@
 
             <div class="application-card">
 
-
                 <h3 data-i18n="automationTitle">
-
                     Automatización
-
                 </h3>
 
-
                 <p data-i18n="automationDescription">
-
                     Sistemas robóticos para manipulación,
                     movimientos programados y automatización
                     de procesos.
-
                 </p>
-
 
             </div>
 
 
 
             <div class="application-card">
-
 
                 <h3 data-i18n="applicationEducationTitle">
-
                     Educación
-
                 </h3>
 
-
                 <p data-i18n="applicationEducationDescription">
-
                     Plataformas para aprendizaje de robótica,
                     programación, control y mecatrónica.
-
                 </p>
-
 
             </div>
 
@@ -1594,21 +1671,14 @@
 
             <div class="application-card">
 
-
                 <h3 data-i18n="researchTitle">
-
                     Investigación
-
                 </h3>
 
-
                 <p data-i18n="researchDescription">
-
                     Plataformas y herramientas para desarrollo,
                     experimentación y proyectos de investigación.
-
                 </p>
-
 
             </div>
 
@@ -1634,28 +1704,19 @@
             class="section-label"
             data-i18n="companyLabel"
         >
-
             EMPRESA
-
         </span>
 
 
         <h2>
 
-
             <span data-i18n="aboutTitle">
-
                 Acerca de
-
             </span>
 
-
             <strong>
-
                 SRC
-
             </strong>
-
 
         </h2>
 
@@ -1665,28 +1726,22 @@
 
 
             <p data-i18n="companyParagraph1">
-
                 Sakuta Robotics Company (SRC) desarrolla
                 soluciones enfocadas en robótica,
                 automatización y tecnología.
-
             </p>
 
 
             <p data-i18n="companyParagraph2">
-
                 Nuestro objetivo es diseñar y desarrollar
                 sistemas robóticos funcionales para
                 aplicaciones educativas, de investigación
                 y de automatización.
-
             </p>
 
 
             <p data-i18n="companyParagraph3">
-
                 Diseñado y desarrollado en México por SRC.
-
             </p>
 
 
@@ -1698,61 +1753,290 @@
 
 
     <!-- =========================================
-         CONTACTO
+         FOOTER / CONTACTO
     ========================================== -->
 
-    <section
-        class="section section-gray"
+    <footer
+        class="site-footer"
         id="contacto"
     >
 
 
-        <span
-            class="section-label"
-            data-i18n="contactLabel"
-        >
-
-            CONTACTO
-
-        </span>
+        <div class="footer-heading">
 
 
-        <h2 data-i18n="contactTitle">
-
-            Contáctanos
-
-        </h2>
-
-
-
-        <div class="contact-box">
+            <span
+                class="footer-label"
+                data-i18n="footerLabel"
+            >
+                CONTACTO
+            </span>
 
 
-            <h3>
-
-                Sakuta Robotics Company
-
-            </h3>
+            <h2 data-i18n="footerTitle">
+                Contáctanos
+            </h2>
 
 
-            <p data-i18n="contactDescription">
-
-                Próximamente agregaremos aquí
-                los medios oficiales de contacto,
-                redes sociales y atención de SRC.
-
+            <p data-i18n="footerDescription">
+                Conecta con Sakuta Robotics Company.
+                Estamos disponibles a través de nuestros
+                canales oficiales.
             </p>
 
 
         </div>
 
 
-    </section>
+
+        <div class="footer-contact-grid">
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                class="footer-contact"
+                href="https://wa.me/526568630623"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp SRC"
+            >
+
+
+                <div class="footer-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M21 11.5a8.5 8.5 0 0 1-12.7 7.4L3 20.5l1.6-5.1A8.5 8.5 0 1 1 21 11.5z"></path>
+
+                        <path d="M8.7 8.2c.4 3.2 2.4 5.2 5.6 6.1"></path>
+
+                        <path d="M8.7 8.2l1.4-.7 1.1 2-1 .9"></path>
+
+                        <path d="M14.3 14.3l.8-1 2 1.1-.6 1.4"></path>
+
+                    </svg>
+
+                </div>
+
+
+                <h3>
+                    WhatsApp
+                </h3>
+
+
+                <p>
+                    +52 656 863 0623
+                </p>
+
+
+            </a>
+
+
+
+            <!-- EMAIL -->
+
+            <a
+                class="footer-contact"
+                href="mailto:rmsakuta@gmail.com"
+                aria-label="Correo electrónico SRC"
+            >
+
+
+                <div class="footer-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+
+                        <path d="M3 7l9 6 9-6"></path>
+
+                    </svg>
+
+                </div>
+
+
+                <h3 data-i18n="emailTitle">
+                    Correo
+                </h3>
+
+
+                <p>
+                    rmsakuta@gmail.com
+                </p>
+
+
+            </a>
+
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                class="footer-contact"
+                href="https://www.instagram.com/sak_src/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram SRC"
+            >
+
+
+                <div class="footer-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+
+                        <circle cx="12" cy="12" r="4"></circle>
+
+                        <circle
+                            cx="17.5"
+                            cy="6.5"
+                            r="0.8"
+                            fill="currentColor"
+                            stroke="none"
+                        ></circle>
+
+                    </svg>
+
+                </div>
+
+
+                <h3>
+                    Instagram
+                </h3>
+
+
+                <p>
+                    @sak_src
+                </p>
+
+
+            </a>
+
+
+
+            <!-- YOUTUBE -->
+
+            <a
+                class="footer-contact"
+                href="https://www.youtube.com/results?search_query=SAKUTA+SRC"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="YouTube SAKUTA SRC"
+            >
+
+
+                <div class="footer-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <rect
+                            x="3"
+                            y="6"
+                            width="18"
+                            height="12"
+                            rx="4"
+                        ></rect>
+
+                        <path
+                            d="M10 9l5 3-5 3z"
+                            fill="currentColor"
+                            stroke="none"
+                        ></path>
+
+                    </svg>
+
+                </div>
+
+
+                <h3>
+                    YouTube
+                </h3>
+
+
+                <p>
+                    SAKUTA SRC
+                </p>
+
+
+            </a>
+
+
+
+            <!-- FACEBOOK -->
+
+            <a
+                class="footer-contact"
+                href="https://www.facebook.com/search/top?q=Sakuta"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook Sakuta"
+            >
+
+
+                <div class="footer-icon">
+
+                    <svg viewBox="0 0 24 24">
+
+                        <path d="M14 8h3V4h-3c-3 0-5 2-5 5v3H6v4h3v5h4v-5h3l1-4h-4V9c0-.7.3-1 1-1z"></path>
+
+                    </svg>
+
+                </div>
+
+
+                <h3>
+                    Facebook
+                </h3>
+
+
+                <p>
+                    Sakuta
+                </p>
+
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- PARTE INFERIOR -->
+
+        <div class="footer-bottom">
+
+
+            <div class="footer-brand">
+
+                SAKUTA
+
+                <span>
+                    ROBOTICS COMPANY
+                </span>
+
+            </div>
+
+
+            <p
+                class="footer-copyright"
+                data-i18n="copyright"
+            >
+                © 2026 Sakuta Robotics Company (SRC).
+                Todos los derechos reservados.
+            </p>
+
+
+        </div>
+
+
+    </footer>
 
 
 
     <!-- =========================================
-         JAVASCRIPT - IDIOMAS
+         IDIOMAS
     ========================================== -->
 
     <script>
@@ -1768,139 +2052,109 @@
             es: {
 
                 navHome: "Inicio",
-
                 navProducts: "Productos",
-
                 navApplications: "Aplicaciones",
-
                 navSupport: "Soporte",
-
                 navCompany: "Empresa",
 
                 aboutUs: "Acerca de nosotros",
-
                 contactUs: "Contáctanos",
-
 
                 heroSmall:
                     "ROBÓTICA PARA UN MEJOR FUTURO",
 
-
                 heroDescription:
                     "Diseñamos y desarrollamos soluciones robóticas en México, integrando innovación, educación y aplicaciones reales.",
-
 
                 productsButton:
                     "Conoce nuestros productos →",
 
-
                 aboutButton:
                     "Sobre SRC",
-
 
                 pioneerPlaceholder:
                     "Aquí colocaremos el render del robot",
 
-
                 designTitle:
                     "Diseño",
-
 
                 designDescription:
                     "Mecánico, electrónico y de control",
 
-
                 educationTitle:
                     "Educación",
-
 
                 educationDescription:
                     "Robots para aprender y crear",
 
-
                 innovationTitle:
                     "Innovación",
-
 
                 innovationDescription:
                     "Soluciones para la industria y más",
 
-
                 mexicoTitle:
                     "Desarrollo en México",
-
 
                 mexicoDescription:
                     "Talento y tecnología nacional",
 
-
                 applicationsLabel:
                     "APLICACIONES",
-
 
                 applicationsTitle:
                     "Robótica para diferentes necesidades",
 
-
                 applicationsDescription:
                     "Los sistemas desarrollados por SRC están orientados a diferentes áreas de la robótica, automatización, educación e investigación.",
-
 
                 automationTitle:
                     "Automatización",
 
-
                 automationDescription:
                     "Sistemas robóticos para manipulación, movimientos programados y automatización de procesos.",
-
 
                 applicationEducationTitle:
                     "Educación",
 
-
                 applicationEducationDescription:
                     "Plataformas para aprendizaje de robótica, programación, control y mecatrónica.",
-
 
                 researchTitle:
                     "Investigación",
 
-
                 researchDescription:
                     "Plataformas y herramientas para desarrollo, experimentación y proyectos de investigación.",
-
 
                 companyLabel:
                     "EMPRESA",
 
-
                 aboutTitle:
                     "Acerca de",
-
 
                 companyParagraph1:
                     "Sakuta Robotics Company (SRC) desarrolla soluciones enfocadas en robótica, automatización y tecnología.",
 
-
                 companyParagraph2:
                     "Nuestro objetivo es diseñar y desarrollar sistemas robóticos funcionales para aplicaciones educativas, de investigación y de automatización.",
-
 
                 companyParagraph3:
                     "Diseñado y desarrollado en México por SRC.",
 
-
-                contactLabel:
+                footerLabel:
                     "CONTACTO",
 
-
-                contactTitle:
+                footerTitle:
                     "Contáctanos",
 
+                footerDescription:
+                    "Conecta con Sakuta Robotics Company. Estamos disponibles a través de nuestros canales oficiales.",
 
-                contactDescription:
-                    "Próximamente agregaremos aquí los medios oficiales de contacto, redes sociales y atención de SRC.",
+                emailTitle:
+                    "Correo",
 
+                copyright:
+                    "© 2026 Sakuta Robotics Company (SRC). Todos los derechos reservados.",
 
                 languageButton:
                     "Idioma"
@@ -1916,139 +2170,109 @@
             en: {
 
                 navHome: "Home",
-
                 navProducts: "Products",
-
                 navApplications: "Applications",
-
                 navSupport: "Support",
-
                 navCompany: "Company",
 
                 aboutUs: "About us",
-
                 contactUs: "Contact us",
-
 
                 heroSmall:
                     "ROBOTICS FOR A BETTER FUTURE",
 
-
                 heroDescription:
                     "We design and develop robotic solutions in Mexico, integrating innovation, education and real-world applications.",
-
 
                 productsButton:
                     "Explore our products →",
 
-
                 aboutButton:
                     "About SRC",
-
 
                 pioneerPlaceholder:
                     "Pioneer robot render will be placed here",
 
-
                 designTitle:
                     "Design",
-
 
                 designDescription:
                     "Mechanical, electronic and control",
 
-
                 educationTitle:
                     "Education",
-
 
                 educationDescription:
                     "Robots to learn and create",
 
-
                 innovationTitle:
                     "Innovation",
-
 
                 innovationDescription:
                     "Solutions for industry and beyond",
 
-
                 mexicoTitle:
                     "Developed in Mexico",
-
 
                 mexicoDescription:
                     "National talent and technology",
 
-
                 applicationsLabel:
                     "APPLICATIONS",
-
 
                 applicationsTitle:
                     "Robotics for different needs",
 
-
                 applicationsDescription:
                     "SRC systems are designed for different areas of robotics, automation, education and research.",
-
 
                 automationTitle:
                     "Automation",
 
-
                 automationDescription:
                     "Robotic systems for manipulation, programmed movements and process automation.",
-
 
                 applicationEducationTitle:
                     "Education",
 
-
                 applicationEducationDescription:
                     "Platforms for learning robotics, programming, control and mechatronics.",
-
 
                 researchTitle:
                     "Research",
 
-
                 researchDescription:
                     "Platforms and tools for development, experimentation and research projects.",
-
 
                 companyLabel:
                     "COMPANY",
 
-
                 aboutTitle:
                     "About",
-
 
                 companyParagraph1:
                     "Sakuta Robotics Company (SRC) develops solutions focused on robotics, automation and technology.",
 
-
                 companyParagraph2:
                     "Our goal is to design and develop functional robotic systems for educational, research and automation applications.",
-
 
                 companyParagraph3:
                     "Designed and developed in Mexico by SRC.",
 
-
-                contactLabel:
+                footerLabel:
                     "CONTACT",
 
-
-                contactTitle:
+                footerTitle:
                     "Contact us",
 
+                footerDescription:
+                    "Connect with Sakuta Robotics Company through our official communication channels.",
 
-                contactDescription:
-                    "Official SRC contact information, social media and support channels will be added here soon.",
+                emailTitle:
+                    "Email",
 
+                copyright:
+                    "© 2026 Sakuta Robotics Company (SRC). All rights reserved.",
 
                 languageButton:
                     "Language"
@@ -2058,7 +2282,7 @@
 
 
             /* =====================================
-               中文 - CHINO SIMPLIFICADO
+               中文
             ====================================== */
 
             zh: {
@@ -2084,126 +2308,101 @@
                 contactUs:
                     "联系我们",
 
-
                 heroSmall:
                     "机器人技术，共创美好未来",
-
 
                 heroDescription:
                     "我们在墨西哥设计和开发机器人解决方案，融合创新、教育与实际应用。",
 
-
                 productsButton:
                     "了解我们的产品 →",
-
 
                 aboutButton:
                     "关于 SRC",
 
-
                 pioneerPlaceholder:
                     "这里将放置 Pioneer 机器人的渲染图",
-
 
                 designTitle:
                     "设计",
 
-
                 designDescription:
                     "机械、电子与控制",
-
 
                 educationTitle:
                     "教育",
 
-
                 educationDescription:
                     "用于学习与创造的机器人",
-
 
                 innovationTitle:
                     "创新",
 
-
                 innovationDescription:
                     "面向工业及更多领域的解决方案",
-
 
                 mexicoTitle:
                     "墨西哥研发",
 
-
                 mexicoDescription:
                     "本土人才与技术",
-
 
                 applicationsLabel:
                     "应用",
 
-
                 applicationsTitle:
                     "面向不同需求的机器人技术",
-
 
                 applicationsDescription:
                     "SRC 系统面向机器人、自动化、教育和科研等多个领域。",
 
-
                 automationTitle:
                     "自动化",
-
 
                 automationDescription:
                     "用于操作、编程运动和流程自动化的机器人系统。",
 
-
                 applicationEducationTitle:
                     "教育",
-
 
                 applicationEducationDescription:
                     "用于学习机器人技术、编程、控制和机电一体化的平台。",
 
-
                 researchTitle:
                     "科研",
-
 
                 researchDescription:
                     "用于开发、实验和科研项目的平台与工具。",
 
-
                 companyLabel:
                     "公司",
-
 
                 aboutTitle:
                     "关于",
 
-
                 companyParagraph1:
                     "Sakuta Robotics Company（SRC）专注于机器人、自动化和技术解决方案的开发。",
-
 
                 companyParagraph2:
                     "我们的目标是设计和开发适用于教育、科研和自动化应用的实用机器人系统。",
 
-
                 companyParagraph3:
                     "由 SRC 在墨西哥设计和开发。",
 
-
-                contactLabel:
+                footerLabel:
                     "联系",
 
-
-                contactTitle:
+                footerTitle:
                     "联系我们",
 
+                footerDescription:
+                    "通过我们的官方渠道与 Sakuta Robotics Company 联系。",
 
-                contactDescription:
-                    "我们将在这里添加 SRC 的官方联系方式、社交媒体和支持渠道。",
+                emailTitle:
+                    "电子邮件",
 
+                copyright:
+                    "© 2026 Sakuta Robotics Company (SRC)。版权所有。",
 
                 languageButton:
                     "语言"
@@ -2213,10 +2412,6 @@
         };
 
 
-
-        /* =========================================
-           ELEMENTOS
-        ========================================== */
 
         const languageSelector =
             document.getElementById("languageSelector");
@@ -2230,10 +2425,6 @@
             document.getElementById("languageButtonText");
 
 
-
-        /* =========================================
-           ABRIR / CERRAR MENÚ DE IDIOMA
-        ========================================== */
 
         languageButton.addEventListener(
             "click",
@@ -2259,10 +2450,6 @@
 
 
 
-        /* =========================================
-           BOTONES DE IDIOMA
-        ========================================== */
-
         document
             .querySelectorAll("[data-language]")
             .forEach(function(button) {
@@ -2273,11 +2460,9 @@
                     function() {
 
 
-                        const language =
-                            button.dataset.language;
-
-
-                        setLanguage(language);
+                        setLanguage(
+                            button.dataset.language
+                        );
 
 
                     }
@@ -2287,10 +2472,6 @@
             });
 
 
-
-        /* =========================================
-           FUNCIÓN PARA CAMBIAR IDIOMA
-        ========================================== */
 
         function setLanguage(language) {
 
@@ -2302,7 +2483,8 @@
             }
 
 
-            document.documentElement.lang = language;
+            document.documentElement.lang =
+                language;
 
 
             document
@@ -2325,10 +2507,8 @@
                 });
 
 
-
             languageButtonText.textContent =
                 translations[language].languageButton;
-
 
 
             localStorage.setItem(
@@ -2337,16 +2517,11 @@
             );
 
 
-
             languageSelector.classList.remove("open");
 
         }
 
 
-
-        /* =========================================
-           RECORDAR IDIOMA
-        ========================================== */
 
         const savedLanguage =
             localStorage.getItem("srcLanguage") || "es";
