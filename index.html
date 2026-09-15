@@ -36,15 +36,16 @@
         }
 
 
-        /* =========================================
+        /* ===============================
            HEADER
-        ========================================= */
+        =============================== */
 
         header {
             width: 100%;
             height: 82px;
 
             background: white;
+
             border-bottom: 1px solid #e8e8e8;
 
             display: flex;
@@ -55,31 +56,34 @@
 
             position: sticky;
             top: 0;
+
             z-index: 1000;
         }
 
 
-        /* =========================================
+        /* ===============================
            LOGO
-        ========================================= */
+        =============================== */
 
         .brand {
             display: flex;
+
             align-items: center;
-            gap: 11px;
+
+            gap: 10px;
 
             text-decoration: none;
         }
 
 
         /*
-           Esta caja recorta la imagen original.
-           Solo deja visible el brazo robótico.
+           Ventana donde se mostrará solamente
+           el brazo robótico del logo.
         */
 
         .brand-logo-crop {
-            width: 58px;
-            height: 58px;
+            width: 62px;
+            height: 62px;
 
             position: relative;
 
@@ -90,19 +94,21 @@
 
 
         /*
-           La imagen completa se hace más grande
-           y la movemos hasta mostrar únicamente
-           el brazo robótico.
+           Imagen original.
+           Reducimos el tamaño y la centramos
+           para mostrar el robot completo.
         */
 
         .brand-logo-crop img {
             position: absolute;
 
-            width: 180px;
+            width: 145px;
+
             max-width: none;
 
-            left: -62px;
-            top: -33px;
+            left: -41px;
+
+            top: -16px;
 
             display: block;
         }
@@ -110,6 +116,7 @@
 
         .brand-name {
             font-size: 32px;
+
             font-weight: 800;
 
             font-style: italic;
@@ -122,12 +129,13 @@
         }
 
 
-        /* =========================================
-           MENÚ
-        ========================================= */
+        /* ===============================
+           NAVEGACIÓN
+        =============================== */
 
         nav {
             display: flex;
+
             align-items: center;
 
             gap: 38px;
@@ -140,6 +148,7 @@
             text-decoration: none;
 
             font-size: 16px;
+
             font-weight: 600;
 
             position: relative;
@@ -159,9 +168,11 @@
             position: absolute;
 
             left: 0;
+
             bottom: -10px;
 
             width: 0;
+
             height: 2px;
 
             background: var(--blue);
@@ -175,9 +186,9 @@
         }
 
 
-        /* =========================================
-           BOTÓN EXPLORAR
-        ========================================= */
+        /* ===============================
+           EXPLORAR
+        =============================== */
 
         .explore-button {
             background: var(--blue);
@@ -203,9 +214,9 @@
         }
 
 
-        /* =========================================
+        /* ===============================
            HERO
-        ========================================= */
+        =============================== */
 
         .hero {
             min-height: 650px;
@@ -254,15 +265,16 @@
             content: "";
 
             width: 38px;
+
             height: 3px;
 
             background: var(--blue);
         }
 
 
-        /* =========================================
-           TÍTULO
-        ========================================= */
+        /* ===============================
+           TÍTULOS
+        =============================== */
 
         .hero h1 {
             font-size: clamp(55px, 6vw, 90px);
@@ -283,6 +295,7 @@
             line-height: 1;
 
             margin-top: 10px;
+
             margin-bottom: 28px;
 
             color: var(--black);
@@ -300,9 +313,9 @@
         }
 
 
-        /* =========================================
-           BOTONES HERO
-        ========================================= */
+        /* ===============================
+           BOTONES
+        =============================== */
 
         .hero-buttons {
             display: flex;
@@ -357,9 +370,9 @@
         }
 
 
-        /* =========================================
-           ZONA PIONEER
-        ========================================= */
+        /* ===============================
+           PIONEER
+        =============================== */
 
         .robot-area {
             min-height: 480px;
@@ -367,6 +380,7 @@
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             position: relative;
@@ -396,11 +410,13 @@
             z-index: 2;
 
             width: 380px;
+
             height: 380px;
 
             display: flex;
 
             align-items: center;
+
             justify-content: center;
 
             border: 2px dashed #d7dce2;
@@ -413,7 +429,7 @@
 
             padding: 40px;
 
-            background: rgba(255, 255, 255, 0.65);
+            background: rgba(255,255,255,0.65);
         }
 
 
@@ -428,9 +444,9 @@
         }
 
 
-        /* =========================================
+        /* ===============================
            CARACTERÍSTICAS
-        ========================================= */
+        =============================== */
 
         .features {
             width: 86%;
@@ -482,9 +498,9 @@
         }
 
 
-        /* =========================================
+        /* ===============================
            PRODUCTOS
-        ========================================= */
+        =============================== */
 
         .products-title {
             padding: 55px 20px 90px;
@@ -516,9 +532,9 @@
         }
 
 
-        /* =========================================
+        /* ===============================
            RESPONSIVE
-        ========================================= */
+        =============================== */
 
         @media (max-width: 900px) {
 
@@ -526,11 +542,9 @@
                 display: none;
             }
 
-
             .explore-button {
                 display: none;
             }
-
 
             .hero {
                 grid-template-columns: 1fr;
@@ -538,16 +552,13 @@
                 padding-top: 65px;
             }
 
-
             .robot-area {
                 margin-top: 40px;
             }
 
-
             .features {
                 grid-template-columns: 1fr 1fr;
             }
-
 
             .feature {
                 border-right: none !important;
@@ -570,16 +581,18 @@
 
 
             .brand-logo-crop {
-                width: 48px;
-                height: 48px;
+                width: 52px;
+
+                height: 52px;
             }
 
 
             .brand-logo-crop img {
-                width: 150px;
+                width: 125px;
 
-                left: -52px;
-                top: -28px;
+                left: -35px;
+
+                top: -14px;
             }
 
 
@@ -622,6 +635,7 @@
 
             .robot-placeholder {
                 width: 290px;
+
                 height: 290px;
             }
 
@@ -640,331 +654,316 @@
 <body>
 
 
-    <!-- =========================================
-         HEADER
-    ========================================== -->
-
-    <header>
+<header>
 
 
-        <a class="brand" href="#inicio">
+    <a class="brand" href="#inicio">
 
 
-            <div class="brand-logo-crop">
+        <div class="brand-logo-crop">
 
-                <img
-                    src="logoooweb.PNG"
-                    alt="Logo SAKUTA"
-                >
+            <img
+                src="logoooweb.PNG"
+                alt="Logo SAKUTA"
+            >
 
-            </div>
-
-
-            <div class="brand-name">
-
-                SAKUTA
-
-            </div>
+        </div>
 
 
+        <div class="brand-name">
+
+            SAKUTA
+
+        </div>
+
+
+    </a>
+
+
+
+    <nav>
+
+        <a href="#inicio">
+            Inicio
         </a>
 
-
-
-        <nav>
-
-            <a href="#inicio">
-                Inicio
-            </a>
-
-            <a href="#productos">
-                Productos
-            </a>
-
-            <a href="#proyectos">
-                Proyectos
-            </a>
-
-            <a href="#nosotros">
-                Nosotros
-            </a>
-
-            <a href="#contacto">
-                Contacto
-            </a>
-
-        </nav>
-
-
-
-        <a
-            class="explore-button"
-            href="#productos"
-        >
-
-            Explorar →
-
+        <a href="#productos">
+            Productos
         </a>
 
+        <a href="#proyectos">
+            Proyectos
+        </a>
 
-    </header>
+        <a href="#nosotros">
+            Nosotros
+        </a>
+
+        <a href="#contacto">
+            Contacto
+        </a>
+
+    </nav>
 
 
 
-    <!-- =========================================
-         INICIO
-    ========================================== -->
-
-    <section
-        class="hero"
-        id="inicio"
+    <a
+        class="explore-button"
+        href="#productos"
     >
 
+        Explorar →
 
-        <div class="hero-content">
+    </a>
 
 
-            <div class="small-title">
-
-                ROBÓTICA PARA UN MEJOR FUTURO
-
-            </div>
+</header>
 
 
 
-            <h1>
-
-                SAKUTA
-
-            </h1>
-
+<section
+    class="hero"
+    id="inicio"
+>
 
 
-            <h2>
-
-                Robotics Company
-
-            </h2>
+    <div class="hero-content">
 
 
+        <div class="small-title">
 
-            <p class="hero-description">
-
-                Diseñamos y desarrollamos soluciones robóticas
-                en México, integrando innovación, educación
-                y aplicaciones reales.
-
-            </p>
-
-
-
-            <div class="hero-buttons">
-
-
-                <a
-                    class="btn-primary"
-                    href="#proyectos"
-                >
-
-                    Conoce nuestros proyectos →
-
-                </a>
-
-
-
-                <a
-                    class="btn-secondary"
-                    href="#nosotros"
-                >
-
-                    Sobre SRC
-
-                </a>
-
-
-            </div>
-
+            ROBÓTICA PARA UN MEJOR FUTURO
 
         </div>
 
 
 
-        <!-- =====================================
-             PIONEER
-        ====================================== -->
+        <h1>
 
-        <div class="robot-area">
+            SAKUTA
 
+        </h1>
 
-            <div class="background-word">
-
-                SAKUTA
-
-            </div>
-
-
-
-            <div class="robot-placeholder">
-
-                <div>
-
-                    <strong>
-
-                        PIONEER
-
-                    </strong>
-
-                    Aquí colocaremos el render del robot
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================================
-         CARACTERÍSTICAS
-    ========================================== -->
-
-    <section class="features">
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-
-                ⚙
-
-            </div>
-
-            <h3>
-
-                Diseño
-
-            </h3>
-
-            <p>
-
-                Mecánico, electrónico y de control
-
-            </p>
-
-        </div>
-
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-
-                🎓
-
-            </div>
-
-            <h3>
-
-                Educación
-
-            </h3>
-
-            <p>
-
-                Robots para aprender y crear
-
-            </p>
-
-        </div>
-
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-
-                💡
-
-            </div>
-
-            <h3>
-
-                Innovación
-
-            </h3>
-
-            <p>
-
-                Soluciones para la industria y más
-
-            </p>
-
-        </div>
-
-
-
-        <div class="feature">
-
-            <div class="feature-icon">
-
-                ↗
-
-            </div>
-
-            <h3>
-
-                Desarrollo en México
-
-            </h3>
-
-            <p>
-
-                Talento y tecnología nacional
-
-            </p>
-
-        </div>
-
-
-    </section>
-
-
-
-    <!-- =========================================
-         PRODUCTOS
-    ========================================== -->
-
-    <section
-        class="products-title"
-        id="productos"
-    >
-
-
-        <span>
-
-            NUESTROS PRODUCTOS
-
-        </span>
 
 
         <h2>
 
-            Robótica desarrollada por
-
-            <strong>
-
-                SRC
-
-            </strong>
+            Robotics Company
 
         </h2>
 
 
-    </section>
+
+        <p class="hero-description">
+
+            Diseñamos y desarrollamos soluciones robóticas
+            en México, integrando innovación, educación
+            y aplicaciones reales.
+
+        </p>
+
+
+
+        <div class="hero-buttons">
+
+
+            <a
+                class="btn-primary"
+                href="#proyectos"
+            >
+
+                Conoce nuestros proyectos →
+
+            </a>
+
+
+
+            <a
+                class="btn-secondary"
+                href="#nosotros"
+            >
+
+                Sobre SRC
+
+            </a>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="robot-area">
+
+
+        <div class="background-word">
+
+            SAKUTA
+
+        </div>
+
+
+
+        <div class="robot-placeholder">
+
+
+            <div>
+
+
+                <strong>
+
+                    PIONEER
+
+                </strong>
+
+
+                Aquí colocaremos el render del robot
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<section class="features">
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+
+            ⚙
+
+        </div>
+
+        <h3>
+
+            Diseño
+
+        </h3>
+
+        <p>
+
+            Mecánico, electrónico y de control
+
+        </p>
+
+    </div>
+
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+
+            🎓
+
+        </div>
+
+        <h3>
+
+            Educación
+
+        </h3>
+
+        <p>
+
+            Robots para aprender y crear
+
+        </p>
+
+    </div>
+
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+
+            💡
+
+        </div>
+
+        <h3>
+
+            Innovación
+
+        </h3>
+
+        <p>
+
+            Soluciones para la industria y más
+
+        </p>
+
+    </div>
+
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+
+            ↗
+
+        </div>
+
+        <h3>
+
+            Desarrollo en México
+
+        </h3>
+
+        <p>
+
+            Talento y tecnología nacional
+
+        </p>
+
+    </div>
+
+
+</section>
+
+
+
+<section
+    class="products-title"
+    id="productos"
+>
+
+
+    <span>
+
+        NUESTROS PRODUCTOS
+
+    </span>
+
+
+    <h2>
+
+        Robótica desarrollada por
+
+        <strong>
+
+            SRC
+
+        </strong>
+
+    </h2>
+
+
+</section>
 
 
 </body>
