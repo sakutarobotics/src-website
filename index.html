@@ -10,10 +10,7 @@
     <title>SAKUTA | Sakuta Robotics Company</title>
 
 
-    <!-- =========================================
-         FAVICON SRC
-         Icono que aparece en la pestaña
-    ========================================== -->
+    <!-- FAVICON SRC -->
 
     <link
         rel="icon"
@@ -25,47 +22,31 @@
     <style>
 
         :root {
-
             --blue: #24579b;
             --blue-dark: #183f78;
-
             --black: #111111;
-
             --gray: #666666;
-
             --white: #ffffff;
-
         }
 
 
         * {
-
             margin: 0;
-
             padding: 0;
-
             box-sizing: border-box;
-
         }
 
 
         html {
-
             scroll-behavior: smooth;
-
         }
 
 
         body {
-
             font-family: Arial, Helvetica, sans-serif;
-
             background: var(--white);
-
             color: var(--black);
-
         }
-
 
 
         /* =========================================
@@ -73,29 +54,22 @@
         ========================================== */
 
         header {
-
             width: 100%;
-
             height: 82px;
 
             background: white;
-
             border-bottom: 1px solid #e8e8e8;
 
             display: flex;
-
             align-items: center;
-
             justify-content: space-between;
 
             padding: 0 7%;
 
             position: sticky;
-
             top: 0;
 
             z-index: 1000;
-
         }
 
 
@@ -105,36 +79,27 @@
         ========================================== */
 
         .brand {
-
             display: flex;
-
             align-items: center;
-
             gap: 10px;
 
             text-decoration: none;
-
         }
 
-
-        /*
-            Esta caja funciona como una ventana
-            para mostrar solamente el brazo
-            del archivo logoooweb.PNG
-        */
 
         .brand-logo-crop {
 
             width: 62px;
 
-            height: 62px;
+            /* Antes era 62px.
+               Ahora damos espacio extra abajo. */
+            height: 70px;
 
             position: relative;
 
             overflow: hidden;
 
             flex-shrink: 0;
-
         }
 
 
@@ -148,17 +113,16 @@
 
             left: -27px;
 
-            top: -8px;
+            /* Un poquito más arriba para mostrar
+               mejor la parte inferior del brazo */
+            top: -10px;
 
             display: block;
-
         }
 
 
         .brand-name {
-
             font-size: 32px;
-
             font-weight: 800;
 
             font-style: italic;
@@ -168,7 +132,6 @@
             letter-spacing: -1px;
 
             white-space: nowrap;
-
         }
 
 
@@ -178,65 +141,50 @@
         ========================================== */
 
         nav {
-
             display: flex;
-
             align-items: center;
-
             gap: 38px;
-
         }
 
 
         nav a {
-
             color: var(--black);
 
             text-decoration: none;
 
             font-size: 16px;
-
             font-weight: 600;
 
             position: relative;
 
             transition: 0.2s;
-
         }
 
 
         nav a:hover {
-
             color: var(--blue);
-
         }
 
 
         nav a::after {
-
             content: "";
 
             position: absolute;
 
             left: 0;
-
             bottom: -10px;
 
             width: 0;
-
             height: 2px;
 
             background: var(--blue);
 
             transition: 0.25s;
-
         }
 
 
         nav a:hover::after {
-
             width: 100%;
-
         }
 
 
@@ -246,7 +194,6 @@
         ========================================== */
 
         .explore-button {
-
             background: var(--blue);
 
             color: white;
@@ -260,32 +207,27 @@
             font-weight: bold;
 
             transition: 0.25s;
-
         }
 
 
         .explore-button:hover {
-
             background: var(--blue-dark);
 
             transform: translateY(-2px);
-
         }
 
 
 
         /* =========================================
-           HERO / INICIO
+           HERO
         ========================================== */
 
         .hero {
-
             min-height: 650px;
 
             padding: 85px 7% 55px;
 
             display: grid;
-
             grid-template-columns: 1fr 1fr;
 
             align-items: center;
@@ -293,28 +235,20 @@
             position: relative;
 
             overflow: hidden;
-
         }
 
 
         .hero-content {
-
             max-width: 650px;
 
             position: relative;
 
             z-index: 2;
-
         }
 
 
-
-        /* Texto pequeño superior */
-
         .small-title {
-
             display: flex;
-
             align-items: center;
 
             gap: 18px;
@@ -326,20 +260,16 @@
             font-size: 13px;
 
             margin-bottom: 25px;
-
         }
 
 
         .small-title::before {
-
             content: "";
 
             width: 38px;
-
             height: 3px;
 
             background: var(--blue);
-
         }
 
 
@@ -349,7 +279,6 @@
         ========================================== */
 
         .hero h1 {
-
             font-size: clamp(55px, 6vw, 90px);
 
             line-height: 0.92;
@@ -359,27 +288,22 @@
             font-style: italic;
 
             letter-spacing: -3px;
-
         }
 
 
         .hero h2 {
-
             font-size: clamp(35px, 4vw, 62px);
 
             line-height: 1;
 
             margin-top: 10px;
-
             margin-bottom: 28px;
 
             color: var(--black);
-
         }
 
 
         .hero-description {
-
             max-width: 590px;
 
             font-size: 21px;
@@ -387,7 +311,6 @@
             line-height: 1.55;
 
             color: var(--gray);
-
         }
 
 
@@ -397,19 +320,16 @@
         ========================================== */
 
         .hero-buttons {
-
             display: flex;
 
             gap: 22px;
 
             margin-top: 38px;
-
         }
 
 
         .btn-primary,
         .btn-secondary {
-
             padding: 16px 30px;
 
             border-radius: 30px;
@@ -421,73 +341,54 @@
             font-size: 16px;
 
             transition: 0.25s;
-
         }
 
 
         .btn-primary {
-
             background: var(--blue);
-
             color: white;
-
         }
 
 
         .btn-primary:hover {
-
             background: var(--blue-dark);
 
             transform: translateY(-2px);
-
         }
 
 
         .btn-secondary {
-
             color: var(--blue);
 
             border: 2px solid var(--blue);
-
         }
 
 
         .btn-secondary:hover {
-
             background: var(--blue);
 
             color: white;
-
         }
 
 
 
         /* =========================================
-           ÁREA DEL ROBOT PIONEER
+           ÁREA PIONEER
         ========================================== */
 
         .robot-area {
-
             min-height: 480px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             position: relative;
-
         }
 
 
-
-        /*
-            Texto SAKUTA grande de fondo
-        */
-
         .background-word {
-
             position: absolute;
 
             font-size: clamp(100px, 12vw, 210px);
@@ -501,30 +402,20 @@
             z-index: 0;
 
             user-select: none;
-
         }
 
 
-
-        /*
-            Temporalmente esta caja representa
-            el lugar donde pondremos Pioneer
-        */
-
         .robot-placeholder {
-
             position: relative;
 
             z-index: 2;
 
             width: 380px;
-
             height: 380px;
 
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             border: 2px dashed #d7dce2;
@@ -538,12 +429,10 @@
             padding: 40px;
 
             background: rgba(255, 255, 255, 0.65);
-
         }
 
 
         .robot-placeholder strong {
-
             display: block;
 
             color: var(--blue);
@@ -551,7 +440,6 @@
             font-size: 25px;
 
             margin-bottom: 10px;
-
         }
 
 
@@ -561,7 +449,6 @@
         ========================================== */
 
         .features {
-
             width: 86%;
 
             margin: 0 auto 70px;
@@ -573,52 +460,41 @@
             border-top: 1px solid #eeeeee;
 
             padding-top: 35px;
-
         }
 
 
         .feature {
-
             text-align: center;
 
             padding: 15px 25px;
-
         }
 
 
         .feature:not(:last-child) {
-
             border-right: 1px solid #e3e3e3;
-
         }
 
 
         .feature-icon {
-
             font-size: 34px;
 
             margin-bottom: 13px;
-
         }
 
 
         .feature h3 {
-
             font-size: 19px;
 
             margin-bottom: 7px;
-
         }
 
 
         .feature p {
-
             color: #777777;
 
             font-size: 15px;
 
             line-height: 1.4;
-
         }
 
 
@@ -628,94 +504,73 @@
         ========================================== */
 
         .products-title {
-
             padding: 55px 20px 90px;
 
             text-align: center;
 
             background: #fafafa;
-
         }
 
 
         .products-title span {
-
             color: #777777;
 
             letter-spacing: 5px;
 
             font-size: 13px;
-
         }
 
 
         .products-title h2 {
-
             margin-top: 13px;
 
             font-size: 36px;
-
         }
 
 
         .products-title h2 strong {
-
             color: var(--blue);
-
         }
 
 
 
         /* =========================================
-           RESPONSIVE
            TABLETS
         ========================================== */
 
         @media (max-width: 900px) {
 
             nav {
-
                 display: none;
-
             }
 
 
             .explore-button {
-
                 display: none;
-
             }
 
 
             .hero {
-
                 grid-template-columns: 1fr;
 
                 padding-top: 65px;
-
             }
 
 
             .robot-area {
-
                 margin-top: 40px;
-
             }
 
 
             .features {
-
                 grid-template-columns: 1fr 1fr;
-
             }
 
 
             .feature {
-
                 border-right: none !important;
 
                 margin-bottom: 30px;
-
             }
 
         }
@@ -723,108 +578,79 @@
 
 
         /* =========================================
-           RESPONSIVE
            CELULARES
         ========================================== */
 
         @media (max-width: 550px) {
 
-
             header {
-
                 height: 70px;
 
                 padding-left: 5%;
-
                 padding-right: 5%;
-
             }
 
 
             .brand-logo-crop {
-
                 width: 52px;
-
-                height: 52px;
-
+                height: 58px;
             }
 
 
             .brand-logo-crop img {
-
                 width: 100px;
 
                 left: -23px;
 
-                top: -7px;
-
+                top: -8px;
             }
 
 
             .brand-name {
-
                 font-size: 25px;
-
             }
 
 
             .hero {
-
                 padding-left: 6%;
 
                 padding-right: 6%;
-
             }
 
 
             .hero h1 {
-
                 font-size: 48px;
-
             }
 
 
             .hero h2 {
-
                 font-size: 33px;
-
             }
 
 
             .hero-description {
-
                 font-size: 17px;
-
             }
 
 
             .hero-buttons {
-
                 flex-direction: column;
-
             }
 
 
             .hero-buttons a {
-
                 text-align: center;
-
             }
 
 
             .robot-placeholder {
-
                 width: 290px;
-
                 height: 290px;
-
             }
 
 
             .features {
-
                 grid-template-columns: 1fr;
-
             }
 
         }
@@ -837,15 +663,10 @@
 <body>
 
 
-
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+    <!-- HEADER -->
 
     <header>
 
-
-        <!-- LOGO -->
 
         <a
             class="brand"
@@ -855,12 +676,10 @@
 
             <div class="brand-logo-crop">
 
-
                 <img
                     src="logoooweb.PNG"
                     alt="Logo SAKUTA"
                 >
-
 
             </div>
 
@@ -876,51 +695,37 @@
 
 
 
-        <!-- MENÚ -->
-
         <nav>
 
 
             <a href="#inicio">
-
                 Inicio
-
             </a>
 
 
             <a href="#productos">
-
                 Productos
-
             </a>
 
 
             <a href="#proyectos">
-
                 Proyectos
-
             </a>
 
 
             <a href="#nosotros">
-
                 Nosotros
-
             </a>
 
 
             <a href="#contacto">
-
                 Contacto
-
             </a>
 
 
         </nav>
 
 
-
-        <!-- BOTÓN -->
 
         <a
             class="explore-button"
@@ -936,9 +741,7 @@
 
 
 
-    <!-- =========================================
-         INICIO
-    ========================================== -->
+    <!-- INICIO -->
 
     <section
         class="hero"
@@ -1014,9 +817,7 @@
 
 
 
-        <!-- =========================================
-             PIONEER
-        ========================================== -->
+        <!-- PIONEER -->
 
         <div class="robot-area">
 
@@ -1058,16 +859,12 @@
 
 
 
-    <!-- =========================================
-         CARACTERÍSTICAS
-    ========================================== -->
+    <!-- CARACTERÍSTICAS -->
 
     <section class="features">
 
 
-
         <div class="feature">
-
 
             <div class="feature-icon">
 
@@ -1089,13 +886,11 @@
 
             </p>
 
-
         </div>
 
 
 
         <div class="feature">
-
 
             <div class="feature-icon">
 
@@ -1117,13 +912,11 @@
 
             </p>
 
-
         </div>
 
 
 
         <div class="feature">
-
 
             <div class="feature-icon">
 
@@ -1145,13 +938,11 @@
 
             </p>
 
-
         </div>
 
 
 
         <div class="feature">
-
 
             <div class="feature-icon">
 
@@ -1173,7 +964,6 @@
 
             </p>
 
-
         </div>
 
 
@@ -1181,9 +971,7 @@
 
 
 
-    <!-- =========================================
-         PRODUCTOS
-    ========================================== -->
+    <!-- PRODUCTOS -->
 
     <section
         class="products-title"
