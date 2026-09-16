@@ -12,7 +12,7 @@
     <link
         rel="icon"
         type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='white'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='39' font-weight='900' fill='%2324579b'%3ESRC%3C/text%3E%3C/svg%3E"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='white'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='39' font-weight='900' fill='%2324579b'%3ESRC%3C/text%3E"
     >
 
     <style>
@@ -20,11 +20,16 @@
         :root {
             --blue: #24579b;
             --blue-dark: #183f78;
+            --blue-soft: #eef4fb;
+
             --black: #111111;
-            --gray: #666666;
-            --light-gray: #f7f8fa;
+            --gray: #676767;
+            --gray-light: #f6f7f9;
+
+            --border: #e4e7eb;
             --white: #ffffff;
         }
+
 
         * {
             margin: 0;
@@ -32,14 +37,22 @@
             box-sizing: border-box;
         }
 
+
         html {
             scroll-behavior: smooth;
         }
+
 
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: var(--white);
             color: var(--black);
+        }
+
+
+        button,
+        a {
+            font-family: inherit;
         }
 
 
@@ -76,10 +89,12 @@
         .brand {
             display: flex;
             align-items: center;
+
             gap: 10px;
 
             text-decoration: none;
         }
+
 
         .brand-logo-crop {
             width: 62px;
@@ -93,6 +108,7 @@
             transform: translateY(-8px);
         }
 
+
         .brand-logo-crop img {
             position: absolute;
 
@@ -105,13 +121,13 @@
             display: block;
         }
 
+
         .brand-name {
+            color: var(--blue);
+
             font-size: 32px;
             font-weight: 800;
-
             font-style: italic;
-
-            color: var(--blue);
 
             letter-spacing: -1px;
 
@@ -131,6 +147,7 @@
             gap: 35px;
         }
 
+
         nav > a,
         .menu-dropdown > a {
             color: var(--black);
@@ -145,10 +162,12 @@
             transition: 0.2s;
         }
 
+
         nav > a:hover,
         .menu-dropdown > a:hover {
             color: var(--blue);
         }
+
 
         nav > a::after,
         .menu-dropdown > a::after {
@@ -166,6 +185,7 @@
 
             transition: 0.25s;
         }
+
 
         nav > a:hover::after,
         .menu-dropdown:hover > a::after {
@@ -187,6 +207,7 @@
             height: 82px;
         }
 
+
         .menu-dropdown > a {
             display: flex;
             align-items: center;
@@ -194,15 +215,18 @@
             gap: 7px;
         }
 
+
         .dropdown-arrow {
             font-size: 10px;
 
             transition: transform 0.25s;
         }
 
+
         .menu-dropdown:hover .dropdown-arrow {
             transform: rotate(180deg);
         }
+
 
         .dropdown-menu {
             position: absolute;
@@ -210,19 +234,22 @@
             top: 70px;
             left: 50%;
 
-            transform: translateX(-50%) translateY(8px);
+            transform:
+                translateX(-50%)
+                translateY(8px);
 
-            min-width: 220px;
+            min-width: 245px;
 
             background: white;
 
             border: 1px solid #e9e9e9;
-
             border-radius: 12px;
 
             padding: 8px;
 
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+            box-shadow:
+                0 12px 30px
+                rgba(0, 0, 0, 0.10);
 
             opacity: 0;
             visibility: hidden;
@@ -231,13 +258,17 @@
             transition: 0.2s;
         }
 
+
         .menu-dropdown:hover .dropdown-menu {
             opacity: 1;
             visibility: visible;
             pointer-events: auto;
 
-            transform: translateX(-50%) translateY(0);
+            transform:
+                translateX(-50%)
+                translateY(0);
         }
+
 
         .dropdown-menu a {
             display: block;
@@ -258,6 +289,7 @@
             transition: 0.2s;
         }
 
+
         .dropdown-menu a:hover {
             background: #f3f6fb;
 
@@ -274,18 +306,16 @@
             position: relative;
         }
 
+
         .language-button {
             border: none;
 
             background: var(--blue);
-
             color: white;
 
             padding: 13px 24px;
 
             border-radius: 30px;
-
-            font-family: inherit;
 
             font-size: 15px;
             font-weight: bold;
@@ -300,11 +330,13 @@
             transition: 0.25s;
         }
 
+
         .language-button:hover {
             background: var(--blue-dark);
 
             transform: translateY(-2px);
         }
+
 
         .language-options {
             position: absolute;
@@ -317,12 +349,13 @@
             background: white;
 
             border: 1px solid #e8e8e8;
-
             border-radius: 12px;
 
             padding: 8px;
 
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+            box-shadow:
+                0 12px 30px
+                rgba(0, 0, 0, 0.10);
 
             opacity: 0;
             visibility: hidden;
@@ -335,6 +368,7 @@
             z-index: 2000;
         }
 
+
         .language-selector.open .language-options {
             opacity: 1;
             visibility: visible;
@@ -342,6 +376,7 @@
 
             transform: translateY(0);
         }
+
 
         .language-options button {
             width: 100%;
@@ -356,8 +391,6 @@
 
             border-radius: 8px;
 
-            font-family: inherit;
-
             font-size: 14px;
             font-weight: 600;
 
@@ -367,6 +400,7 @@
 
             transition: 0.2s;
         }
+
 
         .language-options button:hover {
             background: #f3f6fb;
@@ -381,20 +415,22 @@
         ========================================== */
 
         .page-hero {
-            padding: 105px 7% 95px;
+            padding: 100px 7% 75px;
 
             background: white;
 
             text-align: center;
         }
 
+
         .page-label {
-            color: #777777;
+            color: #777;
 
             letter-spacing: 5px;
 
             font-size: 13px;
         }
+
 
         .page-hero h1 {
             margin-top: 16px;
@@ -406,136 +442,598 @@
             font-style: italic;
         }
 
+
         .page-hero p {
-            max-width: 720px;
+            max-width: 760px;
 
             margin: 22px auto 0;
 
+            color: var(--gray);
+
             font-size: 19px;
 
-            line-height: 1.6;
-
-            color: var(--gray);
+            line-height: 1.65;
         }
 
 
 
         /* =========================================
-           PRODUCTOS
+           CATÁLOGO
         ========================================== */
 
-        .products-grid {
-            padding: 25px 7% 100px;
+        .catalog {
+            background: var(--gray-light);
 
-            display: grid;
-
-            grid-template-columns: repeat(3, 1fr);
-
-            gap: 25px;
+            padding: 70px 7% 110px;
         }
 
-        .product-card {
-            min-height: 260px;
 
-            padding: 35px;
+        .catalog-header {
+            max-width: 1180px;
+
+            margin: auto;
+            margin-bottom: 38px;
+        }
+
+
+        .catalog-label {
+            color: var(--blue);
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 4px;
+        }
+
+
+        .catalog-header h2 {
+            margin-top: 12px;
+
+            font-size: clamp(32px, 4vw, 48px);
+
+            letter-spacing: -1px;
+        }
+
+
+        .catalog-header p {
+            max-width: 700px;
+
+            margin-top: 14px;
+
+            color: var(--gray);
+
+            font-size: 17px;
+
+            line-height: 1.65;
+        }
+
+
+
+        /* =========================================
+           FILTROS
+        ========================================== */
+
+        .filters {
+            max-width: 1180px;
+
+            margin: 0 auto 34px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        .filter-button {
+            padding: 12px 21px;
+
+            border: 1px solid #d8dce2;
+
+            border-radius: 999px;
 
             background: white;
 
-            border: 1px solid #e5e8ed;
+            color: #333;
 
-            border-radius: 18px;
+            font-size: 14px;
+            font-weight: 700;
 
-            text-decoration: none;
-
-            color: var(--black);
+            cursor: pointer;
 
             transition: 0.25s;
         }
 
-        .product-card:hover {
-            transform: translateY(-5px);
 
+        .filter-button:hover {
             border-color: var(--blue);
 
-            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.07);
-        }
-
-        .product-number {
             color: var(--blue);
-
-            font-size: 14px;
-
-            font-weight: bold;
-
-            margin-bottom: 35px;
         }
 
-        .product-card h2 {
-            font-size: 27px;
 
-            margin-bottom: 14px;
-        }
+        .filter-button.active {
+            color: white;
 
-        .product-card p {
-            color: var(--gray);
+            background: var(--blue);
 
-            font-size: 16px;
-
-            line-height: 1.55;
-        }
-
-        .product-link {
-            display: block;
-
-            margin-top: 25px;
-
-            color: var(--blue);
-
-            font-weight: bold;
+            border-color: var(--blue);
         }
 
 
 
         /* =========================================
-           SECCIONES
+           LISTA DE PRODUCTOS
         ========================================== */
 
-        .product-section {
-            padding: 100px 7%;
+        .products-list {
+            max-width: 1180px;
 
-            text-align: center;
+            margin: auto;
+
+            display: flex;
+            flex-direction: column;
+
+            gap: 18px;
+        }
+
+
+        .product-item {
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 20px;
+
+            overflow: hidden;
+
+            transition:
+                border-color 0.25s,
+                box-shadow 0.25s,
+                transform 0.25s;
+        }
+
+
+        .product-item:hover {
+            border-color: #c7d4e5;
+
+            box-shadow:
+                0 12px 30px
+                rgba(0, 0, 0, 0.045);
+        }
+
+
+        .product-item.open {
+            border-color: var(--blue);
+
+            box-shadow:
+                0 18px 45px
+                rgba(36, 87, 155, 0.09);
+        }
+
+
+        .product-item.is-hidden {
+            display: none;
+        }
+
+
+
+        /* =========================================
+           CABECERA DEL PRODUCTO
+        ========================================== */
+
+        .product-toggle {
+            width: 100%;
+
+            border: none;
+            background: white;
+
+            padding: 18px;
+
+            display: grid;
+
+            grid-template-columns:
+                175px
+                1fr
+                auto;
+
+            align-items: center;
+
+            gap: 28px;
+
+            text-align: left;
+
+            cursor: pointer;
+        }
+
+
+        .product-image {
+            width: 175px;
+            height: 145px;
+
+            border-radius: 14px;
+
+            background: #fafafa;
+
+            overflow: hidden;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            transition: transform 0.35s;
+        }
+
+
+        .product-item:hover
+        .product-image img {
+            transform: scale(1.035);
+        }
+
+
+        .product-summary {
+            min-width: 0;
+        }
+
+
+        .category-badge {
+            display: inline-flex;
+            align-items: center;
+
+            padding: 7px 11px;
+
+            border-radius: 999px;
+
+            background: var(--blue-soft);
+
+            color: var(--blue);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+
+        .product-summary h2 {
+            margin-top: 13px;
+
+            font-size: 27px;
+
+            letter-spacing: -0.5px;
+        }
+
+
+        .product-summary p {
+            margin-top: 8px;
+
+            color: var(--gray);
+
+            font-size: 16px;
+
+            line-height: 1.5;
+        }
+
+
+        .expand-control {
+            min-width: 145px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            gap: 11px;
+
+            color: var(--blue);
+
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+
+        .circle-arrow {
+            width: 42px;
+            height: 42px;
+
+            border-radius: 50%;
+
+            background: var(--blue-soft);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 20px;
+
+            transition:
+                transform 0.35s,
+                background 0.25s,
+                color 0.25s;
+        }
+
+
+        .product-item.open
+        .circle-arrow {
+            transform: rotate(180deg);
+
+            background: var(--blue);
+
+            color: white;
+        }
+
+
+
+        /* =========================================
+           CONTENIDO DESPLEGABLE
+        ========================================== */
+
+        .product-details {
+            display: grid;
+
+            grid-template-rows: 0fr;
+
+            transition:
+                grid-template-rows 0.45s ease;
+        }
+
+
+        .product-item.open
+        .product-details {
+            grid-template-rows: 1fr;
+        }
+
+
+        .product-details-inner {
+            overflow: hidden;
+        }
+
+
+        .product-details-content {
+            padding:
+                10px
+                35px
+                38px;
 
             border-top: 1px solid #eeeeee;
         }
 
-        .product-section:nth-child(even) {
-            background: var(--light-gray);
+
+        .details-main {
+            display: grid;
+
+            grid-template-columns:
+                1.15fr
+                0.85fr;
+
+            gap: 45px;
+
+            padding-top: 35px;
         }
 
-        .product-section span {
-            color: #777;
 
-            letter-spacing: 5px;
+        .details-information h3 {
+            margin-bottom: 12px;
 
-            font-size: 13px;
+            font-size: 23px;
         }
 
-        .product-section h2 {
-            margin-top: 14px;
 
-            font-size: 40px;
+        .placeholder-text {
+            color: var(--gray);
 
-            color: var(--blue);
+            font-size: 16px;
+
+            line-height: 1.7;
         }
 
-        .product-section p {
-            max-width: 650px;
 
-            margin: 17px auto;
+        .information-block {
+            padding-bottom: 25px;
+
+            margin-bottom: 25px;
+
+            border-bottom:
+                1px solid #eeeeee;
+        }
+
+
+        .information-block:last-child {
+            border-bottom: none;
+
+            margin-bottom: 0;
+        }
+
+
+        .information-block h4 {
+            margin-bottom: 10px;
+
+            color: #252525;
+
+            font-size: 16px;
+        }
+
+
+        .placeholder-list {
+            padding-left: 19px;
 
             color: var(--gray);
 
-            line-height: 1.6;
+            line-height: 1.9;
+        }
+
+
+
+        /* =========================================
+           IMÁGENES DETALLADAS
+        ========================================== */
+
+        .details-media {
+            display: flex;
+            flex-direction: column;
+
+            gap: 14px;
+        }
+
+
+        .details-media img {
+            width: 100%;
+
+            max-height: 330px;
+
+            object-fit: contain;
+
+            border: 1px solid #eeeeee;
+
+            border-radius: 16px;
+
+            background: #fafafa;
+        }
+
+
+
+        /* =========================================
+           DOCUMENTACIÓN
+        ========================================== */
+
+        .resources {
+            margin-top: 35px;
+
+            padding: 27px;
+
+            background: #f8fafc;
+
+            border: 1px solid #e2e7ed;
+
+            border-radius: 16px;
+        }
+
+
+        .resources-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+
+        .resources h3 {
+            font-size: 20px;
+        }
+
+
+        .resources p {
+            margin-top: 7px;
+
+            color: var(--gray);
+
+            font-size: 14px;
+
+            line-height: 1.5;
+        }
+
+
+        .resource-buttons {
+            margin-top: 20px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 11px;
+        }
+
+
+        .resource-button {
+            border: none;
+
+            padding: 12px 18px;
+
+            border-radius: 9px;
+
+            cursor: pointer;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: 0.25s;
+        }
+
+
+        .resource-button.primary {
+            background: var(--blue);
+
+            color: white;
+        }
+
+
+        .resource-button.primary:hover {
+            background: var(--blue-dark);
+
+            transform: translateY(-2px);
+        }
+
+
+        .resource-button.secondary {
+            background: white;
+
+            color: var(--blue);
+
+            border: 1px solid #cad5e4;
+        }
+
+
+        .resource-button.secondary:hover {
+            border-color: var(--blue);
+
+            transform: translateY(-2px);
+        }
+
+
+        .stl-notice {
+            margin-top: 17px;
+
+            display: inline-flex;
+            align-items: center;
+
+            gap: 7px;
+
+            color: #515151;
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
+        footer {
+            padding: 42px 7%;
+
+            background: #10151c;
+
+            color: #d4d8de;
+
+            text-align: center;
+
+            font-size: 14px;
+        }
+
+
+        footer strong {
+            color: white;
         }
 
 
@@ -544,19 +1042,45 @@
            RESPONSIVE
         ========================================== */
 
-        @media (max-width: 900px) {
+        @media (max-width: 950px) {
 
             nav {
                 display: none;
             }
 
-            .products-grid {
+
+            .product-toggle {
+                grid-template-columns:
+                    140px
+                    1fr
+                    auto;
+            }
+
+
+            .product-image {
+                width: 140px;
+                height: 125px;
+            }
+
+
+            .expand-control span:first-child {
+                display: none;
+            }
+
+
+            .expand-control {
+                min-width: auto;
+            }
+
+
+            .details-main {
                 grid-template-columns: 1fr;
             }
 
         }
 
-        @media (max-width: 550px) {
+
+        @media (max-width: 650px) {
 
             header {
                 height: 70px;
@@ -565,12 +1089,14 @@
                 padding-right: 5%;
             }
 
+
             .brand-logo-crop {
                 width: 52px;
                 height: 58px;
 
                 transform: translateY(-7px);
             }
+
 
             .brand-logo-crop img {
                 width: 100px;
@@ -579,19 +1105,164 @@
                 top: -8px;
             }
 
+
             .brand-name {
                 font-size: 25px;
             }
 
+
             .language-button {
-                padding: 11px 15px;
+                padding: 11px 14px;
 
                 font-size: 13px;
             }
 
+
             .page-hero {
-                padding-left: 6%;
-                padding-right: 6%;
+                padding:
+                    75px
+                    6%
+                    55px;
+            }
+
+
+            .page-hero p {
+                font-size: 17px;
+            }
+
+
+            .catalog {
+                padding:
+                    55px
+                    5%
+                    80px;
+            }
+
+
+            .filters {
+                gap: 8px;
+            }
+
+
+            .filter-button {
+                padding: 10px 14px;
+
+                font-size: 12px;
+            }
+
+
+            .product-toggle {
+                padding: 15px;
+
+                grid-template-columns:
+                    95px
+                    1fr
+                    38px;
+
+                gap: 15px;
+            }
+
+
+            .product-image {
+                width: 95px;
+                height: 95px;
+            }
+
+
+            .category-badge {
+                padding: 5px 8px;
+
+                font-size: 9px;
+
+                letter-spacing: 0.5px;
+            }
+
+
+            .product-summary h2 {
+                margin-top: 8px;
+
+                font-size: 21px;
+            }
+
+
+            .product-summary p {
+                font-size: 14px;
+            }
+
+
+            .circle-arrow {
+                width: 36px;
+                height: 36px;
+
+                font-size: 17px;
+            }
+
+
+            .product-details-content {
+                padding:
+                    10px
+                    20px
+                    28px;
+            }
+
+
+            .resources {
+                padding: 20px;
+            }
+
+
+            .resource-buttons {
+                flex-direction: column;
+            }
+
+
+            .resource-button {
+                width: 100%;
+            }
+
+        }
+
+
+        @media (max-width: 430px) {
+
+            .brand-name {
+                font-size: 21px;
+            }
+
+
+            .language-button {
+                padding: 10px 12px;
+            }
+
+
+            .language-button span {
+                display: none;
+            }
+
+
+            .product-toggle {
+                grid-template-columns:
+                    82px
+                    1fr
+                    34px;
+
+                gap: 11px;
+            }
+
+
+            .product-image {
+                width: 82px;
+                height: 82px;
+            }
+
+
+            .product-summary h2 {
+                font-size: 19px;
+            }
+
+
+            .product-summary p {
+                font-size: 13px;
             }
 
         }
@@ -604,8 +1275,11 @@
 <body>
 
 
-<header>
+<!-- =========================================
+     HEADER
+========================================== -->
 
+<header>
 
     <a
         class="brand"
@@ -623,9 +1297,7 @@
 
 
         <div class="brand-name">
-
             SAKUTA
-
         </div>
 
     </a>
@@ -633,7 +1305,6 @@
 
 
     <nav>
-
 
         <a
             href="index.html#inicio"
@@ -646,8 +1317,7 @@
 
         <div class="menu-dropdown">
 
-
-            <a href="productos.html">
+            <a href="#catalogo">
 
                 <span data-i18n="navProducts">
                     Productos
@@ -662,33 +1332,31 @@
 
             <div class="dropdown-menu">
 
-
                 <a
-                    href="#robots"
-                    data-i18n="robots"
+                    href="#catalogo"
+                    data-filter-link="all"
+                    data-i18n="filterAll"
                 >
-                    Robots
+                    Todos los productos
                 </a>
 
-
                 <a
-                    href="#herramientas"
-                    data-i18n="tools"
+                    href="#catalogo"
+                    data-filter-link="education"
+                    data-i18n="filterEducation"
                 >
-                    Herramientas robóticas
+                    Educación e investigación
                 </a>
 
-
                 <a
-                    href="#software"
-                    data-i18n="software"
+                    href="#catalogo"
+                    data-filter-link="industry"
+                    data-i18n="filterIndustry"
                 >
-                    Software SRC
+                    Semi-industria e industria
                 </a>
-
 
             </div>
-
 
         </div>
 
@@ -702,7 +1370,6 @@
         </a>
 
 
-
         <a
             href="soporte.html"
             data-i18n="navSupport"
@@ -713,7 +1380,6 @@
 
 
         <div class="menu-dropdown">
-
 
             <a href="index.html#empresa">
 
@@ -730,14 +1396,12 @@
 
             <div class="dropdown-menu">
 
-
                 <a
                     href="index.html#empresa"
                     data-i18n="aboutUs"
                 >
                     Acerca de nosotros
                 </a>
-
 
                 <a
                     href="index.html#contacto"
@@ -746,24 +1410,18 @@
                     Contáctanos
                 </a>
 
-
             </div>
 
-
         </div>
-
 
     </nav>
 
 
 
-    <!-- IDIOMA - REEMPLAZA AL BOTÓN EXPLORAR -->
-
     <div
         class="language-selector"
         id="languageSelector"
     >
-
 
         <button
             class="language-button"
@@ -784,14 +1442,12 @@
 
         <div class="language-options">
 
-
             <button
                 type="button"
                 data-language="es"
             >
                 🇲🇽 Español
             </button>
-
 
             <button
                 type="button"
@@ -800,7 +1456,6 @@
                 🇺🇸 English
             </button>
 
-
             <button
                 type="button"
                 data-language="zh"
@@ -808,12 +1463,9 @@
                 🇨🇳 中文
             </button>
 
-
         </div>
 
-
     </div>
-
 
 </header>
 
@@ -825,7 +1477,6 @@
 
 <section class="page-hero">
 
-
     <span
         class="page-label"
         data-i18n="companyLabel"
@@ -835,234 +1486,1489 @@
 
 
     <h1 data-i18n="pageTitle">
-
         Productos
-
     </h1>
 
 
     <p data-i18n="pageDescription">
 
-        Conoce las soluciones desarrolladas por SRC:
-        robots, herramientas robóticas y software
-        para diferentes aplicaciones.
+        Explora los productos desarrollados por SRC
+        para educación, investigación, robótica
+        y automatización.
 
     </p>
-
 
 </section>
 
 
 
 <!-- =========================================
-     CATEGORÍAS
+     CATÁLOGO
 ========================================== -->
 
 <section
-    class="products-grid"
-    id="categorias"
+    class="catalog"
+    id="catalogo"
 >
 
 
-    <a
-        class="product-card"
-        href="#robots"
-    >
-
-
-        <div class="product-number">
-            01
-        </div>
-
-
-        <h2 data-i18n="robots">
-            Robots
-        </h2>
-
-
-        <p data-i18n="robotsDescription">
-            Plataformas robóticas desarrolladas por SRC
-            para educación, investigación y automatización.
-        </p>
-
+    <div class="catalog-header">
 
         <span
-            class="product-link"
-            data-i18n="robotsLink"
+            class="catalog-label"
+            data-i18n="catalogLabel"
         >
-            Explorar robots →
+            CATÁLOGO SRC
         </span>
 
 
-    </a>
-
-
-
-    <a
-        class="product-card"
-        href="#herramientas"
-    >
-
-
-        <div class="product-number">
-            02
-        </div>
-
-
-        <h2 data-i18n="tools">
-            Herramientas robóticas
+        <h2 data-i18n="catalogTitle">
+            Nuestros productos
         </h2>
 
 
-        <p data-i18n="toolsDescription">
-            Grippers, efectores finales y herramientas
-            desarrolladas para distintas aplicaciones robóticas.
+        <p data-i18n="catalogDescription">
+
+            Selecciona una categoría y despliega
+            cada producto para consultar su información,
+            documentación y archivos disponibles.
+
         </p>
 
+    </div>
 
-        <span
-            class="product-link"
-            data-i18n="toolsLink"
+
+
+    <!-- =========================================
+         FILTROS
+    ========================================== -->
+
+    <div class="filters">
+
+        <button
+            class="filter-button active"
+            type="button"
+            data-filter="all"
+            data-i18n="filterAll"
         >
-            Ver herramientas →
-        </span>
+            Todos los productos
+        </button>
 
 
-    </a>
-
-
-
-    <a
-        class="product-card"
-        href="#software"
-    >
-
-
-        <div class="product-number">
-            03
-        </div>
-
-
-        <h2 data-i18n="software">
-            Software SRC
-        </h2>
-
-
-        <p data-i18n="softwareDescription">
-            Software desarrollado para programación,
-            control y operación de nuestros sistemas robóticos.
-        </p>
-
-
-        <span
-            class="product-link"
-            data-i18n="softwareLink"
+        <button
+            class="filter-button"
+            type="button"
+            data-filter="education"
+            data-i18n="filterEducation"
         >
-            Conocer software →
-        </span>
+            Educación e investigación
+        </button>
 
 
-    </a>
+        <button
+            class="filter-button"
+            type="button"
+            data-filter="industry"
+            data-i18n="filterIndustry"
+        >
+            Semi-industria e industria
+        </button>
 
+    </div>
+
+
+
+    <div class="products-list">
+
+
+        <!-- =========================================
+             PRODUCTO 01
+             ROBOT EDUCATIVO
+
+             Cuando tengamos los archivos:
+             data-pdf="nombre-del-archivo.pdf"
+             data-stl="nombre-del-archivo.zip"
+        ========================================== -->
+
+        <article
+            class="product-item"
+            data-category="education"
+            data-pdf=""
+            data-stl=""
+        >
+
+            <button
+                class="product-toggle"
+                type="button"
+                aria-expanded="false"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="robot_educativo.png"
+                        alt="Producto SRC"
+                    >
+
+                </div>
+
+
+                <div class="product-summary">
+
+                    <span
+                        class="category-badge"
+                        data-i18n="educationCategory"
+                    >
+                        Educación e investigación
+                    </span>
+
+
+                    <h2 data-i18n="placeholderTitle">
+                        Título
+                    </h2>
+
+
+                    <p data-i18n="placeholderDescription">
+                        Descripción
+                    </p>
+
+                </div>
+
+
+                <div class="expand-control">
+
+                    <span data-i18n="viewDetails">
+                        Ver detalles
+                    </span>
+
+                    <span class="circle-arrow">
+                        ↓
+                    </span>
+
+                </div>
+
+            </button>
+
+
+
+            <div class="product-details">
+
+                <div class="product-details-inner">
+
+                    <div class="product-details-content">
+
+
+                        <div class="details-main">
+
+                            <div class="details-information">
+
+
+                                <div class="information-block">
+
+                                    <h3 data-i18n="descriptionTitle">
+                                        Descripción
+                                    </h3>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderDescription"
+                                    >
+                                        Descripción
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="featuresTitle">
+                                        Características
+                                    </h4>
+
+                                    <ul class="placeholder-list">
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="specificationsTitle">
+                                        Especificaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderSpecifications"
+                                    >
+                                        Especificaciones
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="applicationsTitle">
+                                        Aplicaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderApplications"
+                                    >
+                                        Aplicaciones
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="details-media">
+
+                                <img
+                                    src="robot_educativo.png"
+                                    alt="Producto SRC"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="resources">
+
+                            <div class="resources-header">
+
+                                <div>
+
+                                    <h3 data-i18n="resourcesTitle">
+                                        Documentación y archivos
+                                    </h3>
+
+                                    <p data-i18n="educationResourcesDescription">
+                                        Consulta la documentación y descarga los archivos disponibles del producto.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="resource-buttons">
+
+                                <button
+                                    class="resource-button primary"
+                                    type="button"
+                                    data-action="view-pdf"
+                                    data-i18n="viewPdf"
+                                >
+                                    Ver PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-pdf"
+                                    data-i18n="downloadPdf"
+                                >
+                                    Descargar PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-stl"
+                                    data-i18n="downloadStl"
+                                >
+                                    Descargar STL
+                                </button>
+
+                            </div>
+
+
+                            <div class="stl-notice">
+
+                                ↓
+
+                                <span data-i18n="freeStl">
+                                    Archivos STL gratuitos para uso educativo.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================================
+             PRODUCTO 02
+             GRIPPER EDUCATIVO
+        ========================================== -->
+
+        <article
+            class="product-item"
+            data-category="education"
+            data-pdf=""
+            data-stl=""
+        >
+
+            <button
+                class="product-toggle"
+                type="button"
+                aria-expanded="false"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="gripper_educativo.png"
+                        alt="Producto SRC"
+                    >
+
+                </div>
+
+
+                <div class="product-summary">
+
+                    <span
+                        class="category-badge"
+                        data-i18n="educationCategory"
+                    >
+                        Educación e investigación
+                    </span>
+
+
+                    <h2 data-i18n="placeholderTitle">
+                        Título
+                    </h2>
+
+
+                    <p data-i18n="placeholderDescription">
+                        Descripción
+                    </p>
+
+                </div>
+
+
+                <div class="expand-control">
+
+                    <span data-i18n="viewDetails">
+                        Ver detalles
+                    </span>
+
+                    <span class="circle-arrow">
+                        ↓
+                    </span>
+
+                </div>
+
+            </button>
+
+
+
+            <div class="product-details">
+
+                <div class="product-details-inner">
+
+                    <div class="product-details-content">
+
+                        <div class="details-main">
+
+                            <div class="details-information">
+
+                                <div class="information-block">
+
+                                    <h3 data-i18n="descriptionTitle">
+                                        Descripción
+                                    </h3>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderDescription"
+                                    >
+                                        Descripción
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="featuresTitle">
+                                        Características
+                                    </h4>
+
+                                    <ul class="placeholder-list">
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="specificationsTitle">
+                                        Especificaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderSpecifications"
+                                    >
+                                        Especificaciones
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="applicationsTitle">
+                                        Aplicaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderApplications"
+                                    >
+                                        Aplicaciones
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="details-media">
+
+                                <img
+                                    src="gripper_educativo.png"
+                                    alt="Producto SRC"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="resources">
+
+                            <h3 data-i18n="resourcesTitle">
+                                Documentación y archivos
+                            </h3>
+
+                            <p data-i18n="educationResourcesDescription">
+                                Consulta la documentación y descarga los archivos disponibles del producto.
+                            </p>
+
+
+                            <div class="resource-buttons">
+
+                                <button
+                                    class="resource-button primary"
+                                    type="button"
+                                    data-action="view-pdf"
+                                    data-i18n="viewPdf"
+                                >
+                                    Ver PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-pdf"
+                                    data-i18n="downloadPdf"
+                                >
+                                    Descargar PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-stl"
+                                    data-i18n="downloadStl"
+                                >
+                                    Descargar STL
+                                </button>
+
+                            </div>
+
+
+                            <div class="stl-notice">
+
+                                ↓
+
+                                <span data-i18n="freeStl">
+                                    Archivos STL gratuitos para uso educativo.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================================
+             PRODUCTO 03
+             GRIPPER ADAPTATIVO EDUCATIVO
+        ========================================== -->
+
+        <article
+            class="product-item"
+            data-category="education"
+            data-pdf=""
+            data-stl=""
+        >
+
+            <button
+                class="product-toggle"
+                type="button"
+                aria-expanded="false"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="gripper_adaptative_educativo.png"
+                        alt="Producto SRC"
+                    >
+
+                </div>
+
+
+                <div class="product-summary">
+
+                    <span
+                        class="category-badge"
+                        data-i18n="educationCategory"
+                    >
+                        Educación e investigación
+                    </span>
+
+
+                    <h2 data-i18n="placeholderTitle">
+                        Título
+                    </h2>
+
+
+                    <p data-i18n="placeholderDescription">
+                        Descripción
+                    </p>
+
+                </div>
+
+
+                <div class="expand-control">
+
+                    <span data-i18n="viewDetails">
+                        Ver detalles
+                    </span>
+
+                    <span class="circle-arrow">
+                        ↓
+                    </span>
+
+                </div>
+
+            </button>
+
+
+
+            <div class="product-details">
+
+                <div class="product-details-inner">
+
+                    <div class="product-details-content">
+
+                        <div class="details-main">
+
+                            <div class="details-information">
+
+                                <div class="information-block">
+
+                                    <h3 data-i18n="descriptionTitle">
+                                        Descripción
+                                    </h3>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderDescription"
+                                    >
+                                        Descripción
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="featuresTitle">
+                                        Características
+                                    </h4>
+
+                                    <ul class="placeholder-list">
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="specificationsTitle">
+                                        Especificaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderSpecifications"
+                                    >
+                                        Especificaciones
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="applicationsTitle">
+                                        Aplicaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderApplications"
+                                    >
+                                        Aplicaciones
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="details-media">
+
+                                <img
+                                    src="gripper_adaptative_educativo.png"
+                                    alt="Producto SRC"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="resources">
+
+                            <h3 data-i18n="resourcesTitle">
+                                Documentación y archivos
+                            </h3>
+
+                            <p data-i18n="educationResourcesDescription">
+                                Consulta la documentación y descarga los archivos disponibles del producto.
+                            </p>
+
+
+                            <div class="resource-buttons">
+
+                                <button
+                                    class="resource-button primary"
+                                    type="button"
+                                    data-action="view-pdf"
+                                    data-i18n="viewPdf"
+                                >
+                                    Ver PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-pdf"
+                                    data-i18n="downloadPdf"
+                                >
+                                    Descargar PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-stl"
+                                    data-i18n="downloadStl"
+                                >
+                                    Descargar STL
+                                </button>
+
+                            </div>
+
+
+                            <div class="stl-notice">
+
+                                ↓
+
+                                <span data-i18n="freeStl">
+                                    Archivos STL gratuitos para uso educativo.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================================
+             PRODUCTO 04
+             KIT DE ENGRANES EDUCATIVO
+        ========================================== -->
+
+        <article
+            class="product-item"
+            data-category="education"
+            data-pdf=""
+            data-stl=""
+        >
+
+            <button
+                class="product-toggle"
+                type="button"
+                aria-expanded="false"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="kit_engranes.png"
+                        alt="Producto SRC"
+                    >
+
+                </div>
+
+
+                <div class="product-summary">
+
+                    <span
+                        class="category-badge"
+                        data-i18n="educationCategory"
+                    >
+                        Educación e investigación
+                    </span>
+
+
+                    <h2 data-i18n="placeholderTitle">
+                        Título
+                    </h2>
+
+
+                    <p data-i18n="placeholderDescription">
+                        Descripción
+                    </p>
+
+                </div>
+
+
+                <div class="expand-control">
+
+                    <span data-i18n="viewDetails">
+                        Ver detalles
+                    </span>
+
+                    <span class="circle-arrow">
+                        ↓
+                    </span>
+
+                </div>
+
+            </button>
+
+
+
+            <div class="product-details">
+
+                <div class="product-details-inner">
+
+                    <div class="product-details-content">
+
+                        <div class="details-main">
+
+                            <div class="details-information">
+
+                                <div class="information-block">
+
+                                    <h3 data-i18n="descriptionTitle">
+                                        Descripción
+                                    </h3>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderDescription"
+                                    >
+                                        Descripción
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="featuresTitle">
+                                        Características
+                                    </h4>
+
+                                    <ul class="placeholder-list">
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="specificationsTitle">
+                                        Especificaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderSpecifications"
+                                    >
+                                        Especificaciones
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="applicationsTitle">
+                                        Aplicaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderApplications"
+                                    >
+                                        Aplicaciones
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="details-media">
+
+                                <img
+                                    src="kit_engranes.png"
+                                    alt="Producto SRC"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="resources">
+
+                            <h3 data-i18n="resourcesTitle">
+                                Documentación y archivos
+                            </h3>
+
+                            <p data-i18n="educationResourcesDescription">
+                                Consulta la documentación y descarga los archivos disponibles del producto.
+                            </p>
+
+
+                            <div class="resource-buttons">
+
+                                <button
+                                    class="resource-button primary"
+                                    type="button"
+                                    data-action="view-pdf"
+                                    data-i18n="viewPdf"
+                                >
+                                    Ver PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-pdf"
+                                    data-i18n="downloadPdf"
+                                >
+                                    Descargar PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-stl"
+                                    data-i18n="downloadStl"
+                                >
+                                    Descargar STL
+                                </button>
+
+                            </div>
+
+
+                            <div class="stl-notice">
+
+                                ↓
+
+                                <span data-i18n="freeStl">
+                                    Archivos STL gratuitos para uso educativo.
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================================
+             PRODUCTO 05
+             GRIPPER NEUMÁTICO
+        ========================================== -->
+
+        <article
+            class="product-item"
+            data-category="industry"
+            data-pdf=""
+        >
+
+            <button
+                class="product-toggle"
+                type="button"
+                aria-expanded="false"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="gripper_neumatico.png"
+                        alt="Producto SRC"
+                    >
+
+                </div>
+
+
+                <div class="product-summary">
+
+                    <span
+                        class="category-badge"
+                        data-i18n="industryCategory"
+                    >
+                        Semi-industria e industria
+                    </span>
+
+
+                    <h2 data-i18n="placeholderTitle">
+                        Título
+                    </h2>
+
+
+                    <p data-i18n="placeholderDescription">
+                        Descripción
+                    </p>
+
+                </div>
+
+
+                <div class="expand-control">
+
+                    <span data-i18n="viewDetails">
+                        Ver detalles
+                    </span>
+
+                    <span class="circle-arrow">
+                        ↓
+                    </span>
+
+                </div>
+
+            </button>
+
+
+
+            <div class="product-details">
+
+                <div class="product-details-inner">
+
+                    <div class="product-details-content">
+
+                        <div class="details-main">
+
+                            <div class="details-information">
+
+                                <div class="information-block">
+
+                                    <h3 data-i18n="descriptionTitle">
+                                        Descripción
+                                    </h3>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderDescription"
+                                    >
+                                        Descripción
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="featuresTitle">
+                                        Características
+                                    </h4>
+
+                                    <ul class="placeholder-list">
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="specificationsTitle">
+                                        Especificaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderSpecifications"
+                                    >
+                                        Especificaciones
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="applicationsTitle">
+                                        Aplicaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderApplications"
+                                    >
+                                        Aplicaciones
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="details-media">
+
+                                <img
+                                    src="gripper_neumatico.png"
+                                    alt="Producto SRC"
+                                >
+
+
+                                <img
+                                    src="conjunto_vistas.png"
+                                    alt="Vistas del producto SRC"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="resources">
+
+                            <h3 data-i18n="resourcesTitle">
+                                Documentación y archivos
+                            </h3>
+
+                            <p data-i18n="industryResourcesDescription">
+                                Consulta la documentación técnica disponible del producto.
+                            </p>
+
+
+                            <div class="resource-buttons">
+
+                                <button
+                                    class="resource-button primary"
+                                    type="button"
+                                    data-action="view-pdf"
+                                    data-i18n="viewPdf"
+                                >
+                                    Ver PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-pdf"
+                                    data-i18n="downloadPdf"
+                                >
+                                    Descargar PDF
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =========================================
+             PRODUCTO 06
+             VENTOSA / EFECTOR FINAL
+        ========================================== -->
+
+        <article
+            class="product-item"
+            data-category="industry"
+            data-pdf=""
+        >
+
+            <button
+                class="product-toggle"
+                type="button"
+                aria-expanded="false"
+            >
+
+                <div class="product-image">
+
+                    <img
+                        src="ventosa.png"
+                        alt="Producto SRC"
+                    >
+
+                </div>
+
+
+                <div class="product-summary">
+
+                    <span
+                        class="category-badge"
+                        data-i18n="industryCategory"
+                    >
+                        Semi-industria e industria
+                    </span>
+
+
+                    <h2 data-i18n="placeholderTitle">
+                        Título
+                    </h2>
+
+
+                    <p data-i18n="placeholderDescription">
+                        Descripción
+                    </p>
+
+                </div>
+
+
+                <div class="expand-control">
+
+                    <span data-i18n="viewDetails">
+                        Ver detalles
+                    </span>
+
+                    <span class="circle-arrow">
+                        ↓
+                    </span>
+
+                </div>
+
+            </button>
+
+
+
+            <div class="product-details">
+
+                <div class="product-details-inner">
+
+                    <div class="product-details-content">
+
+                        <div class="details-main">
+
+                            <div class="details-information">
+
+                                <div class="information-block">
+
+                                    <h3 data-i18n="descriptionTitle">
+                                        Descripción
+                                    </h3>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderDescription"
+                                    >
+                                        Descripción
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="featuresTitle">
+                                        Características
+                                    </h4>
+
+                                    <ul class="placeholder-list">
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                    </ul>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="specificationsTitle">
+                                        Especificaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderSpecifications"
+                                    >
+                                        Especificaciones
+                                    </p>
+
+                                </div>
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="applicationsTitle">
+                                        Aplicaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderApplications"
+                                    >
+                                        Aplicaciones
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="details-media">
+
+                                <img
+                                    src="ventosa.png"
+                                    alt="Producto SRC"
+                                >
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="resources">
+
+                            <h3 data-i18n="resourcesTitle">
+                                Documentación y archivos
+                            </h3>
+
+                            <p data-i18n="industryResourcesDescription">
+                                Consulta la documentación técnica disponible del producto.
+                            </p>
+
+
+                            <div class="resource-buttons">
+
+                                <button
+                                    class="resource-button primary"
+                                    type="button"
+                                    data-action="view-pdf"
+                                    data-i18n="viewPdf"
+                                >
+                                    Ver PDF
+                                </button>
+
+
+                                <button
+                                    class="resource-button secondary"
+                                    type="button"
+                                    data-action="download-pdf"
+                                    data-i18n="downloadPdf"
+                                >
+                                    Descargar PDF
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
 
 </section>
 
 
 
-<!-- =========================================
-     ROBOTS
-========================================== -->
+<footer>
 
-<section
-    class="product-section"
-    id="robots"
->
+    <strong>
+        SAKUTA Robotics Company
+    </strong>
 
+    <br><br>
 
-    <span data-i18n="productsLabel">
-        PRODUCTOS
-    </span>
+    SRC © 2026
 
-
-    <h2 data-i18n="robots">
-        Robots
-    </h2>
-
-
-    <p data-i18n="robotsSectionDescription">
-        Aquí agregaremos posteriormente los robots
-        desarrollados por SRC, incluyendo Pioneer.
-    </p>
-
-
-</section>
-
-
-
-<!-- =========================================
-     HERRAMIENTAS
-========================================== -->
-
-<section
-    class="product-section"
-    id="herramientas"
->
-
-
-    <span data-i18n="productsLabel">
-        PRODUCTOS
-    </span>
-
-
-    <h2 data-i18n="tools">
-        Herramientas robóticas
-    </h2>
-
-
-    <p data-i18n="toolsSectionDescription">
-        Aquí colocaremos grippers, herramientas,
-        accesorios y efectores finales de SRC.
-    </p>
-
-
-</section>
-
-
-
-<!-- =========================================
-     SOFTWARE
-========================================== -->
-
-<section
-    class="product-section"
-    id="software"
->
-
-
-    <span data-i18n="productsLabel">
-        PRODUCTOS
-    </span>
-
-
-    <h2 data-i18n="software">
-        Software SRC
-    </h2>
-
-
-    <p data-i18n="softwareSectionDescription">
-        Aquí presentaremos el software desarrollado
-        para los robots y sistemas SRC.
-    </p>
-
-
-</section>
+</footer>
 
 
 
 <script>
 
-    const translations = {
+    /* =========================================
+       TRADUCCIONES
+    ========================================== */
 
+    const translations = {
 
         es: {
 
@@ -1075,53 +2981,95 @@
             aboutUs: "Acerca de nosotros",
             contactUs: "Contáctanos",
 
-            companyLabel: "SAKUTA ROBOTICS COMPANY",
+            companyLabel:
+                "SAKUTA ROBOTICS COMPANY",
 
-            pageTitle: "Productos",
+            pageTitle:
+                "Productos",
 
             pageDescription:
-                "Conoce las soluciones desarrolladas por SRC: robots, herramientas robóticas y software para diferentes aplicaciones.",
+                "Explora los productos desarrollados por SRC para educación, investigación, robótica y automatización.",
 
-            robots: "Robots",
+            catalogLabel:
+                "CATÁLOGO SRC",
 
-            tools:
-                "Herramientas robóticas",
+            catalogTitle:
+                "Nuestros productos",
 
-            software:
-                "Software SRC",
+            catalogDescription:
+                "Selecciona una categoría y despliega cada producto para consultar su información, documentación y archivos disponibles.",
 
-            robotsDescription:
-                "Plataformas robóticas desarrolladas por SRC para educación, investigación y automatización.",
+            filterAll:
+                "Todos los productos",
 
-            toolsDescription:
-                "Grippers, efectores finales y herramientas desarrolladas para distintas aplicaciones robóticas.",
+            filterEducation:
+                "Educación e investigación",
 
-            softwareDescription:
-                "Software desarrollado para programación, control y operación de nuestros sistemas robóticos.",
+            filterIndustry:
+                "Semi-industria e industria",
 
-            robotsLink:
-                "Explorar robots →",
+            educationCategory:
+                "Educación e investigación",
 
-            toolsLink:
-                "Ver herramientas →",
+            industryCategory:
+                "Semi-industria e industria",
 
-            softwareLink:
-                "Conocer software →",
+            placeholderTitle:
+                "Título",
 
-            productsLabel:
-                "PRODUCTOS",
+            placeholderDescription:
+                "Descripción",
 
-            robotsSectionDescription:
-                "Aquí agregaremos posteriormente los robots desarrollados por SRC, incluyendo Pioneer.",
+            viewDetails:
+                "Ver detalles",
 
-            toolsSectionDescription:
-                "Aquí colocaremos grippers, herramientas, accesorios y efectores finales de SRC.",
+            descriptionTitle:
+                "Descripción",
 
-            softwareSectionDescription:
-                "Aquí presentaremos el software desarrollado para los robots y sistemas SRC.",
+            featuresTitle:
+                "Características",
+
+            placeholderFeature:
+                "Característica",
+
+            specificationsTitle:
+                "Especificaciones",
+
+            placeholderSpecifications:
+                "Especificaciones",
+
+            applicationsTitle:
+                "Aplicaciones",
+
+            placeholderApplications:
+                "Aplicaciones",
+
+            resourcesTitle:
+                "Documentación y archivos",
+
+            educationResourcesDescription:
+                "Consulta la documentación y descarga los archivos disponibles del producto.",
+
+            industryResourcesDescription:
+                "Consulta la documentación técnica disponible del producto.",
+
+            viewPdf:
+                "Ver PDF",
+
+            downloadPdf:
+                "Descargar PDF",
+
+            downloadStl:
+                "Descargar STL",
+
+            freeStl:
+                "Archivos STL gratuitos para uso educativo.",
 
             languageButton:
-                "Idioma"
+                "Idioma",
+
+            unavailable:
+                "Este archivo todavía no ha sido agregado."
 
         },
 
@@ -1137,53 +3085,95 @@
             aboutUs: "About us",
             contactUs: "Contact us",
 
-            companyLabel: "SAKUTA ROBOTICS COMPANY",
+            companyLabel:
+                "SAKUTA ROBOTICS COMPANY",
 
-            pageTitle: "Products",
+            pageTitle:
+                "Products",
 
             pageDescription:
-                "Discover SRC solutions: robots, robotic tools and software for different applications.",
+                "Explore products developed by SRC for education, research, robotics and automation.",
 
-            robots: "Robots",
+            catalogLabel:
+                "SRC CATALOG",
 
-            tools:
-                "Robotic tools",
+            catalogTitle:
+                "Our products",
 
-            software:
-                "SRC Software",
+            catalogDescription:
+                "Select a category and expand each product to view its information, documentation and available files.",
 
-            robotsDescription:
-                "Robotic platforms developed by SRC for education, research and automation.",
+            filterAll:
+                "All products",
 
-            toolsDescription:
-                "Grippers, end effectors and tools developed for different robotic applications.",
+            filterEducation:
+                "Education and research",
 
-            softwareDescription:
-                "Software developed for programming, control and operation of our robotic systems.",
+            filterIndustry:
+                "Semi-industrial and industrial",
 
-            robotsLink:
-                "Explore robots →",
+            educationCategory:
+                "Education and research",
 
-            toolsLink:
-                "View robotic tools →",
+            industryCategory:
+                "Semi-industrial and industrial",
 
-            softwareLink:
-                "Explore software →",
+            placeholderTitle:
+                "Title",
 
-            productsLabel:
-                "PRODUCTS",
+            placeholderDescription:
+                "Description",
 
-            robotsSectionDescription:
-                "SRC robots, including Pioneer, will be presented here.",
+            viewDetails:
+                "View details",
 
-            toolsSectionDescription:
-                "SRC grippers, robotic tools, accessories and end effectors will be presented here.",
+            descriptionTitle:
+                "Description",
 
-            softwareSectionDescription:
-                "Software developed for SRC robots and systems will be presented here.",
+            featuresTitle:
+                "Features",
+
+            placeholderFeature:
+                "Feature",
+
+            specificationsTitle:
+                "Specifications",
+
+            placeholderSpecifications:
+                "Specifications",
+
+            applicationsTitle:
+                "Applications",
+
+            placeholderApplications:
+                "Applications",
+
+            resourcesTitle:
+                "Documentation and files",
+
+            educationResourcesDescription:
+                "View the documentation and download the available product files.",
+
+            industryResourcesDescription:
+                "View the available technical documentation for this product.",
+
+            viewPdf:
+                "View PDF",
+
+            downloadPdf:
+                "Download PDF",
+
+            downloadStl:
+                "Download STL",
+
+            freeStl:
+                "Free STL files for educational use.",
 
             languageButton:
-                "Language"
+                "Language",
+
+            unavailable:
+                "This file has not been added yet."
 
         },
 
@@ -1206,49 +3196,88 @@
                 "产品",
 
             pageDescription:
-                "探索 SRC 开发的机器人、机器人工具和软件解决方案。",
+                "探索 SRC 为教育、科研、机器人和自动化开发的产品。",
 
-            robots:
-                "机器人",
+            catalogLabel:
+                "SRC 产品目录",
 
-            tools:
-                "机器人工具",
+            catalogTitle:
+                "我们的产品",
 
-            software:
-                "SRC 软件",
+            catalogDescription:
+                "选择一个类别并展开产品，以查看信息、文档和可用文件。",
 
-            robotsDescription:
-                "SRC 开发的机器人平台，适用于教育、科研和自动化。",
+            filterAll:
+                "所有产品",
 
-            toolsDescription:
-                "面向不同机器人应用开发的夹具、末端执行器和机器人工具。",
+            filterEducation:
+                "教育与科研",
 
-            softwareDescription:
-                "用于机器人系统编程、控制和操作的软件。",
+            filterIndustry:
+                "半工业与工业",
 
-            robotsLink:
-                "探索机器人 →",
+            educationCategory:
+                "教育与科研",
 
-            toolsLink:
-                "查看机器人工具 →",
+            industryCategory:
+                "半工业与工业",
 
-            softwareLink:
-                "了解软件 →",
+            placeholderTitle:
+                "标题",
 
-            productsLabel:
-                "产品",
+            placeholderDescription:
+                "描述",
 
-            robotsSectionDescription:
-                "这里将展示 SRC 开发的机器人，包括 Pioneer。",
+            viewDetails:
+                "查看详情",
 
-            toolsSectionDescription:
-                "这里将展示 SRC 的夹具、机器人工具、附件和末端执行器。",
+            descriptionTitle:
+                "描述",
 
-            softwareSectionDescription:
-                "这里将展示为 SRC 机器人和系统开发的软件。",
+            featuresTitle:
+                "特点",
+
+            placeholderFeature:
+                "特点",
+
+            specificationsTitle:
+                "规格",
+
+            placeholderSpecifications:
+                "规格",
+
+            applicationsTitle:
+                "应用",
+
+            placeholderApplications:
+                "应用",
+
+            resourcesTitle:
+                "文档与文件",
+
+            educationResourcesDescription:
+                "查看文档并下载该产品可用的文件。",
+
+            industryResourcesDescription:
+                "查看该产品可用的技术文档。",
+
+            viewPdf:
+                "查看 PDF",
+
+            downloadPdf:
+                "下载 PDF",
+
+            downloadStl:
+                "下载 STL",
+
+            freeStl:
+                "用于教育用途的免费 STL 文件。",
 
             languageButton:
-                "语言"
+                "语言",
+
+            unavailable:
+                "该文件尚未添加。"
 
         }
 
@@ -1256,14 +3285,24 @@
 
 
 
+    /* =========================================
+       IDIOMA
+    ========================================== */
+
     const languageSelector =
         document.getElementById("languageSelector");
+
 
     const languageButton =
         document.getElementById("languageButton");
 
+
     const languageButtonText =
         document.getElementById("languageButtonText");
+
+
+    let currentLanguage =
+        localStorage.getItem("srcLanguage") || "es";
 
 
 
@@ -1279,7 +3318,6 @@
     );
 
 
-
     document.addEventListener(
         "click",
         function() {
@@ -1288,7 +3326,6 @@
 
         }
     );
-
 
 
     document
@@ -1312,10 +3349,12 @@
 
     function setLanguage(language) {
 
-
         if (!translations[language]) {
             language = "es";
         }
+
+
+        currentLanguage = language;
 
 
         document.documentElement.lang =
@@ -1328,6 +3367,7 @@
 
                 const key =
                     element.dataset.i18n;
+
 
                 if (translations[language][key]) {
 
@@ -1355,11 +3395,284 @@
 
 
 
-    const savedLanguage =
-        localStorage.getItem("srcLanguage") || "es";
+    setLanguage(currentLanguage);
 
 
-    setLanguage(savedLanguage);
+
+    /* =========================================
+       ACORDEÓN DE PRODUCTOS
+    ========================================== */
+
+    const productItems =
+        document.querySelectorAll(".product-item");
+
+
+    productItems.forEach(function(product) {
+
+        const toggle =
+            product.querySelector(".product-toggle");
+
+
+        toggle.addEventListener(
+            "click",
+            function() {
+
+                const alreadyOpen =
+                    product.classList.contains("open");
+
+
+                productItems.forEach(function(otherProduct) {
+
+                    otherProduct.classList.remove("open");
+
+                    const otherToggle =
+                        otherProduct.querySelector(
+                            ".product-toggle"
+                        );
+
+
+                    if (otherToggle) {
+
+                        otherToggle.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+                    }
+
+                });
+
+
+                if (!alreadyOpen) {
+
+                    product.classList.add("open");
+
+                    toggle.setAttribute(
+                        "aria-expanded",
+                        "true"
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+
+
+    /* =========================================
+       FILTROS
+    ========================================== */
+
+    const filterButtons =
+        document.querySelectorAll(
+            ".filter-button"
+        );
+
+
+    function applyFilter(category) {
+
+        filterButtons.forEach(
+            function(button) {
+
+                button.classList.toggle(
+                    "active",
+                    button.dataset.filter === category
+                );
+
+            }
+        );
+
+
+        productItems.forEach(
+            function(product) {
+
+                product.classList.remove("open");
+
+
+                const toggle =
+                    product.querySelector(
+                        ".product-toggle"
+                    );
+
+
+                toggle.setAttribute(
+                    "aria-expanded",
+                    "false"
+                );
+
+
+                if (
+                    category === "all" ||
+                    product.dataset.category === category
+                ) {
+
+                    product.classList.remove(
+                        "is-hidden"
+                    );
+
+                } else {
+
+                    product.classList.add(
+                        "is-hidden"
+                    );
+
+                }
+
+            }
+        );
+
+    }
+
+
+
+    filterButtons.forEach(
+        function(button) {
+
+            button.addEventListener(
+                "click",
+                function() {
+
+                    applyFilter(
+                        button.dataset.filter
+                    );
+
+                }
+            );
+
+        }
+    );
+
+
+
+    document
+        .querySelectorAll("[data-filter-link]")
+        .forEach(function(link) {
+
+            link.addEventListener(
+                "click",
+                function() {
+
+                    applyFilter(
+                        link.dataset.filterLink
+                    );
+
+                }
+            );
+
+        });
+
+
+
+    /* =========================================
+       PDF Y STL
+
+       Para activar archivos:
+
+       data-pdf="archivo.pdf"
+
+       data-stl="archivo.zip"
+
+       dentro del <article> correspondiente.
+    ========================================== */
+
+    document
+        .querySelectorAll("[data-action]")
+        .forEach(function(button) {
+
+            button.addEventListener(
+                "click",
+                function(event) {
+
+                    event.stopPropagation();
+
+
+                    const product =
+                        button.closest(
+                            ".product-item"
+                        );
+
+
+                    const action =
+                        button.dataset.action;
+
+
+                    let file = "";
+
+
+                    if (
+                        action === "view-pdf" ||
+                        action === "download-pdf"
+                    ) {
+
+                        file =
+                            product.dataset.pdf || "";
+
+                    }
+
+
+                    if (
+                        action === "download-stl"
+                    ) {
+
+                        file =
+                            product.dataset.stl || "";
+
+                    }
+
+
+                    if (!file) {
+
+                        alert(
+                            translations[
+                                currentLanguage
+                            ].unavailable
+                        );
+
+                        return;
+
+                    }
+
+
+                    if (action === "view-pdf") {
+
+                        window.open(
+                            file,
+                            "_blank"
+                        );
+
+                        return;
+
+                    }
+
+
+                    const temporaryLink =
+                        document.createElement("a");
+
+
+                    temporaryLink.href =
+                        file;
+
+
+                    temporaryLink.download =
+                        "";
+
+
+                    document.body.appendChild(
+                        temporaryLink
+                    );
+
+
+                    temporaryLink.click();
+
+
+                    temporaryLink.remove();
+
+                }
+            );
+
+        });
 
 </script>
 
