@@ -7,15 +7,13 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Soporte | SAKUTA Robotics Company</title>
-
+    <title>Soporte | Sakuta Robotics Company</title>
 
     <link
         rel="icon"
         type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='white'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='39' font-weight='900' fill='%2324579b'%3ESRC%3C/text%3E%3C/svg%3E"
     >
-
 
     <style>
 
@@ -25,9 +23,9 @@
             --black: #111111;
             --gray: #666666;
             --light-gray: #f7f8fa;
+            --border: #e4e8ed;
             --white: #ffffff;
         }
-
 
         * {
             margin: 0;
@@ -35,18 +33,15 @@
             box-sizing: border-box;
         }
 
-
         html {
             scroll-behavior: smooth;
         }
 
-
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: var(--white);
+            background: white;
             color: var(--black);
         }
-
 
 
         /* =========================================
@@ -73,7 +68,6 @@
         }
 
 
-
         /* =========================================
            LOGO
         ========================================== */
@@ -81,11 +75,11 @@
         .brand {
             display: flex;
             align-items: center;
+
             gap: 10px;
 
             text-decoration: none;
         }
-
 
         .brand-logo-crop {
             width: 62px;
@@ -100,7 +94,6 @@
             transform: translateY(-8px);
         }
 
-
         .brand-logo-crop img {
             position: absolute;
 
@@ -109,12 +102,10 @@
             max-width: none;
 
             left: -27px;
-
             top: -10px;
 
             display: block;
         }
-
 
         .brand-name {
             font-size: 32px;
@@ -130,7 +121,6 @@
         }
 
 
-
         /* =========================================
            NAVEGACIÓN
         ========================================== */
@@ -141,7 +131,6 @@
 
             gap: 35px;
         }
-
 
         nav > a,
         .menu-dropdown > a {
@@ -157,12 +146,10 @@
             transition: 0.2s;
         }
 
-
         nav > a:hover,
         .menu-dropdown > a:hover {
             color: var(--blue);
         }
-
 
         nav > a::after,
         .menu-dropdown > a::after {
@@ -181,16 +168,22 @@
             transition: 0.25s;
         }
 
-
         nav > a:hover::after,
         .menu-dropdown:hover > a::after {
             width: 100%;
         }
 
+        nav > a.active {
+            color: var(--blue);
+        }
+
+        nav > a.active::after {
+            width: 100%;
+        }
 
 
         /* =========================================
-           DROPDOWN
+           EMPRESA DROPDOWN
         ========================================== */
 
         .menu-dropdown {
@@ -202,15 +195,12 @@
             height: 82px;
         }
 
-
         .menu-dropdown > a {
             display: flex;
-
             align-items: center;
 
             gap: 7px;
         }
-
 
         .dropdown-arrow {
             font-size: 10px;
@@ -218,11 +208,9 @@
             transition: transform 0.25s;
         }
 
-
         .menu-dropdown:hover .dropdown-arrow {
             transform: rotate(180deg);
         }
-
 
         .dropdown-menu {
             position: absolute;
@@ -232,7 +220,7 @@
 
             transform: translateX(-50%) translateY(8px);
 
-            min-width: 220px;
+            min-width: 205px;
 
             background: white;
 
@@ -242,7 +230,7 @@
 
             padding: 8px;
 
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.10);
 
             opacity: 0;
 
@@ -250,9 +238,8 @@
 
             pointer-events: none;
 
-            transition: 0.2s;
+            transition: 0.20s;
         }
-
 
         .menu-dropdown:hover .dropdown-menu {
             opacity: 1;
@@ -263,7 +250,6 @@
 
             transform: translateX(-50%) translateY(0);
         }
-
 
         .dropdown-menu a {
             display: block;
@@ -284,13 +270,11 @@
             transition: 0.2s;
         }
 
-
         .dropdown-menu a:hover {
             background: #f3f6fb;
 
             color: var(--blue);
         }
-
 
 
         /* =========================================
@@ -300,7 +284,6 @@
         .language-selector {
             position: relative;
         }
-
 
         .language-button {
             border: none;
@@ -316,13 +299,11 @@
             font-family: inherit;
 
             font-size: 15px;
-
             font-weight: bold;
 
             cursor: pointer;
 
             display: flex;
-
             align-items: center;
 
             gap: 8px;
@@ -330,13 +311,11 @@
             transition: 0.25s;
         }
 
-
         .language-button:hover {
             background: var(--blue-dark);
 
             transform: translateY(-2px);
         }
-
 
         .language-options {
             position: absolute;
@@ -354,7 +333,7 @@
 
             padding: 8px;
 
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.10);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.10);
 
             opacity: 0;
 
@@ -369,7 +348,6 @@
             z-index: 2000;
         }
 
-
         .language-selector.open .language-options {
             opacity: 1;
 
@@ -379,7 +357,6 @@
 
             transform: translateY(0);
         }
-
 
         .language-options button {
             width: 100%;
@@ -397,7 +374,6 @@
             font-family: inherit;
 
             font-size: 14px;
-
             font-weight: 600;
 
             color: var(--black);
@@ -407,7 +383,6 @@
             transition: 0.2s;
         }
 
-
         .language-options button:hover {
             background: #f3f6fb;
 
@@ -415,21 +390,32 @@
         }
 
 
-
         /* =========================================
-           HERO
+           HERO SOPORTE
         ========================================== */
 
-        .page-hero {
-            padding: 105px 7% 90px;
+        .support-hero {
+            min-height: 420px;
 
-            text-align: center;
+            padding: 100px 7% 90px;
+
+            display: flex;
+            align-items: center;
 
             background: white;
+
+            border-bottom: 1px solid #eeeeee;
         }
 
+        .support-hero-content {
+            max-width: 900px;
 
-        .page-label {
+            margin: 0 auto;
+
+            text-align: center;
+        }
+
+        .section-label {
             color: #777777;
 
             letter-spacing: 5px;
@@ -437,181 +423,475 @@
             font-size: 13px;
         }
 
+        .support-hero h1 {
+            margin-top: 18px;
 
-        .page-hero h1 {
-            margin-top: 16px;
+            font-size: clamp(45px, 6vw, 72px);
 
-            font-size: clamp(48px, 7vw, 82px);
+            color: var(--black);
 
-            color: var(--blue);
-
-            font-style: italic;
+            line-height: 1;
         }
 
+        .support-hero h1 strong {
+            color: var(--blue);
+        }
 
-        .page-hero p {
-            max-width: 740px;
+        .support-hero-description {
+            max-width: 760px;
 
-            margin: 22px auto 0;
+            margin: 27px auto 0;
 
             color: var(--gray);
 
             font-size: 19px;
 
+            line-height: 1.7;
+        }
+
+        .technical-link {
+            max-width: 760px;
+
+            margin: 22px auto 0;
+
+            font-size: 15px;
+
+            line-height: 1.6;
+
+            color: #777777;
+        }
+
+        .technical-link a {
+            color: var(--blue);
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        .technical-link a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================
+           SOPORTE PRINCIPAL
+        ========================================== */
+
+        .support-section {
+            padding: 95px 7% 110px;
+
+            background: var(--light-gray);
+        }
+
+        .support-container {
+            max-width: 1180px;
+
+            margin: 0 auto;
+        }
+
+        .support-heading {
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+        .support-heading h2 {
+            font-size: 39px;
+
+            margin-bottom: 15px;
+        }
+
+        .support-heading p {
+            color: var(--gray);
+
+            font-size: 17px;
+
             line-height: 1.6;
         }
 
 
-
         /* =========================================
-           SOPORTE
+           TARJETAS
         ========================================== */
 
         .support-grid {
-            padding: 25px 7% 100px;
-
             display: grid;
 
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
 
-            gap: 22px;
+            gap: 24px;
         }
 
-
         .support-card {
-            min-height: 230px;
-
-            padding: 32px;
-
             background: white;
 
-            border: 1px solid #e5e8ed;
+            border: 1px solid var(--border);
 
             border-radius: 18px;
 
-            color: var(--black);
+            padding: 36px;
 
-            text-decoration: none;
+            text-align: left;
+
+            position: relative;
+
+            overflow: hidden;
 
             transition: 0.25s;
         }
 
+        .support-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 4px;
+            height: 0;
+
+            background: var(--blue);
+
+            transition: 0.3s;
+        }
 
         .support-card:hover {
+            transform: translateY(-4px);
+
             border-color: var(--blue);
 
-            transform: translateY(-5px);
-
-            box-shadow: 0 12px 28px rgba(0,0,0,0.07);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.06);
         }
 
+        .support-card:hover::before {
+            height: 100%;
+        }
 
-        .support-number {
+        .support-icon {
+            width: 55px;
+            height: 55px;
+
+            border-radius: 50%;
+
+            border: 1px solid #dce4ef;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
             color: var(--blue);
 
-            font-size: 14px;
+            margin-bottom: 23px;
 
-            font-weight: bold;
-
-            margin-bottom: 28px;
+            transition: 0.25s;
         }
 
+        .support-icon svg {
+            width: 27px;
+            height: 27px;
 
-        .support-card h2 {
-            font-size: 24px;
+            fill: none;
 
-            margin-bottom: 13px;
+            stroke: currentColor;
+
+            stroke-width: 1.8;
+
+            stroke-linecap: round;
+            stroke-linejoin: round;
         }
 
+        .support-card:hover .support-icon {
+            color: white;
+
+            background: var(--blue);
+
+            border-color: var(--blue);
+        }
+
+        .support-card h3 {
+            color: var(--blue);
+
+            font-size: 23px;
+
+            margin-bottom: 15px;
+        }
 
         .support-card p {
             color: var(--gray);
 
-            font-size: 15px;
+            font-size: 16px;
 
-            line-height: 1.55;
+            line-height: 1.7;
         }
-
-
-        .support-link {
-            display: block;
-
-            margin-top: 23px;
-
-            color: var(--blue);
-
-            font-weight: bold;
-        }
-
 
 
         /* =========================================
-           SECCIONES
+           GARANTÍA
         ========================================== */
 
-        .support-section {
-            padding: 100px 7%;
-
-            text-align: center;
-
-            border-top: 1px solid #eeeeee;
+        .warranty-card {
+            grid-column: 1 / -1;
         }
 
-
-        .support-section:nth-child(even) {
-            background: var(--light-gray);
+        .warranty-card p + p {
+            margin-top: 16px;
         }
 
+        .warranty-highlight {
+            margin-top: 24px;
 
-        .support-section span {
-            color: #777;
+            padding: 20px 22px;
 
-            letter-spacing: 5px;
+            background: #f5f8fc;
 
-            font-size: 13px;
+            border-left: 3px solid var(--blue);
+
+            border-radius: 0 10px 10px 0;
         }
 
-
-        .support-section h2 {
-            margin-top: 14px;
-
-            font-size: 40px;
-
+        .warranty-highlight strong {
             color: var(--blue);
         }
 
 
-        .support-section p {
-            max-width: 650px;
+        /* =========================================
+           CONTACTO
+        ========================================== */
 
-            margin: 17px auto;
+        .contact-support {
+            margin-top: 25px;
 
-            color: var(--gray);
+            padding: 45px;
 
-            line-height: 1.6;
+            background: var(--blue);
+
+            border-radius: 20px;
+
+            color: white;
+
+            display: grid;
+
+            grid-template-columns: 1fr auto;
+
+            align-items: center;
+
+            gap: 40px;
         }
 
+        .contact-support h3 {
+            font-size: 28px;
+
+            margin-bottom: 12px;
+        }
+
+        .contact-support p {
+            color: rgba(255,255,255,0.82);
+
+            font-size: 16px;
+
+            line-height: 1.65;
+
+            max-width: 650px;
+        }
+
+        .contact-buttons {
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+
+            justify-content: flex-end;
+        }
+
+        .contact-button {
+            text-decoration: none;
+
+            padding: 14px 22px;
+
+            border-radius: 30px;
+
+            font-weight: 700;
+
+            font-size: 14px;
+
+            transition: 0.25s;
+
+            white-space: nowrap;
+        }
+
+        .contact-button-primary {
+            background: white;
+
+            color: var(--blue);
+        }
+
+        .contact-button-primary:hover {
+            transform: translateY(-2px);
+
+            background: #f3f6fb;
+        }
+
+        .contact-button-secondary {
+            color: white;
+
+            border: 1px solid rgba(255,255,255,0.55);
+        }
+
+        .contact-button-secondary:hover {
+            background: rgba(255,255,255,0.10);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================================
+           INFORMACIÓN TÉCNICA
+        ========================================== */
+
+        .technical-info {
+            max-width: 1180px;
+
+            margin: 26px auto 0;
+
+            padding: 32px 35px;
+
+            border: 1px solid var(--border);
+
+            background: white;
+
+            border-radius: 16px;
+
+            text-align: left;
+        }
+
+        .technical-info h3 {
+            color: var(--blue);
+
+            font-size: 21px;
+
+            margin-bottom: 11px;
+        }
+
+        .technical-info p {
+            color: var(--gray);
+
+            line-height: 1.65;
+
+            font-size: 15px;
+        }
+
+        .technical-info a {
+            color: var(--blue);
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        .technical-info a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================== */
+
+        footer {
+            background: #111111;
+
+            color: white;
+
+            padding: 35px 7%;
+        }
+
+        .footer-content {
+            max-width: 1180px;
+
+            margin: 0 auto;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 25px;
+        }
+
+        .footer-brand {
+            color: white;
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            font-style: italic;
+        }
+
+        .footer-brand span {
+            display: block;
+
+            font-size: 10px;
+
+            letter-spacing: 2px;
+
+            font-weight: 500;
+
+            font-style: normal;
+
+            margin-top: 4px;
+
+            color: #aaaaaa;
+        }
+
+        .copyright {
+            color: #999999;
+
+            font-size: 13px;
+
+            text-align: right;
+        }
 
 
         /* =========================================
            RESPONSIVE
         ========================================== */
 
-        @media (max-width: 900px) {
+        @media(max-width: 900px) {
 
             nav {
                 display: none;
             }
 
-
             .support-grid {
-                grid-template-columns: 1fr 1fr;
+                grid-template-columns: 1fr;
+            }
+
+            .warranty-card {
+                grid-column: auto;
+            }
+
+            .contact-support {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .contact-support p {
+                margin: 0 auto;
+            }
+
+            .contact-buttons {
+                justify-content: center;
             }
 
         }
 
 
-        @media (max-width: 550px) {
+        @media(max-width: 600px) {
 
             header {
                 height: 70px;
@@ -620,7 +900,6 @@
                 padding-right: 5%;
             }
 
-
             .brand-logo-crop {
                 width: 52px;
                 height: 58px;
@@ -628,20 +907,16 @@
                 transform: translateY(-7px);
             }
 
-
             .brand-logo-crop img {
                 width: 100px;
 
                 left: -23px;
-
                 top: -8px;
             }
-
 
             .brand-name {
                 font-size: 25px;
             }
-
 
             .language-button {
                 padding: 11px 15px;
@@ -649,15 +924,50 @@
                 font-size: 13px;
             }
 
-
-            .support-grid {
-                grid-template-columns: 1fr;
+            .support-hero {
+                padding: 75px 6% 70px;
             }
 
+            .support-hero h1 {
+                font-size: 43px;
+            }
 
-            .page-hero {
-                padding-left: 6%;
-                padding-right: 6%;
+            .support-hero-description {
+                font-size: 17px;
+            }
+
+            .support-section {
+                padding: 75px 6%;
+            }
+
+            .support-heading h2 {
+                font-size: 32px;
+            }
+
+            .support-card {
+                padding: 28px 25px;
+            }
+
+            .contact-support {
+                padding: 35px 25px;
+            }
+
+            .contact-buttons {
+                flex-direction: column;
+            }
+
+            .contact-button {
+                text-align: center;
+            }
+
+            .footer-content {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .copyright {
+                text-align: center;
             }
 
         }
@@ -670,978 +980,997 @@
 <body>
 
 
-<header>
+    <!-- =========================================
+         HEADER
+    ========================================== -->
+
+    <header>
 
 
-    <a
-        class="brand"
-        href="index.html"
-    >
+        <a
+            class="brand"
+            href="index.html"
+        >
+
+            <div class="brand-logo-crop">
+
+                <img
+                    src="logoooweb.PNG"
+                    alt="Logo SAKUTA"
+                >
+
+            </div>
+
+            <div class="brand-name">
+                SAKUTA
+            </div>
+
+        </a>
 
 
-        <div class="brand-logo-crop">
 
-            <img
-                src="logoooweb.PNG"
-                alt="Logo SAKUTA"
+        <nav>
+
+            <a
+                href="index.html"
+                data-i18n="navHome"
+            >
+                Inicio
+            </a>
+
+            <a
+                href="productos.html"
+                data-i18n="navProducts"
+            >
+                Productos
+            </a>
+
+            <a
+                href="index.html#aplicaciones"
+                data-i18n="navApplications"
+            >
+                Aplicaciones
+            </a>
+
+            <a
+                href="soporte.html"
+                class="active"
+                data-i18n="navSupport"
+            >
+                Soporte
+            </a>
+
+
+            <div class="menu-dropdown">
+
+                <a href="index.html#empresa">
+
+                    <span data-i18n="navCompany">
+                        Empresa
+                    </span>
+
+                    <span class="dropdown-arrow">
+                        ▼
+                    </span>
+
+                </a>
+
+                <div class="dropdown-menu">
+
+                    <a
+                        href="index.html#empresa"
+                        data-i18n="aboutUs"
+                    >
+                        Acerca de nosotros
+                    </a>
+
+                    <a
+                        href="index.html#contacto"
+                        data-i18n="contactUs"
+                    >
+                        Contáctanos
+                    </a>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+
+        <div
+            class="language-selector"
+            id="languageSelector"
+        >
+
+            <button
+                class="language-button"
+                id="languageButton"
+                type="button"
             >
 
-        </div>
+                🌐
 
-
-        <div class="brand-name">
-            SAKUTA
-        </div>
-
-
-    </a>
-
-
-
-    <nav>
-
-
-        <a
-            href="index.html#inicio"
-            data-i18n="navHome"
-        >
-            Inicio
-        </a>
-
-
-        <a
-            href="productos.html"
-            data-i18n="navProducts"
-        >
-            Productos
-        </a>
-
-
-        <a
-            href="index.html#aplicaciones"
-            data-i18n="navApplications"
-        >
-            Aplicaciones
-        </a>
-
-
-
-        <div class="menu-dropdown">
-
-
-            <a href="soporte.html">
-
-                <span data-i18n="navSupport">
-                    Soporte
+                <span id="languageButtonText">
+                    Idioma
                 </span>
 
-                <span class="dropdown-arrow">
-                    ▼
-                </span>
+                ▾
 
-            </a>
+            </button>
 
 
-            <div class="dropdown-menu">
+            <div class="language-options">
 
-
-                <a
-                    href="#software"
-                    data-i18n="software"
+                <button
+                    type="button"
+                    data-language="es"
                 >
-                    Software SRC
-                </a>
+                    🇲🇽 Español
+                </button>
 
-
-                <a
-                    href="#manuales"
-                    data-i18n="manuals"
+                <button
+                    type="button"
+                    data-language="en"
                 >
-                    Manuales y guías
-                </a>
+                    🇺🇸 English
+                </button>
 
-
-                <a
-                    href="#mantenimiento"
-                    data-i18n="maintenance"
+                <button
+                    type="button"
+                    data-language="zh"
                 >
-                    Mantenimiento
-                </a>
-
-
-                <a
-                    href="#descargas"
-                    data-i18n="downloads"
-                >
-                    Descargas
-                </a>
-
-
-                <a
-                    href="#tutoriales"
-                    data-i18n="tutorials"
-                >
-                    Tutoriales
-                </a>
-
+                    🇨🇳 中文
+                </button>
 
             </div>
 
-
         </div>
 
 
-
-        <div class="menu-dropdown">
-
-
-            <a href="index.html#empresa">
-
-                <span data-i18n="navCompany">
-                    Empresa
-                </span>
-
-                <span class="dropdown-arrow">
-                    ▼
-                </span>
-
-            </a>
-
-
-            <div class="dropdown-menu">
-
-
-                <a
-                    href="index.html#empresa"
-                    data-i18n="aboutUs"
-                >
-                    Acerca de nosotros
-                </a>
-
-
-                <a
-                    href="index.html#contacto"
-                    data-i18n="contactUs"
-                >
-                    Contáctanos
-                </a>
-
-
-            </div>
-
-
-        </div>
-
-
-    </nav>
+    </header>
 
 
 
-    <div
-        class="language-selector"
-        id="languageSelector"
-    >
+    <!-- =========================================
+         HERO
+    ========================================== -->
 
+    <section class="support-hero">
 
-        <button
-            class="language-button"
-            id="languageButton"
-            type="button"
-        >
+        <div class="support-hero-content">
 
-            🌐
-
-            <span id="languageButtonText">
-                Idioma
+            <span
+                class="section-label"
+                data-i18n="supportLabel"
+            >
+                SOPORTE SRC
             </span>
 
-            ▾
+            <h1>
 
-        </button>
+                <span data-i18n="supportTitle">
+                    ¿Necesitas ayuda con un
+                </span>
 
+                <strong data-i18n="supportTitleStrong">
+                    producto?
+                </strong>
 
+            </h1>
 
-        <div class="language-options">
-
-
-            <button
-                type="button"
-                data-language="es"
+            <p
+                class="support-hero-description"
+                data-i18n="supportDescription"
             >
-                🇲🇽 Español
-            </button>
+                Encuentra asistencia para resolver dudas, problemas de
+                funcionamiento, instalación, configuración y otros aspectos
+                relacionados con los productos y sistemas de
+                Sakuta Robotics Company.
+            </p>
+
+            <p class="technical-link">
+
+                <span data-i18n="technicalIntro">
+                    Para consultar especificaciones, características,
+                    compatibilidad y documentación técnica detallada,
+                    visita la sección
+                </span>
+
+                <a
+                    href="productos.html"
+                    data-i18n="productsLink"
+                >
+                    Productos
+                </a>.
+
+            </p>
+
+        </div>
+
+    </section>
 
 
-            <button
-                type="button"
-                data-language="en"
+
+    <!-- =========================================
+         AYUDA
+    ========================================== -->
+
+    <section class="support-section">
+
+        <div class="support-container">
+
+
+            <div class="support-heading">
+
+                <h2 data-i18n="helpTitle">
+                    Ayuda con un producto
+                </h2>
+
+                <p data-i18n="helpDescription">
+                    Información y asistencia para productos y sistemas SRC.
+                </p>
+
+            </div>
+
+
+
+            <div class="support-grid">
+
+
+                <!-- PREGUNTAS FRECUENTES -->
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="9"
+                            ></circle>
+
+                            <path d="M9.8 9a2.4 2.4 0 1 1 3.7 2c-1 .6-1.5 1.1-1.5 2.2"></path>
+
+                            <path d="M12 17h.01"></path>
+
+                        </svg>
+
+                    </div>
+
+                    <h3 data-i18n="faqTitle">
+                        Preguntas frecuentes
+                    </h3>
+
+                    <p data-i18n="faqDescription">
+                        Consulta respuestas a las dudas más comunes relacionadas
+                        con el uso, montaje, compatibilidad, funcionamiento y
+                        características generales de los productos SRC.
+                    </p>
+
+                </article>
+
+
+
+                <!-- PROBLEMAS DE FUNCIONAMIENTO -->
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M12 3L2.8 20h18.4z"></path>
+
+                            <path d="M12 9v4"></path>
+
+                            <path d="M12 17h.01"></path>
+
+                        </svg>
+
+                    </div>
+
+                    <h3 data-i18n="problemsTitle">
+                        Problemas de funcionamiento
+                    </h3>
+
+                    <p data-i18n="problemsDescription">
+                        Encuentra orientación para identificar posibles causas
+                        y soluciones cuando un producto no funciona correctamente
+                        o presenta un comportamiento inesperado.
+                    </p>
+
+                </article>
+
+
+
+                <!-- INSTALACIÓN -->
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <circle
+                                cx="12"
+                                cy="12"
+                                r="3"
+                            ></circle>
+
+                            <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V21h-4v-.08a1.7 1.7 0 0 0-1.03-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.52-1H3v-4h.08A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.88L4.2 7.06l2.83-2.83.06.06A1.7 1.7 0 0 0 8.97 4.6 1.7 1.7 0 0 0 10 3.08V3h4v.08a1.7 1.7 0 0 0 1.03 1.52 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9 1.7 1.7 0 0 0 20.92 10H21v4h-.08A1.7 1.7 0 0 0 19.4 15z"></path>
+
+                        </svg>
+
+                    </div>
+
+                    <h3 data-i18n="installationTitle">
+                        Instalación y configuración
+                    </h3>
+
+                    <p data-i18n="installationDescription">
+                        Obtén ayuda para la instalación inicial, conexiones,
+                        configuración básica y puesta en funcionamiento de
+                        productos y sistemas SRC.
+                    </p>
+
+                </article>
+
+
+
+                <!-- CONTACTAR -->
+
+                <article class="support-card">
+
+                    <div class="support-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M4 4h16v12H7l-3 3z"></path>
+
+                            <path d="M8 8h8"></path>
+
+                            <path d="M8 12h5"></path>
+
+                        </svg>
+
+                    </div>
+
+                    <h3 data-i18n="contactTitle">
+                        Contactar a SRC
+                    </h3>
+
+                    <p data-i18n="contactDescription">
+                        Si no encuentras la solución que necesitas, puedes
+                        comunicarte directamente con Sakuta Robotics Company
+                        para recibir orientación y asistencia.
+                    </p>
+
+                </article>
+
+
+
+                <!-- GARANTÍA -->
+
+                <article class="support-card warranty-card">
+
+                    <div class="support-icon">
+
+                        <svg viewBox="0 0 24 24">
+
+                            <path d="M12 3l7 3v5c0 4.5-2.8 8-7 10-4.2-2-7-5.5-7-10V6z"></path>
+
+                            <path d="M8.5 12l2.2 2.2 4.8-5"></path>
+
+                        </svg>
+
+                    </div>
+
+                    <h3 data-i18n="warrantyTitle">
+                        Garantía y servicio
+                    </h3>
+
+                    <p data-i18n="warrantyParagraph1">
+                        Todos los productos comercializados por Sakuta Robotics
+                        Company (SRC) se venden como productos nuevos.
+                    </p>
+
+                    <p data-i18n="warrantyParagraph2">
+                        SRC ofrece una garantía comercial de 20 días a partir
+                        de la recepción del producto, aplicable a defectos de
+                        fabricación o problemas de funcionamiento bajo
+                        condiciones normales de uso.
+                    </p>
+
+                    <p data-i18n="warrantyParagraph3">
+                        La garantía no cubre daños ocasionados por golpes,
+                        modificaciones, conexiones incorrectas, alimentación
+                        eléctrica inadecuada, instalación incorrecta, uso fuera
+                        de las especificaciones del producto o daños derivados
+                        de un uso inadecuado.
+                    </p>
+
+                    <p data-i18n="warrantyParagraph4">
+                        Para solicitar asistencia relacionada con una garantía,
+                        el cliente deberá proporcionar información sobre el
+                        producto y una descripción del problema presentado.
+                    </p>
+
+                    <div class="warranty-highlight">
+
+                        <p data-i18n="warrantyParagraph5">
+                            En productos adquiridos mediante Mercado Libre,
+                            también podrán aplicar las políticas y procedimientos
+                            correspondientes de la plataforma. En compras
+                            realizadas mediante envío directo, la atención será
+                            gestionada directamente por SRC.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+
+            <!-- =========================================
+                 CONTACTO DIRECTO
+            ========================================== -->
+
+            <div class="contact-support">
+
+                <div>
+
+                    <h3 data-i18n="stillNeedHelp">
+                        ¿Aún necesitas ayuda?
+                    </h3>
+
+                    <p data-i18n="stillNeedHelpDescription">
+                        Comunícate directamente con SRC para recibir orientación
+                        relacionada con nuestros productos y sistemas.
+                    </p>
+
+                </div>
+
+
+                <div class="contact-buttons">
+
+                    <a
+                        class="contact-button contact-button-primary"
+                        href="https://wa.me/526568630623"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        WhatsApp
+                    </a>
+
+                    <a
+                        class="contact-button contact-button-secondary"
+                        href="mailto:rmsakuta@gmail.com"
+                        data-i18n="emailButton"
+                    >
+                        Correo electrónico
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =========================================
+                 INFORMACIÓN TÉCNICA
+            ========================================== -->
+
+            <div class="technical-info">
+
+                <h3 data-i18n="technicalTitle">
+                    Información técnica
+                </h3>
+
+                <p>
+
+                    <span data-i18n="technicalDescription">
+                        Las especificaciones, características, compatibilidad,
+                        documentación y demás información técnica específica
+                        de cada producto se encuentra disponible en su sección
+                        correspondiente dentro de
+                    </span>
+
+                    <a
+                        href="productos.html"
+                        data-i18n="productsLink"
+                    >
+                        Productos
+                    </a>.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                SAKUTA
+
+                <span>
+                    ROBOTICS COMPANY
+                </span>
+
+            </div>
+
+            <p
+                class="copyright"
+                data-i18n="copyright"
             >
-                🇺🇸 English
-            </button>
-
-
-            <button
-                type="button"
-                data-language="zh"
-            >
-                🇨🇳 中文
-            </button>
-
+                © 2026 Sakuta Robotics Company (SRC).
+                Todos los derechos reservados.
+            </p>
 
         </div>
 
+    </footer>
 
-    </div>
 
 
-</header>
+    <!-- =========================================
+         IDIOMAS
+    ========================================== -->
 
+    <script>
 
+        const translations = {
 
-<!-- =========================================
-     HERO
-========================================== -->
 
-<section class="page-hero">
+            es: {
 
+                navHome: "Inicio",
 
-    <span
-        class="page-label"
-        data-i18n="supportCenter"
-    >
-        CENTRO DE SOPORTE SRC
-    </span>
+                navProducts: "Productos",
 
+                navApplications: "Aplicaciones",
 
-    <h1 data-i18n="pageTitle">
-        Soporte
-    </h1>
+                navSupport: "Soporte",
 
+                navCompany: "Empresa",
 
-    <p data-i18n="pageDescription">
-        Encuentra información sobre software,
-        documentación, mantenimiento, descargas
-        y uso de los productos SRC.
-    </p>
+                aboutUs: "Acerca de nosotros",
 
+                contactUs: "Contáctanos",
 
-</section>
+                languageButton: "Idioma",
 
+                supportLabel: "SOPORTE SRC",
 
+                supportTitle: "¿Necesitas ayuda con un",
 
-<!-- =========================================
-     OPCIONES
-========================================== -->
+                supportTitleStrong: "producto?",
 
-<section
-    class="support-grid"
-    id="centro-soporte"
->
+                supportDescription:
+                    "Encuentra asistencia para resolver dudas, problemas de funcionamiento, instalación, configuración y otros aspectos relacionados con los productos y sistemas de Sakuta Robotics Company.",
 
+                technicalIntro:
+                    "Para consultar especificaciones, características, compatibilidad y documentación técnica detallada, visita la sección",
 
-    <a
-        class="support-card"
-        href="#software"
-    >
+                productsLink:
+                    "Productos",
 
-        <div class="support-number">
-            01
-        </div>
+                helpTitle:
+                    "Ayuda con un producto",
 
+                helpDescription:
+                    "Información y asistencia para productos y sistemas SRC.",
 
-        <h2 data-i18n="software">
-            Software SRC
-        </h2>
+                faqTitle:
+                    "Preguntas frecuentes",
 
+                faqDescription:
+                    "Consulta respuestas a las dudas más comunes relacionadas con el uso, montaje, compatibilidad, funcionamiento y características generales de los productos SRC.",
 
-        <p data-i18n="softwareDescription">
-            Aprende a instalar, configurar y utilizar
-            el software desarrollado para nuestros robots.
-        </p>
+                problemsTitle:
+                    "Problemas de funcionamiento",
 
+                problemsDescription:
+                    "Encuentra orientación para identificar posibles causas y soluciones cuando un producto no funciona correctamente o presenta un comportamiento inesperado.",
 
-        <span
-            class="support-link"
-            data-i18n="softwareLink"
-        >
-            Ver software →
-        </span>
+                installationTitle:
+                    "Instalación y configuración",
 
+                installationDescription:
+                    "Obtén ayuda para la instalación inicial, conexiones, configuración básica y puesta en funcionamiento de productos y sistemas SRC.",
 
-    </a>
+                contactTitle:
+                    "Contactar a SRC",
 
+                contactDescription:
+                    "Si no encuentras la solución que necesitas, puedes comunicarte directamente con Sakuta Robotics Company para recibir orientación y asistencia.",
 
+                warrantyTitle:
+                    "Garantía y servicio",
 
-    <a
-        class="support-card"
-        href="#manuales"
-    >
+                warrantyParagraph1:
+                    "Todos los productos comercializados por Sakuta Robotics Company (SRC) se venden como productos nuevos.",
 
-        <div class="support-number">
-            02
-        </div>
+                warrantyParagraph2:
+                    "SRC ofrece una garantía comercial de 20 días a partir de la recepción del producto, aplicable a defectos de fabricación o problemas de funcionamiento bajo condiciones normales de uso.",
 
+                warrantyParagraph3:
+                    "La garantía no cubre daños ocasionados por golpes, modificaciones, conexiones incorrectas, alimentación eléctrica inadecuada, instalación incorrecta, uso fuera de las especificaciones del producto o daños derivados de un uso inadecuado.",
 
-        <h2 data-i18n="manuals">
-            Manuales y guías
-        </h2>
+                warrantyParagraph4:
+                    "Para solicitar asistencia relacionada con una garantía, el cliente deberá proporcionar información sobre el producto y una descripción del problema presentado.",
 
+                warrantyParagraph5:
+                    "En productos adquiridos mediante Mercado Libre, también podrán aplicar las políticas y procedimientos correspondientes de la plataforma. En compras realizadas mediante envío directo, la atención será gestionada directamente por SRC.",
 
-        <p data-i18n="manualsDescription">
-            Documentación para instalación,
-            configuración y operación de productos SRC.
-        </p>
+                stillNeedHelp:
+                    "¿Aún necesitas ayuda?",
 
+                stillNeedHelpDescription:
+                    "Comunícate directamente con SRC para recibir orientación relacionada con nuestros productos y sistemas.",
 
-        <span
-            class="support-link"
-            data-i18n="manualsLink"
-        >
-            Ver manuales →
-        </span>
+                emailButton:
+                    "Correo electrónico",
 
+                technicalTitle:
+                    "Información técnica",
 
-    </a>
+                technicalDescription:
+                    "Las especificaciones, características, compatibilidad, documentación y demás información técnica específica de cada producto se encuentra disponible en su sección correspondiente dentro de",
 
+                copyright:
+                    "© 2026 Sakuta Robotics Company (SRC). Todos los derechos reservados."
 
+            },
 
-    <a
-        class="support-card"
-        href="#mantenimiento"
-    >
 
-        <div class="support-number">
-            03
-        </div>
+            en: {
 
+                navHome: "Home",
 
-        <h2 data-i18n="maintenance">
-            Mantenimiento
-        </h2>
+                navProducts: "Products",
 
+                navApplications: "Applications",
 
-        <p data-i18n="maintenanceDescription">
-            Información sobre mantenimiento preventivo,
-            revisión y cuidado de nuestros equipos.
-        </p>
+                navSupport: "Support",
 
+                navCompany: "Company",
 
-        <span
-            class="support-link"
-            data-i18n="maintenanceLink"
-        >
-            Ver mantenimiento →
-        </span>
+                aboutUs: "About us",
 
+                contactUs: "Contact us",
 
-    </a>
+                languageButton: "Language",
 
+                supportLabel: "SRC SUPPORT",
 
+                supportTitle: "Do you need help with a",
 
-    <a
-        class="support-card"
-        href="#descargas"
-    >
+                supportTitleStrong: "product?",
 
-        <div class="support-number">
-            04
-        </div>
+                supportDescription:
+                    "Find assistance with questions, operating problems, installation, configuration and other aspects related to Sakuta Robotics Company products and systems.",
 
+                technicalIntro:
+                    "For specifications, features, compatibility and detailed technical documentation, visit the",
 
-        <h2 data-i18n="downloads">
-            Descargas
-        </h2>
+                productsLink:
+                    "Products",
 
+                helpTitle:
+                    "Product assistance",
 
-        <p data-i18n="downloadsDescription">
-            Software, documentos, archivos
-            y recursos disponibles para usuarios SRC.
-        </p>
+                helpDescription:
+                    "Information and assistance for SRC products and systems.",
 
+                faqTitle:
+                    "Frequently asked questions",
 
-        <span
-            class="support-link"
-            data-i18n="downloadsLink"
-        >
-            Ir a descargas →
-        </span>
+                faqDescription:
+                    "Find answers to common questions related to the use, assembly, compatibility, operation and general characteristics of SRC products.",
 
+                problemsTitle:
+                    "Operating problems",
 
-    </a>
+                problemsDescription:
+                    "Find guidance to identify possible causes and solutions when a product does not operate correctly or presents unexpected behavior.",
 
+                installationTitle:
+                    "Installation and configuration",
 
+                installationDescription:
+                    "Get help with initial installation, connections, basic configuration and startup of SRC products and systems.",
 
-    <a
-        class="support-card"
-        href="#tutoriales"
-    >
+                contactTitle:
+                    "Contact SRC",
 
-        <div class="support-number">
-            05
-        </div>
+                contactDescription:
+                    "If you cannot find the solution you need, you can contact Sakuta Robotics Company directly for guidance and assistance.",
 
+                warrantyTitle:
+                    "Warranty and service",
 
-        <h2 data-i18n="tutorials">
-            Tutoriales
-        </h2>
+                warrantyParagraph1:
+                    "All products sold by Sakuta Robotics Company (SRC) are sold as new products.",
 
+                warrantyParagraph2:
+                    "SRC provides a 20-day commercial warranty starting from the date the product is received, applicable to manufacturing defects or operating problems under normal conditions of use.",
 
-        <p data-i18n="tutorialsDescription">
-            Guías paso a paso para aprender
-            a utilizar productos y software SRC.
-        </p>
+                warrantyParagraph3:
+                    "The warranty does not cover damage caused by impacts, modifications, incorrect connections, improper electrical power, incorrect installation, use outside the product specifications or damage resulting from improper use.",
 
+                warrantyParagraph4:
+                    "To request warranty-related assistance, the customer must provide information about the product and a description of the problem.",
 
-        <span
-            class="support-link"
-            data-i18n="tutorialsLink"
-        >
-            Ver tutoriales →
-        </span>
+                warrantyParagraph5:
+                    "For products purchased through Mercado Libre, the platform's applicable policies and procedures may also apply. For purchases made through direct shipping, assistance will be managed directly by SRC.",
 
+                stillNeedHelp:
+                    "Still need help?",
 
-    </a>
+                stillNeedHelpDescription:
+                    "Contact SRC directly for assistance related to our products and systems.",
 
+                emailButton:
+                    "Email",
 
-</section>
+                technicalTitle:
+                    "Technical information",
 
+                technicalDescription:
+                    "Specifications, features, compatibility, documentation and other technical information specific to each product are available in its corresponding section under",
 
+                copyright:
+                    "© 2026 Sakuta Robotics Company (SRC). All rights reserved."
 
-<section
-    class="support-section"
-    id="software"
->
+            },
 
-    <span data-i18n="supportLabel">
-        SOPORTE
-    </span>
 
-    <h2 data-i18n="software">
-        Software SRC
-    </h2>
+            zh: {
 
-    <p data-i18n="softwareSection">
-        Aquí agregaremos posteriormente información,
-        instalación y documentación del software SRC.
-    </p>
+                navHome:
+                    "首页",
 
-</section>
+                navProducts:
+                    "产品",
 
+                navApplications:
+                    "应用",
 
+                navSupport:
+                    "支持",
 
-<section
-    class="support-section"
-    id="manuales"
->
+                navCompany:
+                    "公司",
 
-    <span data-i18n="documentationLabel">
-        DOCUMENTACIÓN
-    </span>
+                aboutUs:
+                    "关于我们",
 
-    <h2 data-i18n="manuals">
-        Manuales y guías
-    </h2>
+                contactUs:
+                    "联系我们",
 
-    <p data-i18n="manualsSection">
-        Aquí podremos colocar PDFs, manuales
-        de usuario y documentación técnica.
-    </p>
+                languageButton:
+                    "语言",
 
-</section>
+                supportLabel:
+                    "SRC 支持",
 
+                supportTitle:
+                    "需要产品",
 
+                supportTitleStrong:
+                    "帮助吗？",
 
-<section
-    class="support-section"
-    id="mantenimiento"
->
+                supportDescription:
+                    "获取有关 Sakuta Robotics Company 产品和系统的疑问、运行问题、安装、配置以及其他相关方面的帮助。",
 
-    <span data-i18n="supportLabel">
-        SOPORTE
-    </span>
+                technicalIntro:
+                    "如需查看规格、功能、兼容性和详细技术文档，请访问",
 
-    <h2 data-i18n="maintenance">
-        Mantenimiento
-    </h2>
+                productsLink:
+                    "产品",
 
-    <p data-i18n="maintenanceSection">
-        Información para mantener nuestros robots
-        y herramientas en buenas condiciones.
-    </p>
+                helpTitle:
+                    "产品帮助",
 
-</section>
+                helpDescription:
+                    "SRC 产品和系统的信息与支持。",
 
+                faqTitle:
+                    "常见问题",
 
+                faqDescription:
+                    "查看与 SRC 产品的使用、安装、兼容性、运行和一般特性有关的常见问题解答。",
 
-<section
-    class="support-section"
-    id="descargas"
->
+                problemsTitle:
+                    "运行问题",
 
-    <span data-i18n="resourcesLabel">
-        RECURSOS
-    </span>
+                problemsDescription:
+                    "当产品无法正常工作或出现异常行为时，获取有关可能原因和解决方案的指导。",
 
-    <h2 data-i18n="downloads">
-        Descargas
-    </h2>
+                installationTitle:
+                    "安装和配置",
 
-    <p data-i18n="downloadsSection">
-        Aquí agregaremos software,
-        actualizaciones, archivos y documentación.
-    </p>
+                installationDescription:
+                    "获取有关 SRC 产品和系统初始安装、连接、基本配置和启动方面的帮助。",
 
-</section>
+                contactTitle:
+                    "联系 SRC",
 
+                contactDescription:
+                    "如果没有找到所需的解决方案，可以直接联系 Sakuta Robotics Company 获取指导和帮助。",
 
+                warrantyTitle:
+                    "保修与服务",
 
-<section
-    class="support-section"
-    id="tutoriales"
->
+                warrantyParagraph1:
+                    "Sakuta Robotics Company（SRC）销售的所有产品均为全新产品。",
 
-    <span data-i18n="learningLabel">
-        APRENDIZAJE
-    </span>
+                warrantyParagraph2:
+                    "SRC 自客户收到产品之日起提供 20 天商业保修，适用于正常使用条件下的制造缺陷或运行问题。",
 
-    <h2 data-i18n="tutorials">
-        Tutoriales
-    </h2>
+                warrantyParagraph3:
+                    "保修不包括因撞击、修改、错误连接、电源不当、安装错误、超出产品规格使用或不当使用造成的损坏。",
 
-    <p data-i18n="tutorialsSection">
-        Aquí podremos agregar videos,
-        instrucciones y tutoriales paso a paso.
-    </p>
+                warrantyParagraph4:
+                    "如需申请与保修有关的支持，客户需要提供产品信息以及问题描述。",
 
-</section>
+                warrantyParagraph5:
+                    "通过 Mercado Libre 购买的产品还可能适用该平台相应的政策和流程。通过直接配送购买的产品将由 SRC 直接提供服务。",
 
+                stillNeedHelp:
+                    "仍然需要帮助吗？",
 
+                stillNeedHelpDescription:
+                    "直接联系 SRC，获取有关我们产品和系统的帮助。",
 
-<script>
+                emailButton:
+                    "电子邮件",
 
-    const translations = {
+                technicalTitle:
+                    "技术信息",
 
+                technicalDescription:
+                    "每个产品的规格、功能、兼容性、文档和其他具体技术信息可在",
 
-        es: {
+                copyright:
+                    "© 2026 Sakuta Robotics Company (SRC)。版权所有。"
 
-            navHome: "Inicio",
-            navProducts: "Productos",
-            navApplications: "Aplicaciones",
-            navSupport: "Soporte",
-            navCompany: "Empresa",
+            }
 
-            aboutUs: "Acerca de nosotros",
-            contactUs: "Contáctanos",
+        };
 
-            supportCenter:
-                "CENTRO DE SOPORTE SRC",
 
-            pageTitle:
-                "Soporte",
 
-            pageDescription:
-                "Encuentra información sobre software, documentación, mantenimiento, descargas y uso de los productos SRC.",
+        const languageSelector =
+            document.getElementById("languageSelector");
 
-            software:
-                "Software SRC",
 
-            manuals:
-                "Manuales y guías",
+        const languageButton =
+            document.getElementById("languageButton");
 
-            maintenance:
-                "Mantenimiento",
 
-            downloads:
-                "Descargas",
+        const languageButtonText =
+            document.getElementById("languageButtonText");
 
-            tutorials:
-                "Tutoriales",
 
-            softwareDescription:
-                "Aprende a instalar, configurar y utilizar el software desarrollado para nuestros robots.",
 
-            manualsDescription:
-                "Documentación para instalación, configuración y operación de productos SRC.",
+        languageButton.addEventListener(
+            "click",
+            function(event) {
 
-            maintenanceDescription:
-                "Información sobre mantenimiento preventivo, revisión y cuidado de nuestros equipos.",
+                event.stopPropagation();
 
-            downloadsDescription:
-                "Software, documentos, archivos y recursos disponibles para usuarios SRC.",
+                languageSelector.classList.toggle("open");
 
-            tutorialsDescription:
-                "Guías paso a paso para aprender a utilizar productos y software SRC.",
+            }
+        );
 
-            softwareLink:
-                "Ver software →",
 
-            manualsLink:
-                "Ver manuales →",
+        document.addEventListener(
+            "click",
+            function() {
 
-            maintenanceLink:
-                "Ver mantenimiento →",
+                languageSelector.classList.remove("open");
 
-            downloadsLink:
-                "Ir a descargas →",
-
-            tutorialsLink:
-                "Ver tutoriales →",
-
-            supportLabel:
-                "SOPORTE",
-
-            documentationLabel:
-                "DOCUMENTACIÓN",
-
-            resourcesLabel:
-                "RECURSOS",
-
-            learningLabel:
-                "APRENDIZAJE",
-
-            softwareSection:
-                "Aquí agregaremos posteriormente información, instalación y documentación del software SRC.",
-
-            manualsSection:
-                "Aquí podremos colocar PDFs, manuales de usuario y documentación técnica.",
-
-            maintenanceSection:
-                "Información para mantener nuestros robots y herramientas en buenas condiciones.",
-
-            downloadsSection:
-                "Aquí agregaremos software, actualizaciones, archivos y documentación.",
-
-            tutorialsSection:
-                "Aquí podremos agregar videos, instrucciones y tutoriales paso a paso.",
-
-            languageButton:
-                "Idioma"
-
-        },
-
-
-        en: {
-
-            navHome: "Home",
-            navProducts: "Products",
-            navApplications: "Applications",
-            navSupport: "Support",
-            navCompany: "Company",
-
-            aboutUs: "About us",
-            contactUs: "Contact us",
-
-            supportCenter:
-                "SRC SUPPORT CENTER",
-
-            pageTitle:
-                "Support",
-
-            pageDescription:
-                "Find information about software, documentation, maintenance, downloads and the use of SRC products.",
-
-            software:
-                "SRC Software",
-
-            manuals:
-                "Manuals and guides",
-
-            maintenance:
-                "Maintenance",
-
-            downloads:
-                "Downloads",
-
-            tutorials:
-                "Tutorials",
-
-            softwareDescription:
-                "Learn how to install, configure and use the software developed for our robots.",
-
-            manualsDescription:
-                "Documentation for installation, configuration and operation of SRC products.",
-
-            maintenanceDescription:
-                "Information about preventive maintenance, inspection and care of our equipment.",
-
-            downloadsDescription:
-                "Software, documents, files and resources available for SRC users.",
-
-            tutorialsDescription:
-                "Step-by-step guides for learning how to use SRC products and software.",
-
-            softwareLink:
-                "View software →",
-
-            manualsLink:
-                "View manuals →",
-
-            maintenanceLink:
-                "View maintenance →",
-
-            downloadsLink:
-                "Go to downloads →",
-
-            tutorialsLink:
-                "View tutorials →",
-
-            supportLabel:
-                "SUPPORT",
-
-            documentationLabel:
-                "DOCUMENTATION",
-
-            resourcesLabel:
-                "RESOURCES",
-
-            learningLabel:
-                "LEARNING",
-
-            softwareSection:
-                "Software information, installation instructions and documentation will be added here.",
-
-            manualsSection:
-                "PDFs, user manuals and technical documentation will be available here.",
-
-            maintenanceSection:
-                "Information for keeping our robots and robotic tools in good condition.",
-
-            downloadsSection:
-                "Software, updates, files and documentation will be available here.",
-
-            tutorialsSection:
-                "Videos, instructions and step-by-step tutorials will be available here.",
-
-            languageButton:
-                "Language"
-
-        },
-
-
-        zh: {
-
-            navHome:
-                "首页",
-
-            navProducts:
-                "产品",
-
-            navApplications:
-                "应用",
-
-            navSupport:
-                "支持",
-
-            navCompany:
-                "公司",
-
-            aboutUs:
-                "关于我们",
-
-            contactUs:
-                "联系我们",
-
-            supportCenter:
-                "SRC 支持中心",
-
-            pageTitle:
-                "支持",
-
-            pageDescription:
-                "查找 SRC 产品的软件、文档、维护、下载和使用信息。",
-
-            software:
-                "SRC 软件",
-
-            manuals:
-                "手册与指南",
-
-            maintenance:
-                "维护",
-
-            downloads:
-                "下载",
-
-            tutorials:
-                "教程",
-
-            softwareDescription:
-                "了解如何安装、配置和使用为我们的机器人开发的软件。",
-
-            manualsDescription:
-                "SRC 产品安装、配置和操作相关文档。",
-
-            maintenanceDescription:
-                "有关设备预防性维护、检查和保养的信息。",
-
-            downloadsDescription:
-                "SRC 用户可获取的软件、文档、文件和资源。",
-
-            tutorialsDescription:
-                "学习如何使用 SRC 产品和软件的分步指南。",
-
-            softwareLink:
-                "查看软件 →",
-
-            manualsLink:
-                "查看手册 →",
-
-            maintenanceLink:
-                "查看维护信息 →",
-
-            downloadsLink:
-                "前往下载 →",
-
-            tutorialsLink:
-                "查看教程 →",
-
-            supportLabel:
-                "支持",
-
-            documentationLabel:
-                "文档",
-
-            resourcesLabel:
-                "资源",
-
-            learningLabel:
-                "学习",
-
-            softwareSection:
-                "这里将提供 SRC 软件的信息、安装说明和相关文档。",
-
-            manualsSection:
-                "这里将提供 PDF、用户手册和技术文档。",
-
-            maintenanceSection:
-                "这里将提供保持机器人和机器人工具良好状态的相关信息。",
-
-            downloadsSection:
-                "这里将提供软件、更新、文件和相关文档。",
-
-            tutorialsSection:
-                "这里将提供视频、操作说明和分步教程。",
-
-            languageButton:
-                "语言"
-
-        }
-
-    };
-
-
-
-    const languageSelector =
-        document.getElementById("languageSelector");
-
-
-    const languageButton =
-        document.getElementById("languageButton");
-
-
-    const languageButtonText =
-        document.getElementById("languageButtonText");
-
-
-
-    languageButton.addEventListener(
-        "click",
-        function(event) {
-
-            event.stopPropagation();
-
-            languageSelector.classList.toggle("open");
-
-        }
-    );
-
-
-
-    document.addEventListener(
-        "click",
-        function() {
-
-            languageSelector.classList.remove("open");
-
-        }
-    );
-
-
-
-    document
-        .querySelectorAll("[data-language]")
-        .forEach(function(button) {
-
-            button.addEventListener(
-                "click",
-                function() {
-
-                    setLanguage(
-                        button.dataset.language
-                    );
-
-                }
-            );
-
-        });
-
-
-
-    function setLanguage(language) {
-
-
-        if (!translations[language]) {
-
-            language = "es";
-
-        }
-
-
-        document.documentElement.lang =
-            language;
+            }
+        );
 
 
         document
-            .querySelectorAll("[data-i18n]")
-            .forEach(function(element) {
+            .querySelectorAll("[data-language]")
+            .forEach(function(button) {
 
-                const key =
-                    element.dataset.i18n;
+                button.addEventListener(
+                    "click",
+                    function() {
 
+                        setLanguage(
+                            button.dataset.language
+                        );
 
-                if (translations[language][key]) {
-
-                    element.textContent =
-                        translations[language][key];
-
-                }
+                    }
+                );
 
             });
 
 
-        languageButtonText.textContent =
-            translations[language].languageButton;
+
+        function setLanguage(language) {
 
 
-        localStorage.setItem(
-            "srcLanguage",
-            language
-        );
+            if (!translations[language]) {
+
+                language = "es";
+
+            }
 
 
-        languageSelector.classList.remove("open");
-
-    }
-
+            document.documentElement.lang =
+                language;
 
 
-    const savedLanguage =
-        localStorage.getItem("srcLanguage") || "es";
+            document
+                .querySelectorAll("[data-i18n]")
+                .forEach(function(element) {
+
+                    const key =
+                        element.dataset.i18n;
 
 
-    setLanguage(savedLanguage);
+                    if (translations[language][key]) {
 
-</script>
+                        element.textContent =
+                            translations[language][key];
+
+                    }
+
+                });
+
+
+            languageButtonText.textContent =
+                translations[language].languageButton;
+
+
+            localStorage.setItem(
+                "srcLanguage",
+                language
+            );
+
+
+            languageSelector.classList.remove("open");
+
+        }
+
+
+
+        const savedLanguage =
+            localStorage.getItem("srcLanguage") || "es";
+
+
+        setLanguage(savedLanguage);
+
+
+    </script>
 
 
 </body>
