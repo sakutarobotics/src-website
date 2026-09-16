@@ -661,7 +661,7 @@
         }
 
         .section-description {
-            max-width: 750px;
+            max-width: 820px;
 
             margin: 20px auto 0;
 
@@ -677,9 +677,9 @@
         ========================================== */
 
         .applications-grid {
-            max-width: 1100px;
+            max-width: 1180px;
 
-            margin: 45px auto 0;
+            margin: 50px auto 0;
 
             display: grid;
 
@@ -689,7 +689,9 @@
         }
 
         .application-card {
-            padding: 35px;
+            min-height: 245px;
+
+            padding: 34px;
 
             background: white;
 
@@ -700,6 +702,26 @@
             text-align: left;
 
             transition: 0.25s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .application-card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 4px;
+            height: 0;
+
+            background: var(--blue);
+
+            transition: 0.3s;
         }
 
         .application-card:hover {
@@ -710,20 +732,78 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.06);
         }
 
+        .application-card:hover::before {
+            height: 100%;
+        }
+
+        .application-number {
+            display: block;
+
+            color: var(--blue);
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 25px;
+
+            letter-spacing: 1px;
+        }
+
         .application-card h3 {
             color: var(--blue);
 
             font-size: 21px;
 
             margin-bottom: 12px;
+
+            line-height: 1.25;
         }
 
         .application-card p {
             color: var(--gray);
 
-            line-height: 1.55;
+            line-height: 1.6;
 
             font-size: 15px;
+        }
+
+        .applications-note {
+            max-width: 1180px;
+
+            margin: 30px auto 0;
+
+            padding: 35px 40px;
+
+            background: var(--blue);
+
+            border-radius: 18px;
+
+            color: white;
+
+            text-align: left;
+
+            display: grid;
+
+            grid-template-columns: 230px 1fr;
+
+            gap: 35px;
+
+            align-items: center;
+        }
+
+        .applications-note h3 {
+            font-size: 23px;
+
+            line-height: 1.3;
+        }
+
+        .applications-note p {
+            color: rgba(255,255,255,0.85);
+
+            font-size: 16px;
+
+            line-height: 1.65;
         }
 
         /* =========================================
@@ -990,6 +1070,10 @@
 
         @media (max-width: 1050px) {
 
+            .applications-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
             .footer-contact-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -1022,13 +1106,19 @@
                 margin-bottom: 30px;
             }
 
-            .applications-grid {
+            .applications-note {
                 grid-template-columns: 1fr;
+
+                gap: 12px;
             }
 
         }
 
         @media (max-width: 700px) {
+
+            .applications-grid {
+                grid-template-columns: 1fr;
+            }
 
             .footer-contact-grid {
                 grid-template-columns: 1fr 1fr;
@@ -1116,6 +1206,14 @@
                 grid-template-columns: 1fr;
             }
 
+            .application-card {
+                min-height: auto;
+            }
+
+            .applications-note {
+                padding: 30px 25px;
+            }
+
             .company-content p {
                 font-size: 16px;
             }
@@ -1147,6 +1245,10 @@
 
 <body>
 
+
+    <!-- =========================================
+         HEADER
+    ========================================== -->
 
     <header>
 
@@ -1320,6 +1422,10 @@
 
 
 
+    <!-- =========================================
+         INICIO
+    ========================================== -->
+
     <section
         class="hero"
         id="inicio"
@@ -1422,6 +1528,10 @@
 
 
 
+    <!-- =========================================
+         CARACTERÍSTICAS
+    ========================================== -->
+
     <section class="features">
 
 
@@ -1497,6 +1607,10 @@
 
 
 
+    <!-- =========================================
+         APLICACIONES
+    ========================================== -->
+
     <section
         class="section section-gray"
         id="aplicaciones"
@@ -1512,7 +1626,7 @@
 
 
         <h2 data-i18n="applicationsTitle">
-            Robótica para diferentes necesidades
+            Tecnología para aprender, desarrollar y automatizar
         </h2>
 
 
@@ -1520,9 +1634,11 @@
             class="section-description"
             data-i18n="applicationsDescription"
         >
-            Los sistemas desarrollados por SRC están orientados
-            a diferentes áreas de la robótica, automatización,
-            educación e investigación.
+            Las soluciones de SRC están orientadas al desarrollo
+            de proyectos de robótica, mecatrónica y automatización,
+            desde plataformas para aprendizaje y experimentación
+            hasta sistemas destinados a aplicaciones semiindustriales
+            e industriales.
         </p>
 
 
@@ -1530,47 +1646,191 @@
         <div class="applications-grid">
 
 
+            <!-- 01 -->
+
             <div class="application-card">
 
-                <h3 data-i18n="automationTitle">
-                    Automatización
+
+                <span class="application-number">
+                    01
+                </span>
+
+
+                <h3 data-i18n="trainingTitle">
+                    Educación y entrenamiento en robótica
                 </h3>
 
-                <p data-i18n="automationDescription">
-                    Sistemas robóticos para manipulación,
-                    movimientos programados y automatización
-                    de procesos.
+
+                <p data-i18n="trainingDescription">
+                    Plataformas orientadas al aprendizaje práctico
+                    de robótica y mecatrónica, permitiendo estudiar
+                    conceptos como grados de libertad, articulaciones,
+                    movimiento, programación, control y funcionamiento
+                    de sistemas robóticos.
                 </p>
+
 
             </div>
 
 
+
+            <!-- 02 -->
+
             <div class="application-card">
 
-                <h3 data-i18n="applicationEducationTitle">
-                    Educación
+
+                <span class="application-number">
+                    02
+                </span>
+
+
+                <h3 data-i18n="mechanismsTitle">
+                    Desarrollo de mecanismos y prototipos
                 </h3>
 
-                <p data-i18n="applicationEducationDescription">
-                    Plataformas para aprendizaje de robótica,
-                    programación, control y mecatrónica.
+
+                <p data-i18n="mechanismsDescription">
+                    Componentes, kits y herramientas para el diseño,
+                    construcción y experimentación de mecanismos
+                    utilizados en proyectos de ingeniería, incluyendo
+                    sistemas de engranes, poleas, transmisiones y
+                    estructuras mecánicas.
                 </p>
+
 
             </div>
 
 
+
+            <!-- 03 -->
+
             <div class="application-card">
 
-                <h3 data-i18n="researchTitle">
-                    Investigación
+
+                <span class="application-number">
+                    03
+                </span>
+
+
+                <h3 data-i18n="manipulationTitle">
+                    Manipulación y herramientas robóticas
                 </h3>
 
-                <p data-i18n="researchDescription">
-                    Plataformas y herramientas para desarrollo,
-                    experimentación y proyectos de investigación.
+
+                <p data-i18n="manipulationDescription">
+                    Soluciones para la manipulación y sujeción de
+                    objetos mediante grippers, mecanismos, sistemas
+                    neumáticos y herramientas de vacío, aplicables en
+                    prototipos, entrenamiento y automatización.
                 </p>
 
+
             </div>
+
+
+
+            <!-- 04 -->
+
+            <div class="application-card">
+
+
+                <span class="application-number">
+                    04
+                </span>
+
+
+                <h3 data-i18n="prototypingTitle">
+                    Prototipado y desarrollo de proyectos
+                </h3>
+
+
+                <p data-i18n="prototypingDescription">
+                    Soluciones destinadas a estudiantes,
+                    desarrolladores y proyectos de ingeniería que
+                    requieren construir, probar y validar conceptos
+                    mediante sistemas mecánicos, electrónicos y
+                    robóticos.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- 05 -->
+
+            <div class="application-card">
+
+
+                <span class="application-number">
+                    05
+                </span>
+
+
+                <h3 data-i18n="softwareControlTitle">
+                    Software, programación y control
+                </h3>
+
+
+                <p data-i18n="softwareControlDescription">
+                    Desarrollo de software y sistemas de control para
+                    la programación, operación y supervisión de robots
+                    y mecanismos, incluyendo control de movimientos,
+                    secuencias, sensores y aplicaciones robóticas.
+                </p>
+
+
+            </div>
+
+
+
+            <!-- 06 -->
+
+            <div class="application-card">
+
+
+                <span class="application-number">
+                    06
+                </span>
+
+
+                <h3 data-i18n="industrialTitle">
+                    Automatización semiindustrial e industrial
+                </h3>
+
+
+                <p data-i18n="industrialDescription">
+                    Desarrollo de plataformas robóticas y soluciones
+                    destinadas a tareas de manipulación, movimientos
+                    programados, pick and place y automatización de
+                    procesos en aplicaciones semiindustriales e
+                    industriales.
+                </p>
+
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- DESARROLLO CONTINUO -->
+
+        <div class="applications-note">
+
+
+            <h3 data-i18n="continuousTitle">
+                Desarrollo continuo
+            </h3>
+
+
+            <p data-i18n="continuousDescription">
+                SRC continúa desarrollando nuevas plataformas
+                robóticas, herramientas y sistemas de automatización
+                para ampliar sus capacidades en aplicaciones
+                educativas, de investigación y del sector industrial.
+            </p>
 
 
         </div>
@@ -1579,6 +1839,10 @@
     </section>
 
 
+
+    <!-- =========================================
+         EMPRESA
+    ========================================== -->
 
     <section
         class="section section-white"
@@ -1698,6 +1962,10 @@
 
 
 
+    <!-- =========================================
+         FOOTER / CONTACTO
+    ========================================== -->
+
     <footer
         class="site-footer"
         id="contacto"
@@ -1733,6 +2001,8 @@
 
         <div class="footer-contact-grid">
 
+
+            <!-- WHATSAPP -->
 
             <a
                 class="footer-contact"
@@ -1774,6 +2044,8 @@
 
 
 
+            <!-- EMAIL -->
+
             <a
                 class="footer-contact"
                 href="mailto:rmsakuta@gmail.com"
@@ -1807,6 +2079,8 @@
             </a>
 
 
+
+            <!-- INSTAGRAM -->
 
             <a
                 class="footer-contact"
@@ -1851,6 +2125,8 @@
             </a>
 
 
+
+            <!-- YOUTUBE -->
 
             <a
                 class="footer-contact"
@@ -1897,6 +2173,8 @@
             </a>
 
 
+
+            <!-- FACEBOOK -->
 
             <a
                 class="footer-contact"
@@ -1965,11 +2243,19 @@
 
 
 
+    <!-- =========================================
+         IDIOMAS
+    ========================================== -->
+
     <script>
 
 
         const translations = {
 
+
+            /* =====================================
+               ESPAÑOL
+            ====================================== */
 
             es: {
 
@@ -2021,32 +2307,58 @@
                 mexicoDescription:
                     "Talento y tecnología nacional",
 
+
                 applicationsLabel:
                     "APLICACIONES",
 
                 applicationsTitle:
-                    "Robótica para diferentes necesidades",
+                    "Tecnología para aprender, desarrollar y automatizar",
 
                 applicationsDescription:
-                    "Los sistemas desarrollados por SRC están orientados a diferentes áreas de la robótica, automatización, educación e investigación.",
+                    "Las soluciones de SRC están orientadas al desarrollo de proyectos de robótica, mecatrónica y automatización, desde plataformas para aprendizaje y experimentación hasta sistemas destinados a aplicaciones semiindustriales e industriales.",
 
-                automationTitle:
-                    "Automatización",
+                trainingTitle:
+                    "Educación y entrenamiento en robótica",
 
-                automationDescription:
-                    "Sistemas robóticos para manipulación, movimientos programados y automatización de procesos.",
+                trainingDescription:
+                    "Plataformas orientadas al aprendizaje práctico de robótica y mecatrónica, permitiendo estudiar conceptos como grados de libertad, articulaciones, movimiento, programación, control y funcionamiento de sistemas robóticos.",
 
-                applicationEducationTitle:
-                    "Educación",
+                mechanismsTitle:
+                    "Desarrollo de mecanismos y prototipos",
 
-                applicationEducationDescription:
-                    "Plataformas para aprendizaje de robótica, programación, control y mecatrónica.",
+                mechanismsDescription:
+                    "Componentes, kits y herramientas para el diseño, construcción y experimentación de mecanismos utilizados en proyectos de ingeniería, incluyendo sistemas de engranes, poleas, transmisiones y estructuras mecánicas.",
 
-                researchTitle:
-                    "Investigación",
+                manipulationTitle:
+                    "Manipulación y herramientas robóticas",
 
-                researchDescription:
-                    "Plataformas y herramientas para desarrollo, experimentación y proyectos de investigación.",
+                manipulationDescription:
+                    "Soluciones para la manipulación y sujeción de objetos mediante grippers, mecanismos, sistemas neumáticos y herramientas de vacío, aplicables en prototipos, entrenamiento y automatización.",
+
+                prototypingTitle:
+                    "Prototipado y desarrollo de proyectos",
+
+                prototypingDescription:
+                    "Soluciones destinadas a estudiantes, desarrolladores y proyectos de ingeniería que requieren construir, probar y validar conceptos mediante sistemas mecánicos, electrónicos y robóticos.",
+
+                softwareControlTitle:
+                    "Software, programación y control",
+
+                softwareControlDescription:
+                    "Desarrollo de software y sistemas de control para la programación, operación y supervisión de robots y mecanismos, incluyendo control de movimientos, secuencias, sensores y aplicaciones robóticas.",
+
+                industrialTitle:
+                    "Automatización semiindustrial e industrial",
+
+                industrialDescription:
+                    "Desarrollo de plataformas robóticas y soluciones destinadas a tareas de manipulación, movimientos programados, pick and place y automatización de procesos en aplicaciones semiindustriales e industriales.",
+
+                continuousTitle:
+                    "Desarrollo continuo",
+
+                continuousDescription:
+                    "SRC continúa desarrollando nuevas plataformas robóticas, herramientas y sistemas de automatización para ampliar sus capacidades en aplicaciones educativas, de investigación y del sector industrial.",
+
 
                 companyLabel:
                     "EMPRESA",
@@ -2105,6 +2417,11 @@
             },
 
 
+
+            /* =====================================
+               ENGLISH
+            ====================================== */
+
             en: {
 
                 navHome: "Home",
@@ -2155,32 +2472,58 @@
                 mexicoDescription:
                     "National talent and technology",
 
+
                 applicationsLabel:
                     "APPLICATIONS",
 
                 applicationsTitle:
-                    "Robotics for different needs",
+                    "Technology to learn, develop and automate",
 
                 applicationsDescription:
-                    "SRC systems are designed for different areas of robotics, automation, education and research.",
+                    "SRC solutions are aimed at the development of robotics, mechatronics and automation projects, ranging from learning and experimentation platforms to systems intended for semi-industrial and industrial applications.",
 
-                automationTitle:
-                    "Automation",
+                trainingTitle:
+                    "Robotics education and training",
 
-                automationDescription:
-                    "Robotic systems for manipulation, programmed movements and process automation.",
+                trainingDescription:
+                    "Platforms focused on practical robotics and mechatronics learning, allowing users to study concepts such as degrees of freedom, joints, motion, programming, control and the operation of robotic systems.",
 
-                applicationEducationTitle:
-                    "Education",
+                mechanismsTitle:
+                    "Mechanism and prototype development",
 
-                applicationEducationDescription:
-                    "Platforms for learning robotics, programming, control and mechatronics.",
+                mechanismsDescription:
+                    "Components, kits and tools for designing, building and experimenting with mechanisms used in engineering projects, including gears, pulleys, transmissions and mechanical structures.",
 
-                researchTitle:
-                    "Research",
+                manipulationTitle:
+                    "Robotic manipulation and tooling",
 
-                researchDescription:
-                    "Platforms and tools for development, experimentation and research projects.",
+                manipulationDescription:
+                    "Solutions for object manipulation and gripping through grippers, mechanisms, pneumatic systems and vacuum tooling, applicable to prototyping, training and automation.",
+
+                prototypingTitle:
+                    "Prototyping and project development",
+
+                prototypingDescription:
+                    "Solutions for students, developers and engineering projects that require building, testing and validating concepts through mechanical, electronic and robotic systems.",
+
+                softwareControlTitle:
+                    "Software, programming and control",
+
+                softwareControlDescription:
+                    "Development of software and control systems for programming, operating and supervising robots and mechanisms, including motion control, sequences, sensors and robotic applications.",
+
+                industrialTitle:
+                    "Semi-industrial and industrial automation",
+
+                industrialDescription:
+                    "Development of robotic platforms and solutions for manipulation tasks, programmed movements, pick and place and process automation in semi-industrial and industrial applications.",
+
+                continuousTitle:
+                    "Continuous development",
+
+                continuousDescription:
+                    "SRC continues developing new robotic platforms, tools and automation systems to expand its capabilities in educational, research and industrial applications.",
+
 
                 companyLabel:
                     "COMPANY",
@@ -2238,6 +2581,11 @@
 
             },
 
+
+
+            /* =====================================
+               中文
+            ====================================== */
 
             zh: {
 
@@ -2301,32 +2649,58 @@
                 mexicoDescription:
                     "本土人才与技术",
 
+
                 applicationsLabel:
                     "应用",
 
                 applicationsTitle:
-                    "面向不同需求的机器人技术",
+                    "用于学习、开发和自动化的技术",
 
                 applicationsDescription:
-                    "SRC 系统面向机器人、自动化、教育和科研等多个领域。",
+                    "SRC 的解决方案面向机器人、机电一体化和自动化项目，从学习与实验平台到半工业和工业应用系统。",
 
-                automationTitle:
-                    "自动化",
+                trainingTitle:
+                    "机器人教育与培训",
 
-                automationDescription:
-                    "用于操作、编程运动和流程自动化的机器人系统。",
+                trainingDescription:
+                    "面向机器人和机电一体化实践学习的平台，可用于研究自由度、关节、运动、编程、控制以及机器人系统的工作原理。",
 
-                applicationEducationTitle:
-                    "教育",
+                mechanismsTitle:
+                    "机构与原型开发",
 
-                applicationEducationDescription:
-                    "用于学习机器人技术、编程、控制和机电一体化的平台。",
+                mechanismsDescription:
+                    "用于工程项目中机构设计、制造和实验的组件、套件与工具，包括齿轮、滑轮、传动系统和机械结构。",
 
-                researchTitle:
-                    "科研",
+                manipulationTitle:
+                    "机器人操作与工具",
 
-                researchDescription:
-                    "用于开发、实验和科研项目的平台与工具。",
+                manipulationDescription:
+                    "通过夹具、机械机构、气动系统和真空工具实现物体抓取与操作，可应用于原型设计、培训和自动化。",
+
+                prototypingTitle:
+                    "原型设计与项目开发",
+
+                prototypingDescription:
+                    "面向学生、开发人员和工程项目的解决方案，通过机械、电子和机器人系统进行概念构建、测试和验证。",
+
+                softwareControlTitle:
+                    "软件、编程与控制",
+
+                softwareControlDescription:
+                    "开发用于机器人和机构编程、运行与监控的软件和控制系统，包括运动控制、流程顺序、传感器和机器人应用。",
+
+                industrialTitle:
+                    "半工业与工业自动化",
+
+                industrialDescription:
+                    "开发用于物体操作、编程运动、取放任务和流程自动化的机器人平台与解决方案，面向半工业和工业应用。",
+
+                continuousTitle:
+                    "持续开发",
+
+                continuousDescription:
+                    "SRC 持续开发新的机器人平台、工具和自动化系统，以扩大其在教育、科研和工业应用领域的能力。",
+
 
                 companyLabel:
                     "公司",
