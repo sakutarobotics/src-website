@@ -5,15 +5,22 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <title>Productos | SAKUTA Robotics Company</title>
+    <title>
+        Productos | SAKUTA Robotics Company
+    </title>
 
+    <!-- FAVICON SRC -->
     <link
         rel="icon"
         type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='white'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='39' font-weight='900' fill='%2324579b'%3ESRC%3C/text%3E%3C/svg%3E"
     >
+
 
     <style>
 
@@ -47,31 +54,54 @@
         }
 
 
+
         * {
+
             margin: 0;
             padding: 0;
+
             box-sizing: border-box;
+
         }
+
 
 
         html {
+
             scroll-behavior: smooth;
+
         }
+
 
 
         body {
 
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             background: var(--white);
+
             color: var(--black);
 
         }
 
 
+
+        body.modal-open {
+
+            overflow: hidden;
+
+        }
+
+
+
         button,
         a {
+
             font-family: inherit;
+
         }
 
 
@@ -87,15 +117,20 @@
 
             background: white;
 
-            border-bottom: 1px solid #e8e8e8;
+            border-bottom:
+                1px solid #e8e8e8;
 
             display: flex;
+
             align-items: center;
             justify-content: space-between;
 
-            padding: 0 7%;
+            padding:
+                0
+                7%;
 
             position: sticky;
+
             top: 0;
 
             z-index: 1000;
@@ -111,6 +146,7 @@
         .brand {
 
             display: flex;
+
             align-items: center;
 
             gap: 10px;
@@ -120,19 +156,23 @@
         }
 
 
+
         .brand-logo-crop {
 
             width: 62px;
             height: 70px;
 
             position: relative;
+
             overflow: hidden;
 
             flex-shrink: 0;
 
-            transform: translateY(-8px);
+            transform:
+                translateY(-8px);
 
         }
+
 
 
         .brand-logo-crop img {
@@ -140,6 +180,7 @@
             position: absolute;
 
             width: 118px;
+
             max-width: none;
 
             left: -27px;
@@ -150,12 +191,15 @@
         }
 
 
+
         .brand-name {
 
             color: var(--blue);
 
             font-size: 32px;
+
             font-weight: 800;
+
             font-style: italic;
 
             letter-spacing: -1px;
@@ -173,11 +217,13 @@
         nav {
 
             display: flex;
+
             align-items: center;
 
             gap: 35px;
 
         }
+
 
 
         nav > a,
@@ -188,6 +234,7 @@
             text-decoration: none;
 
             font-size: 16px;
+
             font-weight: 600;
 
             position: relative;
@@ -197,12 +244,14 @@
         }
 
 
+
         nav > a:hover,
         .menu-dropdown > a:hover {
 
             color: var(--blue);
 
         }
+
 
 
         nav > a::after,
@@ -225,6 +274,7 @@
         }
 
 
+
         nav > a:hover::after,
         .menu-dropdown:hover > a::after {
 
@@ -243,6 +293,7 @@
             position: relative;
 
             display: flex;
+
             align-items: center;
 
             height: 82px;
@@ -250,9 +301,11 @@
         }
 
 
+
         .menu-dropdown > a {
 
             display: flex;
+
             align-items: center;
 
             gap: 7px;
@@ -260,20 +313,26 @@
         }
 
 
+
         .dropdown-arrow {
 
             font-size: 10px;
 
-            transition: transform 0.25s;
+            transition:
+                transform 0.25s;
 
         }
 
 
-        .menu-dropdown:hover .dropdown-arrow {
 
-            transform: rotate(180deg);
+        .menu-dropdown:hover
+        .dropdown-arrow {
+
+            transform:
+                rotate(180deg);
 
         }
+
 
 
         .dropdown-menu {
@@ -291,7 +350,9 @@
 
             background: white;
 
-            border: 1px solid #e9e9e9;
+            border:
+                1px solid #e9e9e9;
+
             border-radius: 12px;
 
             padding: 8px;
@@ -301,7 +362,9 @@
                 rgba(0,0,0,0.10);
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
             transition: 0.2s;
@@ -309,10 +372,14 @@
         }
 
 
-        .menu-dropdown:hover .dropdown-menu {
+
+        .menu-dropdown:hover
+        .dropdown-menu {
 
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
 
             transform:
@@ -322,11 +389,14 @@
         }
 
 
+
         .dropdown-menu a {
 
             display: block;
 
-            padding: 13px 15px;
+            padding:
+                13px
+                15px;
 
             border-radius: 8px;
 
@@ -335,6 +405,7 @@
             color: var(--black);
 
             font-size: 15px;
+
             font-weight: 600;
 
             white-space: nowrap;
@@ -342,6 +413,7 @@
             transition: 0.2s;
 
         }
+
 
 
         .dropdown-menu a:hover {
@@ -355,7 +427,7 @@
 
 
         /* =========================================================
-           IDIOMA
+           IDIOMA DE LA PÁGINA
         ========================================================== */
 
         .language-selector {
@@ -365,23 +437,29 @@
         }
 
 
+
         .language-button {
 
             border: none;
 
             background: var(--blue);
+
             color: white;
 
-            padding: 13px 24px;
+            padding:
+                13px
+                24px;
 
             border-radius: 30px;
 
             font-size: 15px;
+
             font-weight: bold;
 
             cursor: pointer;
 
             display: flex;
+
             align-items: center;
 
             gap: 8px;
@@ -391,13 +469,17 @@
         }
 
 
+
         .language-button:hover {
 
-            background: var(--blue-dark);
+            background:
+                var(--blue-dark);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
+
 
 
         .language-options {
@@ -411,7 +493,9 @@
 
             background: white;
 
-            border: 1px solid #e8e8e8;
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 12px;
 
             padding: 8px;
@@ -421,10 +505,13 @@
                 rgba(0,0,0,0.10);
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
-            transform: translateY(8px);
+            transform:
+                translateY(8px);
 
             transition: 0.2s;
 
@@ -433,15 +520,21 @@
         }
 
 
-        .language-selector.open .language-options {
+
+        .language-selector.open
+        .language-options {
 
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
 
-            transform: translateY(0);
+            transform:
+                translateY(0);
 
         }
+
 
 
         .language-options button {
@@ -454,11 +547,14 @@
 
             text-align: left;
 
-            padding: 12px 13px;
+            padding:
+                12px
+                13px;
 
             border-radius: 8px;
 
             font-size: 14px;
+
             font-weight: 600;
 
             color: var(--black);
@@ -468,6 +564,7 @@
             transition: 0.2s;
 
         }
+
 
 
         .language-options button:hover {
@@ -486,11 +583,15 @@
 
         .page-hero {
 
-            padding: 100px 7% 75px;
+            padding:
+                100px
+                7%
+                75px;
 
             text-align: center;
 
         }
+
 
 
         .page-label {
@@ -504,12 +605,17 @@
         }
 
 
+
         .page-hero h1 {
 
             margin-top: 16px;
 
             font-size:
-                clamp(48px, 7vw, 82px);
+                clamp(
+                    48px,
+                    7vw,
+                    82px
+                );
 
             color: var(--blue);
 
@@ -518,11 +624,15 @@
         }
 
 
+
         .page-hero p {
 
             max-width: 820px;
 
-            margin: 22px auto 0;
+            margin:
+                22px
+                auto
+                0;
 
             color: var(--gray);
 
@@ -540,11 +650,16 @@
 
         .catalog {
 
-            background: var(--gray-light);
+            background:
+                var(--gray-light);
 
-            padding: 70px 7% 110px;
+            padding:
+                70px
+                7%
+                110px;
 
         }
+
 
 
         .catalog-header {
@@ -552,9 +667,11 @@
             max-width: 1180px;
 
             margin: auto;
+
             margin-bottom: 38px;
 
         }
+
 
 
         .catalog-label {
@@ -562,6 +679,7 @@
             color: var(--blue);
 
             font-size: 12px;
+
             font-weight: 800;
 
             letter-spacing: 4px;
@@ -569,16 +687,22 @@
         }
 
 
+
         .catalog-header h2 {
 
             margin-top: 12px;
 
             font-size:
-                clamp(32px, 4vw, 48px);
+                clamp(
+                    32px,
+                    4vw,
+                    48px
+                );
 
             letter-spacing: -1px;
 
         }
+
 
 
         .catalog-header p {
@@ -605,26 +729,36 @@
 
             max-width: 1180px;
 
-            margin: 0 auto 38px;
+            margin:
+                0 auto
+                38px;
 
             padding: 24px;
 
             background: white;
 
-            border: 1px solid var(--border);
+            border:
+                1px solid
+                var(--border);
+
             border-radius: 18px;
 
         }
 
 
-        .filter-group + .filter-group {
+
+        .filter-group
+        + .filter-group {
 
             margin-top: 23px;
+
             padding-top: 23px;
 
-            border-top: 1px solid #eeeeee;
+            border-top:
+                1px solid #eeeeee;
 
         }
+
 
 
         .filter-title {
@@ -636,6 +770,7 @@
             color: #333;
 
             font-size: 13px;
+
             font-weight: 800;
 
             letter-spacing: 1.2px;
@@ -645,9 +780,11 @@
         }
 
 
+
         .filters {
 
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 10px;
@@ -655,19 +792,24 @@
         }
 
 
+
         .filter-button {
 
-            padding: 11px 19px;
+            padding:
+                11px
+                19px;
 
             border-radius: 999px;
 
-            border: 1px solid #d8dce2;
+            border:
+                1px solid #d8dce2;
 
             background: white;
 
             color: #333;
 
             font-size: 13px;
+
             font-weight: 700;
 
             cursor: pointer;
@@ -678,48 +820,105 @@
 
 
 
-        /* ÁREAS */
+        /* =========================================================
+           FILTROS ÁREA
+        ========================================================== */
+
+        .area-filter[data-area-filter="all"]:hover {
+
+            border-color:
+                var(--blue);
+
+            color:
+                var(--blue);
+
+        }
+
+
 
         .area-filter[data-area-filter="all"].active {
 
-            background: var(--blue);
-            border-color: var(--blue);
+            background:
+                var(--blue);
+
+            border-color:
+                var(--blue);
 
             color: white;
 
         }
+
 
 
         .area-filter[data-area-filter="education"] {
 
-            border-color: var(--education-border);
-            color: var(--education);
+            border-color:
+                var(--education-border);
+
+            color:
+                var(--education);
 
         }
+
+
+
+        .area-filter[data-area-filter="education"]:hover {
+
+            background:
+                var(--education-soft);
+
+            border-color:
+                var(--education);
+
+        }
+
 
 
         .area-filter[data-area-filter="education"].active {
 
-            background: var(--education);
-            border-color: var(--education);
+            background:
+                var(--education);
+
+            border-color:
+                var(--education);
 
             color: white;
 
         }
+
 
 
         .area-filter[data-area-filter="industry"] {
 
-            border-color: var(--industry-border);
-            color: var(--industry);
+            border-color:
+                var(--industry-border);
+
+            color:
+                var(--industry);
 
         }
 
 
+
+        .area-filter[data-area-filter="industry"]:hover {
+
+            background:
+                var(--industry-soft);
+
+            border-color:
+                var(--industry);
+
+        }
+
+
+
         .area-filter[data-area-filter="industry"].active {
 
-            background: var(--industry);
-            border-color: var(--industry);
+            background:
+                var(--industry);
+
+            border-color:
+                var(--industry);
 
             color: white;
 
@@ -727,31 +926,41 @@
 
 
 
-        /* TIPOS */
+        /* =========================================================
+           FILTROS TIPO
+        ========================================================== */
 
         .type-filter {
 
-            color: var(--type-blue);
+            color:
+                var(--type-blue);
 
-            border-color: var(--type-border);
+            border-color:
+                var(--type-border);
 
         }
+
 
 
         .type-filter:hover {
 
-            background: var(--type-soft);
+            background:
+                var(--type-soft);
 
-            border-color: var(--type-blue);
+            border-color:
+                var(--type-blue);
 
         }
 
 
+
         .type-filter.active {
 
-            background: var(--type-blue);
+            background:
+                var(--type-blue);
 
-            border-color: var(--type-blue);
+            border-color:
+                var(--type-blue);
 
             color: white;
 
@@ -770,6 +979,7 @@
             margin: auto;
 
             display: flex;
+
             flex-direction: column;
 
             gap: 18px;
@@ -777,11 +987,14 @@
         }
 
 
+
         .product-item {
 
             background: white;
 
-            border: 1px solid var(--border);
+            border:
+                1px solid
+                var(--border);
 
             border-radius: 20px;
 
@@ -792,6 +1005,7 @@
                 box-shadow 0.25s;
 
         }
+
 
 
         .product-item:hover {
@@ -805,18 +1019,23 @@
         }
 
 
+
         .product-item[data-area="education"].open {
 
-            border-color: var(--education);
+            border-color:
+                var(--education);
 
         }
+
 
 
         .product-item[data-area="industry"].open {
 
-            border-color: var(--industry);
+            border-color:
+                var(--industry);
 
         }
+
 
 
         .product-item.open {
@@ -828,6 +1047,7 @@
         }
 
 
+
         .product-item.is-hidden {
 
             display: none;
@@ -837,7 +1057,7 @@
 
 
         /* =========================================================
-           PRODUCTO CERRADO
+           PRODUCTO COMPACTO
         ========================================================== */
 
         .product-toggle {
@@ -864,6 +1084,7 @@
         }
 
 
+
         .product-image {
 
             width: 175px;
@@ -876,10 +1097,12 @@
             overflow: hidden;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
         }
+
 
 
         .product-image img {
@@ -889,14 +1112,18 @@
 
             object-fit: contain;
 
-            transition: transform 0.35s;
+            transition:
+                transform 0.35s;
 
         }
 
 
-        .product-item:hover .product-image img {
 
-            transform: scale(1.04);
+        .product-item:hover
+        .product-image img {
+
+            transform:
+                scale(1.04);
 
         }
 
@@ -909,6 +1136,7 @@
         .badges {
 
             display: flex;
+
             flex-wrap: wrap;
 
             align-items: center;
@@ -918,6 +1146,7 @@
         }
 
 
+
         .area-badge,
         .type-badge {
 
@@ -925,11 +1154,14 @@
 
             align-items: center;
 
-            padding: 7px 11px;
+            padding:
+                7px
+                11px;
 
             border-radius: 999px;
 
             font-size: 10px;
+
             font-weight: 800;
 
             letter-spacing: 0.9px;
@@ -941,43 +1173,55 @@
         }
 
 
-        .product-item[data-area="education"] .area-badge {
 
-            background: var(--education-soft);
+        .product-item[data-area="education"]
+        .area-badge {
+
+            background:
+                var(--education-soft);
 
             border:
                 1px solid
                 var(--education-border);
 
-            color: var(--education);
+            color:
+                var(--education);
 
         }
 
 
-        .product-item[data-area="industry"] .area-badge {
 
-            background: var(--industry-soft);
+        .product-item[data-area="industry"]
+        .area-badge {
+
+            background:
+                var(--industry-soft);
 
             border:
                 1px solid
                 var(--industry-border);
 
-            color: var(--industry);
+            color:
+                var(--industry);
 
         }
 
 
+
         .type-badge {
 
-            background: var(--type-soft);
+            background:
+                var(--type-soft);
 
             border:
                 1px solid
                 var(--type-border);
 
-            color: var(--type-blue);
+            color:
+                var(--type-blue);
 
         }
+
 
 
         .product-summary {
@@ -985,6 +1229,7 @@
             min-width: 0;
 
         }
+
 
 
         .product-summary h2 {
@@ -996,6 +1241,7 @@
             letter-spacing: -0.5px;
 
         }
+
 
 
         .product-summary p {
@@ -1030,13 +1276,12 @@
             color: #404040;
 
             font-size: 14px;
+
             font-weight: 800;
 
         }
 
 
-
-        /* FLECHA NEUTRA */
 
         .circle-arrow {
 
@@ -1045,7 +1290,8 @@
 
             border-radius: 50%;
 
-            background: var(--neutral-soft);
+            background:
+                var(--neutral-soft);
 
             color: #333333;
 
@@ -1064,11 +1310,15 @@
         }
 
 
-        .product-item.open .circle-arrow {
 
-            transform: rotate(180deg);
+        .product-item.open
+        .circle-arrow {
 
-            background: var(--neutral-dark);
+            transform:
+                rotate(180deg);
+
+            background:
+                var(--neutral-dark);
 
             color: white;
 
@@ -1077,7 +1327,7 @@
 
 
         /* =========================================================
-           DETALLES
+           DETALLES DEL PRODUCTO
         ========================================================== */
 
         .product-details {
@@ -1093,11 +1343,14 @@
         }
 
 
-        .product-item.open .product-details {
+
+        .product-item.open
+        .product-details {
 
             grid-template-rows: 1fr;
 
         }
+
 
 
         .product-details-inner {
@@ -1105,6 +1358,7 @@
             overflow: hidden;
 
         }
+
 
 
         .product-details-content {
@@ -1118,6 +1372,7 @@
                 1px solid #eeeeee;
 
         }
+
 
 
         .details-main {
@@ -1135,6 +1390,7 @@
         }
 
 
+
         .details-information h3 {
 
             margin-bottom: 12px;
@@ -1142,6 +1398,7 @@
             font-size: 23px;
 
         }
+
 
 
         .placeholder-text {
@@ -1153,6 +1410,7 @@
             line-height: 1.7;
 
         }
+
 
 
         .information-block {
@@ -1167,6 +1425,7 @@
         }
 
 
+
         .information-block:last-child {
 
             border-bottom: none;
@@ -1174,6 +1433,7 @@
             margin-bottom: 0;
 
         }
+
 
 
         .information-block h4 {
@@ -1185,6 +1445,7 @@
             font-size: 16px;
 
         }
+
 
 
         .placeholder-list {
@@ -1200,7 +1461,7 @@
 
 
         /* =========================================================
-           IMAGEN DETALLADA
+           IMÁGENES
         ========================================================== */
 
         .details-media {
@@ -1212,6 +1473,7 @@
             gap: 14px;
 
         }
+
 
 
         .details-media img {
@@ -1253,11 +1515,13 @@
         }
 
 
+
         .resources > h3 {
 
             font-size: 21px;
 
         }
+
 
 
         .resources-description {
@@ -1273,12 +1537,16 @@
         }
 
 
+
         .resource-grid {
 
             display: grid;
 
             grid-template-columns:
-                repeat(3,1fr);
+                repeat(
+                    3,
+                    1fr
+                );
 
             gap: 14px;
 
@@ -1287,12 +1555,17 @@
         }
 
 
+
         .resource-grid.industry-grid {
 
             grid-template-columns:
-                repeat(2,1fr);
+                repeat(
+                    2,
+                    1fr
+                );
 
         }
+
 
 
         .resource-card {
@@ -1309,11 +1582,14 @@
         }
 
 
+
         .resource-file-type {
 
             display: inline-flex;
 
-            padding: 5px 8px;
+            padding:
+                5px
+                8px;
 
             margin-bottom: 13px;
 
@@ -1326,11 +1602,13 @@
             border-radius: 7px;
 
             font-size: 10px;
+
             font-weight: 800;
 
             letter-spacing: 1px;
 
         }
+
 
 
         .resource-card h4 {
@@ -1340,6 +1618,7 @@
             margin-bottom: 7px;
 
         }
+
 
 
         .resource-card p {
@@ -1355,11 +1634,13 @@
         }
 
 
+
         .resource-actions {
 
             margin-top: 17px;
 
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 8px;
@@ -1367,17 +1648,21 @@
         }
 
 
+
         .resource-button {
 
             border: none;
 
-            padding: 10px 14px;
+            padding:
+                10px
+                14px;
 
             border-radius: 8px;
 
             cursor: pointer;
 
             font-size: 13px;
+
             font-weight: 700;
 
             transition: 0.25s;
@@ -1385,29 +1670,36 @@
         }
 
 
+
         .resource-button.primary {
 
-            background: var(--blue);
+            background:
+                var(--blue);
 
             color: white;
 
         }
 
 
+
         .resource-button.primary:hover {
 
-            background: var(--blue-dark);
+            background:
+                var(--blue-dark);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
+
 
 
         .resource-button.secondary {
 
             background: white;
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
             border:
                 1px solid #cad5e4;
@@ -1415,17 +1707,22 @@
         }
 
 
+
         .resource-button.secondary:hover {
 
-            border-color: var(--blue);
+            border-color:
+                var(--blue);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
 
 
 
-        /* STL */
+        /* =========================================================
+           STL
+        ========================================================== */
 
         .stl-card {
 
@@ -1442,7 +1739,9 @@
         }
 
 
-        .stl-card .resource-file-type {
+
+        .stl-card
+        .resource-file-type {
 
             background:
                 var(--education-soft);
@@ -1453,12 +1752,24 @@
         }
 
 
-        .stl-card .resource-button.primary {
+
+        .stl-card
+        .resource-button.primary {
 
             background:
                 var(--education);
 
         }
+
+
+
+        .stl-card
+        .resource-button.primary:hover {
+
+            background: #5e47ae;
+
+        }
+
 
 
         .stl-free {
@@ -1467,10 +1778,299 @@
 
             margin-top: 11px;
 
-            color: var(--education);
+            color:
+                var(--education);
 
             font-size: 12px;
+
             font-weight: 700;
+
+        }
+
+
+
+        /* =========================================================
+           MODAL SELECTOR DE IDIOMA DEL PDF
+        ========================================================== */
+
+        .document-modal {
+
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(
+                    12,
+                    18,
+                    27,
+                    0.55
+                );
+
+            backdrop-filter:
+                blur(4px);
+
+            -webkit-backdrop-filter:
+                blur(4px);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            pointer-events: none;
+
+            transition: 0.25s;
+
+            z-index: 5000;
+
+        }
+
+
+
+        .document-modal.open {
+
+            opacity: 1;
+
+            visibility: visible;
+
+            pointer-events: auto;
+
+        }
+
+
+
+        .document-modal-box {
+
+            width: min(
+                460px,
+                100%
+            );
+
+            background: white;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 25px 70px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.22
+                );
+
+            padding:
+                28px;
+
+            position: relative;
+
+            transform:
+                translateY(12px)
+                scale(0.98);
+
+            transition:
+                transform 0.25s;
+
+        }
+
+
+
+        .document-modal.open
+        .document-modal-box {
+
+            transform:
+                translateY(0)
+                scale(1);
+
+        }
+
+
+
+        .document-modal-close {
+
+            position: absolute;
+
+            top: 16px;
+            right: 16px;
+
+            width: 36px;
+            height: 36px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                #f1f2f4;
+
+            color:
+                #333;
+
+            cursor: pointer;
+
+            font-size: 20px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            transition: 0.2s;
+
+        }
+
+
+
+        .document-modal-close:hover {
+
+            background:
+                #e4e6e9;
+
+        }
+
+
+
+        .document-modal-icon {
+
+            width: 52px;
+            height: 52px;
+
+            border-radius: 14px;
+
+            background:
+                var(--blue-soft);
+
+            color:
+                var(--blue);
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            font-size: 25px;
+
+            margin-bottom: 19px;
+
+        }
+
+
+
+        .document-modal-box h3 {
+
+            padding-right: 35px;
+
+            font-size: 23px;
+
+            line-height: 1.25;
+
+        }
+
+
+
+        .document-modal-box > p {
+
+            margin-top: 10px;
+
+            color: var(--gray);
+
+            line-height: 1.6;
+
+            font-size: 14px;
+
+        }
+
+
+
+        .document-language-buttons {
+
+            margin-top: 24px;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr
+                1fr;
+
+            gap: 12px;
+
+        }
+
+
+
+        .document-language-button {
+
+            min-height: 92px;
+
+            border:
+                1px solid #dce2e9;
+
+            border-radius: 14px;
+
+            background: white;
+
+            cursor: pointer;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            transition: 0.25s;
+
+        }
+
+
+
+        .document-language-button:hover {
+
+            border-color:
+                var(--blue);
+
+            box-shadow:
+                0 8px 24px
+                rgba(
+                    36,
+                    87,
+                    155,
+                    0.10
+                );
+
+            transform:
+                translateY(-2px);
+
+        }
+
+
+
+        .document-language-flag {
+
+            font-size: 28px;
+
+        }
+
+
+
+        .document-language-button.disabled {
+
+            opacity: 0.4;
+
+            pointer-events: none;
 
         }
 
@@ -1486,7 +2086,10 @@
 
             max-width: 1180px;
 
-            margin: 30px auto 0;
+            margin:
+                30px
+                auto
+                0;
 
             padding: 35px;
 
@@ -1505,6 +2108,7 @@
         }
 
 
+
         .no-results.show {
 
             display: block;
@@ -1519,7 +2123,9 @@
 
         footer {
 
-            padding: 42px 7%;
+            padding:
+                42px
+                7%;
 
             background: #10151c;
 
@@ -1530,6 +2136,7 @@
             font-size: 14px;
 
         }
+
 
 
         footer strong {
@@ -1544,10 +2151,13 @@
            RESPONSIVE
         ========================================================== */
 
-        @media (max-width:950px) {
+        @media
+        (max-width: 950px) {
 
             nav {
+
                 display: none;
+
             }
 
 
@@ -1564,30 +2174,40 @@
             .product-image {
 
                 width: 140px;
+
                 height: 125px;
 
             }
 
 
-            .expand-control span:first-child {
+            .expand-control
+            span:first-child {
+
                 display: none;
+
             }
 
 
             .expand-control {
+
                 min-width: auto;
+
             }
 
 
             .details-main {
-                grid-template-columns: 1fr;
+
+                grid-template-columns:
+                    1fr;
+
             }
 
 
             .resource-grid,
             .resource-grid.industry-grid {
 
-                grid-template-columns: 1fr;
+                grid-template-columns:
+                    1fr;
 
             }
 
@@ -1595,7 +2215,8 @@
 
 
 
-        @media (max-width:650px) {
+        @media
+        (max-width: 650px) {
 
             header {
 
@@ -1612,6 +2233,19 @@
                 width: 52px;
                 height: 58px;
 
+                transform:
+                    translateY(-7px);
+
+            }
+
+
+            .brand-logo-crop img {
+
+                width: 100px;
+
+                left: -23px;
+                top: -8px;
+
             }
 
 
@@ -1624,9 +2258,28 @@
 
             .language-button {
 
-                padding: 11px 14px;
+                padding:
+                    11px
+                    14px;
 
                 font-size: 13px;
+
+            }
+
+
+            .page-hero {
+
+                padding:
+                    75px
+                    6%
+                    55px;
+
+            }
+
+
+            .page-hero p {
+
+                font-size: 17px;
 
             }
 
@@ -1637,6 +2290,24 @@
                     55px
                     5%
                     80px;
+
+            }
+
+
+            .filters-wrapper {
+
+                padding: 18px;
+
+            }
+
+
+            .filter-button {
+
+                padding:
+                    9px
+                    13px;
+
+                font-size: 12px;
 
             }
 
@@ -1663,19 +2334,39 @@
             }
 
 
+            .badges {
+
+                gap: 5px;
+
+            }
+
+
             .area-badge,
             .type-badge {
 
-                padding: 5px 7px;
+                padding:
+                    5px
+                    7px;
 
                 font-size: 8px;
+
+                letter-spacing: 0.4px;
 
             }
 
 
             .product-summary h2 {
 
+                margin-top: 8px;
+
                 font-size: 21px;
+
+            }
+
+
+            .product-summary p {
+
+                font-size: 14px;
 
             }
 
@@ -1684,6 +2375,8 @@
 
                 width: 36px;
                 height: 36px;
+
+                font-size: 17px;
 
             }
 
@@ -1694,6 +2387,98 @@
                     10px
                     20px
                     28px;
+
+            }
+
+
+            .resources {
+
+                padding: 20px;
+
+            }
+
+
+            .resource-actions {
+
+                flex-direction: column;
+
+            }
+
+
+            .resource-button {
+
+                width: 100%;
+
+            }
+
+
+            .document-language-buttons {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+        }
+
+
+
+        @media
+        (max-width: 430px) {
+
+            .brand-name {
+
+                font-size: 21px;
+
+            }
+
+
+            .language-button {
+
+                padding:
+                    10px
+                    12px;
+
+            }
+
+
+            .language-button span {
+
+                display: none;
+
+            }
+
+
+            .product-toggle {
+
+                grid-template-columns:
+                    82px
+                    1fr
+                    34px;
+
+                gap: 11px;
+
+            }
+
+
+            .product-image {
+
+                width: 82px;
+                height: 82px;
+
+            }
+
+
+            .product-summary h2 {
+
+                font-size: 19px;
+
+            }
+
+
+            .product-summary p {
+
+                font-size: 13px;
 
             }
 
@@ -1708,7 +2493,12 @@
 
 
 
+<!-- =========================================================
+     HEADER
+========================================================== -->
+
 <header>
+
 
     <a
         class="brand"
@@ -1724,6 +2514,7 @@
 
         </div>
 
+
         <div class="brand-name">
             SAKUTA
         </div>
@@ -1734,12 +2525,14 @@
 
     <nav>
 
+
         <a
             href="index.html#inicio"
             data-i18n="navHome"
         >
             Inicio
         </a>
+
 
 
         <div class="menu-dropdown">
@@ -1788,6 +2581,7 @@
         </div>
 
 
+
         <a
             href="index.html#aplicaciones"
             data-i18n="navApplications"
@@ -1804,6 +2598,7 @@
         </a>
 
 
+
         <div class="menu-dropdown">
 
             <a href="index.html#empresa">
@@ -1817,6 +2612,7 @@
                 </span>
 
             </a>
+
 
             <div class="dropdown-menu">
 
@@ -1837,6 +2633,7 @@
             </div>
 
         </div>
+
 
     </nav>
 
@@ -1866,15 +2663,24 @@
 
         <div class="language-options">
 
-            <button type="button" data-language="es">
+            <button
+                type="button"
+                data-language="es"
+            >
                 🇲🇽 Español
             </button>
 
-            <button type="button" data-language="en">
+            <button
+                type="button"
+                data-language="en"
+            >
                 🇺🇸 English
             </button>
 
-            <button type="button" data-language="zh">
+            <button
+                type="button"
+                data-language="zh"
+            >
                 🇨🇳 中文
             </button>
 
@@ -1882,9 +2688,14 @@
 
     </div>
 
+
 </header>
 
 
+
+<!-- =========================================================
+     HERO
+========================================================== -->
 
 <section class="page-hero">
 
@@ -1902,15 +2713,17 @@
 
 
     <p data-i18n="pageDescription">
-
         Explora los productos desarrollados por SRC para las áreas
         de educación, investigación, robótica y automatización industrial.
-
     </p>
 
 </section>
 
 
+
+<!-- =========================================================
+     CATÁLOGO
+========================================================== -->
 
 <section
     class="catalog"
@@ -1934,17 +2747,17 @@
 
 
         <p data-i18n="catalogDescription">
-
-            Explora el catálogo utilizando los filtros
-            por área de aplicación y tipo de producto.
-
+            Explora el catálogo utilizando los filtros por área
+            de aplicación y tipo de producto.
         </p>
 
     </div>
 
 
 
-    <!-- FILTROS -->
+    <!-- =====================================================
+         FILTROS
+    ====================================================== -->
 
     <div class="filters-wrapper">
 
@@ -1963,8 +2776,8 @@
 
                 <button
                     class="filter-button area-filter active"
-                    data-area-filter="all"
                     type="button"
+                    data-area-filter="all"
                     data-i18n="filterAllAreas"
                 >
                     Todas las áreas
@@ -1973,8 +2786,8 @@
 
                 <button
                     class="filter-button area-filter"
-                    data-area-filter="education"
                     type="button"
+                    data-area-filter="education"
                     data-i18n="filterEducation"
                 >
                     Educación e investigación
@@ -1983,8 +2796,8 @@
 
                 <button
                     class="filter-button area-filter"
-                    data-area-filter="industry"
                     type="button"
+                    data-area-filter="industry"
                     data-i18n="filterIndustry"
                 >
                     Semi-industria e industria
@@ -2010,8 +2823,8 @@
 
                 <button
                     class="filter-button type-filter active"
-                    data-type-filter="all"
                     type="button"
+                    data-type-filter="all"
                     data-i18n="filterAllTypes"
                 >
                     Todos los tipos
@@ -2020,8 +2833,8 @@
 
                 <button
                     class="filter-button type-filter"
-                    data-type-filter="robots"
                     type="button"
+                    data-type-filter="robots"
                     data-i18n="typeRobots"
                 >
                     Robots
@@ -2030,8 +2843,8 @@
 
                 <button
                     class="filter-button type-filter"
-                    data-type-filter="grippers"
                     type="button"
+                    data-type-filter="grippers"
                     data-i18n="typeGrippers"
                 >
                     Grippers
@@ -2040,8 +2853,8 @@
 
                 <button
                     class="filter-button type-filter"
-                    data-type-filter="tools"
                     type="button"
+                    data-type-filter="tools"
                     data-i18n="typeTools"
                 >
                     Herramientas
@@ -2050,8 +2863,8 @@
 
                 <button
                     class="filter-button type-filter"
-                    data-type-filter="components"
                     type="button"
+                    data-type-filter="components"
                     data-i18n="typeComponents"
                 >
                     Componentes y accesorios
@@ -2087,6 +2900,98 @@
 
 
 
+<!-- =========================================================
+     MODAL SELECCIÓN DE IDIOMA DEL DOCUMENTO
+========================================================== -->
+
+<div
+    class="document-modal"
+    id="documentModal"
+>
+
+
+    <div
+        class="document-modal-box"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="documentModalTitle"
+    >
+
+
+        <button
+            class="document-modal-close"
+            id="documentModalClose"
+            type="button"
+            aria-label="Cerrar"
+        >
+            ×
+        </button>
+
+
+        <div class="document-modal-icon">
+            PDF
+        </div>
+
+
+        <h3
+            id="documentModalTitle"
+            data-i18n="documentLanguageTitle"
+        >
+            Selecciona el idioma del documento
+        </h3>
+
+
+        <p data-i18n="documentLanguageDescription">
+            Elige la versión que deseas consultar o descargar.
+        </p>
+
+
+        <div class="document-language-buttons">
+
+
+            <button
+                class="document-language-button"
+                id="documentSpanishButton"
+                type="button"
+                data-document-language="es"
+            >
+
+                <span class="document-language-flag">
+                    🇲🇽
+                </span>
+
+                Español
+
+            </button>
+
+
+
+            <button
+                class="document-language-button"
+                id="documentEnglishButton"
+                type="button"
+                data-document-language="en"
+            >
+
+                <span class="document-language-flag">
+                    🇺🇸
+                </span>
+
+                English
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+
 <footer>
 
     <strong>
@@ -2110,76 +3015,111 @@
 
 const translations = {
 
+
     es: {
 
         navHome: "Inicio",
+
         navProducts: "Productos",
+
         navApplications: "Aplicaciones",
+
         navSupport: "Soporte",
+
         navCompany: "Empresa",
 
-        aboutUs: "Acerca de nosotros",
-        contactUs: "Contáctanos",
+        aboutUs:
+            "Acerca de nosotros",
 
-        companyLabel: "SAKUTA ROBOTICS COMPANY",
+        contactUs:
+            "Contáctanos",
 
-        pageTitle: "Productos",
+        companyLabel:
+            "SAKUTA ROBOTICS COMPANY",
+
+        pageTitle:
+            "Productos",
 
         pageDescription:
             "Explora los productos desarrollados por SRC para las áreas de educación, investigación, robótica y automatización industrial.",
 
-        catalogLabel: "CATÁLOGO SRC",
+        catalogLabel:
+            "CATÁLOGO SRC",
 
-        catalogTitle: "Nuestros productos",
+        catalogTitle:
+            "Nuestros productos",
 
         catalogDescription:
             "Explora el catálogo utilizando los filtros por área de aplicación y tipo de producto.",
 
-        areaFilterTitle: "Área de aplicación",
+        areaFilterTitle:
+            "Área de aplicación",
 
-        typeFilterTitle: "Tipo de producto",
+        typeFilterTitle:
+            "Tipo de producto",
 
-        filterAllAreas: "Todas las áreas",
+        filterAllAreas:
+            "Todas las áreas",
 
-        filterEducation: "Educación e investigación",
+        filterEducation:
+            "Educación e investigación",
 
-        filterIndustry: "Semi-industria e industria",
+        filterIndustry:
+            "Semi-industria e industria",
 
-        filterAllTypes: "Todos los tipos",
+        filterAllTypes:
+            "Todos los tipos",
 
-        typeRobots: "Robots",
+        typeRobots:
+            "Robots",
 
-        typeGrippers: "Grippers",
+        typeGrippers:
+            "Grippers",
 
-        typeTools: "Herramientas",
+        typeTools:
+            "Herramientas",
 
-        typeComponents: "Componentes y accesorios",
+        typeComponents:
+            "Componentes y accesorios",
 
-        educationCategory: "Educación e investigación",
+        educationCategory:
+            "Educación e investigación",
 
-        industryCategory: "Semi-industria e industria",
+        industryCategory:
+            "Semi-industria e industria",
 
-        placeholderTitle: "Título",
+        placeholderTitle:
+            "Título",
 
-        placeholderDescription: "Descripción",
+        placeholderDescription:
+            "Descripción",
 
-        viewDetails: "Ver detalles",
+        viewDetails:
+            "Ver detalles",
 
-        descriptionTitle: "Descripción",
+        descriptionTitle:
+            "Descripción",
 
-        featuresTitle: "Características",
+        featuresTitle:
+            "Características",
 
-        placeholderFeature: "Característica",
+        placeholderFeature:
+            "Característica",
 
-        specificationsTitle: "Especificaciones",
+        specificationsTitle:
+            "Especificaciones",
 
-        placeholderSpecifications: "Especificaciones",
+        placeholderSpecifications:
+            "Especificaciones",
 
-        applicationsTitle: "Aplicaciones",
+        applicationsTitle:
+            "Aplicaciones",
 
-        placeholderApplications: "Aplicaciones",
+        placeholderApplications:
+            "Aplicaciones",
 
-        resourcesTitle: "Documentación y archivos",
+        resourcesTitle:
+            "Documentación y archivos",
 
         resourcesDescription:
             "Consulta la información técnica, planos y archivos disponibles del producto.",
@@ -2230,7 +3170,13 @@ const translations = {
             "Este archivo todavía no ha sido agregado.",
 
         noResults:
-            "No hay productos disponibles con esta combinación de filtros."
+            "No hay productos disponibles con esta combinación de filtros.",
+
+        documentLanguageTitle:
+            "Selecciona el idioma del documento",
+
+        documentLanguageDescription:
+            "Elige la versión que deseas consultar o descargar."
 
     },
 
@@ -2238,48 +3184,74 @@ const translations = {
 
     en: {
 
-        navHome: "Home",
-        navProducts: "Products",
-        navApplications: "Applications",
-        navSupport: "Support",
-        navCompany: "Company",
+        navHome:
+            "Home",
 
-        aboutUs: "About us",
-        contactUs: "Contact us",
+        navProducts:
+            "Products",
 
-        companyLabel: "SAKUTA ROBOTICS COMPANY",
+        navApplications:
+            "Applications",
 
-        pageTitle: "Products",
+        navSupport:
+            "Support",
+
+        navCompany:
+            "Company",
+
+        aboutUs:
+            "About us",
+
+        contactUs:
+            "Contact us",
+
+        companyLabel:
+            "SAKUTA ROBOTICS COMPANY",
+
+        pageTitle:
+            "Products",
 
         pageDescription:
             "Explore products developed by SRC for education, research, robotics and industrial automation.",
 
-        catalogLabel: "SRC CATALOG",
+        catalogLabel:
+            "SRC CATALOG",
 
-        catalogTitle: "Our products",
+        catalogTitle:
+            "Our products",
 
         catalogDescription:
             "Explore the catalog using filters by application area and product type.",
 
-        areaFilterTitle: "Application area",
+        areaFilterTitle:
+            "Application area",
 
-        typeFilterTitle: "Product type",
+        typeFilterTitle:
+            "Product type",
 
-        filterAllAreas: "All areas",
+        filterAllAreas:
+            "All areas",
 
-        filterEducation: "Education and research",
+        filterEducation:
+            "Education and research",
 
-        filterIndustry: "Semi-industrial and industrial",
+        filterIndustry:
+            "Semi-industrial and industrial",
 
-        filterAllTypes: "All types",
+        filterAllTypes:
+            "All types",
 
-        typeRobots: "Robots",
+        typeRobots:
+            "Robots",
 
-        typeGrippers: "Grippers",
+        typeGrippers:
+            "Grippers",
 
-        typeTools: "Tools",
+        typeTools:
+            "Tools",
 
-        typeComponents: "Components and accessories",
+        typeComponents:
+            "Components and accessories",
 
         educationCategory:
             "Education and research",
@@ -2287,30 +3259,41 @@ const translations = {
         industryCategory:
             "Semi-industrial and industrial",
 
-        placeholderTitle: "Title",
+        placeholderTitle:
+            "Title",
 
-        placeholderDescription: "Description",
+        placeholderDescription:
+            "Description",
 
-        viewDetails: "View details",
+        viewDetails:
+            "View details",
 
-        descriptionTitle: "Description",
+        descriptionTitle:
+            "Description",
 
-        featuresTitle: "Features",
+        featuresTitle:
+            "Features",
 
-        placeholderFeature: "Feature",
+        placeholderFeature:
+            "Feature",
 
-        specificationsTitle: "Specifications",
+        specificationsTitle:
+            "Specifications",
 
-        placeholderSpecifications: "Specifications",
+        placeholderSpecifications:
+            "Specifications",
 
-        applicationsTitle: "Applications",
+        applicationsTitle:
+            "Applications",
 
-        placeholderApplications: "Applications",
+        placeholderApplications:
+            "Applications",
 
-        resourcesTitle: "Documentation and files",
+        resourcesTitle:
+            "Documentation and files",
 
         resourcesDescription:
-            "View the technical information, drawings and available product files.",
+            "View technical information, drawings and available product files.",
 
         resourcesIndustryDescription:
             "View the technical information and available product drawings.",
@@ -2321,36 +3304,50 @@ const translations = {
         generalInfoDescription:
             "General information, features and specifications.",
 
-        plansTitle: "Drawings",
+        plansTitle:
+            "Drawings",
 
         plansDescription:
             "Product drawings and dimensional documentation.",
 
-        stlTitle: "STL files",
+        stlTitle:
+            "STL files",
 
         stlDescription:
             "3D printable files for the product components.",
 
-        viewPdf: "View PDF",
+        viewPdf:
+            "View PDF",
 
-        downloadPdf: "Download PDF",
+        downloadPdf:
+            "Download PDF",
 
-        viewPlans: "View drawings",
+        viewPlans:
+            "View drawings",
 
-        downloadPlans: "Download PDF",
+        downloadPlans:
+            "Download PDF",
 
-        downloadStlZip: "Download ZIP",
+        downloadStlZip:
+            "Download ZIP",
 
         freeStl:
             "Free download for education and research.",
 
-        languageButton: "Language",
+        languageButton:
+            "Language",
 
         unavailable:
             "This file has not been added yet.",
 
         noResults:
-            "No products are available with this filter combination."
+            "No products are available with this filter combination.",
+
+        documentLanguageTitle:
+            "Select the document language",
+
+        documentLanguageDescription:
+            "Choose the version you want to view or download."
 
     },
 
@@ -2358,14 +3355,26 @@ const translations = {
 
     zh: {
 
-        navHome: "首页",
-        navProducts: "产品",
-        navApplications: "应用",
-        navSupport: "支持",
-        navCompany: "公司",
+        navHome:
+            "首页",
 
-        aboutUs: "关于我们",
-        contactUs: "联系我们",
+        navProducts:
+            "产品",
+
+        navApplications:
+            "应用",
+
+        navSupport:
+            "支持",
+
+        navCompany:
+            "公司",
+
+        aboutUs:
+            "关于我们",
+
+        contactUs:
+            "联系我们",
 
         companyLabel:
             "SAKUTA ROBOTICS COMPANY",
@@ -2503,7 +3512,13 @@ const translations = {
             "该文件尚未添加。",
 
         noResults:
-            "没有符合当前筛选条件的产品。"
+            "没有符合当前筛选条件的产品。",
+
+        documentLanguageTitle:
+            "选择文档语言",
+
+        documentLanguageDescription:
+            "请选择要查看或下载的文档版本。"
 
     }
 
@@ -2512,219 +3527,502 @@ const translations = {
 
 
 /* =========================================================
-   LISTA DE PRODUCTOS
+   PRODUCTOS
 
-   Aquí podemos cambiar posteriormente nombres y descripción.
+   IMPORTANTE:
+   PDF Español + PDF English
+   ZIP STL solo línea educativa
 ========================================================== */
 
 const products = [
 
-    {
-
-        image: "robot_educativo.png",
-
-        area: "education",
-
-        type: "robots",
-
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
-
-    },
-
-
-    {
-
-        image: "gripper_educativo.png",
-
-        area: "education",
-
-        type: "grippers",
-
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
-
-    },
-
-
-    {
-
-        image: "gripper_adaptative_educativo.png",
-
-        area: "education",
-
-        type: "grippers",
-
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
-
-    },
-
-
-    /* NUEVO - GRIPPER PARALELO */
-
-    {
-
-        image: "gripper_paraleloo.webp",
-
-        area: "education",
-
-        type: "grippers",
-
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
-
-    },
-
-
-    /* NUEVO - GRIPPER MG996R */
-
-    {
-
-        image: "gripper_mg996r.jpg",
-
-        area: "education",
-
-        type: "grippers",
-
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
-
-    },
-
-
-    {
-
-        image: "kit_engranes.png",
-
-        area: "education",
-
-        type: "components",
-
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
-
-    },
-
 
     /* =====================================================
-       SERVOMOTORES
-       EDUCACIÓN E INVESTIGACIÓN
-       COMPONENTES Y ACCESORIOS
+       SRAT01
+       BRAZO ROBÓTICO EDUCATIVO
     ====================================================== */
 
     {
 
-        image: "servo14.jpg",
+        code:
+            "SRAT01",
 
-        area: "education",
+        image:
+            "robot_educativo.png",
 
-        type: "components",
+        area:
+            "education",
 
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
+        type:
+            "robots",
 
-    },
+        infoPdfEs:
+            "Ficha Brazo robotico (SRAT01).pdf",
 
+        infoPdfEn:
+            "sheet Robotic Arm (SRAT01).pdf",
 
-    {
+        plansPdfEs:
+            "",
 
-        image: "servo35.webp",
+        plansPdfEn:
+            "",
 
-        area: "education",
-
-        type: "components",
-
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
-
-    },
-
-
-    {
-
-        image: "servo50.jpg",
-
-        area: "education",
-
-        type: "components",
-
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
+        stlZip:
+            "Brazo Robotico (SRAT01).zip"
 
     },
 
 
+
+    /* =====================================================
+       GS90
+       GRIPPER EDUCATIVO
+    ====================================================== */
+
     {
 
-        image: "servo70.jpg",
+        code:
+            "GS90",
 
-        area: "education",
+        image:
+            "gripper_educativo.png",
 
-        type: "components",
+        area:
+            "education",
 
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
+        type:
+            "grippers",
+
+        infoPdfEs:
+            "Ficha Gripper (GS90).pdf",
+
+        infoPdfEn:
+            "Gripper Sheet (GS90).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Gripper (GS90).zip"
 
     },
 
 
+
+    /* =====================================================
+       GSF996
+       GRIPPER ADAPTATIVO
+    ====================================================== */
+
     {
 
-        image: "servo135.jpg",
+        code:
+            "GSF996",
 
-        area: "education",
+        image:
+            "gripper_adaptative_educativo.png",
 
-        type: "components",
+        area:
+            "education",
 
-        infoPdf: "",
-        plansPdf: "",
-        stlZip: ""
+        type:
+            "grippers",
+
+        infoPdfEs:
+            "Ficha Gripper (GSF996).pdf",
+
+        infoPdfEn:
+            "Gripper Sheet (GSF996).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Gripper (GSF996).zip"
 
     },
 
 
-    /* INDUSTRIA */
+
+    /* =====================================================
+       GSP996
+       GRIPPER PARALELO
+    ====================================================== */
 
     {
 
-        image: "gripper_neumatico.png",
+        code:
+            "GSP996",
+
+        image:
+            "gripper_paraleloo.webp",
+
+        area:
+            "education",
+
+        type:
+            "grippers",
+
+        infoPdfEs:
+            "Ficha Gripper (GSP996).pdf",
+
+        infoPdfEn:
+            "Gripper Sheet (GSP996).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Gripper (GSP996).zip"
+
+    },
+
+
+
+    /* =====================================================
+       GSMG996
+       GRIPPER MG996
+    ====================================================== */
+
+    {
+
+        code:
+            "GSMG996",
+
+        image:
+            "gripper_mg996rr.jpg",
+
+        area:
+            "education",
+
+        type:
+            "grippers",
+
+        infoPdfEs:
+            "Ficha Gripper (GSMG996).pdf",
+
+        infoPdfEn:
+            "Gripper sheet (GSMG996).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Gripper (GSMG996).zip"
+
+    },
+
+
+
+    /* =====================================================
+       SKG100
+       ELEMENTOS DE TRANSMISIÓN MECÁNICA
+    ====================================================== */
+
+    {
+
+        code:
+            "SKG100",
+
+        image:
+            "kit_engranes.png",
+
+        area:
+            "education",
+
+        type:
+            "components",
+
+        infoPdfEs:
+            "Ficha Elementos de Transmisión Mecánica (SKG100).pdf",
+
+        infoPdfEn:
+            "Mechanical Power Transmission Components Sheetcarta (SKG100).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Elementos de Transmisión Mecánica (SKG100).zip"
+
+    },
+
+
+
+    /* =====================================================
+       S14KC
+    ====================================================== */
+
+    {
+
+        code:
+            "S14KC",
+
+        image:
+            "servo14.jpg",
+
+        area:
+            "education",
+
+        type:
+            "components",
+
+        infoPdfEs:
+            "Ficha Servomotor (S14KC).pdf",
+
+        infoPdfEn:
+            "Servomotor Sheet (S14KC).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Servomotor(S14KC).zip"
+
+    },
+
+
+
+    /* =====================================================
+       S35KC
+    ====================================================== */
+
+    {
+
+        code:
+            "S35KC",
+
+        image:
+            "servo35.webp",
+
+        area:
+            "education",
+
+        type:
+            "components",
+
+        infoPdfEs:
+            "Ficha Servomotor (S35KC).pdf",
+
+        infoPdfEn:
+            "Servomotor Sheet (S35KC).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Servomotor(S35KC).zip"
+
+    },
+
+
+
+    /* =====================================================
+       S50KC
+    ====================================================== */
+
+    {
+
+        code:
+            "S50KC",
+
+        image:
+            "servo50.jpg",
+
+        area:
+            "education",
+
+        type:
+            "components",
+
+        infoPdfEs:
+            "Ficha Servomotor (S50KC).pdf",
+
+        infoPdfEn:
+            "Servomotor Sheet (S50KC).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Servomotor (S50KC).zip"
+
+    },
+
+
+
+    /* =====================================================
+       S70KC
+    ====================================================== */
+
+    {
+
+        code:
+            "S70KC",
+
+        image:
+            "servo70.jpg",
+
+        area:
+            "education",
+
+        type:
+            "components",
+
+        infoPdfEs:
+            "Ficha Servomotor (S70KC).pdf",
+
+        infoPdfEn:
+            "Servomotor Sheet (S70KC).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Servomotor (S70KC).zip"
+
+    },
+
+
+
+    /* =====================================================
+       S135KC
+    ====================================================== */
+
+    {
+
+        code:
+            "S135KC",
+
+        image:
+            "servo135.jpg",
+
+        area:
+            "education",
+
+        type:
+            "components",
+
+        infoPdfEs:
+            "Ficha Servomotor (S135KC).pdf",
+
+        infoPdfEn:
+            "Servomotor Sheet (S135KC).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            "",
+
+        stlZip:
+            "Servomotor (S135KC).zip"
+
+    },
+
+
+
+    /* =====================================================
+       GSNP
+       GRIPPER NEUMÁTICO
+       INDUSTRIAL
+    ====================================================== */
+
+    {
+
+        code:
+            "GSNP",
+
+        image:
+            "gripper_neumatico.png",
 
         secondaryImage:
             "conjunto_vistas.png",
 
-        area: "industry",
+        area:
+            "industry",
 
-        type: "grippers",
+        type:
+            "grippers",
 
-        infoPdf: "",
-        plansPdf: ""
+        infoPdfEs:
+            "Ficha Gripper (GSNP).pdf",
+
+        infoPdfEn:
+            "Gripper Sheet (GSNP).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            ""
 
     },
 
 
+
+    /* =====================================================
+       GSSN6
+       HERRAMIENTA / VENTOSA
+       INDUSTRIAL
+    ====================================================== */
+
     {
 
-        image: "ventosa.png",
+        code:
+            "GSSN6",
 
-        area: "industry",
+        image:
+            "ventosa.png",
 
-        type: "tools",
+        area:
+            "industry",
 
-        infoPdf: "",
-        plansPdf: ""
+        type:
+            "tools",
+
+        infoPdfEs:
+            "Ficha Herramienta (GSSN6).pdf",
+
+        infoPdfEn:
+            "Tool Sheet (GSSN6).pdf",
+
+        plansPdfEs:
+            "",
+
+        plansPdfEn:
+            ""
 
     }
+
 
 ];
 
@@ -2764,20 +4062,51 @@ const languageButtonText =
     );
 
 
+const documentModal =
+    document.getElementById(
+        "documentModal"
+    );
+
+
+const documentModalClose =
+    document.getElementById(
+        "documentModalClose"
+    );
+
+
+const documentSpanishButton =
+    document.getElementById(
+        "documentSpanishButton"
+    );
+
+
+const documentEnglishButton =
+    document.getElementById(
+        "documentEnglishButton"
+    );
+
+
 let currentLanguage =
     localStorage.getItem(
         "srcLanguage"
     ) || "es";
 
 
-let activeArea = "all";
+let activeArea =
+    "all";
 
-let activeType = "all";
+
+let activeType =
+    "all";
+
+
+let pendingDocumentAction =
+    null;
 
 
 
 /* =========================================================
-   CREAR PRODUCTO
+   CREAR HTML DE PRODUCTO
 ========================================================== */
 
 function createProductHTML(product) {
@@ -2813,54 +4142,56 @@ function createProductHTML(product) {
 
     const secondaryImage =
         product.secondaryImage
-            ? `
-                <img
-                    src="${product.secondaryImage}"
-                    alt="Producto SRC"
-                >
-              `
-            : "";
+        ? `
+
+            <img
+                src="${product.secondaryImage}"
+                alt="Producto SRC"
+            >
+
+        `
+        : "";
 
 
     const stlCard =
         isEducation
         ? `
 
-        <div class="resource-card stl-card">
+            <div class="resource-card stl-card">
 
-            <span class="resource-file-type">
-                ZIP / STL
-            </span>
+                <span class="resource-file-type">
+                    ZIP / STL
+                </span>
 
-            <h4 data-i18n="stlTitle">
-                Archivos STL
-            </h4>
+                <h4 data-i18n="stlTitle">
+                    Archivos STL
+                </h4>
 
-            <p data-i18n="stlDescription">
-                Archivos de las piezas 3D del producto.
-            </p>
+                <p data-i18n="stlDescription">
+                    Archivos de las piezas 3D del producto.
+                </p>
 
-            <div class="resource-actions">
+                <div class="resource-actions">
 
-                <button
-                    class="resource-button primary"
-                    type="button"
-                    data-action="download-stl"
-                    data-i18n="downloadStlZip"
+                    <button
+                        class="resource-button primary"
+                        type="button"
+                        data-action="download-stl"
+                        data-i18n="downloadStlZip"
+                    >
+                        Descargar ZIP
+                    </button>
+
+                </div>
+
+                <span
+                    class="stl-free"
+                    data-i18n="freeStl"
                 >
-                    Descargar ZIP
-                </button>
+                    Descarga gratuita para educación e investigación.
+                </span>
 
             </div>
-
-            <span
-                class="stl-free"
-                data-i18n="freeStl"
-            >
-                Descarga gratuita para educación e investigación.
-            </span>
-
-        </div>
 
         `
         : "";
@@ -2874,179 +4205,202 @@ function createProductHTML(product) {
 
     return `
 
-    <article
-        class="product-item"
+        <article
+            class="product-item"
 
-        data-area="${product.area}"
+            data-area="${product.area}"
 
-        data-type="${product.type}"
+            data-type="${product.type}"
 
-        data-info-pdf="${product.infoPdf || ""}"
+            data-code="${product.code}"
 
-        data-plans-pdf="${product.plansPdf || ""}"
+            data-info-pdf-es="${product.infoPdfEs || ""}"
 
-        data-stl-zip="${product.stlZip || ""}"
-    >
+            data-info-pdf-en="${product.infoPdfEn || ""}"
 
+            data-plans-pdf-es="${product.plansPdfEs || ""}"
 
-        <div
-            class="product-toggle"
-            tabindex="0"
-            role="button"
-            aria-expanded="false"
+            data-plans-pdf-en="${product.plansPdfEn || ""}"
+
+            data-stl-zip="${product.stlZip || ""}"
         >
 
 
-            <div class="product-image">
-
-                <img
-                    src="${product.image}"
-                    alt="Producto SRC"
-                >
-
-            </div>
+            <div
+                class="product-toggle"
+                tabindex="0"
+                role="button"
+                aria-expanded="false"
+            >
 
 
+                <div class="product-image">
 
-            <div class="product-summary">
-
-
-                <div class="badges">
-
-
-                    <span
-                        class="area-badge"
-                        data-i18n="${areaKey}"
+                    <img
+                        src="${product.image}"
+                        alt="${product.code}"
                     >
-                    </span>
+
+                </div>
 
 
-                    <span
-                        class="type-badge"
-                        data-i18n="${typeKeys[product.type]}"
-                    >
-                    </span>
+
+                <div class="product-summary">
+
+
+                    <div class="badges">
+
+                        <span
+                            class="area-badge"
+                            data-i18n="${areaKey}"
+                        >
+                        </span>
+
+
+                        <span
+                            class="type-badge"
+                            data-i18n="${typeKeys[product.type]}"
+                        >
+                        </span>
+
+                    </div>
+
+
+                    <h2 data-i18n="placeholderTitle">
+                        Título
+                    </h2>
+
+
+                    <p data-i18n="placeholderDescription">
+                        Descripción
+                    </p>
 
 
                 </div>
 
 
-                <h2 data-i18n="placeholderTitle">
-                    Título
-                </h2>
 
+                <div class="expand-control">
 
-                <p data-i18n="placeholderDescription">
-                    Descripción
-                </p>
+                    <span data-i18n="viewDetails">
+                        Ver detalles
+                    </span>
+
+                    <span class="circle-arrow">
+                        ↓
+                    </span>
+
+                </div>
 
 
             </div>
 
 
 
-            <div class="expand-control">
-
-                <span data-i18n="viewDetails">
-                    Ver detalles
-                </span>
-
-                <span class="circle-arrow">
-                    ↓
-                </span>
-
-            </div>
+            <div class="product-details">
 
 
-        </div>
+                <div class="product-details-inner">
+
+
+                    <div class="product-details-content">
+
+
+                        <div class="details-main">
+
+
+                            <div class="details-information">
+
+
+                                <div class="information-block">
+
+                                    <h3 data-i18n="descriptionTitle">
+                                        Descripción
+                                    </h3>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderDescription"
+                                    >
+                                        Descripción
+                                    </p>
+
+                                </div>
 
 
 
-        <div class="product-details">
+                                <div class="information-block">
 
-            <div class="product-details-inner">
-
-                <div class="product-details-content">
-
-
-                    <div class="details-main">
+                                    <h4 data-i18n="featuresTitle">
+                                        Características
+                                    </h4>
 
 
-                        <div class="details-information">
+                                    <ul class="placeholder-list">
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                    </ul>
+
+                                </div>
 
 
-                            <div class="information-block">
 
-                                <h3 data-i18n="descriptionTitle">
-                                    Descripción
-                                </h3>
+                                <div class="information-block">
 
-                                <p
-                                    class="placeholder-text"
-                                    data-i18n="placeholderDescription"
-                                >
-                                    Descripción
-                                </p>
+                                    <h4 data-i18n="specificationsTitle">
+                                        Especificaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderSpecifications"
+                                    >
+                                        Especificaciones
+                                    </p>
+
+                                </div>
+
+
+
+                                <div class="information-block">
+
+                                    <h4 data-i18n="applicationsTitle">
+                                        Aplicaciones
+                                    </h4>
+
+                                    <p
+                                        class="placeholder-text"
+                                        data-i18n="placeholderApplications"
+                                    >
+                                        Aplicaciones
+                                    </p>
+
+                                </div>
+
 
                             </div>
 
 
 
-                            <div class="information-block">
+                            <div class="details-media">
 
-                                <h4 data-i18n="featuresTitle">
-                                    Características
-                                </h4>
-
-                                <ul class="placeholder-list">
-
-                                    <li data-i18n="placeholderFeature">
-                                        Característica
-                                    </li>
-
-                                    <li data-i18n="placeholderFeature">
-                                        Característica
-                                    </li>
-
-                                    <li data-i18n="placeholderFeature">
-                                        Característica
-                                    </li>
-
-                                </ul>
-
-                            </div>
-
-
-
-                            <div class="information-block">
-
-                                <h4 data-i18n="specificationsTitle">
-                                    Especificaciones
-                                </h4>
-
-                                <p
-                                    class="placeholder-text"
-                                    data-i18n="placeholderSpecifications"
+                                <img
+                                    src="${product.image}"
+                                    alt="${product.code}"
                                 >
-                                    Especificaciones
-                                </p>
 
-                            </div>
-
-
-
-                            <div class="information-block">
-
-                                <h4 data-i18n="applicationsTitle">
-                                    Aplicaciones
-                                </h4>
-
-                                <p
-                                    class="placeholder-text"
-                                    data-i18n="placeholderApplications"
-                                >
-                                    Aplicaciones
-                                </p>
+                                ${secondaryImage}
 
                             </div>
 
@@ -3055,133 +4409,136 @@ function createProductHTML(product) {
 
 
 
-                        <div class="details-media">
+                        <div class="resources">
 
 
-                            <img
-                                src="${product.image}"
-                                alt="Producto SRC"
+                            <h3 data-i18n="resourcesTitle">
+                                Documentación y archivos
+                            </h3>
+
+
+                            <p
+                                class="resources-description"
+
+                                data-i18n="${
+                                    isEducation
+                                    ? "resourcesDescription"
+                                    : "resourcesIndustryDescription"
+                                }"
+                            >
+                            </p>
+
+
+
+                            <div
+                                class="resource-grid ${industryGridClass}"
                             >
 
 
-                            ${secondaryImage}
+                                <!-- ===========================
+                                     INFORMACIÓN GENERAL
+                                ============================ -->
+
+                                <div class="resource-card">
+
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
 
 
-                        </div>
+                                    <h4 data-i18n="generalInfoTitle">
+                                        Información general del producto
+                                    </h4>
 
 
-                    </div>
+                                    <p data-i18n="generalInfoDescription">
+                                        Información, características y especificaciones generales.
+                                    </p>
 
 
-
-                    <div class="resources">
-
-
-                        <h3 data-i18n="resourcesTitle">
-                            Documentación y archivos
-                        </h3>
+                                    <div class="resource-actions">
 
 
-                        <p
-                            class="resources-description"
-
-                            data-i18n="${
-                                isEducation
-                                ? "resourcesDescription"
-                                : "resourcesIndustryDescription"
-                            }"
-                        >
-                        </p>
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-info"
+                                            data-i18n="viewPdf"
+                                        >
+                                            Ver PDF
+                                        </button>
 
 
-
-                        <div
-                            class="resource-grid ${industryGridClass}"
-                        >
-
-
-                            <div class="resource-card">
-
-                                <span class="resource-file-type">
-                                    PDF
-                                </span>
-
-                                <h4 data-i18n="generalInfoTitle">
-                                    Información general del producto
-                                </h4>
-
-                                <p data-i18n="generalInfoDescription">
-                                    Información general
-                                </p>
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-info"
+                                            data-i18n="downloadPdf"
+                                        >
+                                            Descargar PDF
+                                        </button>
 
 
-                                <div class="resource-actions">
-
-                                    <button
-                                        class="resource-button primary"
-                                        type="button"
-                                        data-action="view-info"
-                                        data-i18n="viewPdf"
-                                    >
-                                        Ver PDF
-                                    </button>
-
-                                    <button
-                                        class="resource-button secondary"
-                                        type="button"
-                                        data-action="download-info"
-                                        data-i18n="downloadPdf"
-                                    >
-                                        Descargar PDF
-                                    </button>
+                                    </div>
 
                                 </div>
 
-                            </div>
 
 
+                                <!-- ===========================
+                                     PLANOS
+                                ============================ -->
 
-                            <div class="resource-card">
+                                <div class="resource-card">
 
-                                <span class="resource-file-type">
-                                    PDF
-                                </span>
-
-                                <h4 data-i18n="plansTitle">
-                                    Planos
-                                </h4>
-
-                                <p data-i18n="plansDescription">
-                                    Planos
-                                </p>
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
 
 
-                                <div class="resource-actions">
+                                    <h4 data-i18n="plansTitle">
+                                        Planos
+                                    </h4>
 
-                                    <button
-                                        class="resource-button primary"
-                                        type="button"
-                                        data-action="view-plans"
-                                        data-i18n="viewPlans"
-                                    >
-                                        Ver planos
-                                    </button>
 
-                                    <button
-                                        class="resource-button secondary"
-                                        type="button"
-                                        data-action="download-plans"
-                                        data-i18n="downloadPlans"
-                                    >
-                                        Descargar PDF
-                                    </button>
+                                    <p data-i18n="plansDescription">
+                                        Planos y documentación dimensional del producto.
+                                    </p>
+
+
+                                    <div class="resource-actions">
+
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-plans"
+                                            data-i18n="viewPlans"
+                                        >
+                                            Ver planos
+                                        </button>
+
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-plans"
+                                            data-i18n="downloadPlans"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+
+                                    </div>
 
                                 </div>
 
+
+
+                                ${stlCard}
+
+
                             </div>
-
-
-                            ${stlCard}
 
 
                         </div>
@@ -3192,12 +4549,11 @@ function createProductHTML(product) {
 
                 </div>
 
+
             </div>
 
-        </div>
 
-
-    </article>
+        </article>
 
     `;
 
@@ -3206,7 +4562,7 @@ function createProductHTML(product) {
 
 
 /* =========================================================
-   MOSTRAR PRODUCTOS
+   RENDER
 ========================================================== */
 
 function renderProducts() {
@@ -3221,7 +4577,7 @@ function renderProducts() {
     configureProducts();
 
 
-    configureDownloads();
+    configureDocumentButtons();
 
 
     setLanguage(
@@ -3240,7 +4596,7 @@ renderProducts();
 
 
 /* =========================================================
-   ABRIR / CERRAR PRODUCTOS
+   ACORDEÓN
 ========================================================== */
 
 function configureProducts() {
@@ -3259,9 +4615,9 @@ function configureProducts() {
             function(product) {
 
 
-                product.classList.remove(
-                    "open"
-                );
+                product
+                    .classList
+                    .remove("open");
 
 
                 const toggle =
@@ -3308,9 +4664,9 @@ function configureProducts() {
                 if (!alreadyOpen) {
 
 
-                    product.classList.add(
-                        "open"
-                    );
+                    product
+                        .classList
+                        .add("open");
 
 
                     toggle.setAttribute(
@@ -3322,6 +4678,7 @@ function configureProducts() {
                 }
 
             }
+
 
 
             toggle.addEventListener(
@@ -3356,7 +4713,6 @@ function configureProducts() {
         }
     );
 
-
 }
 
 
@@ -3387,7 +4743,8 @@ function applyFilters() {
         );
 
 
-    let visibleProducts = 0;
+    let visibleProducts =
+        0;
 
 
     productItems.forEach(
@@ -3410,7 +4767,7 @@ function applyFilters() {
                 activeType;
 
 
-            const show =
+            const shouldShow =
 
                 areaMatches &&
                 typeMatches;
@@ -3418,11 +4775,11 @@ function applyFilters() {
 
             product.classList.toggle(
                 "is-hidden",
-                !show
+                !shouldShow
             );
 
 
-            if (show) {
+            if (shouldShow) {
 
                 visibleProducts++;
 
@@ -3452,23 +4809,26 @@ areaFilterButtons.forEach(
 
 
                 activeArea =
-                    button.dataset.areaFilter;
+                    button.dataset
+                        .areaFilter;
 
 
                 areaFilterButtons.forEach(
-                    function(other) {
+                    function(otherButton) {
 
-                        other.classList.remove(
-                            "active"
-                        );
+
+                        otherButton
+                            .classList
+                            .remove("active");
+
 
                     }
                 );
 
 
-                button.classList.add(
-                    "active"
-                );
+                button
+                    .classList
+                    .add("active");
 
 
                 applyFilters();
@@ -3493,23 +4853,26 @@ typeFilterButtons.forEach(
 
 
                 activeType =
-                    button.dataset.typeFilter;
+                    button.dataset
+                        .typeFilter;
 
 
                 typeFilterButtons.forEach(
-                    function(other) {
+                    function(otherButton) {
 
-                        other.classList.remove(
-                            "active"
-                        );
+
+                        otherButton
+                            .classList
+                            .remove("active");
+
 
                     }
                 );
 
 
-                button.classList.add(
-                    "active"
-                );
+                button
+                    .classList
+                    .add("active");
 
 
                 applyFilters();
@@ -3538,19 +4901,25 @@ document
 
 
                     activeArea =
-                        link.dataset.areaLink;
+                        link.dataset
+                            .areaLink;
 
 
                     areaFilterButtons.forEach(
                         function(button) {
 
 
-                            button.classList.toggle(
-                                "active",
+                            button
+                                .classList
+                                .toggle(
 
-                                button.dataset.areaFilter ===
-                                activeArea
-                            );
+                                    "active",
+
+                                    button.dataset
+                                        .areaFilter ===
+                                    activeArea
+
+                                );
 
 
                         }
@@ -3570,10 +4939,10 @@ document
 
 
 /* =========================================================
-   DOCUMENTOS
+   DOCUMENTACIÓN
 ========================================================== */
 
-function configureDownloads() {
+function configureDocumentButtons() {
 
 
     document
@@ -3599,56 +4968,41 @@ function configureDownloads() {
 
 
                         const action =
-                            button.dataset.action;
+                            button.dataset
+                                .action;
 
 
-                        let file = "";
 
-
-                        if (
-                            action === "view-info" ||
-                            action === "download-info"
-                        ) {
-
-                            file =
-                                product.dataset
-                                    .infoPdf || "";
-
-                        }
-
+                        /* =====================================
+                           STL
+                           NO NECESITA IDIOMA
+                        ====================================== */
 
                         if (
-                            action === "view-plans" ||
-                            action === "download-plans"
+                            action ===
+                            "download-stl"
                         ) {
 
-                            file =
-                                product.dataset
-                                    .plansPdf || "";
 
-                        }
-
-
-                        if (
-                            action === "download-stl"
-                        ) {
-
-                            file =
+                            const file =
                                 product.dataset
                                     .stlZip || "";
 
-                        }
+
+                            if (!file) {
 
 
-                        if (!file) {
+                                showUnavailable();
 
 
-                            alert(
+                                return;
 
-                                translations[
-                                    currentLanguage
-                                ].unavailable
 
+                            }
+
+
+                            downloadFile(
+                                file
                             );
 
 
@@ -3658,16 +5012,60 @@ function configureDownloads() {
                         }
 
 
+
+                        /* =====================================
+                           INFORMACIÓN GENERAL
+                        ====================================== */
+
                         if (
-                            action === "view-info" ||
-                            action === "view-plans"
+                            action ===
+                                "view-info" ||
+
+                            action ===
+                                "download-info"
                         ) {
 
 
-                            window.open(
-                                file,
-                                "_blank"
-                            );
+                            const fileEs =
+                                product.dataset
+                                    .infoPdfEs || "";
+
+
+                            const fileEn =
+                                product.dataset
+                                    .infoPdfEn || "";
+
+
+                            if (
+                                !fileEs &&
+                                !fileEn
+                            ) {
+
+
+                                showUnavailable();
+
+
+                                return;
+
+
+                            }
+
+
+                            openDocumentLanguageModal({
+
+                                mode:
+                                    action ===
+                                    "view-info"
+                                        ? "view"
+                                        : "download",
+
+                                es:
+                                    fileEs,
+
+                                en:
+                                    fileEn
+
+                            });
 
 
                             return;
@@ -3676,29 +5074,63 @@ function configureDownloads() {
                         }
 
 
-                        const temporaryLink =
-                            document.createElement(
-                                "a"
-                            );
+
+                        /* =====================================
+                           PLANOS
+                        ====================================== */
+
+                        if (
+                            action ===
+                                "view-plans" ||
+
+                            action ===
+                                "download-plans"
+                        ) {
 
 
-                        temporaryLink.href =
-                            file;
+                            const fileEs =
+                                product.dataset
+                                    .plansPdfEs || "";
 
 
-                        temporaryLink.download =
-                            "";
+                            const fileEn =
+                                product.dataset
+                                    .plansPdfEn || "";
 
 
-                        document.body.appendChild(
-                            temporaryLink
-                        );
+                            if (
+                                !fileEs &&
+                                !fileEn
+                            ) {
 
 
-                        temporaryLink.click();
+                                showUnavailable();
 
 
-                        temporaryLink.remove();
+                                return;
+
+
+                            }
+
+
+                            openDocumentLanguageModal({
+
+                                mode:
+                                    action ===
+                                    "view-plans"
+                                        ? "view"
+                                        : "download",
+
+                                es:
+                                    fileEs,
+
+                                en:
+                                    fileEn
+
+                            });
+
+
+                        }
 
 
                     }
@@ -3708,13 +5140,283 @@ function configureDownloads() {
             }
         );
 
+}
+
+
+
+/* =========================================================
+   ABRIR SELECTOR DE IDIOMA
+========================================================== */
+
+function openDocumentLanguageModal(
+    documentAction
+) {
+
+
+    pendingDocumentAction =
+        documentAction;
+
+
+    documentSpanishButton
+        .classList
+        .toggle(
+            "disabled",
+            !documentAction.es
+        );
+
+
+    documentEnglishButton
+        .classList
+        .toggle(
+            "disabled",
+            !documentAction.en
+        );
+
+
+    documentSpanishButton.disabled =
+        !documentAction.es;
+
+
+    documentEnglishButton.disabled =
+        !documentAction.en;
+
+
+    documentModal
+        .classList
+        .add("open");
+
+
+    document.body
+        .classList
+        .add("modal-open");
 
 }
 
 
 
 /* =========================================================
-   IDIOMA
+   CERRAR MODAL
+========================================================== */
+
+function closeDocumentLanguageModal() {
+
+
+    documentModal
+        .classList
+        .remove("open");
+
+
+    document.body
+        .classList
+        .remove("modal-open");
+
+
+    pendingDocumentAction =
+        null;
+
+}
+
+
+
+documentModalClose.addEventListener(
+    "click",
+    closeDocumentLanguageModal
+);
+
+
+
+documentModal.addEventListener(
+    "click",
+    function(event) {
+
+
+        if (
+            event.target ===
+            documentModal
+        ) {
+
+
+            closeDocumentLanguageModal();
+
+
+        }
+
+    }
+);
+
+
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+
+            closeDocumentLanguageModal();
+
+
+        }
+
+    }
+);
+
+
+
+/* =========================================================
+   SELECCIONAR ESPAÑOL / INGLÉS
+========================================================== */
+
+document
+    .querySelectorAll(
+        "[data-document-language]"
+    )
+    .forEach(
+        function(button) {
+
+
+            button.addEventListener(
+                "click",
+                function() {
+
+
+                    if (
+                        !pendingDocumentAction
+                    ) {
+
+                        return;
+
+                    }
+
+
+                    const language =
+                        button.dataset
+                            .documentLanguage;
+
+
+                    const file =
+                        pendingDocumentAction[
+                            language
+                        ];
+
+
+                    if (!file) {
+
+
+                        showUnavailable();
+
+
+                        return;
+
+
+                    }
+
+
+                    const mode =
+                        pendingDocumentAction
+                            .mode;
+
+
+                    closeDocumentLanguageModal();
+
+
+
+                    if (
+                        mode ===
+                        "view"
+                    ) {
+
+
+                        window.open(
+                            encodeURI(file),
+                            "_blank"
+                        );
+
+
+                        return;
+
+
+                    }
+
+
+
+                    downloadFile(
+                        file
+                    );
+
+
+                }
+            );
+
+
+        }
+    );
+
+
+
+/* =========================================================
+   DESCARGAR ARCHIVO
+========================================================== */
+
+function downloadFile(file) {
+
+
+    const temporaryLink =
+        document.createElement(
+            "a"
+        );
+
+
+    temporaryLink.href =
+        encodeURI(file);
+
+
+    temporaryLink.download =
+        file
+            .split("/")
+            .pop();
+
+
+    document.body
+        .appendChild(
+            temporaryLink
+        );
+
+
+    temporaryLink.click();
+
+
+    temporaryLink.remove();
+
+}
+
+
+
+/* =========================================================
+   ARCHIVO NO DISPONIBLE
+========================================================== */
+
+function showUnavailable() {
+
+
+    alert(
+
+        translations[
+            currentLanguage
+        ].unavailable
+
+    );
+
+}
+
+
+
+/* =========================================================
+   IDIOMA DE LA PÁGINA
 ========================================================== */
 
 languageButton.addEventListener(
@@ -3764,7 +5466,8 @@ document
 
 
                     setLanguage(
-                        button.dataset.language
+                        button.dataset
+                            .language
                     );
 
 
@@ -3780,9 +5483,16 @@ document
 function setLanguage(language) {
 
 
-    if (!translations[language]) {
+    if (
+        !translations[
+            language
+        ]
+    ) {
 
-        language = "es";
+
+        language =
+            "es";
+
 
     }
 
@@ -3804,16 +5514,21 @@ function setLanguage(language) {
 
 
                 const key =
-                    element.dataset.i18n;
+                    element.dataset
+                        .i18n;
 
 
                 if (
-                    translations[language][key]
+                    translations[
+                        language
+                    ][key]
                 ) {
 
 
                     element.textContent =
-                        translations[language][key];
+                        translations[
+                            language
+                        ][key];
 
 
                 }
@@ -3824,8 +5539,9 @@ function setLanguage(language) {
 
 
     languageButtonText.textContent =
-        translations[language]
-            .languageButton;
+        translations[
+            language
+        ].languageButton;
 
 
     localStorage.setItem(
@@ -3837,7 +5553,6 @@ function setLanguage(language) {
     languageSelector
         .classList
         .remove("open");
-
 
 }
 
