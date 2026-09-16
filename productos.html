@@ -9,59 +9,69 @@
 
     <title>Productos | SAKUTA Robotics Company</title>
 
-    <!-- ICONO DE LA PESTAÑA -->
+    <!-- ICONO SRC DE LA PESTAÑA -->
     <link
         rel="icon"
-        type="image/png"
-        href="logoooweb.PNG"
+        type="image/svg+xml"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='white'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='39' font-weight='900' fill='%2324579b'%3ESRC%3C/text%3E%3C/svg%3E"
     >
 
     <style>
 
         :root {
 
+            /* SRC */
             --blue: #24579b;
             --blue-dark: #183f78;
             --blue-soft: #eef4fb;
 
-            /* EDUCACIÓN E INVESTIGACIÓN */
-            --education: #6d55c7;
-            --education-soft: #f0ecff;
-            --education-border: #d8cff7;
+            /* EDUCACIÓN */
+            --education: #7057c7;
+            --education-soft: #f1edff;
+            --education-border: #d9d0f7;
 
-            /* SEMI-INDUSTRIA E INDUSTRIA */
-            --industry: #247a55;
+            /* INDUSTRIA */
+            --industry: #247957;
             --industry-soft: #eaf7f0;
             --industry-border: #c7e5d5;
 
-            --black: #111111;
-            --gray: #676767;
-            --gray-light: #f6f7f9;
+            /* TIPOS */
+            --type-blue: #355f91;
+            --type-soft: #f1f5fa;
+            --type-border: #d5dfeb;
 
-            --border: #e4e7eb;
+            --black: #111111;
+            --gray: #686868;
+            --gray-light: #f5f6f8;
+            --border: #e3e6ea;
             --white: #ffffff;
 
         }
 
 
-
         * {
+
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
 
+            box-sizing: border-box;
+
+        }
 
 
         html {
-            scroll-behavior: smooth;
-        }
 
+            scroll-behavior: smooth;
+
+        }
 
 
         body {
 
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
             background: var(--white);
 
@@ -70,17 +80,18 @@
         }
 
 
-
         button,
         a {
+
             font-family: inherit;
+
         }
 
 
 
-        /* =========================================
+        /* =========================================================
            HEADER
-        ========================================== */
+        ========================================================== */
 
         header {
 
@@ -89,7 +100,8 @@
 
             background: white;
 
-            border-bottom: 1px solid #e8e8e8;
+            border-bottom:
+                1px solid #e8e8e8;
 
             display: flex;
 
@@ -108,9 +120,9 @@
 
 
 
-        /* =========================================
+        /* =========================================================
            LOGO
-        ========================================== */
+        ========================================================== */
 
         .brand {
 
@@ -125,7 +137,6 @@
         }
 
 
-
         .brand-logo-crop {
 
             width: 62px;
@@ -137,10 +148,10 @@
 
             flex-shrink: 0;
 
-            transform: translateY(-8px);
+            transform:
+                translateY(-8px);
 
         }
-
 
 
         .brand-logo-crop img {
@@ -152,13 +163,11 @@
             max-width: none;
 
             left: -27px;
-
             top: -10px;
 
             display: block;
 
         }
-
 
 
         .brand-name {
@@ -179,9 +188,9 @@
 
 
 
-        /* =========================================
+        /* =========================================================
            NAVEGACIÓN
-        ========================================== */
+        ========================================================== */
 
         nav {
 
@@ -192,7 +201,6 @@
             gap: 35px;
 
         }
-
 
 
         nav > a,
@@ -213,14 +221,12 @@
         }
 
 
-
         nav > a:hover,
         .menu-dropdown > a:hover {
 
             color: var(--blue);
 
         }
-
 
 
         nav > a::after,
@@ -231,11 +237,9 @@
             position: absolute;
 
             left: 0;
-
             bottom: -10px;
 
             width: 0;
-
             height: 2px;
 
             background: var(--blue);
@@ -243,7 +247,6 @@
             transition: 0.25s;
 
         }
-
 
 
         nav > a:hover::after,
@@ -255,9 +258,9 @@
 
 
 
-        /* =========================================
-           MENÚS DESPLEGABLES
-        ========================================== */
+        /* =========================================================
+           MENÚ DESPLEGABLE
+        ========================================================== */
 
         .menu-dropdown {
 
@@ -272,7 +275,6 @@
         }
 
 
-
         .menu-dropdown > a {
 
             display: flex;
@@ -284,23 +286,23 @@
         }
 
 
-
         .dropdown-arrow {
 
             font-size: 10px;
 
-            transition: transform 0.25s;
+            transition:
+                transform 0.25s;
 
         }
 
 
+        .menu-dropdown:hover
+        .dropdown-arrow {
 
-        .menu-dropdown:hover .dropdown-arrow {
-
-            transform: rotate(180deg);
+            transform:
+                rotate(180deg);
 
         }
-
 
 
         .dropdown-menu {
@@ -308,7 +310,6 @@
             position: absolute;
 
             top: 70px;
-
             left: 50%;
 
             transform:
@@ -319,7 +320,8 @@
 
             background: white;
 
-            border: 1px solid #e9e9e9;
+            border:
+                1px solid #e9e9e9;
 
             border-radius: 12px;
 
@@ -327,7 +329,7 @@
 
             box-shadow:
                 0 12px 30px
-                rgba(0, 0, 0, 0.10);
+                rgba(0,0,0,0.10);
 
             opacity: 0;
 
@@ -340,8 +342,8 @@
         }
 
 
-
-        .menu-dropdown:hover .dropdown-menu {
+        .menu-dropdown:hover
+        .dropdown-menu {
 
             opacity: 1;
 
@@ -356,12 +358,13 @@
         }
 
 
-
         .dropdown-menu a {
 
             display: block;
 
-            padding: 13px 15px;
+            padding:
+                13px
+                15px;
 
             border-radius: 8px;
 
@@ -380,7 +383,6 @@
         }
 
 
-
         .dropdown-menu a:hover {
 
             background: #f3f6fb;
@@ -391,16 +393,15 @@
 
 
 
-        /* =========================================
+        /* =========================================================
            IDIOMA
-        ========================================== */
+        ========================================================== */
 
         .language-selector {
 
             position: relative;
 
         }
-
 
 
         .language-button {
@@ -411,7 +412,9 @@
 
             color: white;
 
-            padding: 13px 24px;
+            padding:
+                13px
+                24px;
 
             border-radius: 30px;
 
@@ -432,15 +435,15 @@
         }
 
 
-
         .language-button:hover {
 
-            background: var(--blue-dark);
+            background:
+                var(--blue-dark);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
-
 
 
         .language-options {
@@ -448,14 +451,14 @@
             position: absolute;
 
             top: 55px;
-
             right: 0;
 
             width: 165px;
 
             background: white;
 
-            border: 1px solid #e8e8e8;
+            border:
+                1px solid #e8e8e8;
 
             border-radius: 12px;
 
@@ -463,7 +466,7 @@
 
             box-shadow:
                 0 12px 30px
-                rgba(0, 0, 0, 0.10);
+                rgba(0,0,0,0.10);
 
             opacity: 0;
 
@@ -471,7 +474,8 @@
 
             pointer-events: none;
 
-            transform: translateY(8px);
+            transform:
+                translateY(8px);
 
             transition: 0.2s;
 
@@ -480,8 +484,8 @@
         }
 
 
-
-        .language-selector.open .language-options {
+        .language-selector.open
+        .language-options {
 
             opacity: 1;
 
@@ -489,10 +493,10 @@
 
             pointer-events: auto;
 
-            transform: translateY(0);
+            transform:
+                translateY(0);
 
         }
-
 
 
         .language-options button {
@@ -505,7 +509,9 @@
 
             text-align: left;
 
-            padding: 12px 13px;
+            padding:
+                12px
+                13px;
 
             border-radius: 8px;
 
@@ -522,7 +528,6 @@
         }
 
 
-
         .language-options button:hover {
 
             background: #f3f6fb;
@@ -533,20 +538,22 @@
 
 
 
-        /* =========================================
+        /* =========================================================
            HERO
-        ========================================== */
+        ========================================================== */
 
         .page-hero {
 
-            padding: 100px 7% 75px;
+            padding:
+                100px
+                7%
+                75px;
 
             background: white;
 
             text-align: center;
 
         }
-
 
 
         .page-label {
@@ -560,12 +567,16 @@
         }
 
 
-
         .page-hero h1 {
 
             margin-top: 16px;
 
-            font-size: clamp(48px, 7vw, 82px);
+            font-size:
+                clamp(
+                    48px,
+                    7vw,
+                    82px
+                );
 
             color: var(--blue);
 
@@ -574,12 +585,14 @@
         }
 
 
-
         .page-hero p {
 
-            max-width: 800px;
+            max-width: 820px;
 
-            margin: 22px auto 0;
+            margin:
+                22px
+                auto
+                0;
 
             color: var(--gray);
 
@@ -591,18 +604,21 @@
 
 
 
-        /* =========================================
+        /* =========================================================
            CATÁLOGO
-        ========================================== */
+        ========================================================== */
 
         .catalog {
 
-            background: var(--gray-light);
+            background:
+                var(--gray-light);
 
-            padding: 70px 7% 110px;
+            padding:
+                70px
+                7%
+                110px;
 
         }
-
 
 
         .catalog-header {
@@ -614,7 +630,6 @@
             margin-bottom: 38px;
 
         }
-
 
 
         .catalog-label {
@@ -630,22 +645,25 @@
         }
 
 
-
         .catalog-header h2 {
 
             margin-top: 12px;
 
-            font-size: clamp(32px, 4vw, 48px);
+            font-size:
+                clamp(
+                    32px,
+                    4vw,
+                    48px
+                );
 
             letter-spacing: -1px;
 
         }
 
 
-
         .catalog-header p {
 
-            max-width: 700px;
+            max-width: 720px;
 
             margin-top: 14px;
 
@@ -659,39 +677,90 @@
 
 
 
-        /* =========================================
+        /* =========================================================
            FILTROS
-        ========================================== */
+        ========================================================== */
 
-        .filters {
+        .filters-wrapper {
 
             max-width: 1180px;
 
-            margin: 0 auto 34px;
+            margin:
+                0 auto
+                38px;
+
+            padding: 24px;
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 18px;
+
+        }
+
+
+        .filter-group
+        + .filter-group {
+
+            margin-top: 23px;
+
+            padding-top: 23px;
+
+            border-top:
+                1px solid #eeeeee;
+
+        }
+
+
+        .filter-title {
+
+            display: block;
+
+            margin-bottom: 12px;
+
+            color: #333;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1.2px;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .filters {
 
             display: flex;
 
             flex-wrap: wrap;
 
-            gap: 12px;
+            gap: 10px;
 
         }
 
 
-
         .filter-button {
 
-            padding: 12px 21px;
-
-            border: 1px solid #d8dce2;
+            padding:
+                11px
+                19px;
 
             border-radius: 999px;
+
+            border:
+                1px solid #d8dce2;
 
             background: white;
 
             color: #333;
 
-            font-size: 14px;
+            font-size: 13px;
 
             font-weight: 700;
 
@@ -703,101 +772,148 @@
 
 
 
-        /* TODOS */
+        /* =========================================================
+           FILTRO ÁREA
+        ========================================================== */
 
-        .filter-button[data-filter="all"]:hover {
+        .area-filter[data-area-filter="all"]:hover {
 
-            border-color: var(--blue);
+            border-color:
+                var(--blue);
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
         }
 
 
+        .area-filter[data-area-filter="all"].active {
 
-        .filter-button[data-filter="all"].active {
+            background:
+                var(--blue);
+
+            border-color:
+                var(--blue);
 
             color: white;
 
-            background: var(--blue);
+        }
 
-            border-color: var(--blue);
+
+        .area-filter[data-area-filter="education"] {
+
+            border-color:
+                var(--education-border);
+
+            color:
+                var(--education);
 
         }
 
 
+        .area-filter[data-area-filter="education"]:hover {
 
-        /* EDUCACIÓN */
+            background:
+                var(--education-soft);
 
-        .filter-button[data-filter="education"] {
-
-            border-color: var(--education-border);
-
-            color: var(--education);
-
-        }
-
-
-
-        .filter-button[data-filter="education"]:hover {
-
-            background: var(--education-soft);
-
-            border-color: var(--education);
+            border-color:
+                var(--education);
 
         }
 
 
+        .area-filter[data-area-filter="education"].active {
 
-        .filter-button[data-filter="education"].active {
+            background:
+                var(--education);
+
+            border-color:
+                var(--education);
 
             color: white;
 
-            background: var(--education);
+        }
 
-            border-color: var(--education);
+
+        .area-filter[data-area-filter="industry"] {
+
+            border-color:
+                var(--industry-border);
+
+            color:
+                var(--industry);
 
         }
 
 
+        .area-filter[data-area-filter="industry"]:hover {
 
-        /* INDUSTRIA */
+            background:
+                var(--industry-soft);
 
-        .filter-button[data-filter="industry"] {
-
-            border-color: var(--industry-border);
-
-            color: var(--industry);
-
-        }
-
-
-
-        .filter-button[data-filter="industry"]:hover {
-
-            background: var(--industry-soft);
-
-            border-color: var(--industry);
+            border-color:
+                var(--industry);
 
         }
 
 
+        .area-filter[data-area-filter="industry"].active {
 
-        .filter-button[data-filter="industry"].active {
+            background:
+                var(--industry);
+
+            border-color:
+                var(--industry);
 
             color: white;
 
-            background: var(--industry);
+        }
 
-            border-color: var(--industry);
+
+
+        /* =========================================================
+           FILTRO TIPO
+        ========================================================== */
+
+        .type-filter {
+
+            color:
+                var(--type-blue);
+
+            border-color:
+                var(--type-border);
+
+        }
+
+
+        .type-filter:hover {
+
+            background:
+                var(--type-soft);
+
+            border-color:
+                var(--type-blue);
+
+        }
+
+
+        .type-filter.active {
+
+            background:
+                var(--type-blue);
+
+            border-color:
+                var(--type-blue);
+
+            color: white;
 
         }
 
 
 
-        /* =========================================
-           LISTA DE PRODUCTOS
-        ========================================== */
+        /* =========================================================
+           PRODUCTOS
+        ========================================================== */
 
         .products-list {
 
@@ -814,12 +930,13 @@
         }
 
 
-
         .product-item {
 
             background: white;
 
-            border: 1px solid var(--border);
+            border:
+                1px solid
+                var(--border);
 
             border-radius: 20px;
 
@@ -827,49 +944,45 @@
 
             transition:
                 border-color 0.25s,
-                box-shadow 0.25s,
-                transform 0.25s;
+                box-shadow 0.25s;
 
         }
-
 
 
         .product-item:hover {
 
-            border-color: #c7d4e5;
+            border-color: #c6d2e0;
 
             box-shadow:
                 0 12px 30px
-                rgba(0, 0, 0, 0.045);
+                rgba(0,0,0,0.045);
 
         }
 
+
+        .product-item[data-area="education"].open {
+
+            border-color:
+                var(--education);
+
+        }
+
+
+        .product-item[data-area="industry"].open {
+
+            border-color:
+                var(--industry);
+
+        }
 
 
         .product-item.open {
 
             box-shadow:
                 0 18px 45px
-                rgba(0, 0, 0, 0.07);
+                rgba(0,0,0,0.07);
 
         }
-
-
-
-        .product-item[data-category="education"].open {
-
-            border-color: var(--education);
-
-        }
-
-
-
-        .product-item[data-category="industry"].open {
-
-            border-color: var(--industry);
-
-        }
-
 
 
         .product-item.is-hidden {
@@ -880,17 +993,13 @@
 
 
 
-        /* =========================================
-           CABECERA DEL PRODUCTO
-        ========================================== */
+        /* =========================================================
+           PRODUCTO COMPACTO
+        ========================================================== */
 
         .product-toggle {
 
             width: 100%;
-
-            border: none;
-
-            background: white;
 
             padding: 18px;
 
@@ -905,18 +1014,16 @@
 
             gap: 28px;
 
-            text-align: left;
+            background: white;
 
             cursor: pointer;
 
         }
 
 
-
         .product-image {
 
             width: 175px;
-
             height: 145px;
 
             border-radius: 14px;
@@ -928,34 +1035,122 @@
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
         }
 
 
-
         .product-image img {
 
             width: 100%;
-
             height: 100%;
 
             object-fit: contain;
 
-            transition: transform 0.35s;
+            transition:
+                transform 0.35s;
 
         }
-
 
 
         .product-item:hover
         .product-image img {
 
-            transform: scale(1.035);
+            transform:
+                scale(1.04);
 
         }
 
+
+
+        /* =========================================================
+           ETIQUETAS
+        ========================================================== */
+
+        .badges {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            align-items: center;
+
+            gap: 8px;
+
+        }
+
+
+        .area-badge,
+        .type-badge {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            padding:
+                7px
+                11px;
+
+            border-radius: 999px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 0.9px;
+
+            text-transform: uppercase;
+
+            white-space: nowrap;
+
+        }
+
+
+        .product-item[data-area="education"]
+        .area-badge {
+
+            background:
+                var(--education-soft);
+
+            border:
+                1px solid
+                var(--education-border);
+
+            color:
+                var(--education);
+
+        }
+
+
+        .product-item[data-area="industry"]
+        .area-badge {
+
+            background:
+                var(--industry-soft);
+
+            border:
+                1px solid
+                var(--industry-border);
+
+            color:
+                var(--industry);
+
+        }
+
+
+        .type-badge {
+
+            background:
+                var(--type-soft);
+
+            border:
+                1px solid
+                var(--type-border);
+
+            color:
+                var(--type-blue);
+
+        }
 
 
         .product-summary {
@@ -963,59 +1158,6 @@
             min-width: 0;
 
         }
-
-
-
-        /* =========================================
-           ETIQUETAS POR CATEGORÍA
-        ========================================== */
-
-        .category-badge {
-
-            display: inline-flex;
-
-            align-items: center;
-
-            padding: 7px 12px;
-
-            border-radius: 999px;
-
-            font-size: 11px;
-
-            font-weight: 800;
-
-            letter-spacing: 1px;
-
-            text-transform: uppercase;
-
-        }
-
-
-
-        .product-item[data-category="education"]
-        .category-badge {
-
-            background: var(--education-soft);
-
-            color: var(--education);
-
-            border: 1px solid var(--education-border);
-
-        }
-
-
-
-        .product-item[data-category="industry"]
-        .category-badge {
-
-            background: var(--industry-soft);
-
-            color: var(--industry);
-
-            border: 1px solid var(--industry-border);
-
-        }
-
 
 
         .product-summary h2 {
@@ -1027,7 +1169,6 @@
             letter-spacing: -0.5px;
 
         }
-
 
 
         .product-summary p {
@@ -1044,6 +1185,10 @@
 
 
 
+        /* =========================================================
+           FLECHA
+        ========================================================== */
+
         .expand-control {
 
             min-width: 145px;
@@ -1051,7 +1196,6 @@
             display: flex;
 
             align-items: center;
-
             justify-content: flex-end;
 
             gap: 11px;
@@ -1063,29 +1207,27 @@
         }
 
 
-
-        .product-item[data-category="education"]
+        .product-item[data-area="education"]
         .expand-control {
 
-            color: var(--education);
+            color:
+                var(--education);
 
         }
 
 
-
-        .product-item[data-category="industry"]
+        .product-item[data-area="industry"]
         .expand-control {
 
-            color: var(--industry);
+            color:
+                var(--industry);
 
         }
-
 
 
         .circle-arrow {
 
             width: 42px;
-
             height: 42px;
 
             border-radius: 50%;
@@ -1093,7 +1235,6 @@
             display: flex;
 
             align-items: center;
-
             justify-content: center;
 
             font-size: 20px;
@@ -1106,57 +1247,57 @@
         }
 
 
-
-        .product-item[data-category="education"]
+        .product-item[data-area="education"]
         .circle-arrow {
 
-            background: var(--education-soft);
+            background:
+                var(--education-soft);
 
         }
 
 
-
-        .product-item[data-category="industry"]
+        .product-item[data-area="industry"]
         .circle-arrow {
 
-            background: var(--industry-soft);
+            background:
+                var(--industry-soft);
 
         }
-
 
 
         .product-item.open
         .circle-arrow {
 
-            transform: rotate(180deg);
+            transform:
+                rotate(180deg);
 
             color: white;
 
         }
 
 
-
-        .product-item[data-category="education"].open
+        .product-item[data-area="education"].open
         .circle-arrow {
 
-            background: var(--education);
+            background:
+                var(--education);
+
+        }
+
+
+        .product-item[data-area="industry"].open
+        .circle-arrow {
+
+            background:
+                var(--industry);
 
         }
 
 
 
-        .product-item[data-category="industry"].open
-        .circle-arrow {
-
-            background: var(--industry);
-
-        }
-
-
-
-        /* =========================================
-           CONTENIDO DESPLEGABLE
-        ========================================== */
+        /* =========================================================
+           PRODUCTO DESPLEGADO
+        ========================================================== */
 
         .product-details {
 
@@ -1165,10 +1306,10 @@
             grid-template-rows: 0fr;
 
             transition:
-                grid-template-rows 0.45s ease;
+                grid-template-rows
+                0.45s ease;
 
         }
-
 
 
         .product-item.open
@@ -1179,13 +1320,11 @@
         }
 
 
-
         .product-details-inner {
 
             overflow: hidden;
 
         }
-
 
 
         .product-details-content {
@@ -1195,10 +1334,10 @@
                 35px
                 38px;
 
-            border-top: 1px solid #eeeeee;
+            border-top:
+                1px solid #eeeeee;
 
         }
-
 
 
         .details-main {
@@ -1216,7 +1355,6 @@
         }
 
 
-
         .details-information h3 {
 
             margin-bottom: 12px;
@@ -1224,7 +1362,6 @@
             font-size: 23px;
 
         }
-
 
 
         .placeholder-text {
@@ -1236,7 +1373,6 @@
             line-height: 1.7;
 
         }
-
 
 
         .information-block {
@@ -1251,7 +1387,6 @@
         }
 
 
-
         .information-block:last-child {
 
             border-bottom: none;
@@ -1259,7 +1394,6 @@
             margin-bottom: 0;
 
         }
-
 
 
         .information-block h4 {
@@ -1271,7 +1405,6 @@
             font-size: 16px;
 
         }
-
 
 
         .placeholder-list {
@@ -1286,9 +1419,9 @@
 
 
 
-        /* =========================================
-           IMÁGENES DETALLADAS
-        ========================================== */
+        /* =========================================================
+           IMÁGENES
+        ========================================================== */
 
         .details-media {
 
@@ -1301,7 +1434,6 @@
         }
 
 
-
         .details-media img {
 
             width: 100%;
@@ -1310,7 +1442,8 @@
 
             object-fit: contain;
 
-            border: 1px solid #eeeeee;
+            border:
+                1px solid #eeeeee;
 
             border-radius: 16px;
 
@@ -1320,49 +1453,34 @@
 
 
 
-        /* =========================================
+        /* =========================================================
            DOCUMENTACIÓN
-        ========================================== */
+        ========================================================== */
 
         .resources {
 
             margin-top: 35px;
 
-            padding: 27px;
+            padding: 28px;
 
             background: #f8fafc;
 
-            border: 1px solid #e2e7ed;
+            border:
+                1px solid #e2e7ed;
 
-            border-radius: 16px;
-
-        }
-
-
-
-        .resources-header {
-
-            display: flex;
-
-            align-items: flex-start;
-
-            justify-content: space-between;
-
-            gap: 20px;
+            border-radius: 18px;
 
         }
 
 
+        .resources > h3 {
 
-        .resources h3 {
-
-            font-size: 20px;
+            font-size: 21px;
 
         }
 
 
-
-        .resources p {
+        .resources-description {
 
             margin-top: 7px;
 
@@ -1370,37 +1488,117 @@
 
             font-size: 14px;
 
+            line-height: 1.55;
+
+        }
+
+
+        .resource-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    3,
+                    1fr
+                );
+
+            gap: 14px;
+
+            margin-top: 22px;
+
+        }
+
+
+        .resource-card {
+
+            background: white;
+
+            border:
+                1px solid #dde4ec;
+
+            border-radius: 14px;
+
+            padding: 20px;
+
+        }
+
+
+        .resource-file-type {
+
+            display: inline-flex;
+
+            padding:
+                5px
+                8px;
+
+            margin-bottom: 13px;
+
+            background:
+                var(--blue-soft);
+
+            color:
+                var(--blue);
+
+            border-radius: 7px;
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+        }
+
+
+        .resource-card h4 {
+
+            font-size: 16px;
+
+            margin-bottom: 7px;
+
+        }
+
+
+        .resource-card p {
+
+            min-height: 42px;
+
+            color: var(--gray);
+
+            font-size: 13px;
+
             line-height: 1.5;
 
         }
 
 
+        .resource-actions {
 
-        .resource-buttons {
-
-            margin-top: 20px;
+            margin-top: 17px;
 
             display: flex;
 
             flex-wrap: wrap;
 
-            gap: 11px;
+            gap: 8px;
 
         }
-
 
 
         .resource-button {
 
             border: none;
 
-            padding: 12px 18px;
+            padding:
+                10px
+                14px;
 
-            border-radius: 9px;
+            border-radius: 8px;
 
             cursor: pointer;
 
-            font-size: 14px;
+            font-size: 13px;
 
             font-weight: 700;
 
@@ -1409,76 +1607,166 @@
         }
 
 
-
         .resource-button.primary {
 
-            background: var(--blue);
+            background:
+                var(--blue);
 
             color: white;
 
         }
 
 
-
         .resource-button.primary:hover {
 
-            background: var(--blue-dark);
+            background:
+                var(--blue-dark);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
-
 
 
         .resource-button.secondary {
 
             background: white;
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
-            border: 1px solid #cad5e4;
+            border:
+                1px solid #cad5e4;
 
         }
-
 
 
         .resource-button.secondary:hover {
 
-            border-color: var(--blue);
+            border-color:
+                var(--blue);
 
-            transform: translateY(-2px);
-
-        }
-
-
-
-        .stl-notice {
-
-            margin-top: 17px;
-
-            display: inline-flex;
-
-            align-items: center;
-
-            gap: 7px;
-
-            color: #515151;
-
-            font-size: 13px;
-
-            font-weight: 600;
+            transform:
+                translateY(-2px);
 
         }
 
 
 
-        /* =========================================
+        /* =========================================================
+           STL EDUCATIVO
+        ========================================================== */
+
+        .stl-card {
+
+            border-color:
+                var(--education-border);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #faf8ff
+                );
+
+        }
+
+
+        .stl-card
+        .resource-file-type {
+
+            background:
+                var(--education-soft);
+
+            color:
+                var(--education);
+
+        }
+
+
+        .stl-card
+        .resource-button.primary {
+
+            background:
+                var(--education);
+
+        }
+
+
+        .stl-card
+        .resource-button.primary:hover {
+
+            background: #5e47ae;
+
+        }
+
+
+        .stl-free {
+
+            display: block;
+
+            margin-top: 11px;
+
+            color:
+                var(--education);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+        }
+
+
+
+        /* =========================================================
+           SIN RESULTADOS
+        ========================================================== */
+
+        .no-results {
+
+            display: none;
+
+            max-width: 1180px;
+
+            margin:
+                30px
+                auto
+                0;
+
+            padding: 35px;
+
+            background: white;
+
+            border:
+                1px solid
+                var(--border);
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            color: var(--gray);
+
+        }
+
+
+        .no-results.show {
+
+            display: block;
+
+        }
+
+
+
+        /* =========================================================
            FOOTER
-        ========================================== */
+        ========================================================== */
 
         footer {
 
-            padding: 42px 7%;
+            padding:
+                42px
+                7%;
 
             background: #10151c;
 
@@ -1491,7 +1779,6 @@
         }
 
 
-
         footer strong {
 
             color: white;
@@ -1500,16 +1787,17 @@
 
 
 
-        /* =========================================
+        /* =========================================================
            RESPONSIVE
-        ========================================== */
+        ========================================================== */
 
         @media (max-width: 950px) {
 
             nav {
-                display: none;
-            }
 
+                display: none;
+
+            }
 
 
             .product-toggle {
@@ -1522,7 +1810,6 @@
             }
 
 
-
             .product-image {
 
                 width: 140px;
@@ -1532,13 +1819,12 @@
             }
 
 
-
-            .expand-control span:first-child {
+            .expand-control
+            span:first-child {
 
                 display: none;
 
             }
-
 
 
             .expand-control {
@@ -1548,10 +1834,18 @@
             }
 
 
-
             .details-main {
 
-                grid-template-columns: 1fr;
+                grid-template-columns:
+                    1fr;
+
+            }
+
+
+            .resource-grid {
+
+                grid-template-columns:
+                    1fr;
 
             }
 
@@ -1566,23 +1860,20 @@
                 height: 70px;
 
                 padding-left: 5%;
-
                 padding-right: 5%;
 
             }
 
 
-
             .brand-logo-crop {
 
                 width: 52px;
-
                 height: 58px;
 
-                transform: translateY(-7px);
+                transform:
+                    translateY(-7px);
 
             }
-
 
 
             .brand-logo-crop img {
@@ -1590,11 +1881,9 @@
                 width: 100px;
 
                 left: -23px;
-
                 top: -8px;
 
             }
-
 
 
             .brand-name {
@@ -1604,15 +1893,15 @@
             }
 
 
-
             .language-button {
 
-                padding: 11px 14px;
+                padding:
+                    11px
+                    14px;
 
                 font-size: 13px;
 
             }
-
 
 
             .page-hero {
@@ -1625,13 +1914,11 @@
             }
 
 
-
             .page-hero p {
 
                 font-size: 17px;
 
             }
-
 
 
             .catalog {
@@ -1644,23 +1931,22 @@
             }
 
 
+            .filters-wrapper {
 
-            .filters {
-
-                gap: 8px;
+                padding: 18px;
 
             }
-
 
 
             .filter-button {
 
-                padding: 10px 14px;
+                padding:
+                    9px
+                    13px;
 
                 font-size: 12px;
 
             }
-
 
 
             .product-toggle {
@@ -1677,27 +1963,33 @@
             }
 
 
-
             .product-image {
 
                 width: 95px;
-
                 height: 95px;
 
             }
 
 
+            .badges {
 
-            .category-badge {
-
-                padding: 5px 8px;
-
-                font-size: 9px;
-
-                letter-spacing: 0.5px;
+                gap: 5px;
 
             }
 
+
+            .area-badge,
+            .type-badge {
+
+                padding:
+                    5px
+                    7px;
+
+                font-size: 8px;
+
+                letter-spacing: 0.4px;
+
+            }
 
 
             .product-summary h2 {
@@ -1709,7 +2001,6 @@
             }
 
 
-
             .product-summary p {
 
                 font-size: 14px;
@@ -1717,17 +2008,14 @@
             }
 
 
-
             .circle-arrow {
 
                 width: 36px;
-
                 height: 36px;
 
                 font-size: 17px;
 
             }
-
 
 
             .product-details-content {
@@ -1740,7 +2028,6 @@
             }
 
 
-
             .resources {
 
                 padding: 20px;
@@ -1748,13 +2035,11 @@
             }
 
 
-
-            .resource-buttons {
+            .resource-actions {
 
                 flex-direction: column;
 
             }
-
 
 
             .resource-button {
@@ -1776,13 +2061,13 @@
             }
 
 
-
             .language-button {
 
-                padding: 10px 12px;
+                padding:
+                    10px
+                    12px;
 
             }
-
 
 
             .language-button span {
@@ -1790,7 +2075,6 @@
                 display: none;
 
             }
-
 
 
             .product-toggle {
@@ -1805,15 +2089,12 @@
             }
 
 
-
             .product-image {
 
                 width: 82px;
-
                 height: 82px;
 
             }
-
 
 
             .product-summary h2 {
@@ -1821,7 +2102,6 @@
                 font-size: 19px;
 
             }
-
 
 
             .product-summary p {
@@ -1840,11 +2120,12 @@
 <body>
 
 
-<!-- =========================================
+<!-- =========================================================
      HEADER
-========================================== -->
+========================================================== -->
 
 <header>
+
 
     <a
         class="brand"
@@ -1862,7 +2143,9 @@
 
 
         <div class="brand-name">
+
             SAKUTA
+
         </div>
 
     </a>
@@ -1870,6 +2153,7 @@
 
 
     <nav>
+
 
         <a
             href="index.html#inicio"
@@ -1885,11 +2169,15 @@
             <a href="#catalogo">
 
                 <span data-i18n="navProducts">
+
                     Productos
+
                 </span>
 
                 <span class="dropdown-arrow">
+
                     ▼
+
                 </span>
 
             </a>
@@ -1897,29 +2185,33 @@
 
             <div class="dropdown-menu">
 
-                <a
-                    href="#catalogo"
-                    data-filter-link="all"
-                    data-i18n="filterAll"
-                >
-                    Todos los productos
-                </a>
 
                 <a
                     href="#catalogo"
-                    data-filter-link="education"
+                    data-area-link="all"
+                    data-i18n="filterAllAreas"
+                >
+                    Todas las áreas
+                </a>
+
+
+                <a
+                    href="#catalogo"
+                    data-area-link="education"
                     data-i18n="filterEducation"
                 >
                     Educación e investigación
                 </a>
 
+
                 <a
                     href="#catalogo"
-                    data-filter-link="industry"
+                    data-area-link="industry"
                     data-i18n="filterIndustry"
                 >
                     Semi-industria e industria
                 </a>
+
 
             </div>
 
@@ -1949,17 +2241,22 @@
             <a href="index.html#empresa">
 
                 <span data-i18n="navCompany">
+
                     Empresa
+
                 </span>
 
                 <span class="dropdown-arrow">
+
                     ▼
+
                 </span>
 
             </a>
 
 
             <div class="dropdown-menu">
+
 
                 <a
                     href="index.html#empresa"
@@ -1968,6 +2265,7 @@
                     Acerca de nosotros
                 </a>
 
+
                 <a
                     href="index.html#contacto"
                     data-i18n="contactUs"
@@ -1975,9 +2273,11 @@
                     Contáctanos
                 </a>
 
+
             </div>
 
         </div>
+
 
     </nav>
 
@@ -1997,7 +2297,9 @@
             🌐
 
             <span id="languageButtonText">
+
                 Idioma
+
             </span>
 
             ▾
@@ -2007,12 +2309,14 @@
 
         <div class="language-options">
 
+
             <button
                 type="button"
                 data-language="es"
             >
                 🇲🇽 Español
             </button>
+
 
             <button
                 type="button"
@@ -2021,6 +2325,7 @@
                 🇺🇸 English
             </button>
 
+
             <button
                 type="button"
                 data-language="zh"
@@ -2028,19 +2333,22 @@
                 🇨🇳 中文
             </button>
 
+
         </div>
 
     </div>
+
 
 </header>
 
 
 
-<!-- =========================================
+<!-- =========================================================
      HERO
-========================================== -->
+========================================================== -->
 
 <section class="page-hero">
+
 
     <span
         class="page-label"
@@ -2051,7 +2359,9 @@
 
 
     <h1 data-i18n="pageTitle">
+
         Productos
+
     </h1>
 
 
@@ -2062,13 +2372,14 @@
 
     </p>
 
+
 </section>
 
 
 
-<!-- =========================================
+<!-- =========================================================
      CATÁLOGO
-========================================== -->
+========================================================== -->
 
 <section
     class="catalog"
@@ -2077,6 +2388,7 @@
 
 
     <div class="catalog-header">
+
 
         <span
             class="catalog-label"
@@ -2087,56 +2399,153 @@
 
 
         <h2 data-i18n="catalogTitle">
+
             Nuestros productos
+
         </h2>
 
 
         <p data-i18n="catalogDescription">
 
-            Selecciona una categoría y despliega cada producto
-            para consultar su información, documentación
-            y archivos disponibles.
+            Explora el catálogo utilizando los filtros por área
+            de aplicación y tipo de producto.
 
         </p>
+
 
     </div>
 
 
 
-    <!-- =========================================
+    <!-- =====================================================
          FILTROS
-    ========================================== -->
+    ====================================================== -->
 
-    <div class="filters">
-
-        <button
-            class="filter-button active"
-            type="button"
-            data-filter="all"
-            data-i18n="filterAll"
-        >
-            Todos los productos
-        </button>
+    <div class="filters-wrapper">
 
 
-        <button
-            class="filter-button"
-            type="button"
-            data-filter="education"
-            data-i18n="filterEducation"
-        >
-            Educación e investigación
-        </button>
+        <!-- ÁREA -->
+
+        <div class="filter-group">
 
 
-        <button
-            class="filter-button"
-            type="button"
-            data-filter="industry"
-            data-i18n="filterIndustry"
-        >
-            Semi-industria e industria
-        </button>
+            <span
+                class="filter-title"
+                data-i18n="areaFilterTitle"
+            >
+                Área de aplicación
+            </span>
+
+
+            <div class="filters">
+
+
+                <button
+                    class="filter-button area-filter active"
+                    type="button"
+                    data-area-filter="all"
+                    data-i18n="filterAllAreas"
+                >
+                    Todas las áreas
+                </button>
+
+
+                <button
+                    class="filter-button area-filter"
+                    type="button"
+                    data-area-filter="education"
+                    data-i18n="filterEducation"
+                >
+                    Educación e investigación
+                </button>
+
+
+                <button
+                    class="filter-button area-filter"
+                    type="button"
+                    data-area-filter="industry"
+                    data-i18n="filterIndustry"
+                >
+                    Semi-industria e industria
+                </button>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- TIPO -->
+
+        <div class="filter-group">
+
+
+            <span
+                class="filter-title"
+                data-i18n="typeFilterTitle"
+            >
+                Tipo de producto
+            </span>
+
+
+            <div class="filters">
+
+
+                <button
+                    class="filter-button type-filter active"
+                    type="button"
+                    data-type-filter="all"
+                    data-i18n="filterAllTypes"
+                >
+                    Todos los tipos
+                </button>
+
+
+                <button
+                    class="filter-button type-filter"
+                    type="button"
+                    data-type-filter="robots"
+                    data-i18n="typeRobots"
+                >
+                    Robots
+                </button>
+
+
+                <button
+                    class="filter-button type-filter"
+                    type="button"
+                    data-type-filter="grippers"
+                    data-i18n="typeGrippers"
+                >
+                    Grippers
+                </button>
+
+
+                <button
+                    class="filter-button type-filter"
+                    type="button"
+                    data-type-filter="tools"
+                    data-i18n="typeTools"
+                >
+                    Herramientas
+                </button>
+
+
+                <button
+                    class="filter-button type-filter"
+                    type="button"
+                    data-type-filter="components"
+                    data-i18n="typeComponents"
+                >
+                    Componentes y accesorios
+                </button>
+
+
+            </div>
+
+        </div>
+
 
     </div>
 
@@ -2145,23 +2554,36 @@
     <div class="products-list">
 
 
-        <!-- =========================================
+
+        <!-- =================================================
              PRODUCTO 01
              ROBOT EDUCATIVO
-        ========================================== -->
+
+             COLOCA DESPUÉS LOS ARCHIVOS ASÍ:
+
+             data-info-pdf="archivo.pdf"
+             data-plans-pdf="planos.pdf"
+             data-stl-zip="archivos-stl.zip"
+        ================================================== -->
 
         <article
             class="product-item"
-            data-category="education"
-            data-pdf=""
-            data-stl=""
+            data-area="education"
+            data-type="robots"
+
+            data-info-pdf=""
+            data-plans-pdf=""
+            data-stl-zip=""
         >
 
-            <button
+
+            <div
                 class="product-toggle"
-                type="button"
+                tabindex="0"
+                role="button"
                 aria-expanded="false"
             >
+
 
                 <div class="product-image">
 
@@ -2173,41 +2595,69 @@
                 </div>
 
 
+
                 <div class="product-summary">
 
-                    <span
-                        class="category-badge"
-                        data-i18n="educationCategory"
-                    >
-                        Educación e investigación
-                    </span>
+
+                    <div class="badges">
+
+
+                        <span
+                            class="area-badge"
+                            data-i18n="educationCategory"
+                        >
+                            Educación e investigación
+                        </span>
+
+
+                        <span
+                            class="type-badge"
+                            data-i18n="typeRobots"
+                        >
+                            Robots
+                        </span>
+
+
+                    </div>
 
 
                     <h2 data-i18n="placeholderTitle">
+
                         Título
+
                     </h2>
 
 
                     <p data-i18n="placeholderDescription">
+
                         Descripción
+
                     </p>
 
+
                 </div>
+
 
 
                 <div class="expand-control">
 
                     <span data-i18n="viewDetails">
+
                         Ver detalles
+
                     </span>
 
                     <span class="circle-arrow">
+
                         ↓
+
                     </span>
 
                 </div>
 
-            </button>
+
+            </div>
+
 
 
             <div class="product-details">
@@ -2219,13 +2669,16 @@
 
                         <div class="details-main">
 
+
                             <div class="details-information">
 
 
                                 <div class="information-block">
 
                                     <h3 data-i18n="descriptionTitle">
+
                                         Descripción
+
                                     </h3>
 
                                     <p
@@ -2238,24 +2691,34 @@
                                 </div>
 
 
+
                                 <div class="information-block">
 
                                     <h4 data-i18n="featuresTitle">
+
                                         Características
+
                                     </h4>
+
 
                                     <ul class="placeholder-list">
 
                                         <li data-i18n="placeholderFeature">
+
                                             Característica
+
                                         </li>
 
                                         <li data-i18n="placeholderFeature">
+
                                             Característica
+
                                         </li>
 
                                         <li data-i18n="placeholderFeature">
+
                                             Característica
+
                                         </li>
 
                                     </ul>
@@ -2263,10 +2726,13 @@
                                 </div>
 
 
+
                                 <div class="information-block">
 
                                     <h4 data-i18n="specificationsTitle">
+
                                         Especificaciones
+
                                     </h4>
 
                                     <p
@@ -2279,10 +2745,13 @@
                                 </div>
 
 
+
                                 <div class="information-block">
 
                                     <h4 data-i18n="applicationsTitle">
+
                                         Aplicaciones
+
                                     </h4>
 
                                     <p
@@ -2294,7 +2763,9 @@
 
                                 </div>
 
+
                             </div>
+
 
 
                             <div class="details-media">
@@ -2306,66 +2777,207 @@
 
                             </div>
 
+
                         </div>
 
 
+
+                        <!-- DOCUMENTACIÓN -->
 
                         <div class="resources">
 
+
                             <h3 data-i18n="resourcesTitle">
+
                                 Documentación y archivos
+
                             </h3>
 
-                            <p data-i18n="educationResourcesDescription">
-                                Consulta la documentación y descarga los archivos disponibles del producto.
+
+                            <p
+                                class="resources-description"
+                                data-i18n="resourcesDescription"
+                            >
+                                Consulta la información técnica, planos y archivos disponibles del producto.
                             </p>
 
 
-                            <div class="resource-buttons">
 
-                                <button
-                                    class="resource-button primary"
-                                    type="button"
-                                    data-action="view-pdf"
-                                    data-i18n="viewPdf"
-                                >
-                                    Ver PDF
-                                </button>
+                            <div class="resource-grid">
 
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-pdf"
-                                    data-i18n="downloadPdf"
-                                >
-                                    Descargar PDF
-                                </button>
+                                <!-- INFORMACIÓN GENERAL -->
+
+                                <div class="resource-card">
 
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-stl"
-                                    data-i18n="downloadStl"
-                                >
-                                    Descargar STL
-                                </button>
+                                    <span class="resource-file-type">
+
+                                        PDF
+
+                                    </span>
+
+
+                                    <h4 data-i18n="generalInfoTitle">
+
+                                        Información general del producto
+
+                                    </h4>
+
+
+                                    <p data-i18n="generalInfoDescription">
+
+                                        Información, características y especificaciones generales.
+
+                                    </p>
+
+
+                                    <div class="resource-actions">
+
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-info"
+                                            data-i18n="viewPdf"
+                                        >
+                                            Ver PDF
+                                        </button>
+
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-info"
+                                            data-i18n="downloadPdf"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- PLANOS -->
+
+                                <div class="resource-card">
+
+
+                                    <span class="resource-file-type">
+
+                                        PDF
+
+                                    </span>
+
+
+                                    <h4 data-i18n="plansTitle">
+
+                                        Planos
+
+                                    </h4>
+
+
+                                    <p data-i18n="plansDescription">
+
+                                        Planos y documentación dimensional del producto.
+
+                                    </p>
+
+
+                                    <div class="resource-actions">
+
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-plans"
+                                            data-i18n="viewPlans"
+                                        >
+                                            Ver planos
+                                        </button>
+
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-plans"
+                                            data-i18n="downloadPlans"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- STL SOLO EDUCACIÓN -->
+
+                                <div class="resource-card stl-card">
+
+
+                                    <span class="resource-file-type">
+
+                                        ZIP / STL
+
+                                    </span>
+
+
+                                    <h4 data-i18n="stlTitle">
+
+                                        Archivos STL
+
+                                    </h4>
+
+
+                                    <p data-i18n="stlDescription">
+
+                                        Archivos de las piezas 3D del producto.
+
+                                    </p>
+
+
+                                    <div class="resource-actions">
+
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="download-stl"
+                                            data-i18n="downloadStlZip"
+                                        >
+                                            Descargar ZIP
+                                        </button>
+
+
+                                    </div>
+
+
+                                    <span
+                                        class="stl-free"
+                                        data-i18n="freeStl"
+                                    >
+
+                                        Descarga gratuita para educación e investigación.
+
+                                    </span>
+
+
+                                </div>
+
 
                             </div>
 
-
-                            <div class="stl-notice">
-
-                                ↓
-
-                                <span data-i18n="freeStl">
-                                    Archivos STL gratuitos para uso educativo.
-                                </span>
-
-                            </div>
 
                         </div>
+
 
                     </div>
 
@@ -2373,26 +2985,34 @@
 
             </div>
 
+
         </article>
 
 
 
-        <!-- =========================================
+        <!-- =================================================
              PRODUCTO 02
-        ========================================== -->
+             GRIPPER EDUCATIVO
+        ================================================== -->
 
         <article
             class="product-item"
-            data-category="education"
-            data-pdf=""
-            data-stl=""
+            data-area="education"
+            data-type="grippers"
+
+            data-info-pdf=""
+            data-plans-pdf=""
+            data-stl-zip=""
         >
 
-            <button
+
+            <div
                 class="product-toggle"
-                type="button"
+                tabindex="0"
+                role="button"
                 aria-expanded="false"
             >
+
 
                 <div class="product-image">
 
@@ -2406,22 +3026,40 @@
 
                 <div class="product-summary">
 
-                    <span
-                        class="category-badge"
-                        data-i18n="educationCategory"
-                    >
-                        Educación e investigación
-                    </span>
+
+                    <div class="badges">
+
+                        <span
+                            class="area-badge"
+                            data-i18n="educationCategory"
+                        >
+                            Educación e investigación
+                        </span>
+
+
+                        <span
+                            class="type-badge"
+                            data-i18n="typeGrippers"
+                        >
+                            Grippers
+                        </span>
+
+                    </div>
 
 
                     <h2 data-i18n="placeholderTitle">
+
                         Título
+
                     </h2>
 
 
                     <p data-i18n="placeholderDescription">
+
                         Descripción
+
                     </p>
+
 
                 </div>
 
@@ -2429,16 +3067,21 @@
                 <div class="expand-control">
 
                     <span data-i18n="viewDetails">
+
                         Ver detalles
+
                     </span>
 
                     <span class="circle-arrow">
+
                         ↓
+
                     </span>
 
                 </div>
 
-            </button>
+
+            </div>
 
 
             <div class="product-details">
@@ -2447,14 +3090,19 @@
 
                     <div class="product-details-content">
 
+
                         <div class="details-main">
 
+
                             <div class="details-information">
+
 
                                 <div class="information-block">
 
                                     <h3 data-i18n="descriptionTitle">
+
                                         Descripción
+
                                     </h3>
 
                                     <p
@@ -2470,14 +3118,25 @@
                                 <div class="information-block">
 
                                     <h4 data-i18n="featuresTitle">
+
                                         Características
+
                                     </h4>
+
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
 
                                     </ul>
 
@@ -2514,6 +3173,7 @@
                                     </p>
 
                                 </div>
+
 
                             </div>
 
@@ -2527,63 +3187,176 @@
 
                             </div>
 
+
                         </div>
+
 
 
                         <div class="resources">
 
+
                             <h3 data-i18n="resourcesTitle">
+
                                 Documentación y archivos
+
                             </h3>
 
-                            <p data-i18n="educationResourcesDescription">
-                                Consulta la documentación y descarga los archivos disponibles del producto.
+
+                            <p
+                                class="resources-description"
+                                data-i18n="resourcesDescription"
+                            >
+                                Consulta la información técnica, planos y archivos disponibles del producto.
                             </p>
 
 
-                            <div class="resource-buttons">
+                            <div class="resource-grid">
 
-                                <button
-                                    class="resource-button primary"
-                                    type="button"
-                                    data-action="view-pdf"
-                                    data-i18n="viewPdf"
-                                >
-                                    Ver PDF
-                                </button>
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-pdf"
-                                    data-i18n="downloadPdf"
-                                >
-                                    Descargar PDF
-                                </button>
+                                <div class="resource-card">
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-stl"
-                                    data-i18n="downloadStl"
-                                >
-                                    Descargar STL
-                                </button>
+                                    <span class="resource-file-type">
+
+                                        PDF
+
+                                    </span>
+
+                                    <h4 data-i18n="generalInfoTitle">
+
+                                        Información general del producto
+
+                                    </h4>
+
+                                    <p data-i18n="generalInfoDescription">
+
+                                        Información, características y especificaciones generales.
+
+                                    </p>
+
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-info"
+                                            data-i18n="viewPdf"
+                                        >
+                                            Ver PDF
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-info"
+                                            data-i18n="downloadPdf"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="resource-card">
+
+                                    <span class="resource-file-type">
+
+                                        PDF
+
+                                    </span>
+
+                                    <h4 data-i18n="plansTitle">
+
+                                        Planos
+
+                                    </h4>
+
+                                    <p data-i18n="plansDescription">
+
+                                        Planos y documentación dimensional del producto.
+
+                                    </p>
+
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-plans"
+                                            data-i18n="viewPlans"
+                                        >
+                                            Ver planos
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-plans"
+                                            data-i18n="downloadPlans"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="resource-card stl-card">
+
+                                    <span class="resource-file-type">
+
+                                        ZIP / STL
+
+                                    </span>
+
+                                    <h4 data-i18n="stlTitle">
+
+                                        Archivos STL
+
+                                    </h4>
+
+                                    <p data-i18n="stlDescription">
+
+                                        Archivos de las piezas 3D del producto.
+
+                                    </p>
+
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="download-stl"
+                                            data-i18n="downloadStlZip"
+                                        >
+                                            Descargar ZIP
+                                        </button>
+
+                                    </div>
+
+
+                                    <span
+                                        class="stl-free"
+                                        data-i18n="freeStl"
+                                    >
+                                        Descarga gratuita para educación e investigación.
+                                    </span>
+
+                                </div>
+
 
                             </div>
 
-
-                            <div class="stl-notice">
-
-                                ↓
-
-                                <span data-i18n="freeStl">
-                                    Archivos STL gratuitos para uso educativo.
-                                </span>
-
-                            </div>
 
                         </div>
+
 
                     </div>
 
@@ -2591,26 +3364,34 @@
 
             </div>
 
+
         </article>
 
 
 
-        <!-- =========================================
+        <!-- =================================================
              PRODUCTO 03
-        ========================================== -->
+             GRIPPER ADAPTATIVO
+        ================================================== -->
 
         <article
             class="product-item"
-            data-category="education"
-            data-pdf=""
-            data-stl=""
+            data-area="education"
+            data-type="grippers"
+
+            data-info-pdf=""
+            data-plans-pdf=""
+            data-stl-zip=""
         >
 
-            <button
+
+            <div
                 class="product-toggle"
-                type="button"
+                tabindex="0"
+                role="button"
                 aria-expanded="false"
             >
+
 
                 <div class="product-image">
 
@@ -2624,20 +3405,36 @@
 
                 <div class="product-summary">
 
-                    <span
-                        class="category-badge"
-                        data-i18n="educationCategory"
-                    >
-                        Educación e investigación
-                    </span>
+
+                    <div class="badges">
+
+                        <span
+                            class="area-badge"
+                            data-i18n="educationCategory"
+                        >
+                            Educación e investigación
+                        </span>
+
+
+                        <span
+                            class="type-badge"
+                            data-i18n="typeGrippers"
+                        >
+                            Grippers
+                        </span>
+
+                    </div>
+
 
                     <h2 data-i18n="placeholderTitle">
                         Título
                     </h2>
 
+
                     <p data-i18n="placeholderDescription">
                         Descripción
                     </p>
+
 
                 </div>
 
@@ -2654,7 +3451,8 @@
 
                 </div>
 
-            </button>
+
+            </div>
 
 
             <div class="product-details">
@@ -2663,9 +3461,12 @@
 
                     <div class="product-details-content">
 
+
                         <div class="details-main">
 
+
                             <div class="details-information">
+
 
                                 <div class="information-block">
 
@@ -2691,9 +3492,17 @@
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
 
                                     </ul>
 
@@ -2730,6 +3539,7 @@
                                     </p>
 
                                 </div>
+
 
                             </div>
 
@@ -2743,63 +3553,152 @@
 
                             </div>
 
+
                         </div>
 
 
+
                         <div class="resources">
+
 
                             <h3 data-i18n="resourcesTitle">
                                 Documentación y archivos
                             </h3>
 
-                            <p data-i18n="educationResourcesDescription">
-                                Consulta la documentación y descarga los archivos disponibles del producto.
+
+                            <p
+                                class="resources-description"
+                                data-i18n="resourcesDescription"
+                            >
+                                Consulta la información técnica, planos y archivos disponibles del producto.
                             </p>
 
 
-                            <div class="resource-buttons">
+                            <div class="resource-grid">
 
-                                <button
-                                    class="resource-button primary"
-                                    type="button"
-                                    data-action="view-pdf"
-                                    data-i18n="viewPdf"
-                                >
-                                    Ver PDF
-                                </button>
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-pdf"
-                                    data-i18n="downloadPdf"
-                                >
-                                    Descargar PDF
-                                </button>
+                                <div class="resource-card">
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-stl"
-                                    data-i18n="downloadStl"
-                                >
-                                    Descargar STL
-                                </button>
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
+
+                                    <h4 data-i18n="generalInfoTitle">
+                                        Información general del producto
+                                    </h4>
+
+                                    <p data-i18n="generalInfoDescription">
+                                        Información, características y especificaciones generales.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-info"
+                                            data-i18n="viewPdf"
+                                        >
+                                            Ver PDF
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-info"
+                                            data-i18n="downloadPdf"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="resource-card">
+
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
+
+                                    <h4 data-i18n="plansTitle">
+                                        Planos
+                                    </h4>
+
+                                    <p data-i18n="plansDescription">
+                                        Planos y documentación dimensional del producto.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-plans"
+                                            data-i18n="viewPlans"
+                                        >
+                                            Ver planos
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-plans"
+                                            data-i18n="downloadPlans"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="resource-card stl-card">
+
+                                    <span class="resource-file-type">
+                                        ZIP / STL
+                                    </span>
+
+                                    <h4 data-i18n="stlTitle">
+                                        Archivos STL
+                                    </h4>
+
+                                    <p data-i18n="stlDescription">
+                                        Archivos de las piezas 3D del producto.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="download-stl"
+                                            data-i18n="downloadStlZip"
+                                        >
+                                            Descargar ZIP
+                                        </button>
+
+                                    </div>
+
+                                    <span
+                                        class="stl-free"
+                                        data-i18n="freeStl"
+                                    >
+                                        Descarga gratuita para educación e investigación.
+                                    </span>
+
+                                </div>
+
 
                             </div>
 
-
-                            <div class="stl-notice">
-
-                                ↓
-
-                                <span data-i18n="freeStl">
-                                    Archivos STL gratuitos para uso educativo.
-                                </span>
-
-                            </div>
 
                         </div>
+
 
                     </div>
 
@@ -2807,26 +3706,34 @@
 
             </div>
 
+
         </article>
 
 
 
-        <!-- =========================================
+        <!-- =================================================
              PRODUCTO 04
-        ========================================== -->
+             KIT DE ENGRANES
+        ================================================== -->
 
         <article
             class="product-item"
-            data-category="education"
-            data-pdf=""
-            data-stl=""
+            data-area="education"
+            data-type="components"
+
+            data-info-pdf=""
+            data-plans-pdf=""
+            data-stl-zip=""
         >
 
-            <button
+
+            <div
                 class="product-toggle"
-                type="button"
+                tabindex="0"
+                role="button"
                 aria-expanded="false"
             >
+
 
                 <div class="product-image">
 
@@ -2840,20 +3747,36 @@
 
                 <div class="product-summary">
 
-                    <span
-                        class="category-badge"
-                        data-i18n="educationCategory"
-                    >
-                        Educación e investigación
-                    </span>
+
+                    <div class="badges">
+
+                        <span
+                            class="area-badge"
+                            data-i18n="educationCategory"
+                        >
+                            Educación e investigación
+                        </span>
+
+
+                        <span
+                            class="type-badge"
+                            data-i18n="typeComponents"
+                        >
+                            Componentes y accesorios
+                        </span>
+
+                    </div>
+
 
                     <h2 data-i18n="placeholderTitle">
                         Título
                     </h2>
 
+
                     <p data-i18n="placeholderDescription">
                         Descripción
                     </p>
+
 
                 </div>
 
@@ -2870,7 +3793,8 @@
 
                 </div>
 
-            </button>
+
+            </div>
 
 
             <div class="product-details">
@@ -2879,9 +3803,12 @@
 
                     <div class="product-details-content">
 
+
                         <div class="details-main">
 
+
                             <div class="details-information">
+
 
                                 <div class="information-block">
 
@@ -2907,9 +3834,17 @@
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
 
                                     </ul>
 
@@ -2946,6 +3881,7 @@
                                     </p>
 
                                 </div>
+
 
                             </div>
 
@@ -2959,63 +3895,152 @@
 
                             </div>
 
+
                         </div>
 
 
+
                         <div class="resources">
+
 
                             <h3 data-i18n="resourcesTitle">
                                 Documentación y archivos
                             </h3>
 
-                            <p data-i18n="educationResourcesDescription">
-                                Consulta la documentación y descarga los archivos disponibles del producto.
+
+                            <p
+                                class="resources-description"
+                                data-i18n="resourcesDescription"
+                            >
+                                Consulta la información técnica, planos y archivos disponibles del producto.
                             </p>
 
 
-                            <div class="resource-buttons">
+                            <div class="resource-grid">
 
-                                <button
-                                    class="resource-button primary"
-                                    type="button"
-                                    data-action="view-pdf"
-                                    data-i18n="viewPdf"
-                                >
-                                    Ver PDF
-                                </button>
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-pdf"
-                                    data-i18n="downloadPdf"
-                                >
-                                    Descargar PDF
-                                </button>
+                                <div class="resource-card">
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-stl"
-                                    data-i18n="downloadStl"
-                                >
-                                    Descargar STL
-                                </button>
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
+
+                                    <h4 data-i18n="generalInfoTitle">
+                                        Información general del producto
+                                    </h4>
+
+                                    <p data-i18n="generalInfoDescription">
+                                        Información, características y especificaciones generales.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-info"
+                                            data-i18n="viewPdf"
+                                        >
+                                            Ver PDF
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-info"
+                                            data-i18n="downloadPdf"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="resource-card">
+
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
+
+                                    <h4 data-i18n="plansTitle">
+                                        Planos
+                                    </h4>
+
+                                    <p data-i18n="plansDescription">
+                                        Planos y documentación dimensional del producto.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-plans"
+                                            data-i18n="viewPlans"
+                                        >
+                                            Ver planos
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-plans"
+                                            data-i18n="downloadPlans"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="resource-card stl-card">
+
+                                    <span class="resource-file-type">
+                                        ZIP / STL
+                                    </span>
+
+                                    <h4 data-i18n="stlTitle">
+                                        Archivos STL
+                                    </h4>
+
+                                    <p data-i18n="stlDescription">
+                                        Archivos de las piezas 3D del producto.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="download-stl"
+                                            data-i18n="downloadStlZip"
+                                        >
+                                            Descargar ZIP
+                                        </button>
+
+                                    </div>
+
+                                    <span
+                                        class="stl-free"
+                                        data-i18n="freeStl"
+                                    >
+                                        Descarga gratuita para educación e investigación.
+                                    </span>
+
+                                </div>
+
 
                             </div>
 
-
-                            <div class="stl-notice">
-
-                                ↓
-
-                                <span data-i18n="freeStl">
-                                    Archivos STL gratuitos para uso educativo.
-                                </span>
-
-                            </div>
 
                         </div>
+
 
                     </div>
 
@@ -3023,26 +4048,37 @@
 
             </div>
 
+
         </article>
 
 
 
-        <!-- =========================================
+        <!-- =================================================
              PRODUCTO 05
-             INDUSTRIAL
-        ========================================== -->
+             GRIPPER INDUSTRIAL
+
+             IMPORTANTE:
+             NO TIENE data-stl-zip
+             NI BLOQUE STL
+        ================================================== -->
 
         <article
             class="product-item"
-            data-category="industry"
-            data-pdf=""
+            data-area="industry"
+            data-type="grippers"
+
+            data-info-pdf=""
+            data-plans-pdf=""
         >
 
-            <button
+
+            <div
                 class="product-toggle"
-                type="button"
+                tabindex="0"
+                role="button"
                 aria-expanded="false"
             >
+
 
                 <div class="product-image">
 
@@ -3056,20 +4092,36 @@
 
                 <div class="product-summary">
 
-                    <span
-                        class="category-badge"
-                        data-i18n="industryCategory"
-                    >
-                        Semi-industria e industria
-                    </span>
+
+                    <div class="badges">
+
+                        <span
+                            class="area-badge"
+                            data-i18n="industryCategory"
+                        >
+                            Semi-industria e industria
+                        </span>
+
+
+                        <span
+                            class="type-badge"
+                            data-i18n="typeGrippers"
+                        >
+                            Grippers
+                        </span>
+
+                    </div>
+
 
                     <h2 data-i18n="placeholderTitle">
                         Título
                     </h2>
 
+
                     <p data-i18n="placeholderDescription">
                         Descripción
                     </p>
+
 
                 </div>
 
@@ -3086,7 +4138,8 @@
 
                 </div>
 
-            </button>
+
+            </div>
 
 
             <div class="product-details">
@@ -3095,9 +4148,12 @@
 
                     <div class="product-details-content">
 
+
                         <div class="details-main">
 
+
                             <div class="details-information">
+
 
                                 <div class="information-block">
 
@@ -3123,9 +4179,17 @@
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
 
                                     </ul>
 
@@ -3163,6 +4227,7 @@
 
                                 </div>
 
+
                             </div>
 
 
@@ -3173,6 +4238,7 @@
                                     alt="Producto SRC"
                                 >
 
+
                                 <img
                                     src="conjunto_vistas.png"
                                     alt="Vistas del producto SRC"
@@ -3180,43 +4246,114 @@
 
                             </div>
 
+
                         </div>
 
 
+
                         <div class="resources">
+
 
                             <h3 data-i18n="resourcesTitle">
                                 Documentación y archivos
                             </h3>
 
-                            <p data-i18n="industryResourcesDescription">
-                                Consulta la documentación técnica disponible del producto.
+
+                            <p
+                                class="resources-description"
+                                data-i18n="resourcesIndustryDescription"
+                            >
+                                Consulta la información técnica y los planos disponibles del producto.
                             </p>
 
 
-                            <div class="resource-buttons">
+                            <div class="resource-grid">
 
-                                <button
-                                    class="resource-button primary"
-                                    type="button"
-                                    data-action="view-pdf"
-                                    data-i18n="viewPdf"
-                                >
-                                    Ver PDF
-                                </button>
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-pdf"
-                                    data-i18n="downloadPdf"
-                                >
-                                    Descargar PDF
-                                </button>
+                                <div class="resource-card">
+
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
+
+                                    <h4 data-i18n="generalInfoTitle">
+                                        Información general del producto
+                                    </h4>
+
+                                    <p data-i18n="generalInfoDescription">
+                                        Información, características y especificaciones generales.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-info"
+                                            data-i18n="viewPdf"
+                                        >
+                                            Ver PDF
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-info"
+                                            data-i18n="downloadPdf"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="resource-card">
+
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
+
+                                    <h4 data-i18n="plansTitle">
+                                        Planos
+                                    </h4>
+
+                                    <p data-i18n="plansDescription">
+                                        Planos y documentación dimensional del producto.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-plans"
+                                            data-i18n="viewPlans"
+                                        >
+                                            Ver planos
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-plans"
+                                            data-i18n="downloadPlans"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
 
                             </div>
 
+
                         </div>
+
 
                     </div>
 
@@ -3224,26 +4361,33 @@
 
             </div>
 
+
         </article>
 
 
 
-        <!-- =========================================
+        <!-- =================================================
              PRODUCTO 06
-             INDUSTRIAL
-        ========================================== -->
+             HERRAMIENTA / VENTOSA INDUSTRIAL
+        ================================================== -->
 
         <article
             class="product-item"
-            data-category="industry"
-            data-pdf=""
+            data-area="industry"
+            data-type="tools"
+
+            data-info-pdf=""
+            data-plans-pdf=""
         >
 
-            <button
+
+            <div
                 class="product-toggle"
-                type="button"
+                tabindex="0"
+                role="button"
                 aria-expanded="false"
             >
+
 
                 <div class="product-image">
 
@@ -3257,20 +4401,36 @@
 
                 <div class="product-summary">
 
-                    <span
-                        class="category-badge"
-                        data-i18n="industryCategory"
-                    >
-                        Semi-industria e industria
-                    </span>
+
+                    <div class="badges">
+
+                        <span
+                            class="area-badge"
+                            data-i18n="industryCategory"
+                        >
+                            Semi-industria e industria
+                        </span>
+
+
+                        <span
+                            class="type-badge"
+                            data-i18n="typeTools"
+                        >
+                            Herramientas
+                        </span>
+
+                    </div>
+
 
                     <h2 data-i18n="placeholderTitle">
                         Título
                     </h2>
 
+
                     <p data-i18n="placeholderDescription">
                         Descripción
                     </p>
+
 
                 </div>
 
@@ -3287,7 +4447,8 @@
 
                 </div>
 
-            </button>
+
+            </div>
 
 
             <div class="product-details">
@@ -3296,9 +4457,12 @@
 
                     <div class="product-details-content">
 
+
                         <div class="details-main">
 
+
                             <div class="details-information">
+
 
                                 <div class="information-block">
 
@@ -3324,9 +4488,17 @@
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
-                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
+
+                                        <li data-i18n="placeholderFeature">
+                                            Característica
+                                        </li>
 
                                     </ul>
 
@@ -3364,6 +4536,7 @@
 
                                 </div>
 
+
                             </div>
 
 
@@ -3376,43 +4549,114 @@
 
                             </div>
 
+
                         </div>
 
 
+
                         <div class="resources">
+
 
                             <h3 data-i18n="resourcesTitle">
                                 Documentación y archivos
                             </h3>
 
-                            <p data-i18n="industryResourcesDescription">
-                                Consulta la documentación técnica disponible del producto.
+
+                            <p
+                                class="resources-description"
+                                data-i18n="resourcesIndustryDescription"
+                            >
+                                Consulta la información técnica y los planos disponibles del producto.
                             </p>
 
 
-                            <div class="resource-buttons">
+                            <div class="resource-grid">
 
-                                <button
-                                    class="resource-button primary"
-                                    type="button"
-                                    data-action="view-pdf"
-                                    data-i18n="viewPdf"
-                                >
-                                    Ver PDF
-                                </button>
 
-                                <button
-                                    class="resource-button secondary"
-                                    type="button"
-                                    data-action="download-pdf"
-                                    data-i18n="downloadPdf"
-                                >
-                                    Descargar PDF
-                                </button>
+                                <div class="resource-card">
+
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
+
+                                    <h4 data-i18n="generalInfoTitle">
+                                        Información general del producto
+                                    </h4>
+
+                                    <p data-i18n="generalInfoDescription">
+                                        Información, características y especificaciones generales.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-info"
+                                            data-i18n="viewPdf"
+                                        >
+                                            Ver PDF
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-info"
+                                            data-i18n="downloadPdf"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="resource-card">
+
+                                    <span class="resource-file-type">
+                                        PDF
+                                    </span>
+
+                                    <h4 data-i18n="plansTitle">
+                                        Planos
+                                    </h4>
+
+                                    <p data-i18n="plansDescription">
+                                        Planos y documentación dimensional del producto.
+                                    </p>
+
+                                    <div class="resource-actions">
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="view-plans"
+                                            data-i18n="viewPlans"
+                                        >
+                                            Ver planos
+                                        </button>
+
+                                        <button
+                                            class="resource-button secondary"
+                                            type="button"
+                                            data-action="download-plans"
+                                            data-i18n="downloadPlans"
+                                        >
+                                            Descargar PDF
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
 
                             </div>
 
+
                         </div>
+
 
                     </div>
 
@@ -3420,10 +4664,22 @@
 
             </div>
 
+
         </article>
 
 
     </div>
+
+
+
+    <div
+        class="no-results"
+        id="noResults"
+        data-i18n="noResults"
+    >
+        No hay productos disponibles con esta combinación de filtros.
+    </div>
+
 
 </section>
 
@@ -3432,7 +4688,9 @@
 <footer>
 
     <strong>
+
         SAKUTA Robotics Company
+
     </strong>
 
     <br><br>
@@ -3445,21 +4703,32 @@
 
 <script>
 
-    /* =========================================
+
+    /* =========================================================
        TRADUCCIONES
-    ========================================== */
+    ========================================================== */
 
     const translations = {
+
+
+        /* =====================================================
+           ESPAÑOL
+        ====================================================== */
 
         es: {
 
             navHome: "Inicio",
+
             navProducts: "Productos",
+
             navApplications: "Aplicaciones",
+
             navSupport: "Soporte",
+
             navCompany: "Empresa",
 
             aboutUs: "Acerca de nosotros",
+
             contactUs: "Contáctanos",
 
             companyLabel:
@@ -3478,16 +4747,37 @@
                 "Nuestros productos",
 
             catalogDescription:
-                "Selecciona una categoría y despliega cada producto para consultar su información, documentación y archivos disponibles.",
+                "Explora el catálogo utilizando los filtros por área de aplicación y tipo de producto.",
 
-            filterAll:
-                "Todos los productos",
+            areaFilterTitle:
+                "Área de aplicación",
+
+            typeFilterTitle:
+                "Tipo de producto",
+
+            filterAllAreas:
+                "Todas las áreas",
 
             filterEducation:
                 "Educación e investigación",
 
             filterIndustry:
                 "Semi-industria e industria",
+
+            filterAllTypes:
+                "Todos los tipos",
+
+            typeRobots:
+                "Robots",
+
+            typeGrippers:
+                "Grippers",
+
+            typeTools:
+                "Herramientas",
+
+            typeComponents:
+                "Componentes y accesorios",
 
             educationCategory:
                 "Educación e investigación",
@@ -3528,11 +4818,29 @@
             resourcesTitle:
                 "Documentación y archivos",
 
-            educationResourcesDescription:
-                "Consulta la documentación y descarga los archivos disponibles del producto.",
+            resourcesDescription:
+                "Consulta la información técnica, planos y archivos disponibles del producto.",
 
-            industryResourcesDescription:
-                "Consulta la documentación técnica disponible del producto.",
+            resourcesIndustryDescription:
+                "Consulta la información técnica y los planos disponibles del producto.",
+
+            generalInfoTitle:
+                "Información general del producto",
+
+            generalInfoDescription:
+                "Información, características y especificaciones generales.",
+
+            plansTitle:
+                "Planos",
+
+            plansDescription:
+                "Planos y documentación dimensional del producto.",
+
+            stlTitle:
+                "Archivos STL",
+
+            stlDescription:
+                "Archivos de las piezas 3D del producto.",
 
             viewPdf:
                 "Ver PDF",
@@ -3540,30 +4848,49 @@
             downloadPdf:
                 "Descargar PDF",
 
-            downloadStl:
-                "Descargar STL",
+            viewPlans:
+                "Ver planos",
+
+            downloadPlans:
+                "Descargar PDF",
+
+            downloadStlZip:
+                "Descargar ZIP",
 
             freeStl:
-                "Archivos STL gratuitos para uso educativo.",
+                "Descarga gratuita para educación e investigación.",
 
             languageButton:
                 "Idioma",
 
             unavailable:
-                "Este archivo todavía no ha sido agregado."
+                "Este archivo todavía no ha sido agregado.",
+
+            noResults:
+                "No hay productos disponibles con esta combinación de filtros."
 
         },
 
 
+
+        /* =====================================================
+           ENGLISH
+        ====================================================== */
+
         en: {
 
             navHome: "Home",
+
             navProducts: "Products",
+
             navApplications: "Applications",
+
             navSupport: "Support",
+
             navCompany: "Company",
 
             aboutUs: "About us",
+
             contactUs: "Contact us",
 
             companyLabel:
@@ -3582,16 +4909,37 @@
                 "Our products",
 
             catalogDescription:
-                "Select a category and expand each product to view its information, documentation and available files.",
+                "Explore the catalog using filters by application area and product type.",
 
-            filterAll:
-                "All products",
+            areaFilterTitle:
+                "Application area",
+
+            typeFilterTitle:
+                "Product type",
+
+            filterAllAreas:
+                "All areas",
 
             filterEducation:
                 "Education and research",
 
             filterIndustry:
                 "Semi-industrial and industrial",
+
+            filterAllTypes:
+                "All types",
+
+            typeRobots:
+                "Robots",
+
+            typeGrippers:
+                "Grippers",
+
+            typeTools:
+                "Tools",
+
+            typeComponents:
+                "Components and accessories",
 
             educationCategory:
                 "Education and research",
@@ -3632,11 +4980,29 @@
             resourcesTitle:
                 "Documentation and files",
 
-            educationResourcesDescription:
-                "View the documentation and download the available product files.",
+            resourcesDescription:
+                "View the technical information, drawings and available product files.",
 
-            industryResourcesDescription:
-                "View the available technical documentation for this product.",
+            resourcesIndustryDescription:
+                "View the technical information and available product drawings.",
+
+            generalInfoTitle:
+                "General product information",
+
+            generalInfoDescription:
+                "General information, features and specifications.",
+
+            plansTitle:
+                "Drawings",
+
+            plansDescription:
+                "Product drawings and dimensional documentation.",
+
+            stlTitle:
+                "STL files",
+
+            stlDescription:
+                "3D printable files for the product components.",
 
             viewPdf:
                 "View PDF",
@@ -3644,30 +5010,49 @@
             downloadPdf:
                 "Download PDF",
 
-            downloadStl:
-                "Download STL",
+            viewPlans:
+                "View drawings",
+
+            downloadPlans:
+                "Download PDF",
+
+            downloadStlZip:
+                "Download ZIP",
 
             freeStl:
-                "Free STL files for educational use.",
+                "Free download for education and research.",
 
             languageButton:
                 "Language",
 
             unavailable:
-                "This file has not been added yet."
+                "This file has not been added yet.",
+
+            noResults:
+                "No products are available with this filter combination."
 
         },
 
 
+
+        /* =====================================================
+           中文
+        ====================================================== */
+
         zh: {
 
             navHome: "首页",
+
             navProducts: "产品",
+
             navApplications: "应用",
+
             navSupport: "支持",
+
             navCompany: "公司",
 
             aboutUs: "关于我们",
+
             contactUs: "联系我们",
 
             companyLabel:
@@ -3686,16 +5071,37 @@
                 "我们的产品",
 
             catalogDescription:
-                "选择一个类别并展开产品，以查看信息、文档和可用文件。",
+                "根据应用领域和产品类型筛选并浏览 SRC 产品目录。",
 
-            filterAll:
-                "所有产品",
+            areaFilterTitle:
+                "应用领域",
+
+            typeFilterTitle:
+                "产品类型",
+
+            filterAllAreas:
+                "所有领域",
 
             filterEducation:
                 "教育与科研",
 
             filterIndustry:
                 "半工业与工业",
+
+            filterAllTypes:
+                "所有类型",
+
+            typeRobots:
+                "机器人",
+
+            typeGrippers:
+                "夹爪",
+
+            typeTools:
+                "工具",
+
+            typeComponents:
+                "组件与配件",
 
             educationCategory:
                 "教育与科研",
@@ -3736,11 +5142,29 @@
             resourcesTitle:
                 "文档与文件",
 
-            educationResourcesDescription:
-                "查看文档并下载该产品可用的文件。",
+            resourcesDescription:
+                "查看产品技术信息、图纸和可用文件。",
 
-            industryResourcesDescription:
-                "查看该产品可用的技术文档。",
+            resourcesIndustryDescription:
+                "查看产品技术信息和可用图纸。",
+
+            generalInfoTitle:
+                "产品基本信息",
+
+            generalInfoDescription:
+                "产品信息、特点和一般规格。",
+
+            plansTitle:
+                "图纸",
+
+            plansDescription:
+                "产品图纸和尺寸文档。",
+
+            stlTitle:
+                "STL 文件",
+
+            stlDescription:
+                "产品零件的 3D 打印文件。",
 
             viewPdf:
                 "查看 PDF",
@@ -3748,17 +5172,26 @@
             downloadPdf:
                 "下载 PDF",
 
-            downloadStl:
-                "下载 STL",
+            viewPlans:
+                "查看图纸",
+
+            downloadPlans:
+                "下载 PDF",
+
+            downloadStlZip:
+                "下载 ZIP",
 
             freeStl:
-                "用于教育用途的免费 STL 文件。",
+                "教育与科研用途免费下载。",
 
             languageButton:
                 "语言",
 
             unavailable:
-                "该文件尚未添加。"
+                "该文件尚未添加。",
+
+            noResults:
+                "没有符合当前筛选条件的产品。"
 
         }
 
@@ -3766,24 +5199,32 @@
 
 
 
-    /* =========================================
+    /* =========================================================
        IDIOMA
-    ========================================== */
+    ========================================================== */
 
     const languageSelector =
-        document.getElementById("languageSelector");
+        document.getElementById(
+            "languageSelector"
+        );
 
 
     const languageButton =
-        document.getElementById("languageButton");
+        document.getElementById(
+            "languageButton"
+        );
 
 
     const languageButtonText =
-        document.getElementById("languageButtonText");
+        document.getElementById(
+            "languageButtonText"
+        );
 
 
     let currentLanguage =
-        localStorage.getItem("srcLanguage") || "es";
+        localStorage.getItem(
+            "srcLanguage"
+        ) || "es";
 
 
 
@@ -3793,42 +5234,53 @@
 
             event.stopPropagation();
 
-            languageSelector.classList.toggle("open");
+            languageSelector
+                .classList
+                .toggle("open");
 
         }
     );
+
 
 
     document.addEventListener(
         "click",
         function() {
 
-            languageSelector.classList.remove("open");
+            languageSelector
+                .classList
+                .remove("open");
 
         }
     );
 
 
+
     document
-        .querySelectorAll("[data-language]")
-        .forEach(function(button) {
+        .querySelectorAll(
+            "[data-language]"
+        )
+        .forEach(
+            function(button) {
 
-            button.addEventListener(
-                "click",
-                function() {
+                button.addEventListener(
+                    "click",
+                    function() {
 
-                    setLanguage(
-                        button.dataset.language
-                    );
+                        setLanguage(
+                            button.dataset.language
+                        );
 
-                }
-            );
+                    }
+                );
 
-        });
+            }
+        );
 
 
 
     function setLanguage(language) {
+
 
         if (!translations[language]) {
 
@@ -3837,7 +5289,8 @@
         }
 
 
-        currentLanguage = language;
+        currentLanguage =
+            language;
 
 
         document.documentElement.lang =
@@ -3845,25 +5298,32 @@
 
 
         document
-            .querySelectorAll("[data-i18n]")
-            .forEach(function(element) {
+            .querySelectorAll(
+                "[data-i18n]"
+            )
+            .forEach(
+                function(element) {
 
-                const key =
-                    element.dataset.i18n;
+                    const key =
+                        element.dataset.i18n;
 
 
-                if (translations[language][key]) {
+                    if (
+                        translations[language][key]
+                    ) {
 
-                    element.textContent =
-                        translations[language][key];
+                        element.textContent =
+                            translations[language][key];
+
+                    }
 
                 }
-
-            });
+            );
 
 
         languageButtonText.textContent =
-            translations[language].languageButton;
+            translations[language]
+                .languageButton;
 
 
         localStorage.setItem(
@@ -3872,108 +5332,41 @@
         );
 
 
-        languageSelector.classList.remove("open");
+        languageSelector
+            .classList
+            .remove("open");
 
     }
 
 
 
-    setLanguage(currentLanguage);
+    setLanguage(
+        currentLanguage
+    );
 
 
 
-    /* =========================================
-       ACORDEÓN DE PRODUCTOS
-    ========================================== */
+    /* =========================================================
+       PRODUCTOS
+    ========================================================== */
 
     const productItems =
-        document.querySelectorAll(".product-item");
-
-
-    productItems.forEach(function(product) {
-
-        const toggle =
-            product.querySelector(".product-toggle");
-
-
-        toggle.addEventListener(
-            "click",
-            function() {
-
-                const alreadyOpen =
-                    product.classList.contains("open");
-
-
-                productItems.forEach(function(otherProduct) {
-
-                    otherProduct.classList.remove("open");
-
-
-                    const otherToggle =
-                        otherProduct.querySelector(
-                            ".product-toggle"
-                        );
-
-
-                    if (otherToggle) {
-
-                        otherToggle.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-                    }
-
-                });
-
-
-                if (!alreadyOpen) {
-
-                    product.classList.add("open");
-
-
-                    toggle.setAttribute(
-                        "aria-expanded",
-                        "true"
-                    );
-
-                }
-
-            }
-        );
-
-    });
-
-
-
-    /* =========================================
-       FILTROS
-    ========================================== */
-
-    const filterButtons =
         document.querySelectorAll(
-            ".filter-button"
+            ".product-item"
         );
 
 
-    function applyFilter(category) {
 
-        filterButtons.forEach(
-            function(button) {
-
-                button.classList.toggle(
-                    "active",
-                    button.dataset.filter === category
-                );
-
-            }
-        );
+    function closeAllProducts() {
 
 
         productItems.forEach(
             function(product) {
 
-                product.classList.remove("open");
+
+                product
+                    .classList
+                    .remove("open");
 
 
                 const toggle =
@@ -3988,23 +5381,6 @@
                 );
 
 
-                if (
-                    category === "all" ||
-                    product.dataset.category === category
-                ) {
-
-                    product.classList.remove(
-                        "is-hidden"
-                    );
-
-                } else {
-
-                    product.classList.add(
-                        "is-hidden"
-                    );
-
-                }
-
             }
         );
 
@@ -4012,144 +5388,534 @@
 
 
 
-    filterButtons.forEach(
-        function(button) {
+    function toggleProduct(product) {
 
-            button.addEventListener(
+
+        const toggle =
+            product.querySelector(
+                ".product-toggle"
+            );
+
+
+        const alreadyOpen =
+            product.classList.contains(
+                "open"
+            );
+
+
+        closeAllProducts();
+
+
+        if (!alreadyOpen) {
+
+
+            product
+                .classList
+                .add("open");
+
+
+            toggle.setAttribute(
+                "aria-expanded",
+                "true"
+            );
+
+
+        }
+
+    }
+
+
+
+    productItems.forEach(
+        function(product) {
+
+
+            const toggle =
+                product.querySelector(
+                    ".product-toggle"
+                );
+
+
+            toggle.addEventListener(
                 "click",
                 function() {
 
-                    applyFilter(
-                        button.dataset.filter
+                    toggleProduct(
+                        product
                     );
 
                 }
             );
+
+
+            toggle.addEventListener(
+                "keydown",
+                function(event) {
+
+
+                    if (
+                        event.key === "Enter" ||
+                        event.key === " "
+                    ) {
+
+
+                        event.preventDefault();
+
+
+                        toggleProduct(
+                            product
+                        );
+
+
+                    }
+
+                }
+            );
+
 
         }
     );
 
 
 
-    document
-        .querySelectorAll("[data-filter-link]")
-        .forEach(function(link) {
+    /* =========================================================
+       FILTROS COMBINADOS
+    ========================================================== */
 
-            link.addEventListener(
-                "click",
-                function() {
+    const areaFilterButtons =
+        document.querySelectorAll(
+            "[data-area-filter]"
+        );
 
-                    applyFilter(
-                        link.dataset.filterLink
-                    );
+
+    const typeFilterButtons =
+        document.querySelectorAll(
+            "[data-type-filter]"
+        );
+
+
+    const noResults =
+        document.getElementById(
+            "noResults"
+        );
+
+
+    let activeArea =
+        "all";
+
+
+    let activeType =
+        "all";
+
+
+
+    function applyFilters() {
+
+
+        let visibleProducts =
+            0;
+
+
+        closeAllProducts();
+
+
+        productItems.forEach(
+            function(product) {
+
+
+                const matchesArea =
+
+                    activeArea === "all" ||
+
+                    product.dataset.area ===
+                    activeArea;
+
+
+                const matchesType =
+
+                    activeType === "all" ||
+
+                    product.dataset.type ===
+                    activeType;
+
+
+                const shouldShow =
+
+                    matchesArea &&
+                    matchesType;
+
+
+                if (shouldShow) {
+
+
+                    product
+                        .classList
+                        .remove(
+                            "is-hidden"
+                        );
+
+
+                    visibleProducts++;
+
 
                 }
-            );
 
-        });
-
+                else {
 
 
-    /* =========================================
-       PDF Y STL
-    ========================================== */
+                    product
+                        .classList
+                        .add(
+                            "is-hidden"
+                        );
 
-    document
-        .querySelectorAll("[data-action]")
-        .forEach(function(button) {
+
+                }
+
+
+            }
+        );
+
+
+        if (
+            visibleProducts === 0
+        ) {
+
+
+            noResults
+                .classList
+                .add("show");
+
+
+        }
+
+        else {
+
+
+            noResults
+                .classList
+                .remove("show");
+
+
+        }
+
+    }
+
+
+
+    /* =========================================================
+       FILTRO ÁREA
+    ========================================================== */
+
+    areaFilterButtons.forEach(
+        function(button) {
+
 
             button.addEventListener(
                 "click",
-                function(event) {
-
-                    event.stopPropagation();
+                function() {
 
 
-                    const product =
-                        button.closest(
-                            ".product-item"
-                        );
+                    activeArea =
+                        button.dataset.areaFilter;
 
 
-                    const action =
-                        button.dataset.action;
+                    areaFilterButtons.forEach(
+                        function(otherButton) {
 
+                            otherButton
+                                .classList
+                                .remove("active");
 
-                    let file = "";
-
-
-                    if (
-                        action === "view-pdf" ||
-                        action === "download-pdf"
-                    ) {
-
-                        file =
-                            product.dataset.pdf || "";
-
-                    }
-
-
-                    if (
-                        action === "download-stl"
-                    ) {
-
-                        file =
-                            product.dataset.stl || "";
-
-                    }
-
-
-                    if (!file) {
-
-                        alert(
-                            translations[
-                                currentLanguage
-                            ].unavailable
-                        );
-
-                        return;
-
-                    }
-
-
-                    if (action === "view-pdf") {
-
-                        window.open(
-                            file,
-                            "_blank"
-                        );
-
-                        return;
-
-                    }
-
-
-                    const temporaryLink =
-                        document.createElement("a");
-
-
-                    temporaryLink.href =
-                        file;
-
-
-                    temporaryLink.download =
-                        "";
-
-
-                    document.body.appendChild(
-                        temporaryLink
+                        }
                     );
 
 
-                    temporaryLink.click();
+                    button
+                        .classList
+                        .add("active");
 
 
-                    temporaryLink.remove();
+                    applyFilters();
+
 
                 }
             );
 
-        });
+
+        }
+    );
+
+
+
+    /* =========================================================
+       FILTRO TIPO
+    ========================================================== */
+
+    typeFilterButtons.forEach(
+        function(button) {
+
+
+            button.addEventListener(
+                "click",
+                function() {
+
+
+                    activeType =
+                        button.dataset.typeFilter;
+
+
+                    typeFilterButtons.forEach(
+                        function(otherButton) {
+
+                            otherButton
+                                .classList
+                                .remove("active");
+
+                        }
+                    );
+
+
+                    button
+                        .classList
+                        .add("active");
+
+
+                    applyFilters();
+
+
+                }
+            );
+
+
+        }
+    );
+
+
+
+    /* =========================================================
+       FILTRO DESDE MENÚ SUPERIOR
+    ========================================================== */
+
+    document
+        .querySelectorAll(
+            "[data-area-link]"
+        )
+        .forEach(
+            function(link) {
+
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+
+                        activeArea =
+                            link.dataset.areaLink;
+
+
+                        areaFilterButtons.forEach(
+                            function(button) {
+
+                                button
+                                    .classList
+                                    .toggle(
+                                        "active",
+
+                                        button.dataset.areaFilter ===
+                                        activeArea
+                                    );
+
+                            }
+                        );
+
+
+                        applyFilters();
+
+
+                    }
+                );
+
+
+            }
+        );
+
+
+
+    /* =========================================================
+       DOCUMENTACIÓN
+    ========================================================== */
+
+    document
+        .querySelectorAll(
+            "[data-action]"
+        )
+        .forEach(
+            function(button) {
+
+
+                button.addEventListener(
+                    "click",
+                    function(event) {
+
+
+                        event.stopPropagation();
+
+
+                        const product =
+                            button.closest(
+                                ".product-item"
+                            );
+
+
+                        const action =
+                            button.dataset.action;
+
+
+                        let file =
+                            "";
+
+
+
+                        /* ===============================
+                           PDF INFORMACIÓN GENERAL
+                        =============================== */
+
+                        if (
+                            action === "view-info" ||
+                            action === "download-info"
+                        ) {
+
+
+                            file =
+                                product.dataset
+                                    .infoPdf || "";
+
+
+                        }
+
+
+
+                        /* ===============================
+                           PDF PLANOS
+                        =============================== */
+
+                        if (
+                            action === "view-plans" ||
+                            action === "download-plans"
+                        ) {
+
+
+                            file =
+                                product.dataset
+                                    .plansPdf || "";
+
+
+                        }
+
+
+
+                        /* ===============================
+                           ZIP STL
+                        =============================== */
+
+                        if (
+                            action === "download-stl"
+                        ) {
+
+
+                            file =
+                                product.dataset
+                                    .stlZip || "";
+
+
+                        }
+
+
+
+                        /* ===============================
+                           ARCHIVO NO AGREGADO
+                        =============================== */
+
+                        if (!file) {
+
+
+                            alert(
+
+                                translations[
+                                    currentLanguage
+                                ].unavailable
+
+                            );
+
+
+                            return;
+
+
+                        }
+
+
+
+                        /* ===============================
+                           VER PDF
+                        =============================== */
+
+                        if (
+                            action === "view-info" ||
+                            action === "view-plans"
+                        ) {
+
+
+                            window.open(
+                                file,
+                                "_blank"
+                            );
+
+
+                            return;
+
+
+                        }
+
+
+
+                        /* ===============================
+                           DESCARGAR
+                        =============================== */
+
+                        const temporaryLink =
+                            document.createElement(
+                                "a"
+                            );
+
+
+                        temporaryLink.href =
+                            file;
+
+
+                        temporaryLink.download =
+                            "";
+
+
+                        document.body
+                            .appendChild(
+                                temporaryLink
+                            );
+
+
+                        temporaryLink.click();
+
+
+                        temporaryLink.remove();
+
+
+                    }
+                );
+
+
+            }
+        );
+
 
 </script>
 
