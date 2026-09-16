@@ -602,13 +602,15 @@
 
             border-top: 1px solid #eeeeee;
 
-            padding-top: 35px;
+            padding-top: 30px;
         }
 
         .feature {
             text-align: center;
 
-            padding: 15px 25px;
+            padding: 20px 25px;
+
+            transition: 0.25s;
         }
 
         .feature:not(:last-child) {
@@ -616,9 +618,50 @@
         }
 
         .feature-icon {
-            font-size: 34px;
+            width: 58px;
+            height: 58px;
 
-            margin-bottom: 13px;
+            margin: 0 auto 17px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid #dce4ef;
+
+            border-radius: 50%;
+
+            color: var(--blue);
+
+            background: white;
+
+            transition: 0.25s;
+        }
+
+        .feature-icon svg {
+            width: 27px;
+            height: 27px;
+
+            fill: none;
+
+            stroke: currentColor;
+
+            stroke-width: 1.8;
+
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .feature:hover .feature-icon {
+            background: var(--blue);
+
+            color: white;
+
+            border-color: var(--blue);
+
+            transform: translateY(-3px);
+
+            box-shadow: 0 8px 20px rgba(36,87,155,0.18);
         }
 
         .feature h3 {
@@ -1568,70 +1611,147 @@
     <section class="features">
 
 
+        <!-- DISEÑO -->
+
         <div class="feature">
 
+
             <div class="feature-icon">
-                ⚙
+
+                <svg viewBox="0 0 24 24">
+
+                    <circle cx="12" cy="12" r="3"></circle>
+
+                    <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06a1.7 1.7 0 0 0-1.88-.34 1.7 1.7 0 0 0-1.03 1.56V21h-4v-.08a1.7 1.7 0 0 0-1.03-1.56 1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.52-1H3v-4h.08A1.7 1.7 0 0 0 4.6 9a1.7 1.7 0 0 0-.34-1.88L4.2 7.06l2.83-2.83.06.06A1.7 1.7 0 0 0 8.97 4.6 1.7 1.7 0 0 0 10 3.08V3h4v.08a1.7 1.7 0 0 0 1.03 1.52 1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9 1.7 1.7 0 0 0 20.92 10H21v4h-.08A1.7 1.7 0 0 0 19.4 15z"></path>
+
+                </svg>
+
             </div>
+
 
             <h3 data-i18n="designTitle">
                 Diseño
             </h3>
 
+
             <p data-i18n="designDescription">
                 Mecánico, electrónico y de control
             </p>
 
+
         </div>
 
 
+
+        <!-- EDUCACIÓN -->
+
         <div class="feature">
 
+
             <div class="feature-icon">
-                🎓
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="M2 9l10-5 10 5-10 5z"></path>
+
+                    <path d="M6 11v5c3 2 9 2 12 0v-5"></path>
+
+                    <path d="M22 9v6"></path>
+
+                </svg>
+
             </div>
+
 
             <h3 data-i18n="educationTitle">
                 Educación
             </h3>
 
+
             <p data-i18n="educationDescription">
                 Robots para aprender y crear
             </p>
 
+
         </div>
 
 
+
+        <!-- INNOVACIÓN -->
+
         <div class="feature">
 
+
             <div class="feature-icon">
-                💡
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="M9 18h6"></path>
+
+                    <path d="M10 22h4"></path>
+
+                    <path d="M8.3 15.2A7 7 0 1 1 15.7 15.2C14.7 16 14 17 14 18h-4c0-1-.7-2-1.7-2.8z"></path>
+
+                    <path d="M12 2v2"></path>
+
+                    <path d="M4.9 4.9l1.4 1.4"></path>
+
+                    <path d="M19.1 4.9l-1.4 1.4"></path>
+
+                </svg>
+
             </div>
+
 
             <h3 data-i18n="innovationTitle">
                 Innovación
             </h3>
 
+
             <p data-i18n="innovationDescription">
                 Soluciones para la industria y más
             </p>
 
+
         </div>
 
 
+
+        <!-- DESARROLLO EN MÉXICO -->
+
         <div class="feature">
 
+
             <div class="feature-icon">
-                ↗
+
+                <svg viewBox="0 0 24 24">
+
+                    <path d="M4 18V9"></path>
+
+                    <path d="M10 18V13"></path>
+
+                    <path d="M16 18V6"></path>
+
+                    <path d="M3 21h18"></path>
+
+                    <path d="M5 7l5-4 5 3 5-4"></path>
+
+                    <path d="M17 2h3v3"></path>
+
+                </svg>
+
             </div>
+
 
             <h3 data-i18n="mexicoTitle">
                 Desarrollo en México
             </h3>
 
+
             <p data-i18n="mexicoDescription">
                 Talento y tecnología nacional
             </p>
+
 
         </div>
 
@@ -1681,11 +1801,9 @@
 
             <div class="application-card">
 
-
                 <h3 data-i18n="trainingTitle">
                     Educación y entrenamiento en robótica
                 </h3>
-
 
                 <p data-i18n="trainingDescription">
                     Plataformas orientadas al aprendizaje práctico
@@ -1695,18 +1813,15 @@
                     de sistemas robóticos.
                 </p>
 
-
             </div>
 
 
 
             <div class="application-card">
 
-
                 <h3 data-i18n="mechanismsTitle">
                     Desarrollo de mecanismos y prototipos
                 </h3>
-
 
                 <p data-i18n="mechanismsDescription">
                     Componentes, kits y herramientas para el diseño,
@@ -1716,18 +1831,15 @@
                     estructuras mecánicas.
                 </p>
 
-
             </div>
 
 
 
             <div class="application-card">
 
-
                 <h3 data-i18n="manipulationTitle">
                     Manipulación y herramientas robóticas
                 </h3>
-
 
                 <p data-i18n="manipulationDescription">
                     Soluciones para la manipulación y sujeción de
@@ -1736,18 +1848,15 @@
                     prototipos, entrenamiento y automatización.
                 </p>
 
-
             </div>
 
 
 
             <div class="application-card">
 
-
                 <h3 data-i18n="prototypingTitle">
                     Prototipado y desarrollo de proyectos
                 </h3>
-
 
                 <p data-i18n="prototypingDescription">
                     Soluciones destinadas a estudiantes,
@@ -1757,18 +1866,15 @@
                     robóticos.
                 </p>
 
-
             </div>
 
 
 
             <div class="application-card">
 
-
                 <h3 data-i18n="softwareControlTitle">
                     Software, programación y control
                 </h3>
-
 
                 <p data-i18n="softwareControlDescription">
                     Desarrollo de software y sistemas de control para
@@ -1777,18 +1883,15 @@
                     secuencias, sensores y aplicaciones robóticas.
                 </p>
 
-
             </div>
 
 
 
             <div class="application-card">
 
-
                 <h3 data-i18n="industrialTitle">
                     Automatización semiindustrial e industrial
                 </h3>
-
 
                 <p data-i18n="industrialDescription">
                     Desarrollo de plataformas robóticas y soluciones
@@ -1798,15 +1901,12 @@
                     industriales.
                 </p>
 
-
             </div>
 
 
         </div>
 
 
-
-        <!-- DESARROLLO CONTINUO -->
 
         <div class="applications-note">
 
@@ -1993,8 +2093,6 @@
         <div class="footer-contact-grid">
 
 
-            <!-- WHATSAPP -->
-
             <a
                 class="footer-contact"
                 href="https://wa.me/526568630623"
@@ -2002,7 +2100,6 @@
                 rel="noopener noreferrer"
                 aria-label="WhatsApp SRC"
             >
-
 
                 <div class="footer-icon">
 
@@ -2035,14 +2132,11 @@
 
 
 
-            <!-- CORREO -->
-
             <a
                 class="footer-contact"
                 href="mailto:rmsakuta@gmail.com"
                 aria-label="Correo electrónico SRC"
             >
-
 
                 <div class="footer-icon">
 
@@ -2077,8 +2171,6 @@
 
 
 
-            <!-- INSTAGRAM -->
-
             <a
                 class="footer-contact"
                 href="https://www.instagram.com/sak_src/"
@@ -2086,7 +2178,6 @@
                 rel="noopener noreferrer"
                 aria-label="Instagram SRC"
             >
-
 
                 <div class="footer-icon">
 
@@ -2133,8 +2224,6 @@
 
 
 
-            <!-- YOUTUBE -->
-
             <a
                 class="footer-contact"
                 href="https://www.youtube.com/@sakutaRM-t5u"
@@ -2142,7 +2231,6 @@
                 rel="noopener noreferrer"
                 aria-label="YouTube SAKUTA SRC"
             >
-
 
                 <div class="footer-icon">
 
@@ -2181,8 +2269,6 @@
 
 
 
-            <!-- FACEBOOK -->
-
             <a
                 class="footer-contact"
                 href="https://www.facebook.com/profile.php?id=61568672325873&locale=es_LA"
@@ -2190,7 +2276,6 @@
                 rel="noopener noreferrer"
                 aria-label="Facebook Sakuta"
             >
-
 
                 <div class="footer-icon">
 
@@ -2260,10 +2345,6 @@
         const translations = {
 
 
-            /* =====================================
-               ESPAÑOL
-            ====================================== */
-
             es: {
 
                 navHome: "Inicio",
@@ -2313,7 +2394,6 @@
 
                 mexicoDescription:
                     "Talento y tecnología nacional",
-
 
                 applicationsLabel:
                     "APLICACIONES",
@@ -2365,7 +2445,6 @@
 
                 continuousDescription:
                     "SRC continúa desarrollando nuevas plataformas robóticas, herramientas y sistemas de automatización para ampliar sus capacidades en aplicaciones educativas, de investigación y del sector industrial.",
-
 
                 companyLabel:
                     "EMPRESA",
@@ -2424,10 +2503,6 @@
             },
 
 
-            /* =====================================
-               ENGLISH
-            ====================================== */
-
             en: {
 
                 navHome: "Home",
@@ -2477,7 +2552,6 @@
 
                 mexicoDescription:
                     "National talent and technology",
-
 
                 applicationsLabel:
                     "APPLICATIONS",
@@ -2529,7 +2603,6 @@
 
                 continuousDescription:
                     "SRC continues developing new robotic platforms, tools and automation systems to expand its capabilities in educational, research and industrial applications.",
-
 
                 companyLabel:
                     "COMPANY",
@@ -2587,10 +2660,6 @@
 
             },
 
-
-            /* =====================================
-               中文
-            ====================================== */
 
             zh: {
 
@@ -2654,7 +2723,6 @@
                 mexicoDescription:
                     "本土人才与技术",
 
-
                 applicationsLabel:
                     "应用",
 
@@ -2705,7 +2773,6 @@
 
                 continuousDescription:
                     "SRC 持续开发新的机器人平台、工具和自动化系统，以扩大其在教育、科研和工业应用领域的能力。",
-
 
                 companyLabel:
                     "公司",
