@@ -9,18 +9,30 @@
 
     <title>Productos | SAKUTA Robotics Company</title>
 
+    <!-- ICONO DE LA PESTAÑA -->
     <link
         rel="icon"
-        type="image/svg+xml"
-        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='white'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='39' font-weight='900' fill='%2324579b'%3ESRC%3C/text%3E"
+        type="image/png"
+        href="logoooweb.PNG"
     >
 
     <style>
 
         :root {
+
             --blue: #24579b;
             --blue-dark: #183f78;
             --blue-soft: #eef4fb;
+
+            /* EDUCACIÓN E INVESTIGACIÓN */
+            --education: #6d55c7;
+            --education-soft: #f0ecff;
+            --education-border: #d8cff7;
+
+            /* SEMI-INDUSTRIA E INDUSTRIA */
+            --industry: #247a55;
+            --industry-soft: #eaf7f0;
+            --industry-border: #c7e5d5;
 
             --black: #111111;
             --gray: #676767;
@@ -28,7 +40,9 @@
 
             --border: #e4e7eb;
             --white: #ffffff;
+
         }
+
 
 
         * {
@@ -38,16 +52,23 @@
         }
 
 
+
         html {
             scroll-behavior: smooth;
         }
 
 
+
         body {
+
             font-family: Arial, Helvetica, sans-serif;
+
             background: var(--white);
+
             color: var(--black);
+
         }
+
 
 
         button,
@@ -62,22 +83,27 @@
         ========================================== */
 
         header {
+
             width: 100%;
             height: 82px;
 
             background: white;
+
             border-bottom: 1px solid #e8e8e8;
 
             display: flex;
+
             align-items: center;
             justify-content: space-between;
 
             padding: 0 7%;
 
             position: sticky;
+
             top: 0;
 
             z-index: 1000;
+
         }
 
 
@@ -87,51 +113,68 @@
         ========================================== */
 
         .brand {
+
             display: flex;
+
             align-items: center;
 
             gap: 10px;
 
             text-decoration: none;
+
         }
 
 
+
         .brand-logo-crop {
+
             width: 62px;
             height: 70px;
 
             position: relative;
+
             overflow: hidden;
 
             flex-shrink: 0;
 
             transform: translateY(-8px);
+
         }
+
 
 
         .brand-logo-crop img {
+
             position: absolute;
 
             width: 118px;
+
             max-width: none;
 
             left: -27px;
+
             top: -10px;
 
             display: block;
+
         }
 
 
+
         .brand-name {
+
             color: var(--blue);
 
             font-size: 32px;
+
             font-weight: 800;
+
             font-style: italic;
 
             letter-spacing: -1px;
 
             white-space: nowrap;
+
         }
 
 
@@ -141,55 +184,73 @@
         ========================================== */
 
         nav {
+
             display: flex;
+
             align-items: center;
 
             gap: 35px;
+
         }
+
 
 
         nav > a,
         .menu-dropdown > a {
+
             color: var(--black);
 
             text-decoration: none;
 
             font-size: 16px;
+
             font-weight: 600;
 
             position: relative;
 
             transition: 0.2s;
+
         }
+
 
 
         nav > a:hover,
         .menu-dropdown > a:hover {
+
             color: var(--blue);
+
         }
+
 
 
         nav > a::after,
         .menu-dropdown > a::after {
+
             content: "";
 
             position: absolute;
 
             left: 0;
+
             bottom: -10px;
 
             width: 0;
+
             height: 2px;
 
             background: var(--blue);
 
             transition: 0.25s;
+
         }
+
 
 
         nav > a:hover::after,
         .menu-dropdown:hover > a::after {
+
             width: 100%;
+
         }
 
 
@@ -199,39 +260,55 @@
         ========================================== */
 
         .menu-dropdown {
+
             position: relative;
 
             display: flex;
+
             align-items: center;
 
             height: 82px;
+
         }
+
 
 
         .menu-dropdown > a {
+
             display: flex;
+
             align-items: center;
 
             gap: 7px;
+
         }
+
 
 
         .dropdown-arrow {
+
             font-size: 10px;
 
             transition: transform 0.25s;
+
         }
+
 
 
         .menu-dropdown:hover .dropdown-arrow {
+
             transform: rotate(180deg);
+
         }
 
 
+
         .dropdown-menu {
+
             position: absolute;
 
             top: 70px;
+
             left: 50%;
 
             transform:
@@ -243,6 +320,7 @@
             background: white;
 
             border: 1px solid #e9e9e9;
+
             border-radius: 12px;
 
             padding: 8px;
@@ -252,25 +330,35 @@
                 rgba(0, 0, 0, 0.10);
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
             transition: 0.2s;
+
         }
 
 
+
         .menu-dropdown:hover .dropdown-menu {
+
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
 
             transform:
                 translateX(-50%)
                 translateY(0);
+
         }
 
 
+
         .dropdown-menu a {
+
             display: block;
 
             padding: 13px 15px;
@@ -282,18 +370,23 @@
             color: var(--black);
 
             font-size: 15px;
+
             font-weight: 600;
 
             white-space: nowrap;
 
             transition: 0.2s;
+
         }
 
 
+
         .dropdown-menu a:hover {
+
             background: #f3f6fb;
 
             color: var(--blue);
+
         }
 
 
@@ -303,14 +396,19 @@
         ========================================== */
 
         .language-selector {
+
             position: relative;
+
         }
 
 
+
         .language-button {
+
             border: none;
 
             background: var(--blue);
+
             color: white;
 
             padding: 13px 24px;
@@ -318,30 +416,39 @@
             border-radius: 30px;
 
             font-size: 15px;
+
             font-weight: bold;
 
             cursor: pointer;
 
             display: flex;
+
             align-items: center;
 
             gap: 8px;
 
             transition: 0.25s;
+
         }
+
 
 
         .language-button:hover {
+
             background: var(--blue-dark);
 
             transform: translateY(-2px);
+
         }
 
 
+
         .language-options {
+
             position: absolute;
 
             top: 55px;
+
             right: 0;
 
             width: 165px;
@@ -349,6 +456,7 @@
             background: white;
 
             border: 1px solid #e8e8e8;
+
             border-radius: 12px;
 
             padding: 8px;
@@ -358,7 +466,9 @@
                 rgba(0, 0, 0, 0.10);
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
             transform: translateY(8px);
@@ -366,19 +476,27 @@
             transition: 0.2s;
 
             z-index: 2000;
+
         }
+
 
 
         .language-selector.open .language-options {
+
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
 
             transform: translateY(0);
+
         }
 
 
+
         .language-options button {
+
             width: 100%;
 
             border: none;
@@ -392,6 +510,7 @@
             border-radius: 8px;
 
             font-size: 14px;
+
             font-weight: 600;
 
             color: var(--black);
@@ -399,13 +518,17 @@
             cursor: pointer;
 
             transition: 0.2s;
+
         }
 
 
+
         .language-options button:hover {
+
             background: #f3f6fb;
 
             color: var(--blue);
+
         }
 
 
@@ -415,24 +538,31 @@
         ========================================== */
 
         .page-hero {
+
             padding: 100px 7% 75px;
 
             background: white;
 
             text-align: center;
+
         }
 
 
+
         .page-label {
+
             color: #777;
 
             letter-spacing: 5px;
 
             font-size: 13px;
+
         }
 
 
+
         .page-hero h1 {
+
             margin-top: 16px;
 
             font-size: clamp(48px, 7vw, 82px);
@@ -440,11 +570,14 @@
             color: var(--blue);
 
             font-style: italic;
+
         }
 
 
+
         .page-hero p {
-            max-width: 760px;
+
+            max-width: 800px;
 
             margin: 22px auto 0;
 
@@ -453,6 +586,7 @@
             font-size: 19px;
 
             line-height: 1.65;
+
         }
 
 
@@ -462,40 +596,55 @@
         ========================================== */
 
         .catalog {
+
             background: var(--gray-light);
 
             padding: 70px 7% 110px;
+
         }
+
 
 
         .catalog-header {
+
             max-width: 1180px;
 
             margin: auto;
+
             margin-bottom: 38px;
+
         }
+
 
 
         .catalog-label {
+
             color: var(--blue);
 
             font-size: 12px;
+
             font-weight: 800;
 
             letter-spacing: 4px;
+
         }
 
 
+
         .catalog-header h2 {
+
             margin-top: 12px;
 
             font-size: clamp(32px, 4vw, 48px);
 
             letter-spacing: -1px;
+
         }
 
 
+
         .catalog-header p {
+
             max-width: 700px;
 
             margin-top: 14px;
@@ -505,6 +654,7 @@
             font-size: 17px;
 
             line-height: 1.65;
+
         }
 
 
@@ -514,18 +664,23 @@
         ========================================== */
 
         .filters {
+
             max-width: 1180px;
 
             margin: 0 auto 34px;
 
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 12px;
+
         }
 
 
+
         .filter-button {
+
             padding: 12px 21px;
 
             border: 1px solid #d8dce2;
@@ -537,27 +692,105 @@
             color: #333;
 
             font-size: 14px;
+
             font-weight: 700;
 
             cursor: pointer;
 
             transition: 0.25s;
+
         }
 
 
-        .filter-button:hover {
+
+        /* TODOS */
+
+        .filter-button[data-filter="all"]:hover {
+
             border-color: var(--blue);
 
             color: var(--blue);
+
         }
 
 
-        .filter-button.active {
+
+        .filter-button[data-filter="all"].active {
+
             color: white;
 
             background: var(--blue);
 
             border-color: var(--blue);
+
+        }
+
+
+
+        /* EDUCACIÓN */
+
+        .filter-button[data-filter="education"] {
+
+            border-color: var(--education-border);
+
+            color: var(--education);
+
+        }
+
+
+
+        .filter-button[data-filter="education"]:hover {
+
+            background: var(--education-soft);
+
+            border-color: var(--education);
+
+        }
+
+
+
+        .filter-button[data-filter="education"].active {
+
+            color: white;
+
+            background: var(--education);
+
+            border-color: var(--education);
+
+        }
+
+
+
+        /* INDUSTRIA */
+
+        .filter-button[data-filter="industry"] {
+
+            border-color: var(--industry-border);
+
+            color: var(--industry);
+
+        }
+
+
+
+        .filter-button[data-filter="industry"]:hover {
+
+            background: var(--industry-soft);
+
+            border-color: var(--industry);
+
+        }
+
+
+
+        .filter-button[data-filter="industry"].active {
+
+            color: white;
+
+            background: var(--industry);
+
+            border-color: var(--industry);
+
         }
 
 
@@ -567,18 +800,23 @@
         ========================================== */
 
         .products-list {
+
             max-width: 1180px;
 
             margin: auto;
 
             display: flex;
+
             flex-direction: column;
 
             gap: 18px;
+
         }
 
 
+
         .product-item {
+
             background: white;
 
             border: 1px solid var(--border);
@@ -591,29 +829,53 @@
                 border-color 0.25s,
                 box-shadow 0.25s,
                 transform 0.25s;
+
         }
 
 
+
         .product-item:hover {
+
             border-color: #c7d4e5;
 
             box-shadow:
                 0 12px 30px
                 rgba(0, 0, 0, 0.045);
+
         }
+
 
 
         .product-item.open {
-            border-color: var(--blue);
 
             box-shadow:
                 0 18px 45px
-                rgba(36, 87, 155, 0.09);
+                rgba(0, 0, 0, 0.07);
+
         }
 
 
+
+        .product-item[data-category="education"].open {
+
+            border-color: var(--education);
+
+        }
+
+
+
+        .product-item[data-category="industry"].open {
+
+            border-color: var(--industry);
+
+        }
+
+
+
         .product-item.is-hidden {
+
             display: none;
+
         }
 
 
@@ -623,9 +885,11 @@
         ========================================== */
 
         .product-toggle {
+
             width: 100%;
 
             border: none;
+
             background: white;
 
             padding: 18px;
@@ -644,11 +908,15 @@
             text-align: left;
 
             cursor: pointer;
+
         }
 
 
+
         .product-image {
+
             width: 175px;
+
             height: 145px;
 
             border-radius: 14px;
@@ -658,63 +926,112 @@
             overflow: hidden;
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
+
         }
 
 
+
         .product-image img {
+
             width: 100%;
+
             height: 100%;
 
             object-fit: contain;
 
             transition: transform 0.35s;
+
         }
+
 
 
         .product-item:hover
         .product-image img {
+
             transform: scale(1.035);
+
         }
+
 
 
         .product-summary {
+
             min-width: 0;
+
         }
 
 
+
+        /* =========================================
+           ETIQUETAS POR CATEGORÍA
+        ========================================== */
+
         .category-badge {
+
             display: inline-flex;
+
             align-items: center;
 
-            padding: 7px 11px;
+            padding: 7px 12px;
 
             border-radius: 999px;
 
-            background: var(--blue-soft);
-
-            color: var(--blue);
-
             font-size: 11px;
+
             font-weight: 800;
 
             letter-spacing: 1px;
 
             text-transform: uppercase;
+
         }
 
 
+
+        .product-item[data-category="education"]
+        .category-badge {
+
+            background: var(--education-soft);
+
+            color: var(--education);
+
+            border: 1px solid var(--education-border);
+
+        }
+
+
+
+        .product-item[data-category="industry"]
+        .category-badge {
+
+            background: var(--industry-soft);
+
+            color: var(--industry);
+
+            border: 1px solid var(--industry-border);
+
+        }
+
+
+
         .product-summary h2 {
+
             margin-top: 13px;
 
             font-size: 27px;
 
             letter-spacing: -0.5px;
+
         }
 
 
+
         .product-summary p {
+
             margin-top: 8px;
 
             color: var(--gray);
@@ -722,35 +1039,61 @@
             font-size: 16px;
 
             line-height: 1.5;
+
         }
 
 
+
         .expand-control {
+
             min-width: 145px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: flex-end;
 
             gap: 11px;
 
-            color: var(--blue);
-
             font-size: 14px;
+
             font-weight: 800;
+
         }
 
 
+
+        .product-item[data-category="education"]
+        .expand-control {
+
+            color: var(--education);
+
+        }
+
+
+
+        .product-item[data-category="industry"]
+        .expand-control {
+
+            color: var(--industry);
+
+        }
+
+
+
         .circle-arrow {
+
             width: 42px;
+
             height: 42px;
 
             border-radius: 50%;
 
-            background: var(--blue-soft);
-
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             font-size: 20px;
@@ -759,16 +1102,54 @@
                 transform 0.35s,
                 background 0.25s,
                 color 0.25s;
+
         }
+
+
+
+        .product-item[data-category="education"]
+        .circle-arrow {
+
+            background: var(--education-soft);
+
+        }
+
+
+
+        .product-item[data-category="industry"]
+        .circle-arrow {
+
+            background: var(--industry-soft);
+
+        }
+
 
 
         .product-item.open
         .circle-arrow {
+
             transform: rotate(180deg);
 
-            background: var(--blue);
-
             color: white;
+
+        }
+
+
+
+        .product-item[data-category="education"].open
+        .circle-arrow {
+
+            background: var(--education);
+
+        }
+
+
+
+        .product-item[data-category="industry"].open
+        .circle-arrow {
+
+            background: var(--industry);
+
         }
 
 
@@ -778,37 +1159,50 @@
         ========================================== */
 
         .product-details {
+
             display: grid;
 
             grid-template-rows: 0fr;
 
             transition:
                 grid-template-rows 0.45s ease;
+
         }
+
 
 
         .product-item.open
         .product-details {
+
             grid-template-rows: 1fr;
+
         }
+
 
 
         .product-details-inner {
+
             overflow: hidden;
+
         }
 
 
+
         .product-details-content {
+
             padding:
                 10px
                 35px
                 38px;
 
             border-top: 1px solid #eeeeee;
+
         }
 
 
+
         .details-main {
+
             display: grid;
 
             grid-template-columns:
@@ -818,57 +1212,76 @@
             gap: 45px;
 
             padding-top: 35px;
+
         }
+
 
 
         .details-information h3 {
+
             margin-bottom: 12px;
 
             font-size: 23px;
+
         }
 
 
+
         .placeholder-text {
+
             color: var(--gray);
 
             font-size: 16px;
 
             line-height: 1.7;
+
         }
 
 
+
         .information-block {
+
             padding-bottom: 25px;
 
             margin-bottom: 25px;
 
             border-bottom:
                 1px solid #eeeeee;
+
         }
+
 
 
         .information-block:last-child {
+
             border-bottom: none;
 
             margin-bottom: 0;
+
         }
 
 
+
         .information-block h4 {
+
             margin-bottom: 10px;
 
             color: #252525;
 
             font-size: 16px;
+
         }
 
 
+
         .placeholder-list {
+
             padding-left: 19px;
 
             color: var(--gray);
 
             line-height: 1.9;
+
         }
 
 
@@ -878,14 +1291,19 @@
         ========================================== */
 
         .details-media {
+
             display: flex;
+
             flex-direction: column;
 
             gap: 14px;
+
         }
 
 
+
         .details-media img {
+
             width: 100%;
 
             max-height: 330px;
@@ -897,6 +1315,7 @@
             border-radius: 16px;
 
             background: #fafafa;
+
         }
 
 
@@ -906,6 +1325,7 @@
         ========================================== */
 
         .resources {
+
             margin-top: 35px;
 
             padding: 27px;
@@ -915,24 +1335,35 @@
             border: 1px solid #e2e7ed;
 
             border-radius: 16px;
+
         }
+
 
 
         .resources-header {
+
             display: flex;
+
             align-items: flex-start;
+
             justify-content: space-between;
 
             gap: 20px;
+
         }
+
 
 
         .resources h3 {
+
             font-size: 20px;
+
         }
 
 
+
         .resources p {
+
             margin-top: 7px;
 
             color: var(--gray);
@@ -940,20 +1371,27 @@
             font-size: 14px;
 
             line-height: 1.5;
+
         }
+
 
 
         .resource-buttons {
+
             margin-top: 20px;
 
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 11px;
+
         }
 
 
+
         .resource-button {
+
             border: none;
 
             padding: 12px 18px;
@@ -963,46 +1401,63 @@
             cursor: pointer;
 
             font-size: 14px;
+
             font-weight: 700;
 
             transition: 0.25s;
+
         }
+
 
 
         .resource-button.primary {
+
             background: var(--blue);
 
             color: white;
+
         }
+
 
 
         .resource-button.primary:hover {
+
             background: var(--blue-dark);
 
             transform: translateY(-2px);
+
         }
 
 
+
         .resource-button.secondary {
+
             background: white;
 
             color: var(--blue);
 
             border: 1px solid #cad5e4;
+
         }
+
 
 
         .resource-button.secondary:hover {
+
             border-color: var(--blue);
 
             transform: translateY(-2px);
+
         }
 
 
+
         .stl-notice {
+
             margin-top: 17px;
 
             display: inline-flex;
+
             align-items: center;
 
             gap: 7px;
@@ -1010,7 +1465,9 @@
             color: #515151;
 
             font-size: 13px;
+
             font-weight: 600;
+
         }
 
 
@@ -1020,6 +1477,7 @@
         ========================================== */
 
         footer {
+
             padding: 42px 7%;
 
             background: #10151c;
@@ -1029,11 +1487,15 @@
             text-align: center;
 
             font-size: 14px;
+
         }
 
 
+
         footer strong {
+
             color: white;
+
         }
 
 
@@ -1049,109 +1511,160 @@
             }
 
 
+
             .product-toggle {
+
                 grid-template-columns:
                     140px
                     1fr
                     auto;
+
             }
+
 
 
             .product-image {
+
                 width: 140px;
+
                 height: 125px;
+
             }
+
 
 
             .expand-control span:first-child {
+
                 display: none;
+
             }
+
 
 
             .expand-control {
+
                 min-width: auto;
+
             }
 
 
+
             .details-main {
+
                 grid-template-columns: 1fr;
+
             }
 
         }
 
 
+
         @media (max-width: 650px) {
 
             header {
+
                 height: 70px;
 
                 padding-left: 5%;
+
                 padding-right: 5%;
+
             }
+
 
 
             .brand-logo-crop {
+
                 width: 52px;
+
                 height: 58px;
 
                 transform: translateY(-7px);
+
             }
+
 
 
             .brand-logo-crop img {
+
                 width: 100px;
 
                 left: -23px;
+
                 top: -8px;
+
             }
+
 
 
             .brand-name {
+
                 font-size: 25px;
+
             }
+
 
 
             .language-button {
+
                 padding: 11px 14px;
 
                 font-size: 13px;
+
             }
 
 
+
             .page-hero {
+
                 padding:
                     75px
                     6%
                     55px;
+
             }
+
 
 
             .page-hero p {
+
                 font-size: 17px;
+
             }
 
 
+
             .catalog {
+
                 padding:
                     55px
                     5%
                     80px;
+
             }
+
 
 
             .filters {
+
                 gap: 8px;
+
             }
+
 
 
             .filter-button {
+
                 padding: 10px 14px;
 
                 font-size: 12px;
+
             }
 
 
+
             .product-toggle {
+
                 padding: 15px;
 
                 grid-template-columns:
@@ -1160,109 +1673,161 @@
                     38px;
 
                 gap: 15px;
+
             }
+
 
 
             .product-image {
+
                 width: 95px;
+
                 height: 95px;
+
             }
 
 
+
             .category-badge {
+
                 padding: 5px 8px;
 
                 font-size: 9px;
 
                 letter-spacing: 0.5px;
+
             }
+
 
 
             .product-summary h2 {
+
                 margin-top: 8px;
 
                 font-size: 21px;
+
             }
+
 
 
             .product-summary p {
+
                 font-size: 14px;
+
             }
+
 
 
             .circle-arrow {
+
                 width: 36px;
+
                 height: 36px;
 
                 font-size: 17px;
+
             }
 
 
+
             .product-details-content {
+
                 padding:
                     10px
                     20px
                     28px;
+
             }
+
 
 
             .resources {
+
                 padding: 20px;
+
             }
+
 
 
             .resource-buttons {
+
                 flex-direction: column;
+
             }
 
 
+
             .resource-button {
+
                 width: 100%;
+
             }
 
         }
 
 
+
         @media (max-width: 430px) {
 
             .brand-name {
+
                 font-size: 21px;
+
             }
+
 
 
             .language-button {
+
                 padding: 10px 12px;
+
             }
+
 
 
             .language-button span {
+
                 display: none;
+
             }
 
 
+
             .product-toggle {
+
                 grid-template-columns:
                     82px
                     1fr
                     34px;
 
                 gap: 11px;
+
             }
+
 
 
             .product-image {
+
                 width: 82px;
+
                 height: 82px;
+
             }
+
 
 
             .product-summary h2 {
+
                 font-size: 19px;
+
             }
 
 
+
             .product-summary p {
+
                 font-size: 13px;
+
             }
 
         }
@@ -1492,9 +2057,8 @@
 
     <p data-i18n="pageDescription">
 
-        Explora los productos desarrollados por SRC
-        para educación, investigación, robótica
-        y automatización.
+        Explora los productos desarrollados por SRC para las áreas
+        de educación, investigación, robótica y automatización industrial.
 
     </p>
 
@@ -1529,9 +2093,9 @@
 
         <p data-i18n="catalogDescription">
 
-            Selecciona una categoría y despliega
-            cada producto para consultar su información,
-            documentación y archivos disponibles.
+            Selecciona una categoría y despliega cada producto
+            para consultar su información, documentación
+            y archivos disponibles.
 
         </p>
 
@@ -1584,10 +2148,6 @@
         <!-- =========================================
              PRODUCTO 01
              ROBOT EDUCATIVO
-
-             Cuando tengamos los archivos:
-             data-pdf="nombre-del-archivo.pdf"
-             data-stl="nombre-del-archivo.zip"
         ========================================== -->
 
         <article
@@ -1648,7 +2208,6 @@
                 </div>
 
             </button>
-
 
 
             <div class="product-details">
@@ -1753,21 +2312,13 @@
 
                         <div class="resources">
 
-                            <div class="resources-header">
+                            <h3 data-i18n="resourcesTitle">
+                                Documentación y archivos
+                            </h3>
 
-                                <div>
-
-                                    <h3 data-i18n="resourcesTitle">
-                                        Documentación y archivos
-                                    </h3>
-
-                                    <p data-i18n="educationResourcesDescription">
-                                        Consulta la documentación y descarga los archivos disponibles del producto.
-                                    </p>
-
-                                </div>
-
-                            </div>
+                            <p data-i18n="educationResourcesDescription">
+                                Consulta la documentación y descarga los archivos disponibles del producto.
+                            </p>
 
 
                             <div class="resource-buttons">
@@ -1828,7 +2379,6 @@
 
         <!-- =========================================
              PRODUCTO 02
-             GRIPPER EDUCATIVO
         ========================================== -->
 
         <article
@@ -1891,7 +2441,6 @@
             </button>
 
 
-
             <div class="product-details">
 
                 <div class="product-details-inner">
@@ -1926,17 +2475,9 @@
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
 
                                     </ul>
 
@@ -1989,7 +2530,6 @@
                         </div>
 
 
-
                         <div class="resources">
 
                             <h3 data-i18n="resourcesTitle">
@@ -2012,7 +2552,6 @@
                                     Ver PDF
                                 </button>
 
-
                                 <button
                                     class="resource-button secondary"
                                     type="button"
@@ -2021,7 +2560,6 @@
                                 >
                                     Descargar PDF
                                 </button>
-
 
                                 <button
                                     class="resource-button secondary"
@@ -2059,7 +2597,6 @@
 
         <!-- =========================================
              PRODUCTO 03
-             GRIPPER ADAPTATIVO EDUCATIVO
         ========================================== -->
 
         <article
@@ -2094,11 +2631,9 @@
                         Educación e investigación
                     </span>
 
-
                     <h2 data-i18n="placeholderTitle">
                         Título
                     </h2>
-
 
                     <p data-i18n="placeholderDescription">
                         Descripción
@@ -2120,7 +2655,6 @@
                 </div>
 
             </button>
-
 
 
             <div class="product-details">
@@ -2157,17 +2691,9 @@
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
 
                                     </ul>
 
@@ -2220,7 +2746,6 @@
                         </div>
 
 
-
                         <div class="resources">
 
                             <h3 data-i18n="resourcesTitle">
@@ -2243,7 +2768,6 @@
                                     Ver PDF
                                 </button>
 
-
                                 <button
                                     class="resource-button secondary"
                                     type="button"
@@ -2252,7 +2776,6 @@
                                 >
                                     Descargar PDF
                                 </button>
-
 
                                 <button
                                     class="resource-button secondary"
@@ -2290,7 +2813,6 @@
 
         <!-- =========================================
              PRODUCTO 04
-             KIT DE ENGRANES EDUCATIVO
         ========================================== -->
 
         <article
@@ -2325,11 +2847,9 @@
                         Educación e investigación
                     </span>
 
-
                     <h2 data-i18n="placeholderTitle">
                         Título
                     </h2>
-
 
                     <p data-i18n="placeholderDescription">
                         Descripción
@@ -2351,7 +2871,6 @@
                 </div>
 
             </button>
-
 
 
             <div class="product-details">
@@ -2388,17 +2907,9 @@
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
 
                                     </ul>
 
@@ -2451,7 +2962,6 @@
                         </div>
 
 
-
                         <div class="resources">
 
                             <h3 data-i18n="resourcesTitle">
@@ -2474,7 +2984,6 @@
                                     Ver PDF
                                 </button>
 
-
                                 <button
                                     class="resource-button secondary"
                                     type="button"
@@ -2483,7 +2992,6 @@
                                 >
                                     Descargar PDF
                                 </button>
-
 
                                 <button
                                     class="resource-button secondary"
@@ -2521,7 +3029,7 @@
 
         <!-- =========================================
              PRODUCTO 05
-             GRIPPER NEUMÁTICO
+             INDUSTRIAL
         ========================================== -->
 
         <article
@@ -2555,11 +3063,9 @@
                         Semi-industria e industria
                     </span>
 
-
                     <h2 data-i18n="placeholderTitle">
                         Título
                     </h2>
-
 
                     <p data-i18n="placeholderDescription">
                         Descripción
@@ -2581,7 +3087,6 @@
                 </div>
 
             </button>
-
 
 
             <div class="product-details">
@@ -2618,17 +3123,9 @@
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
 
                                     </ul>
 
@@ -2676,7 +3173,6 @@
                                     alt="Producto SRC"
                                 >
 
-
                                 <img
                                     src="conjunto_vistas.png"
                                     alt="Vistas del producto SRC"
@@ -2685,7 +3181,6 @@
                             </div>
 
                         </div>
-
 
 
                         <div class="resources">
@@ -2709,7 +3204,6 @@
                                 >
                                     Ver PDF
                                 </button>
-
 
                                 <button
                                     class="resource-button secondary"
@@ -2736,7 +3230,7 @@
 
         <!-- =========================================
              PRODUCTO 06
-             VENTOSA / EFECTOR FINAL
+             INDUSTRIAL
         ========================================== -->
 
         <article
@@ -2770,11 +3264,9 @@
                         Semi-industria e industria
                     </span>
 
-
                     <h2 data-i18n="placeholderTitle">
                         Título
                     </h2>
-
 
                     <p data-i18n="placeholderDescription">
                         Descripción
@@ -2796,7 +3288,6 @@
                 </div>
 
             </button>
-
 
 
             <div class="product-details">
@@ -2833,17 +3324,9 @@
 
                                     <ul class="placeholder-list">
 
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
+                                        <li data-i18n="placeholderFeature">Característica</li>
 
                                     </ul>
 
@@ -2896,7 +3379,6 @@
                         </div>
 
 
-
                         <div class="resources">
 
                             <h3 data-i18n="resourcesTitle">
@@ -2918,7 +3400,6 @@
                                 >
                                     Ver PDF
                                 </button>
-
 
                                 <button
                                     class="resource-button secondary"
@@ -2988,7 +3469,7 @@
                 "Productos",
 
             pageDescription:
-                "Explora los productos desarrollados por SRC para educación, investigación, robótica y automatización.",
+                "Explora los productos desarrollados por SRC para las áreas de educación, investigación, robótica y automatización industrial.",
 
             catalogLabel:
                 "CATÁLOGO SRC",
@@ -3092,7 +3573,7 @@
                 "Products",
 
             pageDescription:
-                "Explore products developed by SRC for education, research, robotics and automation.",
+                "Explore products developed by SRC for the fields of education, research, robotics and industrial automation.",
 
             catalogLabel:
                 "SRC CATALOG",
@@ -3196,7 +3677,7 @@
                 "产品",
 
             pageDescription:
-                "探索 SRC 为教育、科研、机器人和自动化开发的产品。",
+                "探索 SRC 为教育、科研、机器人技术和工业自动化领域开发的产品。",
 
             catalogLabel:
                 "SRC 产品目录",
@@ -3350,7 +3831,9 @@
     function setLanguage(language) {
 
         if (!translations[language]) {
+
             language = "es";
+
         }
 
 
@@ -3425,6 +3908,7 @@
 
                     otherProduct.classList.remove("open");
 
+
                     const otherToggle =
                         otherProduct.querySelector(
                             ".product-toggle"
@@ -3446,6 +3930,7 @@
                 if (!alreadyOpen) {
 
                     product.classList.add("open");
+
 
                     toggle.setAttribute(
                         "aria-expanded",
@@ -3567,14 +4052,6 @@
 
     /* =========================================
        PDF Y STL
-
-       Para activar archivos:
-
-       data-pdf="archivo.pdf"
-
-       data-stl="archivo.zip"
-
-       dentro del <article> correspondiente.
     ========================================== */
 
     document
