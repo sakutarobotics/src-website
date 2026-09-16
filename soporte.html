@@ -626,6 +626,43 @@
             line-height: 1.7;
         }
 
+        .qa-item {
+            padding: 15px 0;
+            border-top: 1px solid #edf0f4;
+        }
+
+        .qa-item:first-of-type {
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .qa-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .qa-item h4 {
+            color: var(--black);
+            font-size: 16px;
+            line-height: 1.45;
+            margin-bottom: 7px;
+        }
+
+        .support-text-block p + p {
+            margin-top: 14px;
+        }
+
+        .support-guidance {
+            margin-top: 18px;
+            padding: 17px 18px;
+            background: #f5f8fc;
+            border-left: 3px solid var(--blue);
+            border-radius: 0 10px 10px 0;
+        }
+
+        .support-guidance p {
+            font-size: 15px;
+        }
+
 
         /* =========================================
            GARANTÍA
@@ -1253,11 +1290,53 @@
                         Preguntas frecuentes
                     </h3>
 
-                    <p data-i18n="faqDescription">
-                        Consulta respuestas a las dudas más comunes relacionadas
-                        con el uso, montaje, compatibilidad, funcionamiento y
-                        características generales de los productos SRC.
-                    </p>
+                    <div class="qa-item">
+
+                        <h4 data-i18n="faqNewQuestion">
+                            ¿Todos los productos SRC son nuevos?
+                        </h4>
+
+                        <p data-i18n="faqNewAnswer">
+                            Sí. Todos los productos comercializados por Sakuta Robotics Company (SRC) se venden como productos nuevos.
+                        </p>
+
+                    </div>
+
+                    <div class="qa-item">
+
+                        <h4 data-i18n="faqWarrantyQuestion">
+                            ¿Cuánto tiempo de garantía tienen los productos?
+                        </h4>
+
+                        <p data-i18n="faqWarrantyAnswer">
+                            Los productos SRC cuentan con una garantía de 20 días a partir de la recepción del producto. Las condiciones específicas aplicables se indican en la información correspondiente de cada producto.
+                        </p>
+
+                    </div>
+
+                    <div class="qa-item">
+
+                        <h4 data-i18n="faqBuyQuestion">
+                            ¿Dónde puedo adquirir productos SRC?
+                        </h4>
+
+                        <p data-i18n="faqBuyAnswer">
+                            Los productos SRC pueden adquirirse mediante plataformas donde se encuentren disponibles, como Mercado Libre y Alibaba, así como mediante compra directa con SRC a través de nuestros canales de contacto.
+                        </p>
+
+                    </div>
+
+                    <div class="qa-item">
+
+                        <h4 data-i18n="faqInfoQuestion">
+                            ¿Dónde puedo encontrar la información de cada producto?
+                        </h4>
+
+                        <p data-i18n="faqInfoAnswer">
+                            La información necesaria de cada producto se encuentra en su sección correspondiente dentro de Productos, incluyendo características, especificaciones, compatibilidad, recomendaciones de uso y documentación disponible.
+                        </p>
+
+                    </div>
 
                 </article>
 
@@ -1285,11 +1364,25 @@
                         Problemas de funcionamiento
                     </h3>
 
-                    <p data-i18n="problemsDescription">
-                        Encuentra orientación para identificar posibles causas
-                        y soluciones cuando un producto no funciona correctamente
-                        o presenta un comportamiento inesperado.
-                    </p>
+                    <div class="support-text-block">
+
+                        <p data-i18n="problemsDescription1">
+                            Si un producto no funciona correctamente, verifica primero que esté siendo utilizado de acuerdo con sus especificaciones, conexiones, alimentación, configuración y condiciones de operación indicadas en la información del producto.
+                        </p>
+
+                        <p data-i18n="problemsDescription2">
+                            Debido a que cada producto SRC tiene características y requisitos diferentes, las recomendaciones específicas para diagnóstico y funcionamiento se encuentran en la sección correspondiente de cada producto.
+                        </p>
+
+                        <div class="support-guidance">
+
+                            <p data-i18n="problemsDescription3">
+                                Si después de revisar la información del producto el problema continúa, comunícate con SRC e indica qué producto tienes y qué comportamiento presenta.
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </article>
 
@@ -1319,11 +1412,17 @@
                         Instalación y configuración
                     </h3>
 
-                    <p data-i18n="installationDescription">
-                        Obtén ayuda para la instalación inicial, conexiones,
-                        configuración básica y puesta en funcionamiento de
-                        productos y sistemas SRC.
-                    </p>
+                    <div class="support-text-block">
+
+                        <p data-i18n="installationDescription1">
+                            La información de instalación, configuración, conexiones, manuales, requisitos y software necesario, cuando aplique, se encuentra en la sección correspondiente de cada producto.
+                        </p>
+
+                        <p data-i18n="installationDescription2">
+                            Consulta el producto que adquiriste dentro de Productos para acceder a la información necesaria para su correcta instalación, configuración y puesta en funcionamiento.
+                        </p>
+
+                    </div>
 
                 </article>
 
@@ -1351,11 +1450,17 @@
                         Contactar a SRC
                     </h3>
 
-                    <p data-i18n="contactDescription">
-                        Si no encuentras la solución que necesitas, puedes
-                        comunicarte directamente con Sakuta Robotics Company
-                        para recibir orientación y asistencia.
-                    </p>
+                    <div class="support-text-block">
+
+                        <p data-i18n="contactDescription1">
+                            Si después de consultar la información de tu producto y las recomendaciones de soporte necesitas asistencia adicional, puedes comunicarte directamente con Sakuta Robotics Company.
+                        </p>
+
+                        <p data-i18n="contactDescription2">
+                            Para facilitar la atención, indica qué producto tienes y describe la duda o problema que presenta.
+                        </p>
+
+                    </div>
 
                 </article>
 
@@ -1591,26 +1696,59 @@
                 faqTitle:
                     "Preguntas frecuentes",
 
-                faqDescription:
-                    "Consulta respuestas a las dudas más comunes relacionadas con el uso, montaje, compatibilidad, funcionamiento y características generales de los productos SRC.",
+                faqNewQuestion:
+                    "¿Todos los productos SRC son nuevos?",
+
+                faqNewAnswer:
+                    "Sí. Todos los productos comercializados por Sakuta Robotics Company (SRC) se venden como productos nuevos.",
+
+                faqWarrantyQuestion:
+                    "¿Cuánto tiempo de garantía tienen los productos?",
+
+                faqWarrantyAnswer:
+                    "Los productos SRC cuentan con una garantía de 20 días a partir de la recepción del producto. Las condiciones específicas aplicables se indican en la información correspondiente de cada producto.",
+
+                faqBuyQuestion:
+                    "¿Dónde puedo adquirir productos SRC?",
+
+                faqBuyAnswer:
+                    "Los productos SRC pueden adquirirse mediante plataformas donde se encuentren disponibles, como Mercado Libre y Alibaba, así como mediante compra directa con SRC a través de nuestros canales de contacto.",
+
+                faqInfoQuestion:
+                    "¿Dónde puedo encontrar la información de cada producto?",
+
+                faqInfoAnswer:
+                    "La información necesaria de cada producto se encuentra en su sección correspondiente dentro de Productos, incluyendo características, especificaciones, compatibilidad, recomendaciones de uso y documentación disponible.",
 
                 problemsTitle:
                     "Problemas de funcionamiento",
 
-                problemsDescription:
-                    "Encuentra orientación para identificar posibles causas y soluciones cuando un producto no funciona correctamente o presenta un comportamiento inesperado.",
+                problemsDescription1:
+                    "Si un producto no funciona correctamente, verifica primero que esté siendo utilizado de acuerdo con sus especificaciones, conexiones, alimentación, configuración y condiciones de operación indicadas en la información del producto.",
+
+                problemsDescription2:
+                    "Debido a que cada producto SRC tiene características y requisitos diferentes, las recomendaciones específicas para diagnóstico y funcionamiento se encuentran en la sección correspondiente de cada producto.",
+
+                problemsDescription3:
+                    "Si después de revisar la información del producto el problema continúa, comunícate con SRC e indica qué producto tienes y qué comportamiento presenta.",
 
                 installationTitle:
                     "Instalación y configuración",
 
-                installationDescription:
-                    "Obtén ayuda para la instalación inicial, conexiones, configuración básica y puesta en funcionamiento de productos y sistemas SRC.",
+                installationDescription1:
+                    "La información de instalación, configuración, conexiones, manuales, requisitos y software necesario, cuando aplique, se encuentra en la sección correspondiente de cada producto.",
+
+                installationDescription2:
+                    "Consulta el producto que adquiriste dentro de Productos para acceder a la información necesaria para su correcta instalación, configuración y puesta en funcionamiento.",
 
                 contactTitle:
                     "Contactar a SRC",
 
-                contactDescription:
-                    "Si no encuentras la solución que necesitas, puedes comunicarte directamente con Sakuta Robotics Company para recibir orientación y asistencia.",
+                contactDescription1:
+                    "Si después de consultar la información de tu producto y las recomendaciones de soporte necesitas asistencia adicional, puedes comunicarte directamente con Sakuta Robotics Company.",
+
+                contactDescription2:
+                    "Para facilitar la atención, indica qué producto tienes y describe la duda o problema que presenta.",
 
                 warrantyTitle:
                     "Garantía y servicio",
@@ -1693,26 +1831,59 @@
                 faqTitle:
                     "Frequently asked questions",
 
-                faqDescription:
-                    "Find answers to common questions related to the use, assembly, compatibility, operation and general characteristics of SRC products.",
+                faqNewQuestion:
+                    "Are all SRC products new?",
+
+                faqNewAnswer:
+                    "Yes. All products sold by Sakuta Robotics Company (SRC) are sold as new products.",
+
+                faqWarrantyQuestion:
+                    "How long is the product warranty?",
+
+                faqWarrantyAnswer:
+                    "SRC products include a 20-day warranty starting from the date the product is received. The specific applicable conditions are indicated in the information for each product.",
+
+                faqBuyQuestion:
+                    "Where can I purchase SRC products?",
+
+                faqBuyAnswer:
+                    "SRC products can be purchased through platforms where they are available, such as Mercado Libre and Alibaba, as well as directly from SRC through our contact channels.",
+
+                faqInfoQuestion:
+                    "Where can I find information about each product?",
+
+                faqInfoAnswer:
+                    "The information for each product is available in its corresponding section under Products, including features, specifications, compatibility, usage recommendations and available documentation.",
 
                 problemsTitle:
                     "Operating problems",
 
-                problemsDescription:
-                    "Find guidance to identify possible causes and solutions when a product does not operate correctly or presents unexpected behavior.",
+                problemsDescription1:
+                    "If a product is not operating correctly, first verify that it is being used according to the specifications, connections, power requirements, configuration and operating conditions indicated in the product information.",
+
+                problemsDescription2:
+                    "Because each SRC product has different characteristics and requirements, specific diagnostic and operating recommendations are provided in the corresponding product section.",
+
+                problemsDescription3:
+                    "If the problem continues after reviewing the product information, contact SRC and indicate which product you have and what behavior it is presenting.",
 
                 installationTitle:
                     "Installation and configuration",
 
-                installationDescription:
-                    "Get help with initial installation, connections, basic configuration and startup of SRC products and systems.",
+                installationDescription1:
+                    "Installation, configuration, connections, manuals, requirements and required software, when applicable, are provided in the corresponding section for each product.",
+
+                installationDescription2:
+                    "Open the product you purchased under Products to access the information required for proper installation, configuration and startup.",
 
                 contactTitle:
                     "Contact SRC",
 
-                contactDescription:
-                    "If you cannot find the solution you need, you can contact Sakuta Robotics Company directly for guidance and assistance.",
+                contactDescription1:
+                    "If you still need assistance after reviewing your product information and the support recommendations, you can contact Sakuta Robotics Company directly.",
+
+                contactDescription2:
+                    "To make assistance easier, indicate which product you have and describe your question or the problem you are experiencing.",
 
                 warrantyTitle:
                     "Warranty and service",
@@ -1806,26 +1977,59 @@
                 faqTitle:
                     "常见问题",
 
-                faqDescription:
-                    "查看与 SRC 产品的使用、安装、兼容性、运行和一般特性有关的常见问题解答。",
+                faqNewQuestion:
+                    "SRC 的所有产品都是全新的吗？",
+
+                faqNewAnswer:
+                    "是的。Sakuta Robotics Company（SRC）销售的所有产品均作为全新产品出售。",
+
+                faqWarrantyQuestion:
+                    "产品的保修期是多长？",
+
+                faqWarrantyAnswer:
+                    "SRC 产品自客户收到之日起提供 20 天保修。每个产品适用的具体条件会在对应产品信息中注明。",
+
+                faqBuyQuestion:
+                    "在哪里可以购买 SRC 产品？",
+
+                faqBuyAnswer:
+                    "SRC 产品可通过其上架的平台购买，例如 Mercado Libre 和 Alibaba，也可以通过我们的联系渠道直接向 SRC 购买。",
+
+                faqInfoQuestion:
+                    "在哪里可以找到每个产品的信息？",
+
+                faqInfoAnswer:
+                    "每个产品所需的信息都可在“产品”中的对应页面查看，包括功能、规格、兼容性、使用建议以及可用文档。",
 
                 problemsTitle:
                     "运行问题",
 
-                problemsDescription:
-                    "当产品无法正常工作或出现异常行为时，获取有关可能原因和解决方案的指导。",
+                problemsDescription1:
+                    "如果产品无法正常工作，请先确认其使用方式符合产品信息中注明的规格、连接方式、电源要求、配置和运行条件。",
+
+                problemsDescription2:
+                    "由于每种 SRC 产品的特性和要求不同，具体的诊断和运行建议会在对应产品页面中提供。",
+
+                problemsDescription3:
+                    "如果查看产品信息后问题仍然存在，请联系 SRC，并说明你所使用的产品以及出现的具体情况。",
 
                 installationTitle:
                     "安装和配置",
 
-                installationDescription:
-                    "获取有关 SRC 产品和系统初始安装、连接、基本配置和启动方面的帮助。",
+                installationDescription1:
+                    "每个产品的安装、配置、连接、手册、要求以及所需软件（如适用）都会在对应产品页面中提供。",
+
+                installationDescription2:
+                    "请在“产品”中打开你购买的产品，以查看正确安装、配置和投入使用所需的信息。",
 
                 contactTitle:
                     "联系 SRC",
 
-                contactDescription:
-                    "如果没有找到所需的解决方案，可以直接联系 Sakuta Robotics Company 获取指导和帮助。",
+                contactDescription1:
+                    "如果查看产品信息和支持建议后仍需要帮助，可以直接联系 Sakuta Robotics Company。",
+
+                contactDescription2:
+                    "为了便于我们提供帮助，请说明你所使用的产品，并描述你的疑问或产品出现的问题。",
 
                 warrantyTitle:
                     "保修与服务",
