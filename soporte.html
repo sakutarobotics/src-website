@@ -75,7 +75,9 @@
         .brand {
             display: flex;
             align-items: center;
+
             gap: 10px;
+
             text-decoration: none;
         }
 
@@ -84,7 +86,9 @@
             height: 70px;
 
             position: relative;
+
             overflow: hidden;
+
             flex-shrink: 0;
 
             transform: translateY(-8px);
@@ -94,6 +98,7 @@
             position: absolute;
 
             width: 118px;
+
             max-width: none;
 
             left: -27px;
@@ -105,6 +110,7 @@
         .brand-name {
             font-size: 32px;
             font-weight: 800;
+
             font-style: italic;
 
             color: var(--blue);
@@ -122,6 +128,7 @@
         nav {
             display: flex;
             align-items: center;
+
             gap: 35px;
         }
 
@@ -191,11 +198,13 @@
         .menu-dropdown > a {
             display: flex;
             align-items: center;
+
             gap: 7px;
         }
 
         .dropdown-arrow {
             font-size: 10px;
+
             transition: transform 0.25s;
         }
 
@@ -224,7 +233,9 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.10);
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
             transition: 0.20s;
@@ -232,7 +243,9 @@
 
         .menu-dropdown:hover .dropdown-menu {
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
 
             transform: translateX(-50%) translateY(0);
@@ -259,6 +272,7 @@
 
         .dropdown-menu a:hover {
             background: #f3f6fb;
+
             color: var(--blue);
         }
 
@@ -291,6 +305,7 @@
 
             display: flex;
             align-items: center;
+
             gap: 8px;
 
             transition: 0.25s;
@@ -298,6 +313,7 @@
 
         .language-button:hover {
             background: var(--blue-dark);
+
             transform: translateY(-2px);
         }
 
@@ -320,7 +336,9 @@
             box-shadow: 0 12px 30px rgba(0,0,0,0.10);
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
             transform: translateY(8px);
@@ -332,7 +350,9 @@
 
         .language-selector.open .language-options {
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
 
             transform: translateY(0);
@@ -342,6 +362,7 @@
             width: 100%;
 
             border: none;
+
             background: transparent;
 
             text-align: left;
@@ -364,6 +385,7 @@
 
         .language-options button:hover {
             background: #f3f6fb;
+
             color: var(--blue);
         }
 
@@ -373,9 +395,9 @@
         ========================================== */
 
         .support-hero {
-            min-height: 380px;
+            min-height: 420px;
 
-            padding: 78px 7% 72px;
+            padding: 100px 7% 90px;
 
             display: flex;
             align-items: center;
@@ -404,11 +426,11 @@
         .support-hero h1 {
             margin-top: 18px;
 
-            font-size: clamp(38px, 4.7vw, 58px);
+            font-size: clamp(45px, 6vw, 72px);
 
             color: var(--black);
 
-            line-height: 1.08;
+            line-height: 1;
         }
 
         .support-hero h1 strong {
@@ -418,11 +440,11 @@
         .support-hero-description {
             max-width: 760px;
 
-            margin: 25px auto 0;
+            margin: 27px auto 0;
 
             color: var(--gray);
 
-            font-size: 18px;
+            font-size: 19px;
 
             line-height: 1.7;
         }
@@ -430,9 +452,9 @@
         .technical-link {
             max-width: 760px;
 
-            margin: 20px auto 0;
+            margin: 22px auto 0;
 
-            font-size: 14px;
+            font-size: 15px;
 
             line-height: 1.6;
 
@@ -457,7 +479,7 @@
         ========================================== */
 
         .support-section {
-            padding: 80px 7% 90px;
+            padding: 95px 7% 110px;
 
             background: var(--light-gray);
         }
@@ -471,19 +493,19 @@
         .support-heading {
             text-align: center;
 
-            margin-bottom: 45px;
+            margin-bottom: 50px;
         }
 
         .support-heading h2 {
-            font-size: 34px;
+            font-size: 39px;
 
-            margin-bottom: 12px;
+            margin-bottom: 15px;
         }
 
         .support-heading p {
             color: var(--gray);
 
-            font-size: 16px;
+            font-size: 17px;
 
             line-height: 1.6;
         }
@@ -508,7 +530,7 @@
 
             border-radius: 18px;
 
-            padding: 34px;
+            padding: 36px;
 
             text-align: left;
 
@@ -548,8 +570,8 @@
         }
 
         .support-icon {
-            width: 54px;
-            height: 54px;
+            width: 55px;
+            height: 55px;
 
             border-radius: 50%;
 
@@ -561,14 +583,14 @@
 
             color: var(--blue);
 
-            margin-bottom: 22px;
+            margin-bottom: 23px;
 
             transition: 0.25s;
         }
 
         .support-icon svg {
-            width: 26px;
-            height: 26px;
+            width: 27px;
+            height: 27px;
 
             fill: none;
 
@@ -591,15 +613,15 @@
         .support-card h3 {
             color: var(--blue);
 
-            font-size: 21px;
+            font-size: 23px;
 
-            margin-bottom: 14px;
+            margin-bottom: 15px;
         }
 
         .support-card p {
             color: var(--gray);
 
-            font-size: 15px;
+            font-size: 16px;
 
             line-height: 1.7;
         }
@@ -629,21 +651,25 @@
             border-radius: 0 10px 10px 0;
         }
 
+        .warranty-highlight strong {
+            color: var(--blue);
+        }
+
 
         /* =========================================
-           CONTACTAR
+           CONTACTO
         ========================================== */
 
         .contact-support {
-            margin-top: 24px;
+            margin-top: 25px;
 
-            padding: 35px 36px;
+            padding: 45px;
 
-            background: white;
+            background: var(--blue);
 
-            border: 1px solid var(--border);
+            border-radius: 20px;
 
-            border-radius: 18px;
+            color: white;
 
             display: grid;
 
@@ -652,28 +678,18 @@
             align-items: center;
 
             gap: 40px;
-
-            transition: 0.25s;
-        }
-
-        .contact-support:hover {
-            border-color: var(--blue);
-
-            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
         }
 
         .contact-support h3 {
-            color: var(--blue);
+            font-size: 28px;
 
-            font-size: 22px;
-
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         .contact-support p {
-            color: var(--gray);
+            color: rgba(255,255,255,0.82);
 
-            font-size: 15px;
+            font-size: 16px;
 
             line-height: 1.65;
 
@@ -693,7 +709,7 @@
         .contact-button {
             text-decoration: none;
 
-            padding: 13px 21px;
+            padding: 14px 22px;
 
             border-radius: 30px;
 
@@ -707,33 +723,25 @@
         }
 
         .contact-button-primary {
-            background: var(--blue);
+            background: white;
 
-            color: white;
-
-            border: 1px solid var(--blue);
+            color: var(--blue);
         }
 
         .contact-button-primary:hover {
-            background: var(--blue-dark);
-
-            border-color: var(--blue-dark);
-
             transform: translateY(-2px);
+
+            background: #f3f6fb;
         }
 
         .contact-button-secondary {
-            color: var(--blue);
+            color: white;
 
-            border: 1px solid var(--blue);
-
-            background: white;
+            border: 1px solid rgba(255,255,255,0.55);
         }
 
         .contact-button-secondary:hover {
-            background: var(--blue);
-
-            color: white;
+            background: rgba(255,255,255,0.10);
 
             transform: translateY(-2px);
         }
@@ -746,9 +754,9 @@
         .technical-info {
             max-width: 1180px;
 
-            margin: 24px auto 0;
+            margin: 26px auto 0;
 
-            padding: 30px 34px;
+            padding: 32px 35px;
 
             border: 1px solid var(--border);
 
@@ -762,9 +770,9 @@
         .technical-info h3 {
             color: var(--blue);
 
-            font-size: 20px;
+            font-size: 21px;
 
-            margin-bottom: 10px;
+            margin-bottom: 11px;
         }
 
         .technical-info p {
@@ -772,7 +780,7 @@
 
             line-height: 1.65;
 
-            font-size: 14px;
+            font-size: 15px;
         }
 
         .technical-info a {
@@ -789,15 +797,15 @@
 
 
         /* =========================================
-           FOOTER AZUL
+           FOOTER
         ========================================== */
 
         footer {
-            background: var(--blue);
+            background: #111111;
 
             color: white;
 
-            padding: 38px 7%;
+            padding: 35px 7%;
         }
 
         .footer-content {
@@ -836,11 +844,11 @@
 
             margin-top: 4px;
 
-            color: rgba(255,255,255,0.70);
+            color: #aaaaaa;
         }
 
         .copyright {
-            color: rgba(255,255,255,0.75);
+            color: #999999;
 
             font-size: 13px;
 
@@ -917,25 +925,23 @@
             }
 
             .support-hero {
-                padding: 65px 6% 60px;
-
-                min-height: auto;
+                padding: 75px 6% 70px;
             }
 
             .support-hero h1 {
-                font-size: 38px;
+                font-size: 43px;
             }
 
             .support-hero-description {
-                font-size: 16px;
+                font-size: 17px;
             }
 
             .support-section {
-                padding: 65px 6%;
+                padding: 75px 6%;
             }
 
             .support-heading h2 {
-                font-size: 29px;
+                font-size: 32px;
             }
 
             .support-card {
@@ -943,7 +949,7 @@
             }
 
             .contact-support {
-                padding: 30px 25px;
+                padding: 35px 25px;
             }
 
             .contact-buttons {
@@ -1249,7 +1255,7 @@
 
 
 
-                <!-- PROBLEMAS -->
+                <!-- PROBLEMAS DE FUNCIONAMIENTO -->
 
                 <article class="support-card">
 
@@ -1315,7 +1321,7 @@
 
 
 
-                <!-- CONTACTO -->
+                <!-- CONTACTAR -->
 
                 <article class="support-card">
 
@@ -1413,20 +1419,20 @@
 
 
             <!-- =========================================
-                 CONTACTANOS
+                 CONTACTO DIRECTO
             ========================================== -->
 
             <div class="contact-support">
 
                 <div>
 
-                    <h3 data-i18n="directContactTitle">
-                        Contáctanos
+                    <h3 data-i18n="stillNeedHelp">
+                        ¿Aún necesitas ayuda?
                     </h3>
 
-                    <p data-i18n="directContactDescription">
-                        Si necesitas asistencia adicional, puedes comunicarte
-                        directamente con SRC a través de nuestros canales de contacto.
+                    <p data-i18n="stillNeedHelpDescription">
+                        Comunícate directamente con SRC para recibir orientación
+                        relacionada con nuestros productos y sistemas.
                     </p>
 
                 </div>
@@ -1616,11 +1622,11 @@
                 warrantyParagraph5:
                     "En productos adquiridos mediante Mercado Libre, también podrán aplicar las políticas y procedimientos correspondientes de la plataforma. En compras realizadas mediante envío directo, la atención será gestionada directamente por SRC.",
 
-                directContactTitle:
-                    "Contáctanos",
+                stillNeedHelp:
+                    "¿Aún necesitas ayuda?",
 
-                directContactDescription:
-                    "Si necesitas asistencia adicional, puedes comunicarte directamente con SRC a través de nuestros canales de contacto.",
+                stillNeedHelpDescription:
+                    "Comunícate directamente con SRC para recibir orientación relacionada con nuestros productos y sistemas.",
 
                 emailButton:
                     "Correo electrónico",
@@ -1718,11 +1724,11 @@
                 warrantyParagraph5:
                     "For products purchased through Mercado Libre, the platform's applicable policies and procedures may also apply. For purchases made through direct shipping, assistance will be managed directly by SRC.",
 
-                directContactTitle:
-                    "Contact us",
+                stillNeedHelp:
+                    "Still need help?",
 
-                directContactDescription:
-                    "If you need additional assistance, you can contact SRC directly through our communication channels.",
+                stillNeedHelpDescription:
+                    "Contact SRC directly for assistance related to our products and systems.",
 
                 emailButton:
                     "Email",
@@ -1831,11 +1837,11 @@
                 warrantyParagraph5:
                     "通过 Mercado Libre 购买的产品还可能适用该平台相应的政策和流程。通过直接配送购买的产品将由 SRC 直接提供服务。",
 
-                directContactTitle:
-                    "联系我们",
+                stillNeedHelp:
+                    "仍然需要帮助吗？",
 
-                directContactDescription:
-                    "如果需要更多帮助，可以通过我们的联系渠道直接与 SRC 联系。",
+                stillNeedHelpDescription:
+                    "直接联系 SRC，获取有关我们产品和系统的帮助。",
 
                 emailButton:
                     "电子邮件",
