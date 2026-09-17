@@ -12,12 +12,17 @@
 
     <title>Productos | SAKUTA Robotics Company</title>
 
-    <!-- FAVICON SRC -->
+
+    <!-- =========================================================
+         FAVICON SRC
+    ========================================================== -->
+
     <link
         rel="icon"
         type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='white'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-family='Arial,sans-serif' font-size='39' font-weight='900' fill='%2324579b'%3ESRC%3C/text%3E%3C/svg%3E"
     >
+
 
     <style>
 
@@ -52,36 +57,50 @@
 
 
         * {
+
             margin: 0;
             padding: 0;
+
             box-sizing: border-box;
+
         }
 
 
         html {
+
             scroll-behavior: smooth;
+
         }
 
 
         body {
 
-            font-family: Arial, Helvetica, sans-serif;
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
 
-            background: white;
+            background:
+                var(--white);
 
-            color: var(--black);
+            color:
+                var(--black);
 
         }
 
 
         body.modal-open {
+
             overflow: hidden;
+
         }
 
 
         button,
         a {
+
             font-family: inherit;
+
         }
 
 
@@ -97,15 +116,19 @@
 
             background: white;
 
-            border-bottom: 1px solid #e8e8e8;
+            border-bottom:
+                1px solid #e8e8e8;
 
             display: flex;
+
             align-items: center;
             justify-content: space-between;
 
-            padding: 0 7%;
+            padding:
+                0 7%;
 
             position: sticky;
+
             top: 0;
 
             z-index: 1000;
@@ -121,6 +144,7 @@
         .brand {
 
             display: flex;
+
             align-items: center;
 
             gap: 10px;
@@ -141,7 +165,8 @@
 
             flex-shrink: 0;
 
-            transform: translateY(-8px);
+            transform:
+                translateY(-8px);
 
         }
 
@@ -164,10 +189,13 @@
 
         .brand-name {
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
             font-size: 32px;
+
             font-weight: 800;
+
             font-style: italic;
 
             letter-spacing: -1px;
@@ -185,6 +213,7 @@
         nav {
 
             display: flex;
+
             align-items: center;
 
             gap: 35px;
@@ -195,11 +224,13 @@
         nav > a,
         .menu-dropdown > a {
 
-            color: var(--black);
+            color:
+                var(--black);
 
             text-decoration: none;
 
             font-size: 16px;
+
             font-weight: 600;
 
             position: relative;
@@ -212,7 +243,8 @@
         nav > a:hover,
         .menu-dropdown > a:hover {
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
         }
 
@@ -230,7 +262,8 @@
             width: 0;
             height: 2px;
 
-            background: var(--blue);
+            background:
+                var(--blue);
 
             transition: 0.25s;
 
@@ -255,6 +288,7 @@
             position: relative;
 
             display: flex;
+
             align-items: center;
 
             height: 82px;
@@ -265,6 +299,7 @@
         .menu-dropdown > a {
 
             display: flex;
+
             align-items: center;
 
             gap: 7px;
@@ -276,14 +311,17 @@
 
             font-size: 10px;
 
-            transition: transform 0.25s;
+            transition:
+                transform 0.25s;
 
         }
 
 
-        .menu-dropdown:hover .dropdown-arrow {
+        .menu-dropdown:hover
+        .dropdown-arrow {
 
-            transform: rotate(180deg);
+            transform:
+                rotate(180deg);
 
         }
 
@@ -303,17 +341,21 @@
 
             background: white;
 
-            border: 1px solid #e9e9e9;
+            border:
+                1px solid #e9e9e9;
+
             border-radius: 12px;
 
             padding: 8px;
 
             box-shadow:
                 0 12px 30px
-                rgba(0,0,0,0.10);
+                rgba(0, 0, 0, 0.10);
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
             transition: 0.2s;
@@ -321,10 +363,13 @@
         }
 
 
-        .menu-dropdown:hover .dropdown-menu {
+        .menu-dropdown:hover
+        .dropdown-menu {
 
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
 
             transform:
@@ -338,15 +383,18 @@
 
             display: block;
 
-            padding: 13px 15px;
+            padding:
+                13px 15px;
 
             border-radius: 8px;
 
             text-decoration: none;
 
-            color: var(--black);
+            color:
+                var(--black);
 
             font-size: 15px;
+
             font-weight: 600;
 
             white-space: nowrap;
@@ -358,20 +406,24 @@
 
         .dropdown-menu a:hover {
 
-            background: #f3f6fb;
+            background:
+                #f3f6fb;
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
         }
 
 
 
         /* =========================================================
-           IDIOMA DE LA PÁGINA
+           IDIOMA
         ========================================================== */
 
         .language-selector {
+
             position: relative;
+
         }
 
 
@@ -379,20 +431,24 @@
 
             border: none;
 
-            background: var(--blue);
+            background:
+                var(--blue);
 
             color: white;
 
-            padding: 13px 24px;
+            padding:
+                13px 24px;
 
             border-radius: 30px;
 
             font-size: 15px;
+
             font-weight: bold;
 
             cursor: pointer;
 
             display: flex;
+
             align-items: center;
 
             gap: 8px;
@@ -404,9 +460,11 @@
 
         .language-button:hover {
 
-            background: var(--blue-dark);
+            background:
+                var(--blue-dark);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
 
@@ -422,20 +480,25 @@
 
             background: white;
 
-            border: 1px solid #e8e8e8;
+            border:
+                1px solid #e8e8e8;
+
             border-radius: 12px;
 
             padding: 8px;
 
             box-shadow:
                 0 12px 30px
-                rgba(0,0,0,0.10);
+                rgba(0, 0, 0, 0.10);
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
-            transform: translateY(8px);
+            transform:
+                translateY(8px);
 
             transition: 0.2s;
 
@@ -444,13 +507,17 @@
         }
 
 
-        .language-selector.open .language-options {
+        .language-selector.open
+        .language-options {
 
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
 
-            transform: translateY(0);
+            transform:
+                translateY(0);
 
         }
 
@@ -465,25 +532,32 @@
 
             text-align: left;
 
-            padding: 12px 13px;
+            padding:
+                12px 13px;
 
             border-radius: 8px;
 
             font-size: 14px;
+
             font-weight: 600;
 
-            color: var(--black);
+            color:
+                var(--black);
 
             cursor: pointer;
+
+            transition: 0.2s;
 
         }
 
 
         .language-options button:hover {
 
-            background: #f3f6fb;
+            background:
+                #f3f6fb;
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
         }
 
@@ -495,7 +569,10 @@
 
         .page-hero {
 
-            padding: 100px 7% 75px;
+            padding:
+                100px
+                7%
+                75px;
 
             text-align: center;
 
@@ -518,9 +595,14 @@
             margin-top: 16px;
 
             font-size:
-                clamp(48px, 7vw, 82px);
+                clamp(
+                    48px,
+                    7vw,
+                    82px
+                );
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
             font-style: italic;
 
@@ -531,9 +613,13 @@
 
             max-width: 820px;
 
-            margin: 22px auto 0;
+            margin:
+                22px
+                auto
+                0;
 
-            color: var(--gray);
+            color:
+                var(--gray);
 
             font-size: 19px;
 
@@ -549,9 +635,13 @@
 
         .catalog {
 
-            background: var(--gray-light);
+            background:
+                var(--gray-light);
 
-            padding: 70px 7% 110px;
+            padding:
+                70px
+                7%
+                110px;
 
         }
 
@@ -561,6 +651,7 @@
             max-width: 1180px;
 
             margin: auto;
+
             margin-bottom: 38px;
 
         }
@@ -568,9 +659,11 @@
 
         .catalog-label {
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
             font-size: 12px;
+
             font-weight: 800;
 
             letter-spacing: 4px;
@@ -583,7 +676,11 @@
             margin-top: 12px;
 
             font-size:
-                clamp(32px, 4vw, 48px);
+                clamp(
+                    32px,
+                    4vw,
+                    48px
+                );
 
             letter-spacing: -1px;
 
@@ -596,7 +693,8 @@
 
             margin-top: 14px;
 
-            color: var(--gray);
+            color:
+                var(--gray);
 
             font-size: 17px;
 
@@ -614,24 +712,33 @@
 
             max-width: 1180px;
 
-            margin: 0 auto 38px;
+            margin:
+                0
+                auto
+                38px;
 
             padding: 24px;
 
             background: white;
 
-            border: 1px solid var(--border);
+            border:
+                1px solid
+                var(--border);
+
             border-radius: 18px;
 
         }
 
 
-        .filter-group + .filter-group {
+        .filter-group
+        + .filter-group {
 
             margin-top: 23px;
+
             padding-top: 23px;
 
-            border-top: 1px solid #eeeeee;
+            border-top:
+                1px solid #eeeeee;
 
         }
 
@@ -645,6 +752,7 @@
             color: #333;
 
             font-size: 13px;
+
             font-weight: 800;
 
             letter-spacing: 1.2px;
@@ -657,6 +765,7 @@
         .filters {
 
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 10px;
@@ -666,17 +775,20 @@
 
         .filter-button {
 
-            padding: 11px 19px;
+            padding:
+                11px 19px;
 
             border-radius: 999px;
 
-            border: 1px solid #d8dce2;
+            border:
+                1px solid #d8dce2;
 
             background: white;
 
             color: #333;
 
             font-size: 13px;
+
             font-weight: 700;
 
             cursor: pointer;
@@ -687,12 +799,17 @@
 
 
 
-        /* ÁREA */
+        /* =========================================================
+           FILTROS DE ÁREA
+        ========================================================== */
 
         .area-filter[data-area-filter="all"].active {
 
-            background: var(--blue);
-            border-color: var(--blue);
+            background:
+                var(--blue);
+
+            border-color:
+                var(--blue);
 
             color: white;
 
@@ -701,17 +818,33 @@
 
         .area-filter[data-area-filter="education"] {
 
-            border-color: var(--education-border);
+            border-color:
+                var(--education-border);
 
-            color: var(--education);
+            color:
+                var(--education);
+
+        }
+
+
+        .area-filter[data-area-filter="education"]:hover {
+
+            background:
+                var(--education-soft);
+
+            border-color:
+                var(--education);
 
         }
 
 
         .area-filter[data-area-filter="education"].active {
 
-            background: var(--education);
-            border-color: var(--education);
+            background:
+                var(--education);
+
+            border-color:
+                var(--education);
 
             color: white;
 
@@ -720,17 +853,33 @@
 
         .area-filter[data-area-filter="industry"] {
 
-            border-color: var(--industry-border);
+            border-color:
+                var(--industry-border);
 
-            color: var(--industry);
+            color:
+                var(--industry);
+
+        }
+
+
+        .area-filter[data-area-filter="industry"]:hover {
+
+            background:
+                var(--industry-soft);
+
+            border-color:
+                var(--industry);
 
         }
 
 
         .area-filter[data-area-filter="industry"].active {
 
-            background: var(--industry);
-            border-color: var(--industry);
+            background:
+                var(--industry);
+
+            border-color:
+                var(--industry);
 
             color: white;
 
@@ -738,30 +887,39 @@
 
 
 
-        /* TIPO */
+        /* =========================================================
+           FILTROS DE TIPO
+        ========================================================== */
 
         .type-filter {
 
-            border-color: var(--type-border);
+            color:
+                var(--type-blue);
 
-            color: var(--type-blue);
+            border-color:
+                var(--type-border);
 
         }
 
 
         .type-filter:hover {
 
-            background: var(--type-soft);
+            background:
+                var(--type-soft);
 
-            border-color: var(--type-blue);
+            border-color:
+                var(--type-blue);
 
         }
 
 
         .type-filter.active {
 
-            background: var(--type-blue);
-            border-color: var(--type-blue);
+            background:
+                var(--type-blue);
+
+            border-color:
+                var(--type-blue);
 
             color: white;
 
@@ -780,6 +938,7 @@
             margin: auto;
 
             display: flex;
+
             flex-direction: column;
 
             gap: 18px;
@@ -791,7 +950,9 @@
 
             background: white;
 
-            border: 1px solid var(--border);
+            border:
+                1px solid
+                var(--border);
 
             border-radius: 20px;
 
@@ -806,25 +967,28 @@
 
         .product-item:hover {
 
-            border-color: #c6d2e0;
+            border-color:
+                #c6d2e0;
 
             box-shadow:
                 0 12px 30px
-                rgba(0,0,0,0.045);
+                rgba(0, 0, 0, 0.045);
 
         }
 
 
         .product-item[data-area="education"].open {
 
-            border-color: var(--education);
+            border-color:
+                var(--education);
 
         }
 
 
         .product-item[data-area="industry"].open {
 
-            border-color: var(--industry);
+            border-color:
+                var(--industry);
 
         }
 
@@ -833,19 +997,21 @@
 
             box-shadow:
                 0 18px 45px
-                rgba(0,0,0,0.07);
+                rgba(0, 0, 0, 0.07);
 
         }
 
 
         .product-item.is-hidden {
+
             display: none;
+
         }
 
 
 
         /* =========================================================
-           PARTE COMPACTA
+           PRODUCTO COMPACTO
         ========================================================== */
 
         .product-toggle {
@@ -879,11 +1045,13 @@
 
             border-radius: 14px;
 
-            background: #fafafa;
+            background:
+                #fafafa;
 
             overflow: hidden;
 
             display: flex;
+
             align-items: center;
             justify-content: center;
 
@@ -897,14 +1065,17 @@
 
             object-fit: contain;
 
-            transition: transform 0.35s;
+            transition:
+                transform 0.35s;
 
         }
 
 
-        .product-item:hover .product-image img {
+        .product-item:hover
+        .product-image img {
 
-            transform: scale(1.04);
+            transform:
+                scale(1.04);
 
         }
 
@@ -917,6 +1088,7 @@
         .badges {
 
             display: flex;
+
             flex-wrap: wrap;
 
             align-items: center;
@@ -933,11 +1105,13 @@
 
             align-items: center;
 
-            padding: 7px 11px;
+            padding:
+                7px 11px;
 
             border-radius: 999px;
 
             font-size: 10px;
+
             font-weight: 800;
 
             letter-spacing: 0.9px;
@@ -952,13 +1126,15 @@
         .product-item[data-area="education"]
         .area-badge {
 
-            background: var(--education-soft);
+            background:
+                var(--education-soft);
 
             border:
                 1px solid
                 var(--education-border);
 
-            color: var(--education);
+            color:
+                var(--education);
 
         }
 
@@ -966,29 +1142,38 @@
         .product-item[data-area="industry"]
         .area-badge {
 
-            background: var(--industry-soft);
+            background:
+                var(--industry-soft);
 
             border:
                 1px solid
                 var(--industry-border);
 
-            color: var(--industry);
+            color:
+                var(--industry);
 
         }
 
 
         .type-badge {
 
-            background: var(--type-soft);
+            background:
+                var(--type-soft);
 
             border:
                 1px solid
                 var(--type-border);
 
-            color: var(--type-blue);
+            color:
+                var(--type-blue);
 
         }
 
+
+
+        /* =========================================================
+           TÍTULO Y CÓDIGO
+        ========================================================== */
 
         .product-summary {
 
@@ -1008,15 +1193,34 @@
         }
 
 
+        .product-code {
+
+            display: block;
+
+            margin-top: 3px;
+
+            color:
+                var(--blue);
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+        }
+
+
         .product-summary p {
 
-            margin-top: 8px;
+            margin-top: 9px;
 
-            color: var(--gray);
+            color:
+                var(--gray);
 
-            font-size: 16px;
+            font-size: 15px;
 
-            line-height: 1.5;
+            line-height: 1.55;
 
         }
 
@@ -1033,6 +1237,7 @@
             display: flex;
 
             align-items: center;
+
             justify-content: flex-end;
 
             gap: 11px;
@@ -1040,6 +1245,7 @@
             color: #404040;
 
             font-size: 14px;
+
             font-weight: 800;
 
         }
@@ -1052,9 +1258,11 @@
 
             border-radius: 50%;
 
-            background: var(--neutral-soft);
+            background:
+                var(--neutral-soft);
 
-            color: var(--neutral);
+            color:
+                var(--neutral);
 
             display: flex;
 
@@ -1071,11 +1279,14 @@
         }
 
 
-        .product-item.open .circle-arrow {
+        .product-item.open
+        .circle-arrow {
 
-            transform: rotate(180deg);
+            transform:
+                rotate(180deg);
 
-            background: #333;
+            background:
+                #333333;
 
             color: white;
 
@@ -1100,7 +1311,8 @@
         }
 
 
-        .product-item.open .product-details {
+        .product-item.open
+        .product-details {
 
             grid-template-rows: 1fr;
 
@@ -1151,9 +1363,10 @@
         }
 
 
-        .placeholder-text {
+        .detail-text {
 
-            color: var(--gray);
+            color:
+                var(--gray);
 
             font-size: 16px;
 
@@ -1185,32 +1398,119 @@
 
         .information-block h4 {
 
-            margin-bottom: 10px;
+            margin-bottom: 12px;
 
-            font-size: 16px;
+            color: #252525;
+
+            font-size: 17px;
 
         }
 
 
-        .placeholder-list {
+        .detail-list {
 
             padding-left: 19px;
 
-            color: var(--gray);
+            color:
+                var(--gray);
 
-            line-height: 1.9;
+            line-height: 1.85;
+
+        }
+
+
+        .detail-list li::marker {
+
+            color:
+                var(--blue);
 
         }
 
 
 
         /* =========================================================
-           IMAGEN GRANDE
+           ESPECIFICACIONES
+        ========================================================== */
+
+        .spec-list {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 0;
+
+            border:
+                1px solid #e4e7eb;
+
+            border-radius: 12px;
+
+            overflow: hidden;
+
+            background:
+                #fafbfc;
+
+        }
+
+
+        .spec-row {
+
+            display: grid;
+
+            grid-template-columns:
+                minmax(150px, 0.8fr)
+                1.2fr;
+
+            gap: 15px;
+
+            padding:
+                11px 14px;
+
+            border-bottom:
+                1px solid #e8eaed;
+
+        }
+
+
+        .spec-row:last-child {
+
+            border-bottom: none;
+
+        }
+
+
+        .spec-label {
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            color: #333;
+
+        }
+
+
+        .spec-value {
+
+            font-size: 13px;
+
+            color:
+                var(--gray);
+
+            line-height: 1.45;
+
+        }
+
+
+
+        /* =========================================================
+           IMÁGENES DETALLES
         ========================================================== */
 
         .details-media {
 
             display: flex;
+
             flex-direction: column;
 
             gap: 14px;
@@ -1247,7 +1547,8 @@
 
             padding: 28px;
 
-            background: #f8fafc;
+            background:
+                #f8fafc;
 
             border:
                 1px solid #e2e7ed;
@@ -1268,7 +1569,8 @@
 
             margin-top: 7px;
 
-            color: var(--gray);
+            color:
+                var(--gray);
 
             font-size: 14px;
 
@@ -1317,17 +1619,21 @@
 
             display: inline-flex;
 
-            padding: 5px 8px;
+            padding:
+                5px 8px;
 
             margin-bottom: 13px;
 
-            background: var(--blue-soft);
+            background:
+                var(--blue-soft);
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
             border-radius: 7px;
 
             font-size: 10px;
+
             font-weight: 800;
 
             letter-spacing: 1px;
@@ -1348,7 +1654,8 @@
 
             min-height: 42px;
 
-            color: var(--gray);
+            color:
+                var(--gray);
 
             font-size: 13px;
 
@@ -1362,6 +1669,7 @@
             margin-top: 17px;
 
             display: flex;
+
             flex-wrap: wrap;
 
             gap: 8px;
@@ -1373,13 +1681,15 @@
 
             border: none;
 
-            padding: 10px 14px;
+            padding:
+                10px 14px;
 
             border-radius: 8px;
 
             cursor: pointer;
 
             font-size: 13px;
+
             font-weight: 700;
 
             transition: 0.25s;
@@ -1389,7 +1699,8 @@
 
         .resource-button.primary {
 
-            background: var(--blue);
+            background:
+                var(--blue);
 
             color: white;
 
@@ -1398,9 +1709,11 @@
 
         .resource-button.primary:hover {
 
-            background: var(--blue-dark);
+            background:
+                var(--blue-dark);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
 
@@ -1409,7 +1722,8 @@
 
             background: white;
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
             border:
                 1px solid #cad5e4;
@@ -1419,15 +1733,19 @@
 
         .resource-button.secondary:hover {
 
-            border-color: var(--blue);
+            border-color:
+                var(--blue);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
 
 
 
-        /* STL */
+        /* =========================================================
+           STL
+        ========================================================== */
 
         .stl-card {
 
@@ -1444,25 +1762,32 @@
         }
 
 
-        .stl-card .resource-file-type {
+        .stl-card
+        .resource-file-type {
 
-            background: var(--education-soft);
+            background:
+                var(--education-soft);
 
-            color: var(--education);
-
-        }
-
-
-        .stl-card .resource-button.primary {
-
-            background: var(--education);
+            color:
+                var(--education);
 
         }
 
 
-        .stl-card .resource-button.primary:hover {
+        .stl-card
+        .resource-button.primary {
 
-            background: #5e47ae;
+            background:
+                var(--education);
+
+        }
+
+
+        .stl-card
+        .resource-button.primary:hover {
+
+            background:
+                #5e47ae;
 
         }
 
@@ -1473,9 +1798,11 @@
 
             margin-top: 11px;
 
-            color: var(--education);
+            color:
+                var(--education);
 
             font-size: 12px;
+
             font-weight: 700;
 
         }
@@ -1483,7 +1810,7 @@
 
 
         /* =========================================================
-           MODAL DE IDIOMA PARA FICHAS
+           MODAL DE IDIOMA PDF
         ========================================================== */
 
         .document-modal {
@@ -1493,9 +1820,18 @@
             inset: 0;
 
             background:
-                rgba(12,18,27,0.55);
+                rgba(
+                    12,
+                    18,
+                    27,
+                    0.55
+                );
 
-            backdrop-filter: blur(4px);
+            backdrop-filter:
+                blur(4px);
+
+            -webkit-backdrop-filter:
+                blur(4px);
 
             display: flex;
 
@@ -1505,7 +1841,9 @@
             padding: 20px;
 
             opacity: 0;
+
             visibility: hidden;
+
             pointer-events: none;
 
             transition: 0.25s;
@@ -1518,7 +1856,9 @@
         .document-modal.open {
 
             opacity: 1;
+
             visibility: visible;
+
             pointer-events: auto;
 
         }
@@ -1526,7 +1866,11 @@
 
         .document-modal-box {
 
-            width: min(460px, 100%);
+            width:
+                min(
+                    460px,
+                    100%
+                );
 
             background: white;
 
@@ -1534,7 +1878,12 @@
 
             box-shadow:
                 0 25px 70px
-                rgba(0,0,0,0.22);
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.22
+                );
 
             padding: 28px;
 
@@ -1557,7 +1906,8 @@
 
             border-radius: 50%;
 
-            background: #f1f2f4;
+            background:
+                #f1f2f4;
 
             color: #333;
 
@@ -1575,9 +1925,11 @@
 
             border-radius: 14px;
 
-            background: var(--blue-soft);
+            background:
+                var(--blue-soft);
 
-            color: var(--blue);
+            color:
+                var(--blue);
 
             display: flex;
 
@@ -1585,6 +1937,7 @@
             justify-content: center;
 
             font-size: 16px;
+
             font-weight: 800;
 
             margin-bottom: 19px;
@@ -1605,7 +1958,8 @@
 
             margin-top: 10px;
 
-            color: var(--gray);
+            color:
+                var(--gray);
 
             line-height: 1.6;
 
@@ -1643,6 +1997,7 @@
             cursor: pointer;
 
             display: flex;
+
             flex-direction: column;
 
             align-items: center;
@@ -1651,6 +2006,7 @@
             gap: 8px;
 
             font-size: 15px;
+
             font-weight: 700;
 
             transition: 0.25s;
@@ -1660,9 +2016,11 @@
 
         .document-language-button:hover {
 
-            border-color: var(--blue);
+            border-color:
+                var(--blue);
 
-            transform: translateY(-2px);
+            transform:
+                translateY(-2px);
 
         }
 
@@ -1685,7 +2043,10 @@
 
             max-width: 1180px;
 
-            margin: 30px auto 0;
+            margin:
+                30px
+                auto
+                0;
 
             padding: 35px;
 
@@ -1699,7 +2060,8 @@
 
             text-align: center;
 
-            color: var(--gray);
+            color:
+                var(--gray);
 
         }
 
@@ -1718,11 +2080,14 @@
 
         footer {
 
-            padding: 42px 7%;
+            padding:
+                42px 7%;
 
-            background: #10151c;
+            background:
+                #10151c;
 
-            color: #d4d8de;
+            color:
+                #d4d8de;
 
             text-align: center;
 
@@ -1746,7 +2111,9 @@
         @media (max-width: 950px) {
 
             nav {
+
                 display: none;
+
             }
 
 
@@ -1768,13 +2135,18 @@
             }
 
 
-            .expand-control span:first-child {
+            .expand-control
+            span:first-child {
+
                 display: none;
+
             }
 
 
             .expand-control {
+
                 min-width: auto;
+
             }
 
 
@@ -1815,6 +2187,19 @@
                 width: 52px;
                 height: 58px;
 
+                transform:
+                    translateY(-7px);
+
+            }
+
+
+            .brand-logo-crop img {
+
+                width: 100px;
+
+                left: -23px;
+                top: -8px;
+
             }
 
 
@@ -1827,7 +2212,8 @@
 
             .language-button {
 
-                padding: 11px 14px;
+                padding:
+                    11px 14px;
 
                 font-size: 13px;
 
@@ -1861,6 +2247,16 @@
             }
 
 
+            .filter-button {
+
+                padding:
+                    9px 13px;
+
+                font-size: 12px;
+
+            }
+
+
             .product-toggle {
 
                 padding: 15px;
@@ -1886,16 +2282,28 @@
             .area-badge,
             .type-badge {
 
-                padding: 5px 7px;
+                padding:
+                    5px 7px;
 
                 font-size: 8px;
+
+                letter-spacing: 0.4px;
 
             }
 
 
             .product-summary h2 {
 
+                margin-top: 8px;
+
                 font-size: 21px;
+
+            }
+
+
+            .product-summary p {
+
+                font-size: 14px;
 
             }
 
@@ -1914,6 +2322,16 @@
                     10px
                     20px
                     28px;
+
+            }
+
+
+            .spec-row {
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 4px;
 
             }
 
@@ -1948,6 +2366,60 @@
 
         }
 
+
+
+        @media (max-width: 430px) {
+
+            .brand-name {
+
+                font-size: 21px;
+
+            }
+
+
+            .language-button {
+
+                padding:
+                    10px 12px;
+
+            }
+
+
+            .language-button span {
+
+                display: none;
+
+            }
+
+
+            .product-toggle {
+
+                grid-template-columns:
+                    82px
+                    1fr
+                    34px;
+
+                gap: 11px;
+
+            }
+
+
+            .product-image {
+
+                width: 82px;
+                height: 82px;
+
+            }
+
+
+            .product-summary h2 {
+
+                font-size: 19px;
+
+            }
+
+        }
+
     </style>
 
 </head>
@@ -1956,11 +2428,13 @@
 <body>
 
 
+
 <!-- =========================================================
      HEADER
 ========================================================== -->
 
 <header>
+
 
     <a
         class="brand"
@@ -1987,12 +2461,14 @@
 
     <nav>
 
+
         <a
             href="index.html#inicio"
             data-i18n="navHome"
         >
             Inicio
         </a>
+
 
 
         <div class="menu-dropdown">
@@ -2041,6 +2517,7 @@
         </div>
 
 
+
         <a
             href="index.html#aplicaciones"
             data-i18n="navApplications"
@@ -2055,6 +2532,7 @@
         >
             Soporte
         </a>
+
 
 
         <div class="menu-dropdown">
@@ -2092,6 +2570,7 @@
 
         </div>
 
+
     </nav>
 
 
@@ -2120,21 +2599,31 @@
 
         <div class="language-options">
 
-            <button type="button" data-language="es">
+            <button
+                type="button"
+                data-language="es"
+            >
                 🇲🇽 Español
             </button>
 
-            <button type="button" data-language="en">
+            <button
+                type="button"
+                data-language="en"
+            >
                 🇺🇸 English
             </button>
 
-            <button type="button" data-language="zh">
+            <button
+                type="button"
+                data-language="zh"
+            >
                 🇨🇳 中文
             </button>
 
         </div>
 
     </div>
+
 
 </header>
 
@@ -2154,12 +2643,16 @@
     </span>
 
 
-    <h1 data-i18n="pageTitle">
+    <h1
+        data-i18n="pageTitle"
+    >
         Productos
     </h1>
 
 
-    <p data-i18n="pageDescription">
+    <p
+        data-i18n="pageDescription"
+    >
 
         Explora los productos desarrollados por SRC para las áreas
         de educación, investigación, robótica y automatización industrial.
@@ -2179,6 +2672,7 @@
     id="catalogo"
 >
 
+
     <div class="catalog-header">
 
         <span
@@ -2189,23 +2683,27 @@
         </span>
 
 
-        <h2 data-i18n="catalogTitle">
+        <h2
+            data-i18n="catalogTitle"
+        >
             Nuestros productos
         </h2>
 
 
-        <p data-i18n="catalogDescription">
-
-            Explora el catálogo utilizando los filtros por área
-            de aplicación y tipo de producto.
-
+        <p
+            data-i18n="catalogDescription"
+        >
+            Explora el catálogo utilizando los filtros por área de aplicación
+            y tipo de producto.
         </p>
 
     </div>
 
 
 
-    <!-- FILTROS -->
+    <!-- =====================================================
+         FILTROS
+    ====================================================== -->
 
     <div class="filters-wrapper">
 
@@ -2322,9 +2820,14 @@
 
         </div>
 
+
     </div>
 
 
+
+    <!-- =====================================================
+         PRODUCTOS GENERADOS POR JAVASCRIPT
+    ====================================================== -->
 
     <div
         class="products-list"
@@ -2337,17 +2840,16 @@
     <div
         class="no-results"
         id="noResults"
-        data-i18n="noResults"
     >
-        No hay productos disponibles con esta combinación de filtros.
     </div>
+
 
 </section>
 
 
 
 <!-- =========================================================
-     MODAL IDIOMA PDF
+     MODAL PARA SELECCIONAR PDF ESPAÑOL / INGLÉS
 ========================================================== -->
 
 <div
@@ -2355,7 +2857,11 @@
     id="documentModal"
 >
 
-    <div class="document-modal-box">
+    <div
+        class="document-modal-box"
+        role="dialog"
+        aria-modal="true"
+    >
 
         <button
             class="document-modal-close"
@@ -2371,17 +2877,15 @@
         </div>
 
 
-        <h3 data-i18n="documentLanguageTitle">
-
-            Selecciona el idioma del documento
-
+        <h3
+            id="documentModalTitle"
+        >
         </h3>
 
 
-        <p data-i18n="documentLanguageDescription">
-
-            Elige la versión que deseas consultar o descargar.
-
+        <p
+            id="documentModalDescription"
+        >
         </p>
 
 
@@ -2424,6 +2928,10 @@
 
 
 
+<!-- =========================================================
+     FOOTER
+========================================================== -->
+
 <footer>
 
     <strong>
@@ -2442,21 +2950,34 @@
 
 
 /* =========================================================
-   TRADUCCIONES
+   INTERFAZ / TRADUCCIONES GENERALES
 ========================================================== */
 
 const translations = {
 
+
     es: {
 
-        navHome: "Inicio",
-        navProducts: "Productos",
-        navApplications: "Aplicaciones",
-        navSupport: "Soporte",
-        navCompany: "Empresa",
+        navHome:
+            "Inicio",
 
-        aboutUs: "Acerca de nosotros",
-        contactUs: "Contáctanos",
+        navProducts:
+            "Productos",
+
+        navApplications:
+            "Aplicaciones",
+
+        navSupport:
+            "Soporte",
+
+        navCompany:
+            "Empresa",
+
+        aboutUs:
+            "Acerca de nosotros",
+
+        contactUs:
+            "Contáctanos",
 
         companyLabel:
             "SAKUTA ROBOTICS COMPANY",
@@ -2512,12 +3033,6 @@ const translations = {
         industryCategory:
             "Semi-industria e industria",
 
-        placeholderTitle:
-            "Título",
-
-        placeholderDescription:
-            "Descripción",
-
         viewDetails:
             "Ver detalles",
 
@@ -2527,19 +3042,10 @@ const translations = {
         featuresTitle:
             "Características",
 
-        placeholderFeature:
-            "Característica",
-
         specificationsTitle:
             "Especificaciones",
 
-        placeholderSpecifications:
-            "Especificaciones",
-
         applicationsTitle:
-            "Aplicaciones",
-
-        placeholderApplications:
             "Aplicaciones",
 
         resourcesTitle:
@@ -2591,7 +3097,7 @@ const translations = {
             "Idioma",
 
         unavailable:
-            "Este archivo todavía no ha sido agregado.",
+            "Este archivo todavía no está disponible.",
 
         noResults:
             "No hay productos disponibles con esta combinación de filtros.",
@@ -2605,16 +3111,29 @@ const translations = {
     },
 
 
+
     en: {
 
-        navHome: "Home",
-        navProducts: "Products",
-        navApplications: "Applications",
-        navSupport: "Support",
-        navCompany: "Company",
+        navHome:
+            "Home",
 
-        aboutUs: "About us",
-        contactUs: "Contact us",
+        navProducts:
+            "Products",
+
+        navApplications:
+            "Applications",
+
+        navSupport:
+            "Support",
+
+        navCompany:
+            "Company",
+
+        aboutUs:
+            "About us",
+
+        contactUs:
+            "Contact us",
 
         companyLabel:
             "SAKUTA ROBOTICS COMPANY",
@@ -2670,12 +3189,6 @@ const translations = {
         industryCategory:
             "Semi-industrial and industrial",
 
-        placeholderTitle:
-            "Title",
-
-        placeholderDescription:
-            "Description",
-
         viewDetails:
             "View details",
 
@@ -2685,19 +3198,10 @@ const translations = {
         featuresTitle:
             "Features",
 
-        placeholderFeature:
-            "Feature",
-
         specificationsTitle:
             "Specifications",
 
-        placeholderSpecifications:
-            "Specifications",
-
         applicationsTitle:
-            "Applications",
-
-        placeholderApplications:
             "Applications",
 
         resourcesTitle:
@@ -2725,7 +3229,7 @@ const translations = {
             "STL files",
 
         stlDescription:
-            "3D printable files for the product components.",
+            "3D files for the product components.",
 
         viewPdf:
             "View PDF",
@@ -2749,7 +3253,7 @@ const translations = {
             "Language",
 
         unavailable:
-            "This file has not been added yet.",
+            "This file is not available yet.",
 
         noResults:
             "No products are available with this filter combination.",
@@ -2763,16 +3267,29 @@ const translations = {
     },
 
 
+
     zh: {
 
-        navHome: "首页",
-        navProducts: "产品",
-        navApplications: "应用",
-        navSupport: "支持",
-        navCompany: "公司",
+        navHome:
+            "首页",
 
-        aboutUs: "关于我们",
-        contactUs: "联系我们",
+        navProducts:
+            "产品",
+
+        navApplications:
+            "应用",
+
+        navSupport:
+            "支持",
+
+        navCompany:
+            "公司",
+
+        aboutUs:
+            "关于我们",
+
+        contactUs:
+            "联系我们",
 
         companyLabel:
             "SAKUTA ROBOTICS COMPANY",
@@ -2828,12 +3345,6 @@ const translations = {
         industryCategory:
             "半工业与工业",
 
-        placeholderTitle:
-            "标题",
-
-        placeholderDescription:
-            "描述",
-
         viewDetails:
             "查看详情",
 
@@ -2843,19 +3354,10 @@ const translations = {
         featuresTitle:
             "特点",
 
-        placeholderFeature:
-            "特点",
-
         specificationsTitle:
             "规格",
 
-        placeholderSpecifications:
-            "规格",
-
         applicationsTitle:
-            "应用",
-
-        placeholderApplications:
             "应用",
 
         resourcesTitle:
@@ -2883,7 +3385,7 @@ const translations = {
             "STL 文件",
 
         stlDescription:
-            "产品零件的 3D 打印文件。",
+            "产品零件的 3D 文件。",
 
         viewPdf:
             "查看 PDF",
@@ -2907,7 +3409,7 @@ const translations = {
             "语言",
 
         unavailable:
-            "该文件尚未添加。",
+            "该文件暂不可用。",
 
         noResults:
             "没有符合当前筛选条件的产品。",
@@ -2925,18 +3427,250 @@ const translations = {
 
 
 /* =========================================================
-   PRODUCTOS
+   ETIQUETAS DE ESPECIFICACIONES
+========================================================== */
 
-   NO HAY NOMBRES NI DESCRIPCIONES REALES TODAVÍA.
-   ESO LO HACEMOS AL FINAL.
+const specificationLabels = {
+
+
+    es: {
+
+        material:
+            "Material",
+
+        actuators:
+            "Actuadores",
+
+        actuator:
+            "Actuador",
+
+        actuation:
+            "Accionamiento",
+
+        dof:
+            "Grados de libertad",
+
+        weight:
+            "Peso",
+
+        workRadius:
+            "Radio de trabajo",
+
+        opening:
+            "Apertura de trabajo",
+
+        workingDiameter:
+            "Diámetro de trabajo",
+
+        foldedDimensions:
+            "Dimensiones plegado",
+
+        openDimensions:
+            "Dimensiones abierto",
+
+        dimensions:
+            "Dimensiones",
+
+        packageDimensions:
+            "Dimensiones del paquete",
+
+        compatibility:
+            "Compatibilidad",
+
+        contents:
+            "Contenido",
+
+        torque:
+            "Torque",
+
+        voltage:
+            "Voltaje de operación",
+
+        motionRange:
+            "Rango de movimiento",
+
+        pressure:
+            "Presión de trabajo"
+
+    },
+
+
+    en: {
+
+        material:
+            "Material",
+
+        actuators:
+            "Actuators",
+
+        actuator:
+            "Actuator",
+
+        actuation:
+            "Actuation",
+
+        dof:
+            "Degrees of freedom",
+
+        weight:
+            "Weight",
+
+        workRadius:
+            "Working radius",
+
+        opening:
+            "Working opening",
+
+        workingDiameter:
+            "Working diameter",
+
+        foldedDimensions:
+            "Folded dimensions",
+
+        openDimensions:
+            "Open dimensions",
+
+        dimensions:
+            "Dimensions",
+
+        packageDimensions:
+            "Package dimensions",
+
+        compatibility:
+            "Compatibility",
+
+        contents:
+            "Contents",
+
+        torque:
+            "Torque",
+
+        voltage:
+            "Operating voltage",
+
+        motionRange:
+            "Motion range",
+
+        pressure:
+            "Working pressure"
+
+    },
+
+
+    zh: {
+
+        material:
+            "材料",
+
+        actuators:
+            "执行器",
+
+        actuator:
+            "执行器",
+
+        actuation:
+            "驱动方式",
+
+        dof:
+            "自由度",
+
+        weight:
+            "重量",
+
+        workRadius:
+            "工作半径",
+
+        opening:
+            "工作开口",
+
+        workingDiameter:
+            "工作直径",
+
+        foldedDimensions:
+            "折叠尺寸",
+
+        openDimensions:
+            "展开尺寸",
+
+        dimensions:
+            "尺寸",
+
+        packageDimensions:
+            "包装尺寸",
+
+        compatibility:
+            "兼容性",
+
+        contents:
+            "套件内容",
+
+        torque:
+            "扭矩",
+
+        voltage:
+            "工作电压",
+
+        motionRange:
+            "运动范围",
+
+        pressure:
+            "工作压力"
+
+    }
+
+};
+
+
+
+/* =========================================================
+   FUNCIÓN PARA TEXTO LOCALIZADO
+========================================================== */
+
+function localized(value) {
+
+
+    if (
+        typeof value === "string" ||
+        typeof value === "number"
+    ) {
+
+        return value;
+
+    }
+
+
+    if (!value) {
+
+        return "";
+
+    }
+
+
+    return (
+        value[currentLanguage] ||
+        value.es ||
+        ""
+    );
+
+}
+
+
+
+/* =========================================================
+   PRODUCTOS
 ========================================================== */
 
 const products = [
 
 
-    /* SRAT01 */
+    /* =====================================================
+       SRAT01
+    ====================================================== */
 
     {
+
+        code:
+            "SRAT01",
 
         image:
             "robot_educativo.png",
@@ -2947,6 +3681,7 @@ const products = [
         type:
             "robots",
 
+
         infoPdfEs:
             "Ficha Brazo robotico (SRAT01).pdf",
 
@@ -2954,18 +3689,217 @@ const products = [
             "sheet Robotic Arm (SRAT01).pdf",
 
         plansPdf:
-            "SRAT01_sakuta.pdf",
+            "Brazo Robotico Planos (SRAT01).pdf",
 
         stlZip:
-            "Brazo Robotico (SRAT01).zip"
+            "Brazo Robotico (SRAT01).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Brazo Robótico Educativo",
+
+                summary:
+                    "Brazo robótico de 6 GDL diseñado para prácticas de robótica, programación y manipulación de objetos.",
+
+                description:
+                    "Brazo robótico didáctico diseñado para facilitar el aprendizaje práctico de la robótica, la programación y la automatización mediante una plataforma funcional para experimentación y desarrollo de proyectos.",
+
+                features: [
+
+                    "Configuración robótica de 6 GDL totales.",
+
+                    "Gripper integrado para prácticas de manipulación.",
+
+                    "Diseño orientado a enseñanza y experimentación.",
+
+                    "Integración con una amplia variedad de microcontroladores."
+
+                ],
+
+                applications: [
+
+                    "Prácticas de programación y control.",
+
+                    "Enseñanza de cinemática y robótica.",
+
+                    "Proyectos de automatización educativa.",
+
+                    "Investigación y desarrollo de sistemas de manipulación."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "Educational Robotic Arm",
+
+                summary:
+                    "6-DOF robotic arm designed for robotics, programming and object manipulation practices.",
+
+                description:
+                    "Educational robotic arm designed to support hands-on learning in robotics, programming and automation through a functional platform for experimentation and project development.",
+
+                features: [
+
+                    "Robotic configuration with 6 total DOF.",
+
+                    "Integrated gripper for manipulation practices.",
+
+                    "Design focused on education and experimentation.",
+
+                    "Integration with a wide variety of microcontrollers."
+
+                ],
+
+                applications: [
+
+                    "Programming and control practices.",
+
+                    "Kinematics and robotics education.",
+
+                    "Educational automation projects.",
+
+                    "Research and development of manipulation systems."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "教育型机械臂",
+
+                summary:
+                    "六自由度机械臂，适用于机器人、编程和物体操作实践。",
+
+                description:
+                    "面向机器人、编程和自动化实践教学的机械臂平台，可用于实验、控制学习和机器人项目开发。",
+
+                features: [
+
+                    "总计 6 个自由度。",
+
+                    "集成夹爪，可进行物体操作实验。",
+
+                    "面向教学与实验应用设计。",
+
+                    "可与多种微控制器集成。"
+
+                ],
+
+                applications: [
+
+                    "编程与控制实践。",
+
+                    "机器人学与运动学教学。",
+
+                    "教育自动化项目。",
+
+                    "机器人操作系统研究与开发。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "material",
+                value: "PETG+"
+            },
+
+            {
+                key: "actuators",
+                value: {
+
+                    es:
+                        "6 servomotores: 3 MG996R + 3 MG90",
+
+                    en:
+                        "6 servomotors: 3 MG996R + 3 MG90",
+
+                    zh:
+                        "6 个舵机：3 个 MG996R + 3 个 MG90"
+
+                }
+            },
+
+            {
+                key: "dof",
+                value: {
+
+                    es:
+                        "6 GDL totales: 5 del brazo + 1 del gripper",
+
+                    en:
+                        "6 total DOF: 5 arm + 1 gripper",
+
+                    zh:
+                        "总计 6 自由度：机械臂 5 + 夹爪 1"
+
+                }
+            },
+
+            {
+                key: "weight",
+                value:
+                    "520 g"
+            },
+
+            {
+                key: "workRadius",
+                value:
+                    "350 mm"
+            },
+
+            {
+                key: "foldedDimensions",
+                value:
+                    "15 × 26 × 35 cm"
+            },
+
+            {
+                key: "compatibility",
+                value: {
+
+                    es:
+                        "Amplia variedad de microcontroladores",
+
+                    en:
+                        "Wide variety of microcontrollers",
+
+                    zh:
+                        "兼容多种微控制器"
+
+                }
+            }
+
+        ]
 
     },
 
 
 
-    /* GS90 */
+    /* =====================================================
+       GS90
+    ====================================================== */
 
     {
+
+        code:
+            "GS90",
 
         image:
             "gripper_educativo.png",
@@ -2975,6 +3909,7 @@ const products = [
 
         type:
             "grippers",
+
 
         infoPdfEs:
             "Ficha Gripper (GS90).pdf",
@@ -2986,15 +3921,204 @@ const products = [
             "Gripper Plano (GS90).pdf",
 
         stlZip:
-            "Gripper (GS90).zip"
+            "Gripper (GS90).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Gripper Educativo",
+
+                summary:
+                    "Gripper compacto diseñado para prácticas de sujeción y manipulación de objetos en proyectos de robótica.",
+
+                description:
+                    "Gripper didáctico compacto desarrollado para complementar proyectos de robótica y automatización mediante un mecanismo sencillo de apertura y cierre accionado por microservomotor.",
+
+                features: [
+
+                    "Diseño compacto y ligero.",
+
+                    "Accionamiento mediante microservomotor.",
+
+                    "Mecanismo de apertura y cierre para manipulación de objetos.",
+
+                    "Integración sencilla en proyectos educativos de robótica."
+
+                ],
+
+                applications: [
+
+                    "Prácticas de sujeción y manipulación.",
+
+                    "Integración en brazos robóticos educativos.",
+
+                    "Proyectos de automatización básica.",
+
+                    "Experimentación con sistemas de agarre."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "Educational Gripper",
+
+                summary:
+                    "Compact gripper designed for gripping and object manipulation practices in robotics projects.",
+
+                description:
+                    "Compact educational gripper developed for robotics and automation projects using a simple opening and closing mechanism driven by a micro servomotor.",
+
+                features: [
+
+                    "Compact and lightweight design.",
+
+                    "Micro servomotor actuation.",
+
+                    "Opening and closing mechanism for object manipulation.",
+
+                    "Easy integration into educational robotics projects."
+
+                ],
+
+                applications: [
+
+                    "Gripping and manipulation practices.",
+
+                    "Integration into educational robotic arms.",
+
+                    "Basic automation projects.",
+
+                    "Experimentation with gripping systems."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "教育型夹爪",
+
+                summary:
+                    "紧凑型夹爪，适用于机器人项目中的抓取和物体操作实践。",
+
+                description:
+                    "用于机器人和自动化教学项目的紧凑型夹爪，通过微型舵机驱动开合机构实现物体抓取。",
+
+                features: [
+
+                    "紧凑轻量设计。",
+
+                    "微型舵机驱动。",
+
+                    "具备物体抓取开合机构。",
+
+                    "易于集成到教育机器人项目中。"
+
+                ],
+
+                applications: [
+
+                    "抓取与操作实践。",
+
+                    "教育型机械臂集成。",
+
+                    "基础自动化项目。",
+
+                    "夹持系统实验。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "material",
+                value: "PETG+"
+            },
+
+            {
+                key: "actuator",
+                value: {
+
+                    es:
+                        "1 microservomotor MG90 / SG90",
+
+                    en:
+                        "1 MG90 / SG90 micro servomotor",
+
+                    zh:
+                        "1 个 MG90 / SG90 微型舵机"
+
+                }
+            },
+
+            {
+                key: "dof",
+                value:
+                    "1 GDL / DOF"
+            },
+
+            {
+                key: "weight",
+                value:
+                    "52 g"
+            },
+
+            {
+                key: "opening",
+                value:
+                    "60 mm"
+            },
+
+            {
+                key: "foldedDimensions",
+                value:
+                    "15 × 10 × 5 cm"
+            },
+
+            {
+                key: "compatibility",
+                value: {
+
+                    es:
+                        "Amplia variedad de microcontroladores",
+
+                    en:
+                        "Wide variety of microcontrollers",
+
+                    zh:
+                        "兼容多种微控制器"
+
+                }
+            }
+
+        ]
 
     },
 
 
 
-    /* GSF996 */
+    /* =====================================================
+       GSF996
+    ====================================================== */
 
     {
+
+        code:
+            "GSF996",
 
         image:
             "gripper_adaptative_educativo.png",
@@ -3004,6 +4128,7 @@ const products = [
 
         type:
             "grippers",
+
 
         infoPdfEs:
             "Ficha Gripper (GSF996).pdf",
@@ -3015,24 +4140,224 @@ const products = [
             "Gripper Adaptable Planos (GSF996).pdf",
 
         stlZip:
-            "Gripper (GSF996).zip"
+            "Gripper (GSF996).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Gripper Adaptable",
+
+                summary:
+                    "Gripper de geometría adaptable diseñado para sujetar objetos con diferentes formas y dimensiones.",
+
+                description:
+                    "Gripper robótico con geometría adaptable desarrollado para experimentar con diferentes formas de pieza y condiciones de sujeción dentro de proyectos educativos de robótica y automatización.",
+
+                features: [
+
+                    "Mecanismo adaptable a diferentes geometrías.",
+
+                    "Accionamiento mediante servomotor.",
+
+                    "Contacto distribuido con el objeto durante la sujeción.",
+
+                    "Diseño orientado a experimentación con distintos tipos de piezas."
+
+                ],
+
+                applications: [
+
+                    "Manipulación de objetos con distintas geometrías.",
+
+                    "Prácticas de robótica y automatización.",
+
+                    "Experimentación con mecanismos adaptables.",
+
+                    "Proyectos académicos de agarre y manipulación."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "Adaptive Gripper",
+
+                summary:
+                    "Adaptive-geometry gripper designed to hold objects with different shapes and dimensions.",
+
+                description:
+                    "Robotic gripper with an adaptive geometry developed for experimenting with different part shapes and gripping conditions in educational robotics and automation projects.",
+
+                features: [
+
+                    "Mechanism adaptable to different geometries.",
+
+                    "Servomotor actuation.",
+
+                    "Distributed contact with the object during gripping.",
+
+                    "Designed for experimentation with different types of parts."
+
+                ],
+
+                applications: [
+
+                    "Manipulation of objects with different geometries.",
+
+                    "Robotics and automation practices.",
+
+                    "Experimentation with adaptive mechanisms.",
+
+                    "Academic gripping and manipulation projects."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "自适应夹爪",
+
+                summary:
+                    "具有自适应几何结构的夹爪，可抓取不同形状和尺寸的物体。",
+
+                description:
+                    "采用自适应结构的机器人夹爪，可用于不同形状工件和夹持条件的实验，适合教育机器人和自动化项目。",
+
+                features: [
+
+                    "可适应不同物体几何形状。",
+
+                    "采用舵机驱动。",
+
+                    "夹持时可形成分布式接触。",
+
+                    "适用于不同类型工件的实验。"
+
+                ],
+
+                applications: [
+
+                    "不同几何形状物体操作。",
+
+                    "机器人与自动化实践。",
+
+                    "自适应机构实验。",
+
+                    "学术夹持与操作项目。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "material",
+                value: "PETG+"
+            },
+
+            {
+                key: "actuator",
+                value: {
+
+                    es:
+                        "Compatible con MG995R / MG996R / S14KC",
+
+                    en:
+                        "Compatible with MG995R / MG996R / S14KC",
+
+                    zh:
+                        "兼容 MG995R / MG996R / S14KC"
+
+                }
+            },
+
+            {
+                key: "dof",
+                value:
+                    "1 GDL / DOF"
+            },
+
+            {
+                key: "weight",
+                value:
+                    "72 g"
+            },
+
+            {
+                key: "opening",
+                value: {
+
+                    es:
+                        "Hasta 100 mm",
+
+                    en:
+                        "Up to 100 mm",
+
+                    zh:
+                        "最大 100 mm"
+
+                }
+            },
+
+            {
+                key: "dimensions",
+                value:
+                    "75 × 158 × 45 mm"
+            },
+
+            {
+                key: "compatibility",
+                value: {
+
+                    es:
+                        "Amplia variedad de microcontroladores",
+
+                    en:
+                        "Wide variety of microcontrollers",
+
+                    zh:
+                        "兼容多种微控制器"
+
+                }
+            }
+
+        ]
 
     },
 
 
 
-    /* GSP996 */
+    /* =====================================================
+       GSP996
+    ====================================================== */
 
     {
 
+        code:
+            "GSP996",
+
         image:
-            "gripper_paraleloo.webp",
+            "gripper_paraleloo.png",
 
         area:
             "education",
 
         type:
             "grippers",
+
 
         infoPdfEs:
             "Ficha Gripper (GSP996).pdf",
@@ -3044,15 +4369,204 @@ const products = [
             "Gripper Planos (GSP996).pdf",
 
         stlZip:
-            "Gripper (GSP996).zip"
+            "Gripper (GSP996).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Gripper Paralelo",
+
+                summary:
+                    "Gripper de movimiento paralelo diseñado para prácticas de sujeción, posicionamiento y manipulación de objetos.",
+
+                description:
+                    "Gripper robótico con movimiento paralelo de mordazas diseñado para prácticas de sujeción y posicionamiento, permitiendo su integración en proyectos educativos de automatización y manipulación.",
+
+                features: [
+
+                    "Movimiento paralelo de las mordazas.",
+
+                    "Accionamiento mediante servomotor.",
+
+                    "Apertura y cierre simétrico.",
+
+                    "Diseño compacto para integración en brazos robóticos."
+
+                ],
+
+                applications: [
+
+                    "Prácticas de pick and place.",
+
+                    "Manipulación y posicionamiento de piezas.",
+
+                    "Integración en brazos robóticos educativos.",
+
+                    "Proyectos de automatización y control."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "Parallel Gripper",
+
+                summary:
+                    "Parallel-motion gripper designed for gripping, positioning and object manipulation practices.",
+
+                description:
+                    "Robotic gripper with parallel jaw motion designed for gripping and positioning practices and integration into educational automation and manipulation projects.",
+
+                features: [
+
+                    "Parallel jaw movement.",
+
+                    "Servomotor actuation.",
+
+                    "Symmetrical opening and closing.",
+
+                    "Compact design for robotic arm integration."
+
+                ],
+
+                applications: [
+
+                    "Pick-and-place practices.",
+
+                    "Part manipulation and positioning.",
+
+                    "Integration into educational robotic arms.",
+
+                    "Automation and control projects."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "平行夹爪",
+
+                summary:
+                    "采用平行运动结构的夹爪，适用于抓取、定位和物体操作实践。",
+
+                description:
+                    "采用平行夹爪运动方式的机器人末端夹具，可用于抓取、定位以及教育自动化操作项目。",
+
+                features: [
+
+                    "夹爪平行运动。",
+
+                    "采用舵机驱动。",
+
+                    "对称开合。",
+
+                    "紧凑设计，便于机械臂集成。"
+
+                ],
+
+                applications: [
+
+                    "取放操作实践。",
+
+                    "工件操作与定位。",
+
+                    "教育型机械臂集成。",
+
+                    "自动化与控制项目。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "material",
+                value: "PETG+"
+            },
+
+            {
+                key: "actuator",
+                value: {
+
+                    es:
+                        "Compatible con MG996R / MG995R / S14KC",
+
+                    en:
+                        "Compatible with MG996R / MG995R / S14KC",
+
+                    zh:
+                        "兼容 MG996R / MG995R / S14KC"
+
+                }
+            },
+
+            {
+                key: "dof",
+                value:
+                    "1 GDL / DOF"
+            },
+
+            {
+                key: "weight",
+                value:
+                    "72 g"
+            },
+
+            {
+                key: "opening",
+                value:
+                    "56 mm"
+            },
+
+            {
+                key: "openDimensions",
+                value:
+                    "108 × 98 × 40 mm"
+            },
+
+            {
+                key: "compatibility",
+                value: {
+
+                    es:
+                        "Amplia variedad de microcontroladores",
+
+                    en:
+                        "Wide variety of microcontrollers",
+
+                    zh:
+                        "兼容多种微控制器"
+
+                }
+            }
+
+        ]
 
     },
 
 
 
-    /* GSMG996 */
+    /* =====================================================
+       GSMG996
+    ====================================================== */
 
     {
+
+        code:
+            "GSMG996",
 
         image:
             "gripper_mg996rr.jpg",
@@ -3062,6 +4576,7 @@ const products = [
 
         type:
             "grippers",
+
 
         infoPdfEs:
             "Ficha Gripper (GSMG996).pdf",
@@ -3073,15 +4588,214 @@ const products = [
             "Gripper Planos (GSMG996).pdf",
 
         stlZip:
-            "Gripper (GSMG996).zip"
+            "Gripper (GSMG996).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Gripper MG996R",
+
+                summary:
+                    "Gripper accionado mediante servomotor MG996R para prácticas de manipulación y automatización robótica.",
+
+                description:
+                    "Gripper robótico de accionamiento por servomotor desarrollado para prácticas educativas de sujeción, manipulación y automatización, con una estructura fabricada mediante impresión 3D.",
+
+                features: [
+
+                    "Accionamiento mediante servomotor.",
+
+                    "Mecanismo de sujeción mecánica.",
+
+                    "Diseño para integración en proyectos robóticos.",
+
+                    "Estructura orientada a prácticas de manipulación de objetos."
+
+                ],
+
+                applications: [
+
+                    "Manipulación de objetos.",
+
+                    "Prácticas de robótica y automatización.",
+
+                    "Integración con sistemas de control.",
+
+                    "Desarrollo de proyectos de sujeción robótica."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "MG996R Gripper",
+
+                summary:
+                    "Servomotor-driven gripper for robotic manipulation and automation practices.",
+
+                description:
+                    "Servomotor-driven robotic gripper developed for educational gripping, manipulation and automation practices, with a structure manufactured using 3D printing.",
+
+                features: [
+
+                    "Servomotor actuation.",
+
+                    "Mechanical gripping mechanism.",
+
+                    "Designed for integration into robotics projects.",
+
+                    "Structure focused on object manipulation practices."
+
+                ],
+
+                applications: [
+
+                    "Object manipulation.",
+
+                    "Robotics and automation practices.",
+
+                    "Integration with control systems.",
+
+                    "Development of robotic gripping projects."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "MG996R 夹爪",
+
+                summary:
+                    "由 MG996R 类舵机驱动的夹爪，适用于机器人操作和自动化实践。",
+
+                description:
+                    "用于教育型抓取、操作和自动化实践的舵机驱动机器人夹爪，其结构采用 3D 打印制造。",
+
+                features: [
+
+                    "舵机驱动。",
+
+                    "机械夹持机构。",
+
+                    "适用于机器人项目集成。",
+
+                    "面向物体操作实践设计。"
+
+                ],
+
+                applications: [
+
+                    "物体操作。",
+
+                    "机器人与自动化实践。",
+
+                    "控制系统集成。",
+
+                    "机器人夹持项目开发。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "material",
+                value: "PETG+"
+            },
+
+            {
+                key: "actuator",
+                value: {
+
+                    es:
+                        "Compatible con MG995R / MG996R / S14KC",
+
+                    en:
+                        "Compatible with MG995R / MG996R / S14KC",
+
+                    zh:
+                        "兼容 MG995R / MG996R / S14KC"
+
+                }
+            },
+
+            {
+                key: "dof",
+                value:
+                    "1 GDL / DOF"
+            },
+
+            {
+                key: "weight",
+                value:
+                    "72 g"
+            },
+
+            {
+                key: "workingDiameter",
+                value: {
+
+                    es:
+                        "Hasta 100 mm",
+
+                    en:
+                        "Up to 100 mm",
+
+                    zh:
+                        "最大 100 mm"
+
+                }
+            },
+
+            {
+                key: "packageDimensions",
+                value:
+                    "150 × 150 × 35 mm"
+            },
+
+            {
+                key: "compatibility",
+                value: {
+
+                    es:
+                        "Sistemas y actuadores compatibles",
+
+                    en:
+                        "Compatible systems and actuators",
+
+                    zh:
+                        "兼容多种系统和执行器"
+
+                }
+            }
+
+        ]
 
     },
 
 
 
-    /* SKG100 */
+    /* =====================================================
+       SKG100
+    ====================================================== */
 
     {
+
+        code:
+            "SKG100",
 
         image:
             "kit_engranes.png",
@@ -3092,31 +4806,238 @@ const products = [
         type:
             "components",
 
+
         infoPdfEs:
             "Ficha Elementos de Transmisión Mecánica (SKG100).pdf",
 
-        infoPdfEn:
-            "Mechanical Power Transmission Components Sheetcarta (SKG100).pdf",
 
         /*
-        IMPORTANTE:
-        CUANDO SUBAS / CONFIRMES EL PDF UNIDO DE PLANOS
-        DEL SKG100, SOLO PON SU NOMBRE AQUÍ.
+           El nombre completo del archivo inglés queda oculto
+           en la captura de GitHub.
+
+           El código intenta automáticamente varias variantes.
+           La primera es la nomenclatura normal utilizada.
         */
 
+        infoPdfEn: [
+
+            "Mechanical Power Transmission Components Sheet (SKG100).pdf",
+
+            "Mechanical Power Transmission Components Sheet(SK G100).pdf",
+
+            "Mechanical Power Transmission Components Sheet SKG100.pdf",
+
+            "Mechanical Power Transmission Components Sheetcarta (SKG100).pdf"
+
+        ],
+
+
         plansPdf:
-            "",
+            "Planos_Elementos_Transmision_SRC.pdf",
 
         stlZip:
-            "Elementos de Transmisión Mecánica (SKG100).zip"
+            "Elementos de Transmisión Mecánica (SKG100).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Kit de Elementos de Transmisión Mecánica",
+
+                summary:
+                    "Conjunto de elementos mecánicos diseñado para el estudio y desarrollo de sistemas de transmisión de movimiento.",
+
+                description:
+                    "Kit de componentes de transmisión mecánica desarrollado para facilitar el diseño y construcción de mecanismos en proyectos educativos, mecánicos y de ingeniería.",
+
+                features: [
+
+                    "Conjunto de diferentes elementos de transmisión.",
+
+                    "Piezas destinadas al estudio de mecanismos.",
+
+                    "Diversas geometrías y configuraciones mecánicas.",
+
+                    "Archivos digitales disponibles para fabricación mediante impresión 3D."
+
+                ],
+
+                applications: [
+
+                    "Diseño y construcción de mecanismos.",
+
+                    "Enseñanza de transmisión de movimiento.",
+
+                    "Prototipado de sistemas mecánicos.",
+
+                    "Proyectos educativos y de ingeniería."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "Mechanical Power Transmission Components Kit",
+
+                summary:
+                    "Set of mechanical elements designed for the study and development of motion transmission systems.",
+
+                description:
+                    "Mechanical power transmission component kit developed to support the design and construction of mechanisms in educational, mechanical and engineering projects.",
+
+                features: [
+
+                    "Set of different transmission elements.",
+
+                    "Components intended for mechanism study.",
+
+                    "Multiple mechanical geometries and configurations.",
+
+                    "Digital files available for 3D-print manufacturing."
+
+                ],
+
+                applications: [
+
+                    "Mechanism design and construction.",
+
+                    "Teaching motion transmission principles.",
+
+                    "Mechanical system prototyping.",
+
+                    "Educational and engineering projects."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "机械传动元件套件",
+
+                summary:
+                    "用于学习和开发运动传动系统的机械元件套件。",
+
+                description:
+                    "用于教育、机械和工程项目中机构设计与搭建的机械传动元件套件。",
+
+                features: [
+
+                    "包含多种传动元件。",
+
+                    "用于机构原理学习。",
+
+                    "支持多种机械组合和几何结构。",
+
+                    "提供适用于 3D 打印制造的数字文件。"
+
+                ],
+
+                applications: [
+
+                    "机构设计与搭建。",
+
+                    "运动传动原理教学。",
+
+                    "机械系统原型开发。",
+
+                    "教育与工程项目。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "material",
+                value: "PETG+"
+            },
+
+            {
+                key: "weight",
+                value:
+                    "200 g"
+            },
+
+            {
+                key: "workingDiameter",
+                value: {
+
+                    es:
+                        "Hasta 65 mm",
+
+                    en:
+                        "Up to 65 mm",
+
+                    zh:
+                        "最大 65 mm"
+
+                }
+            },
+
+            {
+                key: "packageDimensions",
+                value:
+                    "150 × 150 × 30 mm"
+            },
+
+            {
+                key: "contents",
+                value: {
+
+                    es:
+                        "100 piezas",
+
+                    en:
+                        "100 pieces",
+
+                    zh:
+                        "100 件"
+
+                }
+            },
+
+            {
+                key: "compatibility",
+                value: {
+
+                    es:
+                        "MG996R / SG90 / motor DC",
+
+                    en:
+                        "MG996R / SG90 / DC motor",
+
+                    zh:
+                        "MG996R / SG90 / 直流电机"
+
+                }
+            }
+
+        ]
 
     },
 
 
 
-    /* S14KC */
+    /* =====================================================
+       S14KC
+    ====================================================== */
 
     {
+
+        code:
+            "S14KC",
 
         image:
             "servo14.jpg",
@@ -3127,6 +5048,7 @@ const products = [
         type:
             "components",
 
+
         infoPdfEs:
             "Ficha Servomotor (S14KC).pdf",
 
@@ -3134,18 +5056,192 @@ const products = [
             "Servomotor Sheet (S14KC).pdf",
 
         plansPdf:
-            "Servomotor planos (S14KC).pdf",
+            "Servomotor Planos (S14KC).pdf",
 
         stlZip:
-            "Servomotor(S14KC).zip"
+            "Servomotor(S14KC).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Servomotor 14 kg·cm",
+
+                summary:
+                    "Servomotor de 14 kg·cm diseñado para mecanismos, prototipos y aplicaciones educativas de control de movimiento.",
+
+                description:
+                    "Servomotor orientado a proyectos de robótica y automatización que requieren control de posición y una capacidad de torque adecuada para mecanismos educativos y prototipos.",
+
+                features: [
+
+                    "Control de posición angular.",
+
+                    "Formato compacto para mecanismos robóticos.",
+
+                    "Integración con sistemas electrónicos de control.",
+
+                    "Adecuado para mecanismos que requieren accionamiento controlado."
+
+                ],
+
+                applications: [
+
+                    "Accionamiento de pequeños mecanismos.",
+
+                    "Articulaciones robóticas educativas.",
+
+                    "Prototipos de automatización.",
+
+                    "Prácticas de control de posición."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "14 kg·cm Servomotor",
+
+                summary:
+                    "14 kg·cm servomotor designed for mechanisms, prototypes and educational motion-control applications.",
+
+                description:
+                    "Servomotor intended for robotics and automation projects requiring position control and suitable torque for educational mechanisms and prototypes.",
+
+                features: [
+
+                    "Angular position control.",
+
+                    "Compact format for robotic mechanisms.",
+
+                    "Integration with electronic control systems.",
+
+                    "Suitable for mechanisms requiring controlled actuation."
+
+                ],
+
+                applications: [
+
+                    "Actuation of small mechanisms.",
+
+                    "Educational robotic joints.",
+
+                    "Automation prototypes.",
+
+                    "Position-control practices."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "14 kg·cm 舵机",
+
+                summary:
+                    "14 kg·cm 舵机，适用于机构、原型和教育型运动控制应用。",
+
+                description:
+                    "适用于机器人和自动化项目的舵机，可进行位置控制并为教育机构和原型提供适当扭矩。",
+
+                features: [
+
+                    "角度位置控制。",
+
+                    "适合机器人机构的紧凑结构。",
+
+                    "可集成电子控制系统。",
+
+                    "适用于需要受控驱动的机构。"
+
+                ],
+
+                applications: [
+
+                    "小型机构驱动。",
+
+                    "教育机器人关节。",
+
+                    "自动化原型。",
+
+                    "位置控制实践。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "torque",
+                value:
+                    "14 kg·cm / 1.37 N·m"
+            },
+
+            {
+                key: "voltage",
+                value:
+                    "5–7 V"
+            },
+
+            {
+                key: "motionRange",
+                value:
+                    "180°"
+            },
+
+            {
+                key: "material",
+                value: {
+
+                    es:
+                        "Plástico ABS y engranes metálicos",
+
+                    en:
+                        "ABS plastic and metal gears",
+
+                    zh:
+                        "ABS 塑料和金属齿轮"
+
+                }
+            },
+
+            {
+                key: "weight",
+                value:
+                    "52 g"
+            },
+
+            {
+                key: "dimensions",
+                value:
+                    "44.5 × 20 × 54.2 mm"
+            }
+
+        ]
 
     },
 
 
 
-    /* S35KC */
+    /* =====================================================
+       S35KC
+    ====================================================== */
 
     {
+
+        code:
+            "S35KC",
 
         image:
             "servo35.webp",
@@ -3155,6 +5251,7 @@ const products = [
 
         type:
             "components",
+
 
         infoPdfEs:
             "Ficha Servomotor (S35KC).pdf",
@@ -3166,15 +5263,189 @@ const products = [
             "Servomotor Planos (S35KC).PDF",
 
         stlZip:
-            "Servomotor(S35KC).zip"
+            "Servomotor(S35KC).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Servomotor 35 kg·cm",
+
+                summary:
+                    "Servomotor de 35 kg·cm para proyectos que requieren mayor capacidad de movimiento y posicionamiento controlado.",
+
+                description:
+                    "Servomotor diseñado para proyectos de robótica y automatización que requieren mayor capacidad de torque manteniendo control de posición angular.",
+
+                features: [
+
+                    "Mayor capacidad de torque para mecanismos robóticos.",
+
+                    "Control de posición angular.",
+
+                    "Construcción orientada a aplicaciones de movimiento controlado.",
+
+                    "Integración con proyectos de robótica y automatización."
+
+                ],
+
+                applications: [
+
+                    "Accionamiento de mecanismos robóticos.",
+
+                    "Articulaciones de mayor demanda.",
+
+                    "Proyectos de automatización educativa.",
+
+                    "Prácticas de posicionamiento y control."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "35 kg·cm Servomotor",
+
+                summary:
+                    "35 kg·cm servomotor for projects requiring greater actuation capacity and controlled positioning.",
+
+                description:
+                    "Servomotor designed for robotics and automation projects that require increased torque while maintaining angular position control.",
+
+                features: [
+
+                    "Greater torque capacity for robotic mechanisms.",
+
+                    "Angular position control.",
+
+                    "Construction focused on controlled-motion applications.",
+
+                    "Integration into robotics and automation projects."
+
+                ],
+
+                applications: [
+
+                    "Robotic mechanism actuation.",
+
+                    "Higher-demand robotic joints.",
+
+                    "Educational automation projects.",
+
+                    "Positioning and control practices."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "35 kg·cm 舵机",
+
+                summary:
+                    "35 kg·cm 舵机，适用于需要更高驱动能力和受控定位的项目。",
+
+                description:
+                    "适用于机器人和自动化项目的舵机，在保持角度位置控制的同时提供更高扭矩。",
+
+                features: [
+
+                    "适用于机器人机构的较高扭矩。",
+
+                    "角度位置控制。",
+
+                    "面向受控运动应用设计。",
+
+                    "适用于机器人与自动化项目集成。"
+
+                ],
+
+                applications: [
+
+                    "机器人机构驱动。",
+
+                    "较高负载的机器人关节。",
+
+                    "教育自动化项目。",
+
+                    "定位与控制实践。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "torque",
+                value:
+                    "35 kg·cm / 3.43 N·m"
+            },
+
+            {
+                key: "voltage",
+                value:
+                    "5–7 V"
+            },
+
+            {
+                key: "motionRange",
+                value:
+                    "180°"
+            },
+
+            {
+                key: "material",
+                value: {
+
+                    es:
+                        "Plástico ABS, bloque de aluminio y engranes metálicos",
+
+                    en:
+                        "ABS plastic, aluminum block and metal gears",
+
+                    zh:
+                        "ABS 塑料、铝制结构和金属齿轮"
+
+                }
+            },
+
+            {
+                key: "weight",
+                value:
+                    "64 g"
+            },
+
+            {
+                key: "dimensions",
+                value:
+                    "45.8 × 20.4 × 54.6 mm"
+            }
+
+        ]
 
     },
 
 
 
-    /* S50KC */
+    /* =====================================================
+       S50KC
+    ====================================================== */
 
     {
+
+        code:
+            "S50KC",
 
         image:
             "servo50.jpg",
@@ -3184,6 +5455,7 @@ const products = [
 
         type:
             "components",
+
 
         infoPdfEs:
             "Ficha Servomotor (S50KC).pdf",
@@ -3195,15 +5467,189 @@ const products = [
             "Servomotor Planos (S50KC).PDF",
 
         stlZip:
-            "Servomotor (S50KC).zip"
+            "Servomotor (S50KC).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Servomotor 50 kg·cm",
+
+                summary:
+                    "Servomotor de 50 kg·cm orientado al accionamiento de mecanismos y sistemas robóticos de mayor carga.",
+
+                description:
+                    "Servomotor de alto torque diseñado para mecanismos robóticos y proyectos de automatización que requieren mayor capacidad de accionamiento y control de posición.",
+
+                features: [
+
+                    "Alto torque para accionamiento de mecanismos.",
+
+                    "Posicionamiento angular controlado.",
+
+                    "Adecuado para estructuras robóticas de mayor demanda mecánica.",
+
+                    "Integración mediante señales de control convencionales para servomotores."
+
+                ],
+
+                applications: [
+
+                    "Brazos y mecanismos robóticos.",
+
+                    "Accionamiento de sistemas con mayor carga.",
+
+                    "Prototipos de automatización.",
+
+                    "Investigación y desarrollo de mecanismos controlados."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "50 kg·cm Servomotor",
+
+                summary:
+                    "50 kg·cm servomotor intended for mechanisms and robotic systems with higher load requirements.",
+
+                description:
+                    "High-torque servomotor designed for robotic mechanisms and automation projects requiring increased actuation capacity and position control.",
+
+                features: [
+
+                    "High torque for mechanism actuation.",
+
+                    "Controlled angular positioning.",
+
+                    "Suitable for robotic structures with greater mechanical demand.",
+
+                    "Integration using conventional servomotor control signals."
+
+                ],
+
+                applications: [
+
+                    "Robotic arms and mechanisms.",
+
+                    "Actuation of higher-load systems.",
+
+                    "Automation prototypes.",
+
+                    "Research and development of controlled mechanisms."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "50 kg·cm 舵机",
+
+                summary:
+                    "50 kg·cm 舵机，适用于具有较高负载需求的机构和机器人系统。",
+
+                description:
+                    "高扭矩舵机，适用于需要更高驱动力和位置控制的机器人机构及自动化项目。",
+
+                features: [
+
+                    "高扭矩机构驱动。",
+
+                    "受控角度定位。",
+
+                    "适用于机械负载较高的机器人结构。",
+
+                    "采用常规舵机控制信号集成。"
+
+                ],
+
+                applications: [
+
+                    "机器人机械臂和机构。",
+
+                    "较高负载系统驱动。",
+
+                    "自动化原型。",
+
+                    "受控机构研究与开发。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "torque",
+                value:
+                    "50 kg·cm / 4.90 N·m"
+            },
+
+            {
+                key: "voltage",
+                value:
+                    "6.2–8.2 V"
+            },
+
+            {
+                key: "motionRange",
+                value:
+                    "180°"
+            },
+
+            {
+                key: "material",
+                value: {
+
+                    es:
+                        "Plástico ABS, bloque de aluminio y engranes metálicos",
+
+                    en:
+                        "ABS plastic, aluminum block and metal gears",
+
+                    zh:
+                        "ABS 塑料、铝制结构和金属齿轮"
+
+                }
+            },
+
+            {
+                key: "weight",
+                value:
+                    "152 g"
+            },
+
+            {
+                key: "dimensions",
+                value:
+                    "82 × 30.5 × 54.6 mm"
+            }
+
+        ]
 
     },
 
 
 
-    /* S70KC */
+    /* =====================================================
+       S70KC
+    ====================================================== */
 
     {
+
+        code:
+            "S70KC",
 
         image:
             "servo70.jpg",
@@ -3213,6 +5659,7 @@ const products = [
 
         type:
             "components",
+
 
         infoPdfEs:
             "Ficha Servomotor (S70KC).pdf",
@@ -3224,15 +5671,189 @@ const products = [
             "Servomotor Planos (S70KC).pdf",
 
         stlZip:
-            "Servomotor (S70KC).zip"
+            "Servomotor (S70KC).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Servomotor 70 kg·cm",
+
+                summary:
+                    "Servomotor de 70 kg·cm diseñado para mecanismos robóticos que requieren alto torque y control de posición.",
+
+                description:
+                    "Servomotor de alta capacidad de torque desarrollado para mecanismos robóticos, prototipos y aplicaciones experimentales que requieren posicionamiento controlado.",
+
+                features: [
+
+                    "Elevada capacidad de torque.",
+
+                    "Control preciso de posición angular.",
+
+                    "Orientado a mecanismos robóticos de mayor carga.",
+
+                    "Construcción para aplicaciones que requieren mayor fuerza de accionamiento."
+
+                ],
+
+                applications: [
+
+                    "Mecanismos robóticos de alto torque.",
+
+                    "Articulaciones de robots y prototipos.",
+
+                    "Automatización experimental.",
+
+                    "Sistemas de posicionamiento con mayor demanda mecánica."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "70 kg·cm Servomotor",
+
+                summary:
+                    "70 kg·cm servomotor designed for robotic mechanisms requiring high torque and position control.",
+
+                description:
+                    "High-torque servomotor developed for robotic mechanisms, prototypes and experimental applications requiring controlled positioning.",
+
+                features: [
+
+                    "High torque capacity.",
+
+                    "Precise angular position control.",
+
+                    "Intended for higher-load robotic mechanisms.",
+
+                    "Construction for applications requiring greater actuation force."
+
+                ],
+
+                applications: [
+
+                    "High-torque robotic mechanisms.",
+
+                    "Robot joints and prototypes.",
+
+                    "Experimental automation.",
+
+                    "Positioning systems with greater mechanical demand."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "70 kg·cm 舵机",
+
+                summary:
+                    "70 kg·cm 舵机，适用于需要高扭矩和位置控制的机器人机构。",
+
+                description:
+                    "高扭矩舵机，适用于需要受控定位的机器人机构、原型及实验型自动化应用。",
+
+                features: [
+
+                    "较高扭矩能力。",
+
+                    "精确角度位置控制。",
+
+                    "适用于较高负载的机器人机构。",
+
+                    "面向需要更大驱动力的应用。"
+
+                ],
+
+                applications: [
+
+                    "高扭矩机器人机构。",
+
+                    "机器人关节和原型。",
+
+                    "实验自动化。",
+
+                    "较高机械负载的定位系统。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "torque",
+                value:
+                    "70 kg·cm / 6.86 N·m"
+            },
+
+            {
+                key: "voltage",
+                value:
+                    "6.2–8.2 V"
+            },
+
+            {
+                key: "motionRange",
+                value:
+                    "180°"
+            },
+
+            {
+                key: "material",
+                value: {
+
+                    es:
+                        "Plástico ABS, bloque de aluminio y engranes metálicos",
+
+                    en:
+                        "ABS plastic, aluminum block and metal gears",
+
+                    zh:
+                        "ABS 塑料、铝制结构和金属齿轮"
+
+                }
+            },
+
+            {
+                key: "weight",
+                value:
+                    "152 g"
+            },
+
+            {
+                key: "dimensions",
+                value:
+                    "82 × 30.5 × 55 mm"
+            }
+
+        ]
 
     },
 
 
 
-    /* S135KC */
+    /* =====================================================
+       S135KC
+    ====================================================== */
 
     {
+
+        code:
+            "S135KC",
 
         image:
             "servo135.jpg",
@@ -3242,6 +5863,7 @@ const products = [
 
         type:
             "components",
+
 
         infoPdfEs:
             "Ficha Servomotor (S135KC).pdf",
@@ -3253,15 +5875,189 @@ const products = [
             "Servomotor Planos (S135KC).PDF",
 
         stlZip:
-            "Servomotor (S135KC).zip"
+            "Servomotor (S135KC).zip",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Servomotor 135 kg·cm",
+
+                summary:
+                    "Servomotor de 135 kg·cm para sistemas y mecanismos que requieren una elevada capacidad de accionamiento.",
+
+                description:
+                    "Servomotor de muy alto torque orientado a sistemas robóticos y mecanismos experimentales que requieren una elevada capacidad de accionamiento y control de posición.",
+
+                features: [
+
+                    "Muy alta capacidad de torque dentro de la línea.",
+
+                    "Accionamiento de mecanismos de alta demanda mecánica.",
+
+                    "Control de posición angular.",
+
+                    "Orientado a sistemas robóticos que requieren elevada fuerza de movimiento."
+
+                ],
+
+                applications: [
+
+                    "Accionamiento de mecanismos de alta demanda.",
+
+                    "Articulaciones robóticas de mayor carga.",
+
+                    "Prototipos avanzados de automatización.",
+
+                    "Sistemas experimentales de posicionamiento."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "135 kg·cm Servomotor",
+
+                summary:
+                    "135 kg·cm servomotor for systems and mechanisms requiring very high actuation capacity.",
+
+                description:
+                    "Very high-torque servomotor intended for robotic systems and experimental mechanisms requiring substantial actuation capacity and position control.",
+
+                features: [
+
+                    "Very high torque capacity within the product line.",
+
+                    "Actuation of high-demand mechanisms.",
+
+                    "Angular position control.",
+
+                    "Intended for robotic systems requiring high actuation force."
+
+                ],
+
+                applications: [
+
+                    "High-demand mechanism actuation.",
+
+                    "Higher-load robotic joints.",
+
+                    "Advanced automation prototypes.",
+
+                    "Experimental positioning systems."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "135 kg·cm 舵机",
+
+                summary:
+                    "135 kg·cm 舵机，适用于需要高驱动能力的系统和机构。",
+
+                description:
+                    "超高扭矩舵机，面向需要较大驱动力和位置控制的机器人系统及实验机构。",
+
+                features: [
+
+                    "产品系列中的超高扭矩能力。",
+
+                    "适用于高机械负载机构。",
+
+                    "角度位置控制。",
+
+                    "面向需要高驱动力的机器人系统。"
+
+                ],
+
+                applications: [
+
+                    "高负载机构驱动。",
+
+                    "较大负载机器人关节。",
+
+                    "高级自动化原型。",
+
+                    "实验型定位系统。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "torque",
+                value:
+                    "135 kg·cm / 13.24 N·m"
+            },
+
+            {
+                key: "voltage",
+                value:
+                    "10–12.4 V"
+            },
+
+            {
+                key: "motionRange",
+                value:
+                    "180°"
+            },
+
+            {
+                key: "material",
+                value: {
+
+                    es:
+                        "Plástico ABS, bloque de aluminio y engranes metálicos",
+
+                    en:
+                        "ABS plastic, aluminum block and metal gears",
+
+                    zh:
+                        "ABS 塑料、铝制结构和金属齿轮"
+
+                }
+            },
+
+            {
+                key: "weight",
+                value:
+                    "168 g"
+            },
+
+            {
+                key: "dimensions",
+                value:
+                    "82 × 30.5 × 54.6 mm"
+            }
+
+        ]
 
     },
 
 
 
-    /* GSNP */
+    /* =====================================================
+       GSNP
+    ====================================================== */
 
     {
+
+        code:
+            "GSNP",
 
         image:
             "gripper_neumatico.png",
@@ -3275,6 +6071,7 @@ const products = [
         type:
             "grippers",
 
+
         infoPdfEs:
             "Ficha Gripper (GSNP).pdf",
 
@@ -3282,15 +6079,215 @@ const products = [
             "Gripper Sheet (GSNP).pdf",
 
         plansPdf:
-            "Gripper Neumatico Planos(GSNP).pdf"
+            "Gripper Neumatico Planos(GSNP).pdf",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Gripper Neumático",
+
+                summary:
+                    "Gripper neumático de movimiento paralelo diseñado para la sujeción y manipulación de piezas en sistemas automatizados.",
+
+                description:
+                    "Gripper neumático desarrollado para procesos de sujeción y manipulación de piezas, orientado a proyectos de automatización, formación técnica y aplicaciones semiindustriales e industriales.",
+
+                features: [
+
+                    "Accionamiento neumático de doble efecto.",
+
+                    "Movimiento paralelo de las mordazas.",
+
+                    "Diseño para sujeción repetitiva de piezas.",
+
+                    "Integración en sistemas de automatización y manipulación."
+
+                ],
+
+                applications: [
+
+                    "Manipulación repetitiva de piezas.",
+
+                    "Estaciones de pick and place.",
+
+                    "Automatización semiindustrial e industrial.",
+
+                    "Integración en sistemas neumáticos de manipulación."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "Pneumatic Gripper",
+
+                summary:
+                    "Parallel-motion pneumatic gripper designed for gripping and handling parts in automated systems.",
+
+                description:
+                    "Pneumatic gripper developed for part gripping and handling processes, intended for automation projects, technical training and semi-industrial and industrial applications.",
+
+                features: [
+
+                    "Double-acting pneumatic actuation.",
+
+                    "Parallel jaw movement.",
+
+                    "Designed for repetitive part gripping.",
+
+                    "Integration into automation and manipulation systems."
+
+                ],
+
+                applications: [
+
+                    "Repetitive part handling.",
+
+                    "Pick-and-place stations.",
+
+                    "Semi-industrial and industrial automation.",
+
+                    "Integration into pneumatic handling systems."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "气动夹爪",
+
+                summary:
+                    "平行运动气动夹爪，适用于自动化系统中的工件夹持和操作。",
+
+                description:
+                    "用于工件夹持和搬运过程的气动夹爪，适用于自动化项目、技术培训以及半工业和工业应用。",
+
+                features: [
+
+                    "双作用气动驱动。",
+
+                    "夹爪平行运动。",
+
+                    "适用于重复工件夹持。",
+
+                    "可集成到自动化和搬运系统中。"
+
+                ],
+
+                applications: [
+
+                    "重复工件搬运。",
+
+                    "取放工作站。",
+
+                    "半工业和工业自动化。",
+
+                    "气动搬运系统集成。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "material",
+                value: {
+
+                    es:
+                        "Aluminio",
+
+                    en:
+                        "Aluminum",
+
+                    zh:
+                        "铝"
+
+                }
+            },
+
+            {
+                key: "actuation",
+                value: {
+
+                    es:
+                        "Neumático de doble efecto",
+
+                    en:
+                        "Double-acting pneumatic",
+
+                    zh:
+                        "双作用气动"
+
+                }
+            },
+
+            {
+                key: "pressure",
+                value:
+                    "0.1–0.7 MPa"
+            },
+
+            {
+                key: "dof",
+                value:
+                    "1 GDL / DOF"
+            },
+
+            {
+                key: "weight",
+                value:
+                    "118 g"
+            },
+
+            {
+                key: "opening",
+                value: {
+
+                    es:
+                        "Hasta 58 mm",
+
+                    en:
+                        "Up to 58 mm",
+
+                    zh:
+                        "最大 58 mm"
+
+                }
+            },
+
+            {
+                key: "dimensions",
+                value:
+                    "67.4 × 31 × 23.7 mm"
+            }
+
+        ]
 
     },
 
 
 
-    /* GSSN6 */
+    /* =====================================================
+       GSSN6
+    ====================================================== */
 
     {
+
+        code:
+            "GSSN6",
 
         image:
             "ventosa.png",
@@ -3301,6 +6298,7 @@ const products = [
         type:
             "tools",
 
+
         infoPdfEs:
             "Ficha Herramienta (GSSN6).pdf",
 
@@ -3308,7 +6306,190 @@ const products = [
             "Tool Sheet (GSSN6).pdf",
 
         plansPdf:
-            "Vacuum Planos (GSSN6).pdf"
+            "Vacuum Planos (GSSN6).pdf",
+
+
+        content: {
+
+            es: {
+
+                title:
+                    "Ventosa de Succión",
+
+                summary:
+                    "Herramienta de succión diseñada para sujetar y manipular objetos mediante vacío en aplicaciones de automatización.",
+
+                description:
+                    "Herramienta de manipulación por vacío desarrollada para sujetar piezas con superficies lisas mediante ventosas, permitiendo su integración en proyectos de robótica, automatización e ingeniería.",
+
+                features: [
+
+                    "Sujeción mediante vacío.",
+
+                    "Manipulación sin mordazas mecánicas.",
+
+                    "Contacto mediante ventosa.",
+
+                    "Diseño para integración como herramienta de manipulación en sistemas automatizados."
+
+                ],
+
+                applications: [
+
+                    "Manipulación de piezas con superficies lisas.",
+
+                    "Sistemas de pick and place por vacío.",
+
+                    "Automatización semiindustrial e industrial.",
+
+                    "Integración como herramienta terminal en sistemas robóticos."
+
+                ]
+
+            },
+
+
+            en: {
+
+                title:
+                    "Suction Cup",
+
+                summary:
+                    "Suction tool designed to grip and handle objects using vacuum in automation applications.",
+
+                description:
+                    "Vacuum handling tool developed to grip parts with smooth surfaces using suction cups, enabling integration into robotics, automation and engineering projects.",
+
+                features: [
+
+                    "Vacuum gripping.",
+
+                    "Handling without mechanical jaws.",
+
+                    "Suction-cup contact.",
+
+                    "Designed for integration as a handling tool in automated systems."
+
+                ],
+
+                applications: [
+
+                    "Handling parts with smooth surfaces.",
+
+                    "Vacuum pick-and-place systems.",
+
+                    "Semi-industrial and industrial automation.",
+
+                    "Integration as an end tool in robotic systems."
+
+                ]
+
+            },
+
+
+            zh: {
+
+                title:
+                    "真空吸盘",
+
+                summary:
+                    "利用真空吸附抓取和搬运物体的工具，适用于自动化应用。",
+
+                description:
+                    "采用吸盘对光滑表面工件进行真空吸附的搬运工具，可集成到机器人、自动化和工程项目中。",
+
+                features: [
+
+                    "真空吸附。",
+
+                    "无需机械夹爪即可搬运。",
+
+                    "采用吸盘接触工件。",
+
+                    "可作为自动化系统末端搬运工具。"
+
+                ],
+
+                applications: [
+
+                    "光滑表面工件搬运。",
+
+                    "真空取放系统。",
+
+                    "半工业和工业自动化。",
+
+                    "机器人末端工具集成。"
+
+                ]
+
+            }
+
+        },
+
+
+        specs: [
+
+            {
+                key: "material",
+                value: {
+
+                    es:
+                        "Silicona, aluminio, latón y PETG+",
+
+                    en:
+                        "Silicone, aluminum, brass and PETG+",
+
+                    zh:
+                        "硅胶、铝、黄铜和 PETG+"
+
+                }
+            },
+
+            {
+                key: "compatibility",
+                value: {
+
+                    es:
+                        "Compatible con cualquier bomba de vacío",
+
+                    en:
+                        "Compatible with any vacuum pump",
+
+                    zh:
+                        "兼容各种真空泵"
+
+                }
+            },
+
+            {
+                key: "weight",
+                value:
+                    "52 g"
+            },
+
+            {
+                key: "workingDiameter",
+                value: {
+
+                    es:
+                        "Hasta 20 mm",
+
+                    en:
+                        "Up to 20 mm",
+
+                    zh:
+                        "最大 20 mm"
+
+                }
+            },
+
+            {
+                key: "packageDimensions",
+                value:
+                    "72 × 17 × 17 mm"
+            }
+
+        ]
 
     }
 
@@ -3317,7 +6498,7 @@ const products = [
 
 
 /* =========================================================
-   VARIABLES
+   ELEMENTOS
 ========================================================== */
 
 const productsList =
@@ -3362,6 +6543,23 @@ const documentModalClose =
     );
 
 
+const documentModalTitle =
+    document.getElementById(
+        "documentModalTitle"
+    );
+
+
+const documentModalDescription =
+    document.getElementById(
+        "documentModalDescription"
+    );
+
+
+
+/* =========================================================
+   ESTADO
+========================================================== */
+
 let currentLanguage =
     localStorage.getItem(
         "srcLanguage"
@@ -3382,98 +6580,257 @@ let pendingDocumentAction =
 
 
 /* =========================================================
-   CREAR TARJETAS
+   UTILIDAD TRADUCCIÓN
+========================================================== */
+
+function t(key) {
+
+
+    return (
+
+        translations[
+            currentLanguage
+        ][key]
+
+        ||
+
+        translations.es[key]
+
+        ||
+
+        key
+
+    );
+
+}
+
+
+
+/* =========================================================
+   CREAR ESPECIFICACIONES
+========================================================== */
+
+function createSpecificationsHTML(product) {
+
+
+    return product.specs
+        .map(
+            function(spec) {
+
+
+                const label =
+
+                    specificationLabels[
+                        currentLanguage
+                    ][spec.key]
+
+                    ||
+
+                    specificationLabels.es[
+                        spec.key
+                    ]
+
+                    ||
+
+                    spec.key;
+
+
+                const value =
+                    localized(
+                        spec.value
+                    );
+
+
+                return `
+
+                    <div class="spec-row">
+
+                        <span class="spec-label">
+                            ${label}
+                        </span>
+
+                        <span class="spec-value">
+                            ${value}
+                        </span>
+
+                    </div>
+
+                `;
+
+            }
+        )
+        .join("");
+
+}
+
+
+
+/* =========================================================
+   CREAR LISTA
+========================================================== */
+
+function createListHTML(items) {
+
+
+    return items
+        .map(
+            function(item) {
+
+
+                return `
+
+                    <li>
+                        ${item}
+                    </li>
+
+                `;
+
+            }
+        )
+        .join("");
+
+}
+
+
+
+/* =========================================================
+   CREAR TARJETA DE PRODUCTO
 ========================================================== */
 
 function createProductHTML(product) {
 
 
+    const content =
+
+        product.content[
+            currentLanguage
+        ]
+
+        ||
+
+        product.content.es;
+
+
     const isEducation =
+
         product.area ===
         "education";
 
 
-    const areaKey =
+    const areaText =
+
         isEducation
-        ? "educationCategory"
-        : "industryCategory";
+
+        ? t(
+            "educationCategory"
+        )
+
+        : t(
+            "industryCategory"
+        );
 
 
-    const typeKeys = {
+    const typeText = {
 
         robots:
-            "typeRobots",
+            t("typeRobots"),
 
         grippers:
-            "typeGrippers",
+            t("typeGrippers"),
 
         tools:
-            "typeTools",
+            t("typeTools"),
 
         components:
-            "typeComponents"
+            t("typeComponents")
 
-    };
+    }[
+        product.type
+    ];
 
 
     const secondaryImage =
+
         product.secondaryImage
+
         ? `
 
             <img
                 src="${product.secondaryImage}"
-                alt="Producto SRC"
+                alt="${content.title}"
             >
 
         `
+
         : "";
 
 
     const stlCard =
+
         isEducation
+
         ? `
 
             <div class="resource-card stl-card">
 
+
                 <span class="resource-file-type">
+
                     ZIP / STL
+
                 </span>
 
 
-                <h4 data-i18n="stlTitle">
-                    Archivos STL
+                <h4>
+
+                    ${t(
+                        "stlTitle"
+                    )}
+
                 </h4>
 
 
-                <p data-i18n="stlDescription">
-                    Archivos de las piezas 3D del producto.
+                <p>
+
+                    ${t(
+                        "stlDescription"
+                    )}
+
                 </p>
 
 
                 <div class="resource-actions">
 
+
                     <button
                         class="resource-button primary"
                         type="button"
                         data-action="download-stl"
-                        data-i18n="downloadStlZip"
                     >
-                        Descargar ZIP
+
+                        ${t(
+                            "downloadStlZip"
+                        )}
+
                     </button>
+
 
                 </div>
 
 
-                <span
-                    class="stl-free"
-                    data-i18n="freeStl"
-                >
-                    Descarga gratuita para educación e investigación.
+                <span class="stl-free">
+
+                    ${t(
+                        "freeStl"
+                    )}
+
                 </span>
+
 
             </div>
 
         `
+
         : "";
 
 
@@ -3482,26 +6839,25 @@ function createProductHTML(product) {
         <article
             class="product-item"
 
+            data-code="${product.code}"
+
             data-area="${product.area}"
 
             data-type="${product.type}"
-
-            data-info-pdf-es="${product.infoPdfEs || ""}"
-
-            data-info-pdf-en="${product.infoPdfEn || ""}"
-
-            data-plans-pdf="${product.plansPdf || ""}"
-
-            data-stl-zip="${product.stlZip || ""}"
         >
 
 
-            <!-- PARTE COMPACTA -->
+            <!-- =================================================
+                 CABECERA DEL PRODUCTO
+            ================================================== -->
 
             <div
                 class="product-toggle"
+
                 tabindex="0"
+
                 role="button"
+
                 aria-expanded="false"
             >
 
@@ -3510,7 +6866,7 @@ function createProductHTML(product) {
 
                     <img
                         src="${product.image}"
-                        alt="Producto SRC"
+                        alt="${content.title}"
                     >
 
                 </div>
@@ -3522,30 +6878,43 @@ function createProductHTML(product) {
 
                     <div class="badges">
 
-                        <span
-                            class="area-badge"
-                            data-i18n="${areaKey}"
-                        >
+
+                        <span class="area-badge">
+
+                            ${areaText}
+
                         </span>
 
 
-                        <span
-                            class="type-badge"
-                            data-i18n="${typeKeys[product.type]}"
-                        >
+                        <span class="type-badge">
+
+                            ${typeText}
+
                         </span>
+
 
                     </div>
 
 
 
-                    <h2 data-i18n="placeholderTitle">
-                        Título
+                    <h2>
+
+                        ${content.title}
+
                     </h2>
 
 
-                    <p data-i18n="placeholderDescription">
-                        Descripción
+                    <span class="product-code">
+
+                        ${product.code}
+
+                    </span>
+
+
+                    <p>
+
+                        ${content.summary}
+
                     </p>
 
 
@@ -3555,14 +6924,22 @@ function createProductHTML(product) {
 
                 <div class="expand-control">
 
-                    <span data-i18n="viewDetails">
-                        Ver detalles
+
+                    <span>
+
+                        ${t(
+                            "viewDetails"
+                        )}
+
                     </span>
 
 
                     <span class="circle-arrow">
+
                         ↓
+
                     </span>
+
 
                 </div>
 
@@ -3571,7 +6948,9 @@ function createProductHTML(product) {
 
 
 
-            <!-- PARTE DESPLEGADA -->
+            <!-- =================================================
+                 DETALLES
+            ================================================== -->
 
             <div class="product-details">
 
@@ -3582,90 +6961,123 @@ function createProductHTML(product) {
                     <div class="product-details-content">
 
 
-                        <!-- INFORMACIÓN -->
-
                         <div class="details-main">
 
+
+                            <!-- =====================================
+                                 INFORMACIÓN
+                            ====================================== -->
 
                             <div class="details-information">
 
 
+                                <!-- DESCRIPCIÓN -->
+
                                 <div class="information-block">
 
-                                    <h3 data-i18n="descriptionTitle">
-                                        Descripción
+
+                                    <h3>
+
+                                        ${t(
+                                            "descriptionTitle"
+                                        )}
+
                                     </h3>
 
 
-                                    <p
-                                        class="placeholder-text"
-                                        data-i18n="placeholderDescription"
-                                    >
-                                        Descripción
+                                    <p class="detail-text">
+
+                                        ${content.description}
+
                                     </p>
+
 
                                 </div>
 
 
 
+                                <!-- CARACTERÍSTICAS -->
+
                                 <div class="information-block">
 
-                                    <h4 data-i18n="featuresTitle">
-                                        Características
+
+                                    <h4>
+
+                                        ${t(
+                                            "featuresTitle"
+                                        )}
+
                                     </h4>
 
 
-                                    <ul class="placeholder-list">
+                                    <ul class="detail-list">
 
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
-
-                                        <li data-i18n="placeholderFeature">
-                                            Característica
-                                        </li>
+                                        ${
+                                            createListHTML(
+                                                content.features
+                                            )
+                                        }
 
                                     </ul>
 
-                                </div>
-
-
-
-                                <div class="information-block">
-
-                                    <h4 data-i18n="specificationsTitle">
-                                        Especificaciones
-                                    </h4>
-
-
-                                    <p
-                                        class="placeholder-text"
-                                        data-i18n="placeholderSpecifications"
-                                    >
-                                        Especificaciones
-                                    </p>
 
                                 </div>
 
 
 
+                                <!-- ESPECIFICACIONES -->
+
                                 <div class="information-block">
 
-                                    <h4 data-i18n="applicationsTitle">
-                                        Aplicaciones
+
+                                    <h4>
+
+                                        ${t(
+                                            "specificationsTitle"
+                                        )}
+
                                     </h4>
 
 
-                                    <p
-                                        class="placeholder-text"
-                                        data-i18n="placeholderApplications"
-                                    >
-                                        Aplicaciones
-                                    </p>
+                                    <div class="spec-list">
+
+                                        ${
+                                            createSpecificationsHTML(
+                                                product
+                                            )
+                                        }
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <!-- APLICACIONES -->
+
+                                <div class="information-block">
+
+
+                                    <h4>
+
+                                        ${t(
+                                            "applicationsTitle"
+                                        )}
+
+                                    </h4>
+
+
+                                    <ul class="detail-list">
+
+                                        ${
+                                            createListHTML(
+                                                content.applications
+                                            )
+                                        }
+
+                                    </ul>
+
 
                                 </div>
 
@@ -3674,14 +7086,21 @@ function createProductHTML(product) {
 
 
 
+                            <!-- =====================================
+                                 IMÁGENES
+                            ====================================== -->
+
                             <div class="details-media">
+
 
                                 <img
                                     src="${product.image}"
-                                    alt="Producto SRC"
+                                    alt="${content.title}"
                                 >
 
+
                                 ${secondaryImage}
+
 
                             </div>
 
@@ -3691,26 +7110,35 @@ function createProductHTML(product) {
 
 
                         <!-- =========================================
-                             DOCUMENTACIÓN ABAJO
+                             DOCUMENTACIÓN Y ARCHIVOS ABAJO
                         ========================================== -->
 
                         <div class="resources">
 
 
-                            <h3 data-i18n="resourcesTitle">
-                                Documentación y archivos
+                            <h3>
+
+                                ${t(
+                                    "resourcesTitle"
+                                )}
+
                             </h3>
 
 
-                            <p
-                                class="resources-description"
+                            <p class="resources-description">
 
-                                data-i18n="${
+                                ${
                                     isEducation
-                                    ? "resourcesDescription"
-                                    : "resourcesIndustryDescription"
-                                }"
-                            >
+
+                                    ? t(
+                                        "resourcesDescription"
+                                    )
+
+                                    : t(
+                                        "resourcesIndustryDescription"
+                                    )
+                                }
+
                             </p>
 
 
@@ -3724,93 +7152,139 @@ function createProductHTML(product) {
                             >
 
 
-                                <!-- INFORMACIÓN GENERAL -->
+                                <!-- =================================
+                                     INFORMACIÓN GENERAL
+                                ================================== -->
 
                                 <div class="resource-card">
 
+
                                     <span class="resource-file-type">
+
                                         PDF
+
                                     </span>
 
 
-                                    <h4 data-i18n="generalInfoTitle">
-                                        Información general del producto
+                                    <h4>
+
+                                        ${t(
+                                            "generalInfoTitle"
+                                        )}
+
                                     </h4>
 
 
-                                    <p data-i18n="generalInfoDescription">
-                                        Información, características y especificaciones generales.
+                                    <p>
+
+                                        ${t(
+                                            "generalInfoDescription"
+                                        )}
+
                                     </p>
 
 
                                     <div class="resource-actions">
 
+
                                         <button
                                             class="resource-button primary"
                                             type="button"
                                             data-action="view-info"
-                                            data-i18n="viewPdf"
                                         >
-                                            Ver PDF
+
+                                            ${t(
+                                                "viewPdf"
+                                            )}
+
                                         </button>
+
 
 
                                         <button
                                             class="resource-button secondary"
                                             type="button"
                                             data-action="download-info"
-                                            data-i18n="downloadPdf"
                                         >
-                                            Descargar PDF
+
+                                            ${t(
+                                                "downloadPdf"
+                                            )}
+
                                         </button>
 
+
                                     </div>
+
 
                                 </div>
 
 
 
-                                <!-- PLANOS -->
+                                <!-- =================================
+                                     PLANOS
+                                ================================== -->
 
                                 <div class="resource-card">
 
+
                                     <span class="resource-file-type">
+
                                         PDF
+
                                     </span>
 
 
-                                    <h4 data-i18n="plansTitle">
-                                        Planos
+                                    <h4>
+
+                                        ${t(
+                                            "plansTitle"
+                                        )}
+
                                     </h4>
 
 
-                                    <p data-i18n="plansDescription">
-                                        Planos y documentación dimensional del producto.
+                                    <p>
+
+                                        ${t(
+                                            "plansDescription"
+                                        )}
+
                                     </p>
 
 
                                     <div class="resource-actions">
 
+
                                         <button
                                             class="resource-button primary"
                                             type="button"
                                             data-action="view-plans"
-                                            data-i18n="viewPlans"
                                         >
-                                            Ver planos
+
+                                            ${t(
+                                                "viewPlans"
+                                            )}
+
                                         </button>
+
 
 
                                         <button
                                             class="resource-button secondary"
                                             type="button"
                                             data-action="download-plans"
-                                            data-i18n="downloadPlans"
                                         >
-                                            Descargar PDF
+
+                                            ${t(
+                                                "downloadPlans"
+                                            )}
+
                                         </button>
 
+
                                     </div>
+
 
                                 </div>
 
@@ -3843,25 +7317,48 @@ function createProductHTML(product) {
 
 
 /* =========================================================
-   RENDER
+   BUSCAR PRODUCTO
+========================================================== */
+
+function getProductByCode(code) {
+
+
+    return products.find(
+        function(product) {
+
+
+            return (
+                product.code ===
+                code
+            );
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   RENDER PRODUCTOS
 ========================================================== */
 
 function renderProducts() {
 
 
     productsList.innerHTML =
+
         products
-            .map(createProductHTML)
+            .map(
+                createProductHTML
+            )
             .join("");
 
 
     configureProducts();
 
-    configureResourceButtons();
 
-    setLanguage(
-        currentLanguage
-    );
+    configureResourceButtons();
 
 
     applyFilters();
@@ -3870,18 +7367,15 @@ function renderProducts() {
 
 
 
-renderProducts();
-
-
-
 /* =========================================================
-   ACORDEÓN
+   ABRIR / CERRAR PRODUCTOS
 ========================================================== */
 
 function configureProducts() {
 
 
     const productItems =
+
         document.querySelectorAll(
             ".product-item"
         );
@@ -3894,12 +7388,15 @@ function configureProducts() {
             function(product) {
 
 
-                product.classList.remove(
-                    "open"
-                );
+                product
+                    .classList
+                    .remove(
+                        "open"
+                    );
 
 
                 const toggle =
+
                     product.querySelector(
                         ".product-toggle"
                     );
@@ -3922,6 +7419,7 @@ function configureProducts() {
 
 
             const toggle =
+
                 product.querySelector(
                     ".product-toggle"
                 );
@@ -3931,20 +7429,27 @@ function configureProducts() {
 
 
                 const alreadyOpen =
-                    product.classList.contains(
-                        "open"
-                    );
+
+                    product
+                        .classList
+                        .contains(
+                            "open"
+                        );
 
 
                 closeAllProducts();
 
 
-                if (!alreadyOpen) {
+                if (
+                    !alreadyOpen
+                ) {
 
 
-                    product.classList.add(
-                        "open"
-                    );
+                    product
+                        .classList
+                        .add(
+                            "open"
+                        );
 
 
                     toggle.setAttribute(
@@ -3970,12 +7475,14 @@ function configureProducts() {
 
 
                     if (
-                        event.key === "Enter" ||
+                        event.key === "Enter"
+                        ||
                         event.key === " "
                     ) {
 
 
                         event.preventDefault();
+
 
                         toggleProduct();
 
@@ -3996,15 +7503,63 @@ function configureProducts() {
 ========================================================== */
 
 const areaFilterButtons =
+
     document.querySelectorAll(
         "[data-area-filter]"
     );
 
 
 const typeFilterButtons =
+
     document.querySelectorAll(
         "[data-type-filter]"
     );
+
+
+
+function updateFilterButtonStates() {
+
+
+    areaFilterButtons.forEach(
+        function(button) {
+
+
+            button
+                .classList
+                .toggle(
+
+                    "active",
+
+                    button.dataset
+                        .areaFilter ===
+                        activeArea
+
+                );
+
+        }
+    );
+
+
+    typeFilterButtons.forEach(
+        function(button) {
+
+
+            button
+                .classList
+                .toggle(
+
+                    "active",
+
+                    button.dataset
+                        .typeFilter ===
+                        activeType
+
+                );
+
+        }
+    );
+
+}
 
 
 
@@ -4012,6 +7567,7 @@ function applyFilters() {
 
 
     const productItems =
+
         document.querySelectorAll(
             ".product-item"
         );
@@ -4027,7 +7583,10 @@ function applyFilters() {
 
             const areaMatches =
 
-                activeArea === "all" ||
+                activeArea ===
+                "all"
+
+                ||
 
                 product.dataset.area ===
                 activeArea;
@@ -4035,7 +7594,10 @@ function applyFilters() {
 
             const typeMatches =
 
-                activeType === "all" ||
+                activeType ===
+                "all"
+
+                ||
 
                 product.dataset.type ===
                 activeType;
@@ -4043,17 +7605,26 @@ function applyFilters() {
 
             const shouldShow =
 
-                areaMatches &&
+                areaMatches
+                &&
                 typeMatches;
 
 
-            product.classList.toggle(
-                "is-hidden",
-                !shouldShow
-            );
+            product
+                .classList
+                .toggle(
+
+                    "is-hidden",
+
+                    !shouldShow
+
+                );
 
 
-            if (shouldShow) {
+            if (
+                shouldShow
+            ) {
+
 
                 visibleProducts++;
 
@@ -4063,10 +7634,21 @@ function applyFilters() {
     );
 
 
-    noResults.classList.toggle(
-        "show",
-        visibleProducts === 0
-    );
+    noResults.textContent =
+        t(
+            "noResults"
+        );
+
+
+    noResults
+        .classList
+        .toggle(
+
+            "show",
+
+            visibleProducts === 0
+
+        );
 
 }
 
@@ -4082,24 +7664,12 @@ areaFilterButtons.forEach(
 
 
                 activeArea =
-                    button.dataset.areaFilter;
+
+                    button.dataset
+                        .areaFilter;
 
 
-                areaFilterButtons.forEach(
-                    function(other) {
-
-
-                        other.classList.remove(
-                            "active"
-                        );
-
-                    }
-                );
-
-
-                button.classList.add(
-                    "active"
-                );
+                updateFilterButtonStates();
 
 
                 applyFilters();
@@ -4122,24 +7692,12 @@ typeFilterButtons.forEach(
 
 
                 activeType =
-                    button.dataset.typeFilter;
+
+                    button.dataset
+                        .typeFilter;
 
 
-                typeFilterButtons.forEach(
-                    function(other) {
-
-
-                        other.classList.remove(
-                            "active"
-                        );
-
-                    }
-                );
-
-
-                button.classList.add(
-                    "active"
-                );
+                updateFilterButtonStates();
 
 
                 applyFilters();
@@ -4166,24 +7724,12 @@ document
 
 
                     activeArea =
-                        link.dataset.areaLink;
+
+                        link.dataset
+                            .areaLink;
 
 
-                    areaFilterButtons.forEach(
-                        function(button) {
-
-
-                            button.classList.toggle(
-
-                                "active",
-
-                                button.dataset.areaFilter ===
-                                activeArea
-
-                            );
-
-                        }
-                    );
+                    updateFilterButtonStates();
 
 
                     applyFilters();
@@ -4193,6 +7739,136 @@ document
 
         }
     );
+
+
+
+/* =========================================================
+   ARCHIVOS / CANDIDATOS
+========================================================== */
+
+function hasFileSource(source) {
+
+
+    if (
+        Array.isArray(
+            source
+        )
+    ) {
+
+
+        return (
+            source.length > 0
+        );
+
+    }
+
+
+    return Boolean(
+        source
+    );
+
+}
+
+
+
+/* =========================================================
+   RESOLVER ARCHIVO
+
+   Esto permite que un producto pueda tener varias posibles
+   rutas en caso de que GitHub o el nombre del archivo tenga
+   alguna variante.
+
+========================================================== */
+
+async function resolveFileSource(source) {
+
+
+    if (
+        !hasFileSource(
+            source
+        )
+    ) {
+
+
+        return null;
+
+    }
+
+
+    if (
+        !Array.isArray(
+            source
+        )
+    ) {
+
+
+        return source;
+
+    }
+
+
+    for (
+        const candidate
+        of source
+    ) {
+
+
+        try {
+
+
+            const url =
+
+                new URL(
+                    candidate,
+                    window.location.href
+                );
+
+
+            const response =
+
+                await fetch(
+                    url.href,
+                    {
+                        method:
+                            "HEAD",
+
+                        cache:
+                            "no-store"
+                    }
+                );
+
+
+            if (
+                response.ok
+            ) {
+
+
+                return candidate;
+
+            }
+
+
+        } catch (
+            error
+        ) {
+
+
+            /* Continuar con el siguiente candidato */
+
+
+        }
+
+    }
+
+
+    /*
+       Si el servidor no permite HEAD,
+       intentamos con la primera variante.
+    */
+
+    return source[0];
+
+}
 
 
 
@@ -4219,61 +7895,69 @@ function configureResourceButtons() {
                         event.stopPropagation();
 
 
-                        const product =
+                        const article =
+
                             button.closest(
                                 ".product-item"
                             );
 
 
+                        const product =
+
+                            getProductByCode(
+                                article.dataset.code
+                            );
+
+
+                        if (
+                            !product
+                        ) {
+
+
+                            return;
+
+                        }
+
+
                         const action =
+
                             button.dataset.action;
 
 
 
                         /* =========================================
-                           FICHA INFORMACIÓN
-                           ESPAÑOL / ENGLISH
+                           FICHA TÉCNICA ES / EN
                         ========================================== */
 
                         if (
-                            action === "view-info" ||
-                            action === "download-info"
+                            action ===
+                                "view-info"
+
+                            ||
+
+                            action ===
+                                "download-info"
                         ) {
-
-
-                            const fileEs =
-                                product.dataset.infoPdfEs || "";
-
-
-                            const fileEn =
-                                product.dataset.infoPdfEn || "";
-
-
-                            if (
-                                !fileEs &&
-                                !fileEn
-                            ) {
-
-
-                                showUnavailable();
-
-                                return;
-
-                            }
 
 
                             pendingDocumentAction = {
 
                                 mode:
-                                    action === "view-info"
+
+                                    action ===
+                                        "view-info"
+
                                     ? "view"
+
                                     : "download",
 
+
                                 es:
-                                    fileEs,
+                                    product.infoPdfEs,
+
 
                                 en:
-                                    fileEn
+                                    product.infoPdfEn
 
                             };
 
@@ -4289,48 +7973,44 @@ function configureResourceButtons() {
 
                         /* =========================================
                            PLANOS
-                           UN SOLO PDF DIRECTO
                         ========================================== */
 
                         if (
-                            action === "view-plans" ||
-                            action === "download-plans"
+                            action ===
+                                "view-plans"
+
+                            ||
+
+                            action ===
+                                "download-plans"
                         ) {
 
 
-                            const file =
-                                product.dataset.plansPdf || "";
-
-
-                            if (!file) {
+                            if (
+                                !product.plansPdf
+                            ) {
 
 
                                 showUnavailable();
+
 
                                 return;
 
                             }
 
 
-                            if (
-                                action === "view-plans"
-                            ) {
+                            performFileAction(
 
+                                product.plansPdf,
 
-                                openFile(
-                                    file
-                                );
+                                action ===
+                                    "view-plans"
 
+                                ? "view"
 
-                            } else {
+                                : "download"
 
-
-                                downloadFile(
-                                    file
-                                );
-
-
-                            }
+                            );
 
 
                             return;
@@ -4340,30 +8020,34 @@ function configureResourceButtons() {
 
 
                         /* =========================================
-                           STL ZIP
+                           STL
                         ========================================== */
 
                         if (
-                            action === "download-stl"
+                            action ===
+                            "download-stl"
                         ) {
 
 
-                            const file =
-                                product.dataset.stlZip || "";
-
-
-                            if (!file) {
+                            if (
+                                !product.stlZip
+                            ) {
 
 
                                 showUnavailable();
+
 
                                 return;
 
                             }
 
 
-                            downloadFile(
-                                file
+                            performFileAction(
+
+                                product.stlZip,
+
+                                "download"
+
                             );
 
                         }
@@ -4380,20 +8064,38 @@ function configureResourceButtons() {
 
 
 /* =========================================================
-   MODAL DE IDIOMA DEL PDF
+   MODAL DE IDIOMA
 ========================================================== */
 
 function openDocumentModal() {
 
 
-    documentModal.classList.add(
-        "open"
-    );
+    documentModalTitle.textContent =
+
+        t(
+            "documentLanguageTitle"
+        );
 
 
-    document.body.classList.add(
-        "modal-open"
-    );
+    documentModalDescription.textContent =
+
+        t(
+            "documentLanguageDescription"
+        );
+
+
+    documentModal
+        .classList
+        .add(
+            "open"
+        );
+
+
+    document.body
+        .classList
+        .add(
+            "modal-open"
+        );
 
 }
 
@@ -4402,66 +8104,62 @@ function openDocumentModal() {
 function closeDocumentModal() {
 
 
-    documentModal.classList.remove(
-        "open"
-    );
+    documentModal
+        .classList
+        .remove(
+            "open"
+        );
 
 
-    document.body.classList.remove(
-        "modal-open"
-    );
-
-
-    pendingDocumentAction =
-        null;
+    document.body
+        .classList
+        .remove(
+            "modal-open"
+        );
 
 }
 
 
 
-documentModalClose.addEventListener(
-    "click",
-    closeDocumentModal
-);
-
-
-
-documentModal.addEventListener(
-    "click",
-    function(event) {
-
-
-        if (
-            event.target ===
-            documentModal
-        ) {
+documentModalClose
+    .addEventListener(
+        "click",
+        function() {
 
 
             closeDocumentModal();
 
-        }
 
-    }
-);
-
-
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-
-        if (
-            event.key === "Escape"
-        ) {
-
-
-            closeDocumentModal();
+            pendingDocumentAction =
+                null;
 
         }
+    );
 
-    }
-);
+
+
+documentModal
+    .addEventListener(
+        "click",
+        function(event) {
+
+
+            if (
+                event.target ===
+                documentModal
+            ) {
+
+
+                closeDocumentModal();
+
+
+                pendingDocumentAction =
+                    null;
+
+            }
+
+        }
+    );
 
 
 
@@ -4475,70 +8173,156 @@ document
 
             button.addEventListener(
                 "click",
-                function() {
+                async function() {
 
 
                     if (
                         !pendingDocumentAction
                     ) {
 
+
                         return;
 
                     }
 
 
-                    const language =
-                        button.dataset.documentLanguage;
+                    const selectedLanguage =
+
+                        button.dataset
+                            .documentLanguage;
 
 
-                    const file =
-                        pendingDocumentAction[
-                            language
+                    const action =
+
+                        pendingDocumentAction;
+
+
+                    const source =
+
+                        action[
+                            selectedLanguage
                         ];
 
 
                     const mode =
-                        pendingDocumentAction.mode;
 
-
-                    if (!file) {
-
-
-                        showUnavailable();
-
-                        return;
-
-                    }
+                        action.mode;
 
 
                     closeDocumentModal();
 
 
-                    if (
-                        mode === "view"
-                    ) {
+                    pendingDocumentAction =
+                        null;
 
 
-                        openFile(
-                            file
-                        );
+                    await performFileAction(
 
+                        source,
 
-                    } else {
+                        mode
 
-
-                        downloadFile(
-                            file
-                        );
-
-
-                    }
+                    );
 
                 }
             );
 
         }
     );
+
+
+
+document
+    .addEventListener(
+        "keydown",
+        function(event) {
+
+
+            if (
+                event.key ===
+                "Escape"
+            ) {
+
+
+                closeDocumentModal();
+
+
+                pendingDocumentAction =
+                    null;
+
+            }
+
+        }
+    );
+
+
+
+/* =========================================================
+   EJECUTAR ACCIÓN DE ARCHIVO
+========================================================== */
+
+async function performFileAction(
+    source,
+    mode
+) {
+
+
+    if (
+        !hasFileSource(
+            source
+        )
+    ) {
+
+
+        showUnavailable();
+
+
+        return;
+
+    }
+
+
+    const file =
+
+        await resolveFileSource(
+            source
+        );
+
+
+    if (
+        !file
+    ) {
+
+
+        showUnavailable();
+
+
+        return;
+
+    }
+
+
+    if (
+        mode ===
+        "view"
+    ) {
+
+
+        openFile(
+            file
+        );
+
+
+    } else {
+
+
+        downloadFile(
+            file
+        );
+
+    }
+
+}
 
 
 
@@ -4550,6 +8334,7 @@ function openFile(file) {
 
 
     const url =
+
         new URL(
             file,
             window.location.href
@@ -4557,9 +8342,13 @@ function openFile(file) {
 
 
     window.open(
+
         url.href,
+
         "_blank",
+
         "noopener"
+
     );
 
 }
@@ -4574,6 +8363,7 @@ function downloadFile(file) {
 
 
     const url =
+
         new URL(
             file,
             window.location.href
@@ -4581,6 +8371,7 @@ function downloadFile(file) {
 
 
     const link =
+
         document.createElement(
             "a"
         );
@@ -4591,14 +8382,16 @@ function downloadFile(file) {
 
 
     link.download =
+
         file
             .split("/")
             .pop();
 
 
-    document.body.appendChild(
-        link
-    );
+    document.body
+        .appendChild(
+            link
+        );
 
 
     link.click();
@@ -4611,7 +8404,7 @@ function downloadFile(file) {
 
 
 /* =========================================================
-   ARCHIVO NO DISPONIBLE
+   NO DISPONIBLE
 ========================================================== */
 
 function showUnavailable() {
@@ -4619,9 +8412,9 @@ function showUnavailable() {
 
     alert(
 
-        translations[
-            currentLanguage
-        ].unavailable
+        t(
+            "unavailable"
+        )
 
     );
 
@@ -4630,37 +8423,43 @@ function showUnavailable() {
 
 
 /* =========================================================
-   IDIOMA DE LA PÁGINA
+   SELECTOR DE IDIOMA
 ========================================================== */
 
-languageButton.addEventListener(
-    "click",
-    function(event) {
+languageButton
+    .addEventListener(
+        "click",
+        function(event) {
 
 
-        event.stopPropagation();
+            event.stopPropagation();
 
 
-        languageSelector.classList.toggle(
-            "open"
-        );
+            languageSelector
+                .classList
+                .toggle(
+                    "open"
+                );
 
-    }
-);
-
-
-
-document.addEventListener(
-    "click",
-    function() {
+        }
+    );
 
 
-        languageSelector.classList.remove(
-            "open"
-        );
 
-    }
-);
+document
+    .addEventListener(
+        "click",
+        function() {
+
+
+            languageSelector
+                .classList
+                .remove(
+                    "open"
+                );
+
+        }
+    );
 
 
 
@@ -4688,6 +8487,10 @@ document
     );
 
 
+
+/* =========================================================
+   CAMBIAR IDIOMA
+========================================================== */
 
 function setLanguage(language) {
 
@@ -4722,7 +8525,9 @@ function setLanguage(language) {
 
 
                 const key =
-                    element.dataset.i18n;
+
+                    element.dataset
+                        .i18n;
 
 
                 if (
@@ -4733,6 +8538,7 @@ function setLanguage(language) {
 
 
                     element.textContent =
+
                         translations[
                             language
                         ][key];
@@ -4744,20 +8550,32 @@ function setLanguage(language) {
 
 
     languageButtonText.textContent =
+
         translations[
             language
         ].languageButton;
 
 
     localStorage.setItem(
+
         "srcLanguage",
+
         language
+
     );
 
 
-    languageSelector.classList.remove(
-        "open"
-    );
+    languageSelector
+        .classList
+        .remove(
+            "open"
+        );
+
+
+    renderProducts();
+
+
+    updateFilterButtonStates();
 
 }
 
