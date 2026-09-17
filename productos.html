@@ -541,8 +541,6 @@
 
             cursor: pointer;
 
-            transition: 0.2s;
-
         }
 
 
@@ -1067,7 +1065,7 @@
 
 
         /* =========================================================
-           ETIQUETAS
+           BADGES
         ========================================================== */
 
         .badges {
@@ -1157,7 +1155,7 @@
 
 
         /* =========================================================
-           TÍTULO Y CÓDIGO
+           TÍTULO
         ========================================================== */
 
         .product-summary {
@@ -1198,18 +1196,17 @@
 
 
         /* =========================================================
-           CONTADOR EXCLUSIVO ZIP / STL
+           CONTADORES
         ========================================================== */
 
-        .product-downloads {
+        .product-downloads,
+        .resource-download-counter {
 
             display: inline-flex;
 
             align-items: center;
 
             gap: 5px;
-
-            margin-top: 7px;
 
             color:
                 #777777;
@@ -1225,7 +1222,15 @@
         }
 
 
-        .product-downloads svg {
+        .product-downloads {
+
+            margin-top: 7px;
+
+        }
+
+
+        .product-downloads svg,
+        .resource-download-counter svg {
 
             width: 15px;
             height: 15px;
@@ -1239,12 +1244,34 @@
             stroke-linecap: round;
             stroke-linejoin: round;
 
+            flex-shrink: 0;
+
         }
 
 
-        .product-download-count {
+        .resource-download-counter {
 
-            min-width: 8px;
+            min-height: 36px;
+
+            padding:
+                0 3px;
+
+        }
+
+
+        .stl-card
+        .resource-download-counter {
+
+            color:
+                var(--education);
+
+        }
+
+
+        .industry-download-counter {
+
+            color:
+                var(--industry);
 
         }
 
@@ -1333,7 +1360,7 @@
 
 
         /* =========================================================
-           DESPLEGABLE
+           DETALLES
         ========================================================== */
 
         .product-details {
@@ -1540,7 +1567,7 @@
 
 
         /* =========================================================
-           IMÁGENES DETALLES
+           IMÁGENES
         ========================================================== */
 
         .details-media {
@@ -1574,7 +1601,7 @@
 
 
         /* =========================================================
-           DOCUMENTACIÓN ABAJO
+           RECURSOS
         ========================================================== */
 
         .resources {
@@ -1707,6 +1734,8 @@
             display: flex;
 
             flex-wrap: wrap;
+
+            align-items: center;
 
             gap: 8px;
 
@@ -1846,7 +1875,7 @@
 
 
         /* =========================================================
-           MODAL DE IDIOMA PDF
+           MODAL
         ========================================================== */
 
         .document-modal {
@@ -1914,12 +1943,7 @@
 
             box-shadow:
                 0 25px 70px
-                rgba(
-                    0,
-                    0,
-                    0,
-                    0.22
-                );
+                rgba(0, 0, 0, 0.22);
 
             padding: 28px;
 
@@ -2381,14 +2405,7 @@
 
             .resource-actions {
 
-                flex-direction: column;
-
-            }
-
-
-            .resource-button {
-
-                width: 100%;
+                align-items: flex-start;
 
             }
 
@@ -2681,10 +2698,8 @@
     <p
         data-i18n="pageDescription"
     >
-
-        Explora los productos desarrollados por SRC para las áreas
-        de educación, investigación, robótica y automatización industrial.
-
+        Explora los productos desarrollados por SRC para las áreas de educación,
+        investigación, robótica y automatización industrial.
     </p>
 
 </section>
@@ -3116,8 +3131,11 @@ const translations = {
         documentLanguageDescription:
             "Elige la versión que deseas consultar o descargar.",
 
-        downloadsTitle:
-            "Descargas de archivos STL"
+        stlDownloadsTitle:
+            "Descargas del archivo ZIP / STL",
+
+        plansDownloadsTitle:
+            "Descargas de planos"
 
     },
 
@@ -3275,8 +3293,11 @@ const translations = {
         documentLanguageDescription:
             "Choose the version you want to view or download.",
 
-        downloadsTitle:
-            "STL file downloads"
+        stlDownloadsTitle:
+            "ZIP / STL file downloads",
+
+        plansDownloadsTitle:
+            "Drawing downloads"
 
     },
 
@@ -3434,8 +3455,11 @@ const translations = {
         documentLanguageDescription:
             "请选择要查看或下载的文档版本。",
 
-        downloadsTitle:
-            "STL 文件下载次数"
+        stlDownloadsTitle:
+            "ZIP / STL 文件下载次数",
+
+        plansDownloadsTitle:
+            "图纸下载次数"
 
     }
 
@@ -3444,7 +3468,7 @@ const translations = {
 
 
 /* =========================================================
-   ETIQUETAS ESPECIFICACIONES
+   ETIQUETAS DE ESPECIFICACIONES
 ========================================================== */
 
 const specificationLabels = {
@@ -3646,2735 +3670,2800 @@ const specificationLabels = {
 const products = [
 
 
-    {
+/* =========================================================
+   SRAT01
+========================================================== */
 
-        code:
-            "SRAT01",
+{
+    code:
+        "SRAT01",
 
-        image:
-            "robot_educativo.png",
+    image:
+        "robot_educativo.png",
 
-        area:
-            "education",
+    area:
+        "education",
 
-        type:
-            "robots",
+    type:
+        "robots",
 
-        infoPdfEs:
-            "Ficha Brazo robotico (SRAT01).pdf",
+    downloadMetric:
+        "stl",
 
-        infoPdfEn:
-            "sheet Robotic Arm (SRAT01).pdf",
+    infoPdfEs:
+        "Ficha Brazo robotico (SRAT01).pdf",
 
-        plansPdf:
-            "Brazo Robotico Planos (SRAT01).pdf",
+    infoPdfEn:
+        "sheet Robotic Arm (SRAT01).pdf",
 
-        stlZip:
-            "Brazo Robotico (SRAT01).zip",
+    plansPdf:
+        "Brazo Robotico Planos (SRAT01).pdf",
 
-
-        content: {
-
-            es: {
-
-                title:
-                    "Brazo Robótico Educativo",
-
-                summary:
-                    "Brazo robótico de 6 GDL diseñado para prácticas de robótica, programación y manipulación de objetos.",
-
-                description:
-                    "Brazo robótico didáctico diseñado para facilitar el aprendizaje práctico de la robótica, la programación y la automatización mediante una plataforma funcional para experimentación y desarrollo de proyectos.",
-
-                features: [
-
-                    "Configuración robótica de 6 GDL totales.",
-
-                    "Gripper integrado para prácticas de manipulación.",
-
-                    "Diseño orientado a enseñanza y experimentación.",
-
-                    "Integración con una amplia variedad de microcontroladores."
-
-                ],
-
-                applications: [
-
-                    "Prácticas de programación y control.",
-
-                    "Enseñanza de cinemática y robótica.",
-
-                    "Proyectos de automatización educativa.",
-
-                    "Investigación y desarrollo de sistemas de manipulación."
-
-                ]
-
-            },
+    stlZip:
+        "Brazo Robotico (SRAT01).zip",
 
 
-            en: {
+    content: {
 
-                title:
-                    "Educational Robotic Arm",
+        es: {
 
-                summary:
-                    "6-DOF robotic arm designed for robotics, programming and object manipulation practices.",
+            title:
+                "Brazo Robótico Educativo",
 
-                description:
-                    "Educational robotic arm designed to support hands-on learning in robotics, programming and automation through a functional platform for experimentation and project development.",
+            summary:
+                "Brazo robótico de 6 GDL diseñado para prácticas de robótica, programación y manipulación de objetos.",
 
-                features: [
+            description:
+                "Brazo robótico didáctico diseñado para facilitar el aprendizaje práctico de la robótica, la programación y la automatización mediante una plataforma funcional para experimentación y desarrollo de proyectos.",
 
-                    "Robotic configuration with 6 total DOF.",
+            features: [
 
-                    "Integrated gripper for manipulation practices.",
+                "Configuración robótica de 6 GDL totales.",
 
-                    "Design focused on education and experimentation.",
+                "Gripper integrado para prácticas de manipulación.",
 
-                    "Integration with a wide variety of microcontrollers."
+                "Diseño orientado a enseñanza y experimentación.",
 
-                ],
+                "Integración con una amplia variedad de microcontroladores."
 
-                applications: [
+            ],
 
-                    "Programming and control practices.",
+            applications: [
 
-                    "Kinematics and robotics education.",
+                "Prácticas de programación y control.",
 
-                    "Educational automation projects.",
+                "Enseñanza de cinemática y robótica.",
 
-                    "Research and development of manipulation systems."
+                "Proyectos de automatización educativa.",
 
-                ]
+                "Investigación y desarrollo de sistemas de manipulación."
 
-            },
-
-
-            zh: {
-
-                title:
-                    "教育型机械臂",
-
-                summary:
-                    "六自由度机械臂，适用于机器人、编程和物体操作实践。",
-
-                description:
-                    "面向机器人、编程和自动化实践教学的机械臂平台，可用于实验、控制学习和机器人项目开发。",
-
-                features: [
-
-                    "总计 6 个自由度。",
-
-                    "集成夹爪，可进行物体操作实验。",
-
-                    "面向教学与实验应用设计。",
-
-                    "可与多种微控制器集成。"
-
-                ],
-
-                applications: [
-
-                    "编程与控制实践。",
-
-                    "机器人学与运动学教学。",
-
-                    "教育自动化项目。",
-
-                    "机器人操作系统研究与开发。"
-
-                ]
-
-            }
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "material",
-                value: "PETG+"
-            },
+            title:
+                "Educational Robotic Arm",
 
-            {
-                key: "actuators",
+            summary:
+                "6-DOF robotic arm designed for robotics, programming and object manipulation practices.",
 
-                value: {
+            description:
+                "Educational robotic arm designed to support hands-on learning in robotics, programming and automation through a functional platform for experimentation and project development.",
 
-                    es:
-                        "6 servomotores: 3 MG996R + 3 MG90",
+            features: [
 
-                    en:
-                        "6 servomotors: 3 MG996R + 3 MG90",
+                "Robotic configuration with 6 total DOF.",
 
-                    zh:
-                        "6 个舵机：3 个 MG996R + 3 个 MG90"
+                "Integrated gripper for manipulation practices.",
 
-                }
-            },
+                "Design focused on education and experimentation.",
 
-            {
-                key: "dof",
+                "Integration with a wide variety of microcontrollers."
 
-                value: {
+            ],
 
-                    es:
-                        "6 GDL totales: 5 del brazo + 1 del gripper",
+            applications: [
 
-                    en:
-                        "6 total DOF: 5 arm + 1 gripper",
+                "Programming and control practices.",
 
-                    zh:
-                        "总计 6 自由度：机械臂 5 + 夹爪 1"
+                "Kinematics and robotics education.",
 
-                }
-            },
+                "Educational automation projects.",
 
-            {
-                key: "weight",
-                value: "520 g"
-            },
+                "Research and development of manipulation systems."
 
-            {
-                key: "workRadius",
-                value: "350 mm"
-            },
+            ]
 
-            {
-                key: "foldedDimensions",
-                value: "15 × 26 × 35 cm"
-            },
+        },
 
-            {
-                key: "compatibility",
 
-                value: {
+        zh: {
 
-                    es:
-                        "Amplia variedad de microcontroladores",
+            title:
+                "教育型机械臂",
 
-                    en:
-                        "Wide variety of microcontrollers",
+            summary:
+                "六自由度机械臂，适用于机器人、编程和物体操作实践。",
 
-                    zh:
-                        "兼容多种微控制器"
+            description:
+                "面向机器人、编程和自动化实践教学的机械臂平台，可用于实验、控制学习和机器人项目开发。",
 
-                }
-            }
+            features: [
 
-        ]
+                "总计 6 个自由度。",
+
+                "集成夹爪，可进行物体操作实验。",
+
+                "面向教学与实验应用设计。",
+
+                "可与多种微控制器集成。"
+
+            ],
+
+            applications: [
+
+                "编程与控制实践。",
+
+                "机器人学与运动学教学。",
+
+                "教育自动化项目。",
+
+                "机器人操作系统研究与开发。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "material",
+            value: "PETG+"
+        },
 
-        code:
-            "GS90",
+        {
+            key: "actuators",
 
-        image:
-            "gripper_educativo.png",
+            value: {
 
-        area:
-            "education",
+                es:
+                    "6 servomotores: 3 MG996R + 3 MG90",
 
-        type:
-            "grippers",
+                en:
+                    "6 servomotors: 3 MG996R + 3 MG90",
 
-        infoPdfEs:
-            "Ficha Gripper (GS90).pdf",
-
-        infoPdfEn:
-            "Gripper Sheet (GS90).pdf",
-
-        plansPdf:
-            "Gripper Plano (GS90).pdf",
-
-        stlZip:
-            "Gripper (GS90).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Gripper Educativo",
-
-                summary:
-                    "Gripper compacto diseñado para prácticas de sujeción y manipulación de objetos en proyectos de robótica.",
-
-                description:
-                    "Gripper didáctico compacto desarrollado para complementar proyectos de robótica y automatización mediante un mecanismo sencillo de apertura y cierre accionado por microservomotor.",
-
-                features: [
-
-                    "Diseño compacto y ligero.",
-
-                    "Accionamiento mediante microservomotor.",
-
-                    "Mecanismo de apertura y cierre para manipulación de objetos.",
-
-                    "Integración sencilla en proyectos educativos de robótica."
-
-                ],
-
-                applications: [
-
-                    "Prácticas de sujeción y manipulación.",
-
-                    "Integración en brazos robóticos educativos.",
-
-                    "Proyectos de automatización básica.",
-
-                    "Experimentación con sistemas de agarre."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "Educational Gripper",
-
-                summary:
-                    "Compact gripper designed for gripping and object manipulation practices in robotics projects.",
-
-                description:
-                    "Compact educational gripper developed for robotics and automation projects using a simple opening and closing mechanism driven by a micro servomotor.",
-
-                features: [
-
-                    "Compact and lightweight design.",
-
-                    "Micro servomotor actuation.",
-
-                    "Opening and closing mechanism for object manipulation.",
-
-                    "Easy integration into educational robotics projects."
-
-                ],
-
-                applications: [
-
-                    "Gripping and manipulation practices.",
-
-                    "Integration into educational robotic arms.",
-
-                    "Basic automation projects.",
-
-                    "Experimentation with gripping systems."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "教育型夹爪",
-
-                summary:
-                    "紧凑型夹爪，适用于机器人项目中的抓取和物体操作实践。",
-
-                description:
-                    "用于机器人和自动化教学项目的紧凑型夹爪，通过微型舵机驱动开合机构实现物体抓取。",
-
-                features: [
-
-                    "紧凑轻量设计。",
-
-                    "微型舵机驱动。",
-
-                    "具备物体抓取开合机构。",
-
-                    "易于集成到教育机器人项目中。"
-
-                ],
-
-                applications: [
-
-                    "抓取与操作实践。",
-
-                    "教育型机械臂集成。",
-
-                    "基础自动化项目。",
-
-                    "夹持系统实验。"
-
-                ]
+                zh:
+                    "6 个舵机：3 个 MG996R + 3 个 MG90"
 
             }
+        },
+
+        {
+            key: "dof",
+
+            value: {
+
+                es:
+                    "6 GDL totales: 5 del brazo + 1 del gripper",
+
+                en:
+                    "6 total DOF: 5 arm + 1 gripper",
+
+                zh:
+                    "总计 6 自由度：机械臂 5 + 夹爪 1"
+
+            }
+        },
+
+        {
+            key: "weight",
+            value: "520 g"
+        },
+
+        {
+            key: "workRadius",
+            value: "350 mm"
+        },
+
+        {
+            key: "foldedDimensions",
+            value: "15 × 26 × 35 cm"
+        },
+
+        {
+            key: "compatibility",
+
+            value: {
+
+                es:
+                    "Amplia variedad de microcontroladores",
+
+                en:
+                    "Wide variety of microcontrollers",
+
+                zh:
+                    "兼容多种微控制器"
+
+            }
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   GS90
+========================================================== */
+
+{
+    code:
+        "GS90",
+
+    image:
+        "gripper_educativo.png",
+
+    area:
+        "education",
+
+    type:
+        "grippers",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Gripper (GS90).pdf",
+
+    infoPdfEn:
+        "Gripper Sheet (GS90).pdf",
+
+    plansPdf:
+        "Gripper Plano (GS90).pdf",
+
+    stlZip:
+        "Gripper (GS90).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Gripper Educativo",
+
+            summary:
+                "Gripper compacto diseñado para prácticas de sujeción y manipulación de objetos en proyectos de robótica.",
+
+            description:
+                "Gripper didáctico compacto desarrollado para complementar proyectos de robótica y automatización mediante un mecanismo sencillo de apertura y cierre accionado por microservomotor.",
+
+            features: [
+
+                "Diseño compacto y ligero.",
+
+                "Accionamiento mediante microservomotor.",
+
+                "Mecanismo de apertura y cierre para manipulación de objetos.",
+
+                "Integración sencilla en proyectos educativos de robótica."
+
+            ],
+
+            applications: [
+
+                "Prácticas de sujeción y manipulación.",
+
+                "Integración en brazos robóticos educativos.",
+
+                "Proyectos de automatización básica.",
+
+                "Experimentación con sistemas de agarre."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "material",
-                value: "PETG+"
-            },
+            title:
+                "Educational Gripper",
 
-            {
-                key: "actuator",
+            summary:
+                "Compact gripper designed for gripping and object manipulation practices in robotics projects.",
 
-                value: {
+            description:
+                "Compact educational gripper developed for robotics and automation projects using a simple opening and closing mechanism driven by a micro servomotor.",
 
-                    es:
-                        "1 microservomotor MG90 / SG90",
+            features: [
 
-                    en:
-                        "1 MG90 / SG90 micro servomotor",
+                "Compact and lightweight design.",
 
-                    zh:
-                        "1 个 MG90 / SG90 微型舵机"
+                "Micro servomotor actuation.",
 
-                }
-            },
+                "Opening and closing mechanism for object manipulation.",
 
-            {
-                key: "dof",
-                value: "1 GDL / DOF"
-            },
+                "Easy integration into educational robotics projects."
 
-            {
-                key: "weight",
-                value: "52 g"
-            },
+            ],
 
-            {
-                key: "opening",
-                value: "60 mm"
-            },
+            applications: [
 
-            {
-                key: "foldedDimensions",
-                value: "15 × 10 × 5 cm"
-            },
+                "Gripping and manipulation practices.",
 
-            {
-                key: "compatibility",
+                "Integration into educational robotic arms.",
 
-                value: {
+                "Basic automation projects.",
 
-                    es:
-                        "Amplia variedad de microcontroladores",
+                "Experimentation with gripping systems."
 
-                    en:
-                        "Wide variety of microcontrollers",
+            ]
 
-                    zh:
-                        "兼容多种微控制器"
+        },
 
-                }
-            }
 
-        ]
+        zh: {
+
+            title:
+                "教育型夹爪",
+
+            summary:
+                "紧凑型夹爪，适用于机器人项目中的抓取和物体操作实践。",
+
+            description:
+                "用于机器人和自动化教学项目的紧凑型夹爪，通过微型舵机驱动开合机构实现物体抓取。",
+
+            features: [
+
+                "紧凑轻量设计。",
+
+                "微型舵机驱动。",
+
+                "具备物体抓取开合机构。",
+
+                "易于集成到教育机器人项目中。"
+
+            ],
+
+            applications: [
+
+                "抓取与操作实践。",
+
+                "教育型机械臂集成。",
+
+                "基础自动化项目。",
+
+                "夹持系统实验。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "material",
+            value: "PETG+"
+        },
 
-        code:
-            "GSF996",
+        {
+            key: "actuator",
 
-        image:
-            "gripper_adaptative_educativo.png",
+            value: {
 
-        area:
-            "education",
+                es:
+                    "1 microservomotor MG90 / SG90",
 
-        type:
-            "grippers",
+                en:
+                    "1 MG90 / SG90 micro servomotor",
 
-        infoPdfEs:
-            "Ficha Gripper (GSF996).pdf",
-
-        infoPdfEn:
-            "Gripper Sheet (GSF996).pdf",
-
-        plansPdf:
-            "Gripper Adaptable Planos (GSF996).pdf",
-
-        stlZip:
-            "Gripper (GSF996).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Gripper Adaptable",
-
-                summary:
-                    "Gripper de geometría adaptable diseñado para sujetar objetos con diferentes formas y dimensiones.",
-
-                description:
-                    "Gripper robótico con geometría adaptable desarrollado para experimentar con diferentes formas de pieza y condiciones de sujeción dentro de proyectos educativos de robótica y automatización.",
-
-                features: [
-
-                    "Mecanismo adaptable a diferentes geometrías.",
-
-                    "Accionamiento mediante servomotor.",
-
-                    "Contacto distribuido con el objeto durante la sujeción.",
-
-                    "Diseño orientado a experimentación con distintos tipos de piezas."
-
-                ],
-
-                applications: [
-
-                    "Manipulación de objetos con distintas geometrías.",
-
-                    "Prácticas de robótica y automatización.",
-
-                    "Experimentación con mecanismos adaptables.",
-
-                    "Proyectos académicos de agarre y manipulación."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "Adaptive Gripper",
-
-                summary:
-                    "Adaptive-geometry gripper designed to hold objects with different shapes and dimensions.",
-
-                description:
-                    "Robotic gripper with an adaptive geometry developed for experimenting with different part shapes and gripping conditions in educational robotics and automation projects.",
-
-                features: [
-
-                    "Mechanism adaptable to different geometries.",
-
-                    "Servomotor actuation.",
-
-                    "Distributed contact with the object during gripping.",
-
-                    "Designed for experimentation with different types of parts."
-
-                ],
-
-                applications: [
-
-                    "Manipulation of objects with different geometries.",
-
-                    "Robotics and automation practices.",
-
-                    "Experimentation with adaptive mechanisms.",
-
-                    "Academic gripping and manipulation projects."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "自适应夹爪",
-
-                summary:
-                    "具有自适应几何结构的夹爪，可抓取不同形状和尺寸的物体。",
-
-                description:
-                    "采用自适应结构的机器人夹爪，可用于不同形状工件和夹持条件的实验，适合教育机器人和自动化项目。",
-
-                features: [
-
-                    "可适应不同物体几何形状。",
-
-                    "采用舵机驱动。",
-
-                    "夹持时可形成分布式接触。",
-
-                    "适用于不同类型工件的实验。"
-
-                ],
-
-                applications: [
-
-                    "不同几何形状物体操作。",
-
-                    "机器人与自动化实践。",
-
-                    "自适应机构实验。",
-
-                    "学术夹持与操作项目。"
-
-                ]
+                zh:
+                    "1 个 MG90 / SG90 微型舵机"
 
             }
+        },
+
+        {
+            key: "dof",
+            value: "1 GDL / DOF"
+        },
+
+        {
+            key: "weight",
+            value: "52 g"
+        },
+
+        {
+            key: "opening",
+            value: "60 mm"
+        },
+
+        {
+            key: "foldedDimensions",
+            value: "15 × 10 × 5 cm"
+        },
+
+        {
+            key: "compatibility",
+
+            value: {
+
+                es:
+                    "Amplia variedad de microcontroladores",
+
+                en:
+                    "Wide variety of microcontrollers",
+
+                zh:
+                    "兼容多种微控制器"
+
+            }
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   GSF996
+========================================================== */
+
+{
+    code:
+        "GSF996",
+
+    image:
+        "gripper_adaptative_educativo.png",
+
+    area:
+        "education",
+
+    type:
+        "grippers",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Gripper (GSF996).pdf",
+
+    infoPdfEn:
+        "Gripper Sheet (GSF996).pdf",
+
+    plansPdf:
+        "Gripper Adaptable Planos (GSF996).pdf",
+
+    stlZip:
+        "Gripper (GSF996).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Gripper Adaptable",
+
+            summary:
+                "Gripper de geometría adaptable diseñado para sujetar objetos con diferentes formas y dimensiones.",
+
+            description:
+                "Gripper robótico con geometría adaptable desarrollado para experimentar con diferentes formas de pieza y condiciones de sujeción dentro de proyectos educativos de robótica y automatización.",
+
+            features: [
+
+                "Mecanismo adaptable a diferentes geometrías.",
+
+                "Accionamiento mediante servomotor.",
+
+                "Contacto distribuido con el objeto durante la sujeción.",
+
+                "Diseño orientado a experimentación con distintos tipos de piezas."
+
+            ],
+
+            applications: [
+
+                "Manipulación de objetos con distintas geometrías.",
+
+                "Prácticas de robótica y automatización.",
+
+                "Experimentación con mecanismos adaptables.",
+
+                "Proyectos académicos de agarre y manipulación."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "material",
-                value: "PETG+"
-            },
+            title:
+                "Adaptive Gripper",
 
-            {
-                key: "actuator",
+            summary:
+                "Adaptive-geometry gripper designed to hold objects with different shapes and dimensions.",
 
-                value: {
+            description:
+                "Robotic gripper with an adaptive geometry developed for experimenting with different part shapes and gripping conditions in educational robotics and automation projects.",
 
-                    es:
-                        "Compatible con MG995R / MG996R / S14KC",
+            features: [
 
-                    en:
-                        "Compatible with MG995R / MG996R / S14KC",
+                "Mechanism adaptable to different geometries.",
 
-                    zh:
-                        "兼容 MG995R / MG996R / S14KC"
+                "Servomotor actuation.",
 
-                }
-            },
+                "Distributed contact with the object during gripping.",
 
-            {
-                key: "dof",
-                value: "1 GDL / DOF"
-            },
+                "Designed for experimentation with different types of parts."
 
-            {
-                key: "weight",
-                value: "72 g"
-            },
+            ],
 
-            {
-                key: "opening",
+            applications: [
 
-                value: {
+                "Manipulation of objects with different geometries.",
 
-                    es:
-                        "Hasta 100 mm",
+                "Robotics and automation practices.",
 
-                    en:
-                        "Up to 100 mm",
+                "Experimentation with adaptive mechanisms.",
 
-                    zh:
-                        "最大 100 mm"
+                "Academic gripping and manipulation projects."
 
-                }
-            },
+            ]
 
-            {
-                key: "dimensions",
-                value: "75 × 158 × 45 mm"
-            },
+        },
 
-            {
-                key: "compatibility",
 
-                value: {
+        zh: {
 
-                    es:
-                        "Amplia variedad de microcontroladores",
+            title:
+                "自适应夹爪",
 
-                    en:
-                        "Wide variety of microcontrollers",
+            summary:
+                "具有自适应几何结构的夹爪，可抓取不同形状和尺寸的物体。",
 
-                    zh:
-                        "兼容多种微控制器"
+            description:
+                "采用自适应结构的机器人夹爪，可用于不同形状工件和夹持条件的实验，适合教育机器人和自动化项目。",
 
-                }
-            }
+            features: [
 
-        ]
+                "可适应不同物体几何形状。",
+
+                "采用舵机驱动。",
+
+                "夹持时可形成分布式接触。",
+
+                "适用于不同类型工件的实验。"
+
+            ],
+
+            applications: [
+
+                "不同几何形状物体操作。",
+
+                "机器人与自动化实践。",
+
+                "自适应机构实验。",
+
+                "学术夹持与操作项目。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "material",
+            value: "PETG+"
+        },
 
-        code:
-            "GSP996",
+        {
+            key: "actuator",
 
-        image:
-            "gripper_paraleloo.png",
+            value: {
 
-        area:
-            "education",
+                es:
+                    "Compatible con MG995R / MG996R / S14KC",
 
-        type:
-            "grippers",
+                en:
+                    "Compatible with MG995R / MG996R / S14KC",
 
-        infoPdfEs:
-            "Ficha Gripper (GSP996).pdf",
-
-        infoPdfEn:
-            "Gripper Sheet (GSP996).pdf",
-
-        plansPdf:
-            "Gripper Planos (GSP996).pdf",
-
-        stlZip:
-            "Gripper (GSP996).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Gripper Paralelo",
-
-                summary:
-                    "Gripper de movimiento paralelo diseñado para prácticas de sujeción, posicionamiento y manipulación de objetos.",
-
-                description:
-                    "Gripper robótico con movimiento paralelo de mordazas diseñado para prácticas de sujeción y posicionamiento, permitiendo su integración en proyectos educativos de automatización y manipulación.",
-
-                features: [
-
-                    "Movimiento paralelo de las mordazas.",
-
-                    "Accionamiento mediante servomotor.",
-
-                    "Apertura y cierre simétrico.",
-
-                    "Diseño compacto para integración en brazos robóticos."
-
-                ],
-
-                applications: [
-
-                    "Prácticas de pick and place.",
-
-                    "Manipulación y posicionamiento de piezas.",
-
-                    "Integración en brazos robóticos educativos.",
-
-                    "Proyectos de automatización y control."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "Parallel Gripper",
-
-                summary:
-                    "Parallel-motion gripper designed for gripping, positioning and object manipulation practices.",
-
-                description:
-                    "Robotic gripper with parallel jaw motion designed for gripping and positioning practices and integration into educational automation and manipulation projects.",
-
-                features: [
-
-                    "Parallel jaw movement.",
-
-                    "Servomotor actuation.",
-
-                    "Symmetrical opening and closing.",
-
-                    "Compact design for robotic arm integration."
-
-                ],
-
-                applications: [
-
-                    "Pick-and-place practices.",
-
-                    "Part manipulation and positioning.",
-
-                    "Integration into educational robotic arms.",
-
-                    "Automation and control projects."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "平行夹爪",
-
-                summary:
-                    "采用平行运动结构的夹爪，适用于抓取、定位和物体操作实践。",
-
-                description:
-                    "采用平行夹爪运动方式的机器人末端夹具，可用于抓取、定位以及教育自动化操作项目。",
-
-                features: [
-
-                    "夹爪平行运动。",
-
-                    "采用舵机驱动。",
-
-                    "对称开合。",
-
-                    "紧凑设计，便于机械臂集成。"
-
-                ],
-
-                applications: [
-
-                    "取放操作实践。",
-
-                    "工件操作与定位。",
-
-                    "教育型机械臂集成。",
-
-                    "自动化与控制项目。"
-
-                ]
+                zh:
+                    "兼容 MG995R / MG996R / S14KC"
 
             }
+        },
+
+        {
+            key: "dof",
+            value: "1 GDL / DOF"
+        },
+
+        {
+            key: "weight",
+            value: "72 g"
+        },
+
+        {
+            key: "opening",
+
+            value: {
+
+                es:
+                    "Hasta 100 mm",
+
+                en:
+                    "Up to 100 mm",
+
+                zh:
+                    "最大 100 mm"
+
+            }
+        },
+
+        {
+            key: "dimensions",
+            value: "75 × 158 × 45 mm"
+        },
+
+        {
+            key: "compatibility",
+
+            value: {
+
+                es:
+                    "Amplia variedad de microcontroladores",
+
+                en:
+                    "Wide variety of microcontrollers",
+
+                zh:
+                    "兼容多种微控制器"
+
+            }
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   GSP996
+========================================================== */
+
+{
+    code:
+        "GSP996",
+
+    image:
+        "gripper_paraleloo.png",
+
+    area:
+        "education",
+
+    type:
+        "grippers",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Gripper (GSP996).pdf",
+
+    infoPdfEn:
+        "Gripper Sheet (GSP996).pdf",
+
+    plansPdf:
+        "Gripper Planos (GSP996).pdf",
+
+    stlZip:
+        "Gripper (GSP996).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Gripper Paralelo",
+
+            summary:
+                "Gripper de movimiento paralelo diseñado para prácticas de sujeción, posicionamiento y manipulación de objetos.",
+
+            description:
+                "Gripper robótico con movimiento paralelo de mordazas diseñado para prácticas de sujeción y posicionamiento, permitiendo su integración en proyectos educativos de automatización y manipulación.",
+
+            features: [
+
+                "Movimiento paralelo de las mordazas.",
+
+                "Accionamiento mediante servomotor.",
+
+                "Apertura y cierre simétrico.",
+
+                "Diseño compacto para integración en brazos robóticos."
+
+            ],
+
+            applications: [
+
+                "Prácticas de pick and place.",
+
+                "Manipulación y posicionamiento de piezas.",
+
+                "Integración en brazos robóticos educativos.",
+
+                "Proyectos de automatización y control."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "material",
-                value: "PETG+"
-            },
+            title:
+                "Parallel Gripper",
 
-            {
-                key: "actuator",
+            summary:
+                "Parallel-motion gripper designed for gripping, positioning and object manipulation practices.",
 
-                value: {
+            description:
+                "Robotic gripper with parallel jaw motion designed for gripping and positioning practices and integration into educational automation and manipulation projects.",
 
-                    es:
-                        "Compatible con MG996R / MG995R / S14KC",
+            features: [
 
-                    en:
-                        "Compatible with MG996R / MG995R / S14KC",
+                "Parallel jaw movement.",
 
-                    zh:
-                        "兼容 MG996R / MG995R / S14KC"
+                "Servomotor actuation.",
 
-                }
-            },
+                "Symmetrical opening and closing.",
 
-            {
-                key: "dof",
-                value: "1 GDL / DOF"
-            },
+                "Compact design for robotic arm integration."
 
-            {
-                key: "weight",
-                value: "72 g"
-            },
+            ],
 
-            {
-                key: "opening",
-                value: "56 mm"
-            },
+            applications: [
 
-            {
-                key: "openDimensions",
-                value: "108 × 98 × 40 mm"
-            },
+                "Pick-and-place practices.",
 
-            {
-                key: "compatibility",
+                "Part manipulation and positioning.",
 
-                value: {
+                "Integration into educational robotic arms.",
 
-                    es:
-                        "Amplia variedad de microcontroladores",
+                "Automation and control projects."
 
-                    en:
-                        "Wide variety of microcontrollers",
+            ]
 
-                    zh:
-                        "兼容多种微控制器"
+        },
 
-                }
-            }
 
-        ]
+        zh: {
+
+            title:
+                "平行夹爪",
+
+            summary:
+                "采用平行运动结构的夹爪，适用于抓取、定位和物体操作实践。",
+
+            description:
+                "采用平行夹爪运动方式的机器人末端夹具，可用于抓取、定位以及教育自动化操作项目。",
+
+            features: [
+
+                "夹爪平行运动。",
+
+                "采用舵机驱动。",
+
+                "对称开合。",
+
+                "紧凑设计，便于机械臂集成。"
+
+            ],
+
+            applications: [
+
+                "取放操作实践。",
+
+                "工件操作与定位。",
+
+                "教育型机械臂集成。",
+
+                "自动化与控制项目。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "material",
+            value: "PETG+"
+        },
 
-        code:
-            "GSMG996",
+        {
+            key: "actuator",
 
-        image:
-            "gripper_mg996rr.jpg",
+            value: {
 
-        area:
-            "education",
+                es:
+                    "Compatible con MG996R / MG995R / S14KC",
 
-        type:
-            "grippers",
+                en:
+                    "Compatible with MG996R / MG995R / S14KC",
 
-        infoPdfEs:
-            "Ficha Gripper (GSMG996).pdf",
-
-        infoPdfEn:
-            "Gripper sheet (GSMG996).pdf",
-
-        plansPdf:
-            "Gripper Planos (GSMG996).pdf",
-
-        stlZip:
-            "Gripper (GSMG996).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Gripper MG996R",
-
-                summary:
-                    "Gripper accionado mediante servomotor MG996R para prácticas de manipulación y automatización robótica.",
-
-                description:
-                    "Gripper robótico de accionamiento por servomotor desarrollado para prácticas educativas de sujeción, manipulación y automatización, con una estructura fabricada mediante impresión 3D.",
-
-                features: [
-
-                    "Accionamiento mediante servomotor.",
-
-                    "Mecanismo de sujeción mecánica.",
-
-                    "Diseño para integración en proyectos robóticos.",
-
-                    "Estructura orientada a prácticas de manipulación de objetos."
-
-                ],
-
-                applications: [
-
-                    "Manipulación de objetos.",
-
-                    "Prácticas de robótica y automatización.",
-
-                    "Integración con sistemas de control.",
-
-                    "Desarrollo de proyectos de sujeción robótica."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "MG996R Gripper",
-
-                summary:
-                    "Servomotor-driven gripper for robotic manipulation and automation practices.",
-
-                description:
-                    "Servomotor-driven robotic gripper developed for educational gripping, manipulation and automation practices, with a structure manufactured using 3D printing.",
-
-                features: [
-
-                    "Servomotor actuation.",
-
-                    "Mechanical gripping mechanism.",
-
-                    "Designed for integration into robotics projects.",
-
-                    "Structure focused on object manipulation practices."
-
-                ],
-
-                applications: [
-
-                    "Object manipulation.",
-
-                    "Robotics and automation practices.",
-
-                    "Integration with control systems.",
-
-                    "Development of robotic gripping projects."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "MG996R 夹爪",
-
-                summary:
-                    "由 MG996R 类舵机驱动的夹爪，适用于机器人操作和自动化实践。",
-
-                description:
-                    "用于教育型抓取、操作和自动化实践的舵机驱动机器人夹爪，其结构采用 3D 打印制造。",
-
-                features: [
-
-                    "舵机驱动。",
-
-                    "机械夹持机构。",
-
-                    "适用于机器人项目集成。",
-
-                    "面向物体操作实践设计。"
-
-                ],
-
-                applications: [
-
-                    "物体操作。",
-
-                    "机器人与自动化实践。",
-
-                    "控制系统集成。",
-
-                    "机器人夹持项目开发。"
-
-                ]
+                zh:
+                    "兼容 MG996R / MG995R / S14KC"
 
             }
+        },
+
+        {
+            key: "dof",
+            value: "1 GDL / DOF"
+        },
+
+        {
+            key: "weight",
+            value: "72 g"
+        },
+
+        {
+            key: "opening",
+            value: "56 mm"
+        },
+
+        {
+            key: "openDimensions",
+            value: "108 × 98 × 40 mm"
+        },
+
+        {
+            key: "compatibility",
+
+            value: {
+
+                es:
+                    "Amplia variedad de microcontroladores",
+
+                en:
+                    "Wide variety of microcontrollers",
+
+                zh:
+                    "兼容多种微控制器"
+
+            }
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   GSMG996
+========================================================== */
+
+{
+    code:
+        "GSMG996",
+
+    image:
+        "gripper_mg996rr.jpg",
+
+    area:
+        "education",
+
+    type:
+        "grippers",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Gripper (GSMG996).pdf",
+
+    infoPdfEn:
+        "Gripper sheet (GSMG996).pdf",
+
+    plansPdf:
+        "Gripper Planos (GSMG996).pdf",
+
+    stlZip:
+        "Gripper (GSMG996).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Gripper MG996R",
+
+            summary:
+                "Gripper accionado mediante servomotor MG996R para prácticas de manipulación y automatización robótica.",
+
+            description:
+                "Gripper robótico de accionamiento por servomotor desarrollado para prácticas educativas de sujeción, manipulación y automatización, con una estructura fabricada mediante impresión 3D.",
+
+            features: [
+
+                "Accionamiento mediante servomotor.",
+
+                "Mecanismo de sujeción mecánica.",
+
+                "Diseño para integración en proyectos robóticos.",
+
+                "Estructura orientada a prácticas de manipulación de objetos."
+
+            ],
+
+            applications: [
+
+                "Manipulación de objetos.",
+
+                "Prácticas de robótica y automatización.",
+
+                "Integración con sistemas de control.",
+
+                "Desarrollo de proyectos de sujeción robótica."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "material",
-                value: "PETG+"
-            },
+            title:
+                "MG996R Gripper",
 
-            {
-                key: "actuator",
+            summary:
+                "Servomotor-driven gripper for robotic manipulation and automation practices.",
 
-                value: {
+            description:
+                "Servomotor-driven robotic gripper developed for educational gripping, manipulation and automation practices, with a structure manufactured using 3D printing.",
 
-                    es:
-                        "Compatible con MG995R / MG996R / S14KC",
+            features: [
 
-                    en:
-                        "Compatible with MG995R / MG996R / S14KC",
+                "Servomotor actuation.",
 
-                    zh:
-                        "兼容 MG995R / MG996R / S14KC"
+                "Mechanical gripping mechanism.",
 
-                }
-            },
+                "Designed for integration into robotics projects.",
 
-            {
-                key: "dof",
-                value: "1 GDL / DOF"
-            },
+                "Structure focused on object manipulation practices."
 
-            {
-                key: "weight",
-                value: "72 g"
-            },
+            ],
 
-            {
-                key: "workingDiameter",
+            applications: [
 
-                value: {
+                "Object manipulation.",
 
-                    es:
-                        "Hasta 100 mm",
+                "Robotics and automation practices.",
 
-                    en:
-                        "Up to 100 mm",
+                "Integration with control systems.",
 
-                    zh:
-                        "最大 100 mm"
+                "Development of robotic gripping projects."
 
-                }
-            },
+            ]
 
-            {
-                key: "packageDimensions",
-                value: "150 × 150 × 35 mm"
-            },
+        },
 
-            {
-                key: "compatibility",
 
-                value: {
+        zh: {
 
-                    es:
-                        "Sistemas y actuadores compatibles",
+            title:
+                "MG996R 夹爪",
 
-                    en:
-                        "Compatible systems and actuators",
+            summary:
+                "由 MG996R 类舵机驱动的夹爪，适用于机器人操作和自动化实践。",
 
-                    zh:
-                        "兼容多种系统和执行器"
+            description:
+                "用于教育型抓取、操作和自动化实践的舵机驱动机器人夹爪，其结构采用 3D 打印制造。",
 
-                }
-            }
+            features: [
 
-        ]
+                "舵机驱动。",
+
+                "机械夹持机构。",
+
+                "适用于机器人项目集成。",
+
+                "面向物体操作实践设计。"
+
+            ],
+
+            applications: [
+
+                "物体操作。",
+
+                "机器人与自动化实践。",
+
+                "控制系统集成。",
+
+                "机器人夹持项目开发。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "material",
+            value: "PETG+"
+        },
 
-        code:
-            "SKG100",
+        {
+            key: "actuator",
 
-        image:
-            "kit_engranes.png",
+            value: {
 
-        area:
-            "education",
+                es:
+                    "Compatible con MG995R / MG996R / S14KC",
 
-        type:
-            "components",
+                en:
+                    "Compatible with MG995R / MG996R / S14KC",
 
-        infoPdfEs:
-            "Ficha Elementos de Transmisión Mecánica (SKG100).pdf",
-
-        infoPdfEn: [
-
-            "Mechanical Power Transmission Components Sheet (SKG100).pdf",
-
-            "Mechanical Power Transmission Components Sheet(SKG100).pdf",
-
-            "Mechanical Power Transmission Components Sheet SKG100.pdf"
-
-        ],
-
-        plansPdf:
-            "Planos_Elementos_Transmision_SRC.pdf",
-
-        stlZip:
-            "Elementos de Transmisión Mecánica (SKG100).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Kit de Elementos de Transmisión Mecánica",
-
-                summary:
-                    "Conjunto de elementos mecánicos diseñado para el estudio y desarrollo de sistemas de transmisión de movimiento.",
-
-                description:
-                    "Kit de componentes de transmisión mecánica desarrollado para facilitar el diseño y construcción de mecanismos en proyectos educativos, mecánicos y de ingeniería.",
-
-                features: [
-
-                    "Conjunto de diferentes elementos de transmisión.",
-
-                    "Piezas destinadas al estudio de mecanismos.",
-
-                    "Diversas geometrías y configuraciones mecánicas.",
-
-                    "Archivos digitales disponibles para fabricación mediante impresión 3D."
-
-                ],
-
-                applications: [
-
-                    "Diseño y construcción de mecanismos.",
-
-                    "Enseñanza de transmisión de movimiento.",
-
-                    "Prototipado de sistemas mecánicos.",
-
-                    "Proyectos educativos y de ingeniería."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "Mechanical Power Transmission Components Kit",
-
-                summary:
-                    "Set of mechanical elements designed for the study and development of motion transmission systems.",
-
-                description:
-                    "Mechanical power transmission component kit developed to support the design and construction of mechanisms in educational, mechanical and engineering projects.",
-
-                features: [
-
-                    "Set of different transmission elements.",
-
-                    "Components intended for mechanism study.",
-
-                    "Multiple mechanical geometries and configurations.",
-
-                    "Digital files available for 3D-print manufacturing."
-
-                ],
-
-                applications: [
-
-                    "Mechanism design and construction.",
-
-                    "Teaching motion transmission principles.",
-
-                    "Mechanical system prototyping.",
-
-                    "Educational and engineering projects."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "机械传动元件套件",
-
-                summary:
-                    "用于学习和开发运动传动系统的机械元件套件。",
-
-                description:
-                    "用于教育、机械和工程项目中机构设计与搭建的机械传动元件套件。",
-
-                features: [
-
-                    "包含多种传动元件。",
-
-                    "用于机构原理学习。",
-
-                    "支持多种机械组合和几何结构。",
-
-                    "提供适用于 3D 打印制造的数字文件。"
-
-                ],
-
-                applications: [
-
-                    "机构设计与搭建。",
-
-                    "运动传动原理教学。",
-
-                    "机械系统原型开发。",
-
-                    "教育与工程项目。"
-
-                ]
+                zh:
+                    "兼容 MG995R / MG996R / S14KC"
 
             }
+        },
+
+        {
+            key: "dof",
+            value: "1 GDL / DOF"
+        },
+
+        {
+            key: "weight",
+            value: "72 g"
+        },
+
+        {
+            key: "workingDiameter",
+
+            value: {
+
+                es:
+                    "Hasta 100 mm",
+
+                en:
+                    "Up to 100 mm",
+
+                zh:
+                    "最大 100 mm"
+
+            }
+        },
+
+        {
+            key: "packageDimensions",
+            value: "150 × 150 × 35 mm"
+        },
+
+        {
+            key: "compatibility",
+
+            value: {
+
+                es:
+                    "Sistemas y actuadores compatibles",
+
+                en:
+                    "Compatible systems and actuators",
+
+                zh:
+                    "兼容多种系统和执行器"
+
+            }
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   SKG100
+========================================================== */
+
+{
+    code:
+        "SKG100",
+
+    image:
+        "kit_engranes.png",
+
+    area:
+        "education",
+
+    type:
+        "components",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Elementos de Transmisión Mecánica (SKG100).pdf",
+
+    infoPdfEn: [
+
+        "Mechanical Power Transmission Components Sheet (SKG100).pdf",
+
+        "Mechanical Power Transmission Components Sheet(SKG100).pdf",
+
+        "Mechanical Power Transmission Components Sheet SKG100.pdf"
+
+    ],
+
+    plansPdf:
+        "Planos_Elementos_Transmision_SRC.pdf",
+
+    stlZip:
+        "Elementos de Transmisión Mecánica (SKG100).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Kit de Elementos de Transmisión Mecánica",
+
+            summary:
+                "Conjunto de elementos mecánicos diseñado para el estudio y desarrollo de sistemas de transmisión de movimiento.",
+
+            description:
+                "Kit de componentes de transmisión mecánica desarrollado para facilitar el diseño y construcción de mecanismos en proyectos educativos, mecánicos y de ingeniería.",
+
+            features: [
+
+                "Conjunto de diferentes elementos de transmisión.",
+
+                "Piezas destinadas al estudio de mecanismos.",
+
+                "Diversas geometrías y configuraciones mecánicas.",
+
+                "Archivos digitales disponibles para fabricación mediante impresión 3D."
+
+            ],
+
+            applications: [
+
+                "Diseño y construcción de mecanismos.",
+
+                "Enseñanza de transmisión de movimiento.",
+
+                "Prototipado de sistemas mecánicos.",
+
+                "Proyectos educativos y de ingeniería."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "material",
-                value: "PETG+"
-            },
+            title:
+                "Mechanical Power Transmission Components Kit",
 
-            {
-                key: "weight",
-                value: "200 g"
-            },
+            summary:
+                "Set of mechanical elements designed for the study and development of motion transmission systems.",
 
-            {
-                key: "workingDiameter",
+            description:
+                "Mechanical power transmission component kit developed to support the design and construction of mechanisms in educational, mechanical and engineering projects.",
 
-                value: {
+            features: [
 
-                    es:
-                        "Hasta 65 mm",
+                "Set of different transmission elements.",
 
-                    en:
-                        "Up to 65 mm",
+                "Components intended for mechanism study.",
 
-                    zh:
-                        "最大 65 mm"
+                "Multiple mechanical geometries and configurations.",
 
-                }
-            },
+                "Digital files available for 3D-print manufacturing."
 
-            {
-                key: "packageDimensions",
-                value: "150 × 150 × 30 mm"
-            },
+            ],
 
-            {
-                key: "contents",
+            applications: [
 
-                value: {
+                "Mechanism design and construction.",
 
-                    es:
-                        "100 piezas",
+                "Teaching motion transmission principles.",
 
-                    en:
-                        "100 pieces",
+                "Mechanical system prototyping.",
 
-                    zh:
-                        "100 件"
+                "Educational and engineering projects."
 
-                }
-            },
+            ]
 
-            {
-                key: "compatibility",
+        },
 
-                value: {
 
-                    es:
-                        "MG996R / SG90 / motor DC",
+        zh: {
 
-                    en:
-                        "MG996R / SG90 / DC motor",
+            title:
+                "机械传动元件套件",
 
-                    zh:
-                        "MG996R / SG90 / 直流电机"
+            summary:
+                "用于学习和开发运动传动系统的机械元件套件。",
 
-                }
-            }
+            description:
+                "用于教育、机械和工程项目中机构设计与搭建的机械传动元件套件。",
 
-        ]
+            features: [
+
+                "包含多种传动元件。",
+
+                "用于机构原理学习。",
+
+                "支持多种机械组合和几何结构。",
+
+                "提供适用于 3D 打印制造的数字文件。"
+
+            ],
+
+            applications: [
+
+                "机构设计与搭建。",
+
+                "运动传动原理教学。",
+
+                "机械系统原型开发。",
+
+                "教育与工程项目。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "material",
+            value: "PETG+"
+        },
 
-        code:
-            "S14KC",
+        {
+            key: "weight",
+            value: "200 g"
+        },
 
-        image:
-            "servo14.jpg",
+        {
+            key: "workingDiameter",
 
-        area:
-            "education",
+            value: {
 
-        type:
-            "components",
+                es:
+                    "Hasta 65 mm",
 
-        infoPdfEs:
-            "Ficha Servomotor (S14KC).pdf",
+                en:
+                    "Up to 65 mm",
 
-        infoPdfEn:
-            "Servomotor Sheet (S14KC).pdf",
-
-        plansPdf:
-            "Servomotor Planos (S14KC).pdf",
-
-        stlZip:
-            "Servomotor(S14KC).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Servomotor 14 kg·cm",
-
-                summary:
-                    "Servomotor de 14 kg·cm diseñado para mecanismos, prototipos y aplicaciones educativas de control de movimiento.",
-
-                description:
-                    "Servomotor orientado a proyectos de robótica y automatización que requieren control de posición y una capacidad de torque adecuada para mecanismos educativos y prototipos.",
-
-                features: [
-
-                    "Control de posición angular.",
-
-                    "Formato compacto para mecanismos robóticos.",
-
-                    "Integración con sistemas electrónicos de control.",
-
-                    "Adecuado para mecanismos que requieren accionamiento controlado."
-
-                ],
-
-                applications: [
-
-                    "Accionamiento de pequeños mecanismos.",
-
-                    "Articulaciones robóticas educativas.",
-
-                    "Prototipos de automatización.",
-
-                    "Prácticas de control de posición."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "14 kg·cm Servomotor",
-
-                summary:
-                    "14 kg·cm servomotor designed for mechanisms, prototypes and educational motion-control applications.",
-
-                description:
-                    "Servomotor intended for robotics and automation projects requiring position control and suitable torque for educational mechanisms and prototypes.",
-
-                features: [
-
-                    "Angular position control.",
-
-                    "Compact format for robotic mechanisms.",
-
-                    "Integration with electronic control systems.",
-
-                    "Suitable for mechanisms requiring controlled actuation."
-
-                ],
-
-                applications: [
-
-                    "Actuation of small mechanisms.",
-
-                    "Educational robotic joints.",
-
-                    "Automation prototypes.",
-
-                    "Position-control practices."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "14 kg·cm 舵机",
-
-                summary:
-                    "14 kg·cm 舵机，适用于机构、原型和教育型运动控制应用。",
-
-                description:
-                    "适用于机器人和自动化项目的舵机，可进行位置控制并为教育机构和原型提供适当扭矩。",
-
-                features: [
-
-                    "角度位置控制。",
-
-                    "适合机器人机构的紧凑结构。",
-
-                    "可集成电子控制系统。",
-
-                    "适用于需要受控驱动的机构。"
-
-                ],
-
-                applications: [
-
-                    "小型机构驱动。",
-
-                    "教育机器人关节。",
-
-                    "自动化原型。",
-
-                    "位置控制实践。"
-
-                ]
+                zh:
+                    "最大 65 mm"
 
             }
+        },
+
+        {
+            key: "packageDimensions",
+            value: "150 × 150 × 30 mm"
+        },
+
+        {
+            key: "contents",
+
+            value: {
+
+                es:
+                    "100 piezas",
+
+                en:
+                    "100 pieces",
+
+                zh:
+                    "100 件"
+
+            }
+        },
+
+        {
+            key: "compatibility",
+
+            value: {
+
+                es:
+                    "MG996R / SG90 / motor DC",
+
+                en:
+                    "MG996R / SG90 / DC motor",
+
+                zh:
+                    "MG996R / SG90 / 直流电机"
+
+            }
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   S14KC
+========================================================== */
+
+{
+    code:
+        "S14KC",
+
+    image:
+        "servo14.jpg",
+
+    area:
+        "education",
+
+    type:
+        "components",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Servomotor (S14KC).pdf",
+
+    infoPdfEn:
+        "Servomotor Sheet (S14KC).pdf",
+
+    plansPdf:
+        "Servomotor Planos (S14KC).pdf",
+
+    stlZip:
+        "Servomotor(S14KC).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Servomotor 14 kg·cm",
+
+            summary:
+                "Servomotor de 14 kg·cm diseñado para mecanismos, prototipos y aplicaciones educativas de control de movimiento.",
+
+            description:
+                "Servomotor orientado a proyectos de robótica y automatización que requieren control de posición y una capacidad de torque adecuada para mecanismos educativos y prototipos.",
+
+            features: [
+
+                "Control de posición angular.",
+
+                "Formato compacto para mecanismos robóticos.",
+
+                "Integración con sistemas electrónicos de control.",
+
+                "Adecuado para mecanismos que requieren accionamiento controlado."
+
+            ],
+
+            applications: [
+
+                "Accionamiento de pequeños mecanismos.",
+
+                "Articulaciones robóticas educativas.",
+
+                "Prototipos de automatización.",
+
+                "Prácticas de control de posición."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "torque",
-                value: "14 kg·cm / 1.37 N·m"
-            },
+            title:
+                "14 kg·cm Servomotor",
 
-            {
-                key: "voltage",
-                value: "5–7 V"
-            },
+            summary:
+                "14 kg·cm servomotor designed for mechanisms, prototypes and educational motion-control applications.",
 
-            {
-                key: "motionRange",
-                value: "180°"
-            },
+            description:
+                "Servomotor intended for robotics and automation projects requiring position control and suitable torque for educational mechanisms and prototypes.",
 
-            {
-                key: "material",
+            features: [
 
-                value: {
+                "Angular position control.",
 
-                    es:
-                        "Plástico ABS y engranes metálicos",
+                "Compact format for robotic mechanisms.",
 
-                    en:
-                        "ABS plastic and metal gears",
+                "Integration with electronic control systems.",
 
-                    zh:
-                        "ABS 塑料和金属齿轮"
+                "Suitable for mechanisms requiring controlled actuation."
 
-                }
-            },
+            ],
 
-            {
-                key: "weight",
-                value: "52 g"
-            },
+            applications: [
 
-            {
-                key: "dimensions",
-                value: "44.5 × 20 × 54.2 mm"
-            }
+                "Actuation of small mechanisms.",
 
-        ]
+                "Educational robotic joints.",
+
+                "Automation prototypes.",
+
+                "Position-control practices."
+
+            ]
+
+        },
+
+
+        zh: {
+
+            title:
+                "14 kg·cm 舵机",
+
+            summary:
+                "14 kg·cm 舵机，适用于机构、原型和教育型运动控制应用。",
+
+            description:
+                "适用于机器人和自动化项目的舵机，可进行位置控制并为教育机构和原型提供适当扭矩。",
+
+            features: [
+
+                "角度位置控制。",
+
+                "适合机器人机构的紧凑结构。",
+
+                "可集成电子控制系统。",
+
+                "适用于需要受控驱动的机构。"
+
+            ],
+
+            applications: [
+
+                "小型机构驱动。",
+
+                "教育机器人关节。",
+
+                "自动化原型。",
+
+                "位置控制实践。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "torque",
+            value: "14 kg·cm / 1.37 N·m"
+        },
 
-        code:
-            "S35KC",
+        {
+            key: "voltage",
+            value: "5–7 V"
+        },
 
-        image:
-            "servo35.webp",
+        {
+            key: "motionRange",
+            value: "180°"
+        },
 
-        area:
-            "education",
+        {
+            key: "material",
 
-        type:
-            "components",
+            value: {
 
-        infoPdfEs:
-            "Ficha Servomotor (S35KC).pdf",
+                es:
+                    "Plástico ABS y engranes metálicos",
 
-        infoPdfEn:
-            "Servomotor Sheet (S35KC).pdf",
+                en:
+                    "ABS plastic and metal gears",
 
-        plansPdf:
-            "Servomotor Planos (S35KC).PDF",
-
-        stlZip:
-            "Servomotor(S35KC).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Servomotor 35 kg·cm",
-
-                summary:
-                    "Servomotor de 35 kg·cm para proyectos que requieren mayor capacidad de movimiento y posicionamiento controlado.",
-
-                description:
-                    "Servomotor diseñado para proyectos de robótica y automatización que requieren mayor capacidad de torque manteniendo control de posición angular.",
-
-                features: [
-
-                    "Mayor capacidad de torque para mecanismos robóticos.",
-
-                    "Control de posición angular.",
-
-                    "Construcción orientada a aplicaciones de movimiento controlado.",
-
-                    "Integración con proyectos de robótica y automatización."
-
-                ],
-
-                applications: [
-
-                    "Accionamiento de mecanismos robóticos.",
-
-                    "Articulaciones de mayor demanda.",
-
-                    "Proyectos de automatización educativa.",
-
-                    "Prácticas de posicionamiento y control."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "35 kg·cm Servomotor",
-
-                summary:
-                    "35 kg·cm servomotor for projects requiring greater actuation capacity and controlled positioning.",
-
-                description:
-                    "Servomotor designed for robotics and automation projects that require increased torque while maintaining angular position control.",
-
-                features: [
-
-                    "Greater torque capacity for robotic mechanisms.",
-
-                    "Angular position control.",
-
-                    "Construction focused on controlled-motion applications.",
-
-                    "Integration into robotics and automation projects."
-
-                ],
-
-                applications: [
-
-                    "Robotic mechanism actuation.",
-
-                    "Higher-demand robotic joints.",
-
-                    "Educational automation projects.",
-
-                    "Positioning and control practices."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "35 kg·cm 舵机",
-
-                summary:
-                    "35 kg·cm 舵机，适用于需要更高驱动能力和受控定位的项目。",
-
-                description:
-                    "适用于机器人和自动化项目的舵机，在保持角度位置控制的同时提供更高扭矩。",
-
-                features: [
-
-                    "适用于机器人机构的较高扭矩。",
-
-                    "角度位置控制。",
-
-                    "面向受控运动应用设计。",
-
-                    "适用于机器人与自动化项目集成。"
-
-                ],
-
-                applications: [
-
-                    "机器人机构驱动。",
-
-                    "较高负载的机器人关节。",
-
-                    "教育自动化项目。",
-
-                    "定位与控制实践。"
-
-                ]
+                zh:
+                    "ABS 塑料和金属齿轮"
 
             }
+        },
+
+        {
+            key: "weight",
+            value: "52 g"
+        },
+
+        {
+            key: "dimensions",
+            value: "44.5 × 20 × 54.2 mm"
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   S35KC
+========================================================== */
+
+{
+    code:
+        "S35KC",
+
+    image:
+        "servo35.webp",
+
+    area:
+        "education",
+
+    type:
+        "components",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Servomotor (S35KC).pdf",
+
+    infoPdfEn:
+        "Servomotor Sheet (S35KC).pdf",
+
+    plansPdf:
+        "Servomotor Planos (S35KC).PDF",
+
+    stlZip:
+        "Servomotor(S35KC).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Servomotor 35 kg·cm",
+
+            summary:
+                "Servomotor de 35 kg·cm para proyectos que requieren mayor capacidad de movimiento y posicionamiento controlado.",
+
+            description:
+                "Servomotor diseñado para proyectos de robótica y automatización que requieren mayor capacidad de torque manteniendo control de posición angular.",
+
+            features: [
+
+                "Mayor capacidad de torque para mecanismos robóticos.",
+
+                "Control de posición angular.",
+
+                "Construcción orientada a aplicaciones de movimiento controlado.",
+
+                "Integración con proyectos de robótica y automatización."
+
+            ],
+
+            applications: [
+
+                "Accionamiento de mecanismos robóticos.",
+
+                "Articulaciones de mayor demanda.",
+
+                "Proyectos de automatización educativa.",
+
+                "Prácticas de posicionamiento y control."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "torque",
-                value: "35 kg·cm / 3.43 N·m"
-            },
+            title:
+                "35 kg·cm Servomotor",
 
-            {
-                key: "voltage",
-                value: "5–7 V"
-            },
+            summary:
+                "35 kg·cm servomotor for projects requiring greater actuation capacity and controlled positioning.",
 
-            {
-                key: "motionRange",
-                value: "180°"
-            },
+            description:
+                "Servomotor designed for robotics and automation projects that require increased torque while maintaining angular position control.",
 
-            {
-                key: "material",
+            features: [
 
-                value: {
+                "Greater torque capacity for robotic mechanisms.",
 
-                    es:
-                        "Plástico ABS, bloque de aluminio y engranes metálicos",
+                "Angular position control.",
 
-                    en:
-                        "ABS plastic, aluminum block and metal gears",
+                "Construction focused on controlled-motion applications.",
 
-                    zh:
-                        "ABS 塑料、铝制结构和金属齿轮"
+                "Integration into robotics and automation projects."
 
-                }
-            },
+            ],
 
-            {
-                key: "weight",
-                value: "64 g"
-            },
+            applications: [
 
-            {
-                key: "dimensions",
-                value: "45.8 × 20.4 × 54.6 mm"
-            }
+                "Robotic mechanism actuation.",
 
-        ]
+                "Higher-demand robotic joints.",
+
+                "Educational automation projects.",
+
+                "Positioning and control practices."
+
+            ]
+
+        },
+
+
+        zh: {
+
+            title:
+                "35 kg·cm 舵机",
+
+            summary:
+                "35 kg·cm 舵机，适用于需要更高驱动能力和受控定位的项目。",
+
+            description:
+                "适用于机器人和自动化项目的舵机，在保持角度位置控制的同时提供更高扭矩。",
+
+            features: [
+
+                "适用于机器人机构的较高扭矩。",
+
+                "角度位置控制。",
+
+                "面向受控运动应用设计。",
+
+                "适用于机器人与自动化项目集成。"
+
+            ],
+
+            applications: [
+
+                "机器人机构驱动。",
+
+                "较高负载的机器人关节。",
+
+                "教育自动化项目。",
+
+                "定位与控制实践。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "torque",
+            value: "35 kg·cm / 3.43 N·m"
+        },
 
-        code:
-            "S50KC",
+        {
+            key: "voltage",
+            value: "5–7 V"
+        },
 
-        image:
-            "servo50.jpg",
+        {
+            key: "motionRange",
+            value: "180°"
+        },
 
-        area:
-            "education",
+        {
+            key: "material",
 
-        type:
-            "components",
+            value: {
 
-        infoPdfEs:
-            "Ficha Servomotor (S50KC).pdf",
+                es:
+                    "Plástico ABS, bloque de aluminio y engranes metálicos",
 
-        infoPdfEn:
-            "Servomotor Sheet (S50KC).pdf",
+                en:
+                    "ABS plastic, aluminum block and metal gears",
 
-        plansPdf:
-            "Servomotor Planos (S50KC).PDF",
-
-        stlZip:
-            "Servomotor (S50KC).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Servomotor 50 kg·cm",
-
-                summary:
-                    "Servomotor de 50 kg·cm orientado al accionamiento de mecanismos y sistemas robóticos de mayor carga.",
-
-                description:
-                    "Servomotor de alto torque diseñado para mecanismos robóticos y proyectos de automatización que requieren mayor capacidad de accionamiento y control de posición.",
-
-                features: [
-
-                    "Alto torque para accionamiento de mecanismos.",
-
-                    "Posicionamiento angular controlado.",
-
-                    "Adecuado para estructuras robóticas de mayor demanda mecánica.",
-
-                    "Integración mediante señales de control convencionales para servomotores."
-
-                ],
-
-                applications: [
-
-                    "Brazos y mecanismos robóticos.",
-
-                    "Accionamiento de sistemas con mayor carga.",
-
-                    "Prototipos de automatización.",
-
-                    "Investigación y desarrollo de mecanismos controlados."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "50 kg·cm Servomotor",
-
-                summary:
-                    "50 kg·cm servomotor intended for mechanisms and robotic systems with higher load requirements.",
-
-                description:
-                    "High-torque servomotor designed for robotic mechanisms and automation projects requiring increased actuation capacity and position control.",
-
-                features: [
-
-                    "High torque for mechanism actuation.",
-
-                    "Controlled angular positioning.",
-
-                    "Suitable for robotic structures with greater mechanical demand.",
-
-                    "Integration using conventional servomotor control signals."
-
-                ],
-
-                applications: [
-
-                    "Robotic arms and mechanisms.",
-
-                    "Actuation of higher-load systems.",
-
-                    "Automation prototypes.",
-
-                    "Research and development of controlled mechanisms."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "50 kg·cm 舵机",
-
-                summary:
-                    "50 kg·cm 舵机，适用于具有较高负载需求的机构和机器人系统。",
-
-                description:
-                    "高扭矩舵机，适用于需要更高驱动力和位置控制的机器人机构及自动化项目。",
-
-                features: [
-
-                    "高扭矩机构驱动。",
-
-                    "受控角度定位。",
-
-                    "适用于机械负载较高的机器人结构。",
-
-                    "采用常规舵机控制信号集成。"
-
-                ],
-
-                applications: [
-
-                    "机器人机械臂和机构。",
-
-                    "较高负载系统驱动。",
-
-                    "自动化原型。",
-
-                    "受控机构研究与开发。"
-
-                ]
+                zh:
+                    "ABS 塑料、铝制结构和金属齿轮"
 
             }
+        },
+
+        {
+            key: "weight",
+            value: "64 g"
+        },
+
+        {
+            key: "dimensions",
+            value: "45.8 × 20.4 × 54.6 mm"
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   S50KC
+========================================================== */
+
+{
+    code:
+        "S50KC",
+
+    image:
+        "servo50.jpg",
+
+    area:
+        "education",
+
+    type:
+        "components",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Servomotor (S50KC).pdf",
+
+    infoPdfEn:
+        "Servomotor Sheet (S50KC).pdf",
+
+    plansPdf:
+        "Servomotor Planos (S50KC).PDF",
+
+    stlZip:
+        "Servomotor (S50KC).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Servomotor 50 kg·cm",
+
+            summary:
+                "Servomotor de 50 kg·cm orientado al accionamiento de mecanismos y sistemas robóticos de mayor carga.",
+
+            description:
+                "Servomotor de alto torque diseñado para mecanismos robóticos y proyectos de automatización que requieren mayor capacidad de accionamiento y control de posición.",
+
+            features: [
+
+                "Alto torque para accionamiento de mecanismos.",
+
+                "Posicionamiento angular controlado.",
+
+                "Adecuado para estructuras robóticas de mayor demanda mecánica.",
+
+                "Integración mediante señales de control convencionales para servomotores."
+
+            ],
+
+            applications: [
+
+                "Brazos y mecanismos robóticos.",
+
+                "Accionamiento de sistemas con mayor carga.",
+
+                "Prototipos de automatización.",
+
+                "Investigación y desarrollo de mecanismos controlados."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "torque",
-                value: "50 kg·cm / 4.90 N·m"
-            },
+            title:
+                "50 kg·cm Servomotor",
 
-            {
-                key: "voltage",
-                value: "6.2–8.2 V"
-            },
+            summary:
+                "50 kg·cm servomotor intended for mechanisms and robotic systems with higher load requirements.",
 
-            {
-                key: "motionRange",
-                value: "180°"
-            },
+            description:
+                "High-torque servomotor designed for robotic mechanisms and automation projects requiring increased actuation capacity and position control.",
 
-            {
-                key: "material",
+            features: [
 
-                value: {
+                "High torque for mechanism actuation.",
 
-                    es:
-                        "Plástico ABS, bloque de aluminio y engranes metálicos",
+                "Controlled angular positioning.",
 
-                    en:
-                        "ABS plastic, aluminum block and metal gears",
+                "Suitable for robotic structures with greater mechanical demand.",
 
-                    zh:
-                        "ABS 塑料、铝制结构和金属齿轮"
+                "Integration using conventional servomotor control signals."
 
-                }
-            },
+            ],
 
-            {
-                key: "weight",
-                value: "152 g"
-            },
+            applications: [
 
-            {
-                key: "dimensions",
-                value: "82 × 30.5 × 54.6 mm"
-            }
+                "Robotic arms and mechanisms.",
 
-        ]
+                "Actuation of higher-load systems.",
+
+                "Automation prototypes.",
+
+                "Research and development of controlled mechanisms."
+
+            ]
+
+        },
+
+
+        zh: {
+
+            title:
+                "50 kg·cm 舵机",
+
+            summary:
+                "50 kg·cm 舵机，适用于具有较高负载需求的机构和机器人系统。",
+
+            description:
+                "高扭矩舵机，适用于需要更高驱动力和位置控制的机器人机构及自动化项目。",
+
+            features: [
+
+                "高扭矩机构驱动。",
+
+                "受控角度定位。",
+
+                "适用于机械负载较高的机器人结构。",
+
+                "采用常规舵机控制信号集成。"
+
+            ],
+
+            applications: [
+
+                "机器人机械臂和机构。",
+
+                "较高负载系统驱动。",
+
+                "自动化原型。",
+
+                "受控机构研究与开发。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "torque",
+            value: "50 kg·cm / 4.90 N·m"
+        },
 
-        code:
-            "S70KC",
+        {
+            key: "voltage",
+            value: "6.2–8.2 V"
+        },
 
-        image:
-            "servo70.jpg",
+        {
+            key: "motionRange",
+            value: "180°"
+        },
 
-        area:
-            "education",
+        {
+            key: "material",
 
-        type:
-            "components",
+            value: {
 
-        infoPdfEs:
-            "Ficha Servomotor (S70KC).pdf",
+                es:
+                    "Plástico ABS, bloque de aluminio y engranes metálicos",
 
-        infoPdfEn:
-            "Servomotor Sheet (S70KC).pdf",
+                en:
+                    "ABS plastic, aluminum block and metal gears",
 
-        plansPdf:
-            "Servomotor Planos (S70KC).pdf",
-
-        stlZip:
-            "Servomotor (S70KC).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Servomotor 70 kg·cm",
-
-                summary:
-                    "Servomotor de 70 kg·cm diseñado para mecanismos robóticos que requieren alto torque y control de posición.",
-
-                description:
-                    "Servomotor de alta capacidad de torque desarrollado para mecanismos robóticos, prototipos y aplicaciones experimentales que requieren posicionamiento controlado.",
-
-                features: [
-
-                    "Elevada capacidad de torque.",
-
-                    "Control preciso de posición angular.",
-
-                    "Orientado a mecanismos robóticos de mayor carga.",
-
-                    "Construcción para aplicaciones que requieren mayor fuerza de accionamiento."
-
-                ],
-
-                applications: [
-
-                    "Mecanismos robóticos de alto torque.",
-
-                    "Articulaciones de robots y prototipos.",
-
-                    "Automatización experimental.",
-
-                    "Sistemas de posicionamiento con mayor demanda mecánica."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "70 kg·cm Servomotor",
-
-                summary:
-                    "70 kg·cm servomotor designed for robotic mechanisms requiring high torque and position control.",
-
-                description:
-                    "High-torque servomotor developed for robotic mechanisms, prototypes and experimental applications requiring controlled positioning.",
-
-                features: [
-
-                    "High torque capacity.",
-
-                    "Precise angular position control.",
-
-                    "Intended for higher-load robotic mechanisms.",
-
-                    "Construction for applications requiring greater actuation force."
-
-                ],
-
-                applications: [
-
-                    "High-torque robotic mechanisms.",
-
-                    "Robot joints and prototypes.",
-
-                    "Experimental automation.",
-
-                    "Positioning systems with greater mechanical demand."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "70 kg·cm 舵机",
-
-                summary:
-                    "70 kg·cm 舵机，适用于需要高扭矩和位置控制的机器人机构。",
-
-                description:
-                    "高扭矩舵机，适用于需要受控定位的机器人机构、原型及实验型自动化应用。",
-
-                features: [
-
-                    "较高扭矩能力。",
-
-                    "精确角度位置控制。",
-
-                    "适用于较高负载的机器人机构。",
-
-                    "面向需要更大驱动力的应用。"
-
-                ],
-
-                applications: [
-
-                    "高扭矩机器人机构。",
-
-                    "机器人关节和原型。",
-
-                    "实验自动化。",
-
-                    "较高机械负载的定位系统。"
-
-                ]
+                zh:
+                    "ABS 塑料、铝制结构和金属齿轮"
 
             }
+        },
+
+        {
+            key: "weight",
+            value: "152 g"
+        },
+
+        {
+            key: "dimensions",
+            value: "82 × 30.5 × 54.6 mm"
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   S70KC
+========================================================== */
+
+{
+    code:
+        "S70KC",
+
+    image:
+        "servo70.jpg",
+
+    area:
+        "education",
+
+    type:
+        "components",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Servomotor (S70KC).pdf",
+
+    infoPdfEn:
+        "Servomotor Sheet (S70KC).pdf",
+
+    plansPdf:
+        "Servomotor Planos (S70KC).pdf",
+
+    stlZip:
+        "Servomotor (S70KC).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Servomotor 70 kg·cm",
+
+            summary:
+                "Servomotor de 70 kg·cm diseñado para mecanismos robóticos que requieren alto torque y control de posición.",
+
+            description:
+                "Servomotor de alta capacidad de torque desarrollado para mecanismos robóticos, prototipos y aplicaciones experimentales que requieren posicionamiento controlado.",
+
+            features: [
+
+                "Elevada capacidad de torque.",
+
+                "Control preciso de posición angular.",
+
+                "Orientado a mecanismos robóticos de mayor carga.",
+
+                "Construcción para aplicaciones que requieren mayor fuerza de accionamiento."
+
+            ],
+
+            applications: [
+
+                "Mecanismos robóticos de alto torque.",
+
+                "Articulaciones de robots y prototipos.",
+
+                "Automatización experimental.",
+
+                "Sistemas de posicionamiento con mayor demanda mecánica."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "torque",
-                value: "70 kg·cm / 6.86 N·m"
-            },
+            title:
+                "70 kg·cm Servomotor",
 
-            {
-                key: "voltage",
-                value: "6.2–8.2 V"
-            },
+            summary:
+                "70 kg·cm servomotor designed for robotic mechanisms requiring high torque and position control.",
 
-            {
-                key: "motionRange",
-                value: "180°"
-            },
+            description:
+                "High-torque servomotor developed for robotic mechanisms, prototypes and experimental applications requiring controlled positioning.",
 
-            {
-                key: "material",
+            features: [
 
-                value: {
+                "High torque capacity.",
 
-                    es:
-                        "Plástico ABS, bloque de aluminio y engranes metálicos",
+                "Precise angular position control.",
 
-                    en:
-                        "ABS plastic, aluminum block and metal gears",
+                "Intended for higher-load robotic mechanisms.",
 
-                    zh:
-                        "ABS 塑料、铝制结构和金属齿轮"
+                "Construction for applications requiring greater actuation force."
 
-                }
-            },
+            ],
 
-            {
-                key: "weight",
-                value: "152 g"
-            },
+            applications: [
 
-            {
-                key: "dimensions",
-                value: "82 × 30.5 × 55 mm"
-            }
+                "High-torque robotic mechanisms.",
 
-        ]
+                "Robot joints and prototypes.",
+
+                "Experimental automation.",
+
+                "Positioning systems with greater mechanical demand."
+
+            ]
+
+        },
+
+
+        zh: {
+
+            title:
+                "70 kg·cm 舵机",
+
+            summary:
+                "70 kg·cm 舵机，适用于需要高扭矩和位置控制的机器人机构。",
+
+            description:
+                "高扭矩舵机，适用于需要受控定位的机器人机构、原型及实验型自动化应用。",
+
+            features: [
+
+                "较高扭矩能力。",
+
+                "精确角度位置控制。",
+
+                "适用于较高负载的机器人机构。",
+
+                "面向需要更大驱动力的应用。"
+
+            ],
+
+            applications: [
+
+                "高扭矩机器人机构。",
+
+                "机器人关节和原型。",
+
+                "实验自动化。",
+
+                "较高机械负载的定位系统。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "torque",
+            value: "70 kg·cm / 6.86 N·m"
+        },
 
-        code:
-            "S135KC",
+        {
+            key: "voltage",
+            value: "6.2–8.2 V"
+        },
 
-        image:
-            "servo135.jpg",
+        {
+            key: "motionRange",
+            value: "180°"
+        },
 
-        area:
-            "education",
+        {
+            key: "material",
 
-        type:
-            "components",
+            value: {
 
-        infoPdfEs:
-            "Ficha Servomotor (S135KC).pdf",
+                es:
+                    "Plástico ABS, bloque de aluminio y engranes metálicos",
 
-        infoPdfEn:
-            "Servomotor Sheet (S135KC).pdf",
+                en:
+                    "ABS plastic, aluminum block and metal gears",
 
-        plansPdf:
-            "Servomotor Planos (S135KC).PDF",
-
-        stlZip:
-            "Servomotor (S135KC).zip",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Servomotor 135 kg·cm",
-
-                summary:
-                    "Servomotor de 135 kg·cm para sistemas y mecanismos que requieren una elevada capacidad de accionamiento.",
-
-                description:
-                    "Servomotor de muy alto torque orientado a sistemas robóticos y mecanismos experimentales que requieren una elevada capacidad de accionamiento y control de posición.",
-
-                features: [
-
-                    "Muy alta capacidad de torque dentro de la línea.",
-
-                    "Accionamiento de mecanismos de alta demanda mecánica.",
-
-                    "Control de posición angular.",
-
-                    "Orientado a sistemas robóticos que requieren elevada fuerza de movimiento."
-
-                ],
-
-                applications: [
-
-                    "Accionamiento de mecanismos de alta demanda.",
-
-                    "Articulaciones robóticas de mayor carga.",
-
-                    "Prototipos avanzados de automatización.",
-
-                    "Sistemas experimentales de posicionamiento."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "135 kg·cm Servomotor",
-
-                summary:
-                    "135 kg·cm servomotor for systems and mechanisms requiring very high actuation capacity.",
-
-                description:
-                    "Very high-torque servomotor intended for robotic systems and experimental mechanisms requiring substantial actuation capacity and position control.",
-
-                features: [
-
-                    "Very high torque capacity within the product line.",
-
-                    "Actuation of high-demand mechanisms.",
-
-                    "Angular position control.",
-
-                    "Intended for robotic systems requiring high actuation force."
-
-                ],
-
-                applications: [
-
-                    "High-demand mechanism actuation.",
-
-                    "Higher-load robotic joints.",
-
-                    "Advanced automation prototypes.",
-
-                    "Experimental positioning systems."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "135 kg·cm 舵机",
-
-                summary:
-                    "135 kg·cm 舵机，适用于需要高驱动能力的系统和机构。",
-
-                description:
-                    "超高扭矩舵机，面向需要较大驱动力和位置控制的机器人系统及实验机构。",
-
-                features: [
-
-                    "产品系列中的超高扭矩能力。",
-
-                    "适用于高机械负载机构。",
-
-                    "角度位置控制。",
-
-                    "面向需要高驱动力的机器人系统。"
-
-                ],
-
-                applications: [
-
-                    "高负载机构驱动。",
-
-                    "较大负载机器人关节。",
-
-                    "高级自动化原型。",
-
-                    "实验型定位系统。"
-
-                ]
+                zh:
+                    "ABS 塑料、铝制结构和金属齿轮"
 
             }
+        },
+
+        {
+            key: "weight",
+            value: "152 g"
+        },
+
+        {
+            key: "dimensions",
+            value: "82 × 30.5 × 55 mm"
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   S135KC
+========================================================== */
+
+{
+    code:
+        "S135KC",
+
+    image:
+        "servo135.jpg",
+
+    area:
+        "education",
+
+    type:
+        "components",
+
+    downloadMetric:
+        "stl",
+
+    infoPdfEs:
+        "Ficha Servomotor (S135KC).pdf",
+
+    infoPdfEn:
+        "Servomotor Sheet (S135KC).pdf",
+
+    plansPdf:
+        "Servomotor Planos (S135KC).PDF",
+
+    stlZip:
+        "Servomotor (S135KC).zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Servomotor 135 kg·cm",
+
+            summary:
+                "Servomotor de 135 kg·cm para sistemas y mecanismos que requieren una elevada capacidad de accionamiento.",
+
+            description:
+                "Servomotor de muy alto torque orientado a sistemas robóticos y mecanismos experimentales que requieren una elevada capacidad de accionamiento y control de posición.",
+
+            features: [
+
+                "Muy alta capacidad de torque dentro de la línea.",
+
+                "Accionamiento de mecanismos de alta demanda mecánica.",
+
+                "Control de posición angular.",
+
+                "Orientado a sistemas robóticos que requieren elevada fuerza de movimiento."
+
+            ],
+
+            applications: [
+
+                "Accionamiento de mecanismos de alta demanda.",
+
+                "Articulaciones robóticas de mayor carga.",
+
+                "Prototipos avanzados de automatización.",
+
+                "Sistemas experimentales de posicionamiento."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "torque",
-                value: "135 kg·cm / 13.24 N·m"
-            },
+            title:
+                "135 kg·cm Servomotor",
 
-            {
-                key: "voltage",
-                value: "10–12.4 V"
-            },
+            summary:
+                "135 kg·cm servomotor for systems and mechanisms requiring very high actuation capacity.",
 
-            {
-                key: "motionRange",
-                value: "180°"
-            },
+            description:
+                "Very high-torque servomotor intended for robotic systems and experimental mechanisms requiring substantial actuation capacity and position control.",
 
-            {
-                key: "material",
+            features: [
 
-                value: {
+                "Very high torque capacity within the product line.",
 
-                    es:
-                        "Plástico ABS, bloque de aluminio y engranes metálicos",
+                "Actuation of high-demand mechanisms.",
 
-                    en:
-                        "ABS plastic, aluminum block and metal gears",
+                "Angular position control.",
 
-                    zh:
-                        "ABS 塑料、铝制结构和金属齿轮"
+                "Intended for robotic systems requiring high actuation force."
 
-                }
-            },
+            ],
 
-            {
-                key: "weight",
-                value: "168 g"
-            },
+            applications: [
 
-            {
-                key: "dimensions",
-                value: "82 × 30.5 × 54.6 mm"
-            }
+                "High-demand mechanism actuation.",
 
-        ]
+                "Higher-load robotic joints.",
+
+                "Advanced automation prototypes.",
+
+                "Experimental positioning systems."
+
+            ]
+
+        },
+
+
+        zh: {
+
+            title:
+                "135 kg·cm 舵机",
+
+            summary:
+                "135 kg·cm 舵机，适用于需要高驱动能力的系统和机构。",
+
+            description:
+                "超高扭矩舵机，面向需要较大驱动力和位置控制的机器人系统及实验机构。",
+
+            features: [
+
+                "产品系列中的超高扭矩能力。",
+
+                "适用于高机械负载机构。",
+
+                "角度位置控制。",
+
+                "面向需要高驱动力的机器人系统。"
+
+            ],
+
+            applications: [
+
+                "高负载机构驱动。",
+
+                "较大负载机器人关节。",
+
+                "高级自动化原型。",
+
+                "实验型定位系统。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "torque",
+            value: "135 kg·cm / 13.24 N·m"
+        },
 
-        code:
-            "GSNP",
+        {
+            key: "voltage",
+            value: "10–12.4 V"
+        },
 
-        image:
-            "gripper_neumatico.png",
+        {
+            key: "motionRange",
+            value: "180°"
+        },
 
-        secondaryImage:
-            "conjunto_vistas.png",
+        {
+            key: "material",
 
-        area:
-            "industry",
+            value: {
 
-        type:
-            "grippers",
+                es:
+                    "Plástico ABS, bloque de aluminio y engranes metálicos",
 
-        infoPdfEs:
-            "Ficha Gripper (GSNP).pdf",
+                en:
+                    "ABS plastic, aluminum block and metal gears",
 
-        infoPdfEn:
-            "Gripper Sheet (GSNP).pdf",
-
-        plansPdf:
-            "Gripper Neumatico Planos(GSNP).pdf",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Gripper Neumático",
-
-                summary:
-                    "Gripper neumático de movimiento paralelo diseñado para la sujeción y manipulación de piezas en sistemas automatizados.",
-
-                description:
-                    "Gripper neumático desarrollado para procesos de sujeción y manipulación de piezas, orientado a proyectos de automatización, formación técnica y aplicaciones semiindustriales e industriales.",
-
-                features: [
-
-                    "Accionamiento neumático de doble efecto.",
-
-                    "Movimiento paralelo de las mordazas.",
-
-                    "Diseño para sujeción repetitiva de piezas.",
-
-                    "Integración en sistemas de automatización y manipulación."
-
-                ],
-
-                applications: [
-
-                    "Manipulación repetitiva de piezas.",
-
-                    "Estaciones de pick and place.",
-
-                    "Automatización semiindustrial e industrial.",
-
-                    "Integración en sistemas neumáticos de manipulación."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "Pneumatic Gripper",
-
-                summary:
-                    "Parallel-motion pneumatic gripper designed for gripping and handling parts in automated systems.",
-
-                description:
-                    "Pneumatic gripper developed for part gripping and handling processes, intended for automation projects, technical training and semi-industrial and industrial applications.",
-
-                features: [
-
-                    "Double-acting pneumatic actuation.",
-
-                    "Parallel jaw movement.",
-
-                    "Designed for repetitive part gripping.",
-
-                    "Integration into automation and manipulation systems."
-
-                ],
-
-                applications: [
-
-                    "Repetitive part handling.",
-
-                    "Pick-and-place stations.",
-
-                    "Semi-industrial and industrial automation.",
-
-                    "Integration into pneumatic handling systems."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "气动夹爪",
-
-                summary:
-                    "平行运动气动夹爪，适用于自动化系统中的工件夹持和操作。",
-
-                description:
-                    "用于工件夹持和搬运过程的气动夹爪，适用于自动化项目、技术培训以及半工业和工业应用。",
-
-                features: [
-
-                    "双作用气动驱动。",
-
-                    "夹爪平行运动。",
-
-                    "适用于重复工件夹持。",
-
-                    "可集成到自动化和搬运系统中。"
-
-                ],
-
-                applications: [
-
-                    "重复工件搬运。",
-
-                    "取放工作站。",
-
-                    "半工业和工业自动化。",
-
-                    "气动搬运系统集成。"
-
-                ]
+                zh:
+                    "ABS 塑料、铝制结构和金属齿轮"
 
             }
+        },
+
+        {
+            key: "weight",
+            value: "168 g"
+        },
+
+        {
+            key: "dimensions",
+            value: "82 × 30.5 × 54.6 mm"
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   GSNP
+========================================================== */
+
+{
+    code:
+        "GSNP",
+
+    image:
+        "gripper_neumatico.png",
+
+    secondaryImage:
+        "conjunto_vistas.png",
+
+    area:
+        "industry",
+
+    type:
+        "grippers",
+
+    downloadMetric:
+        "plans",
+
+    infoPdfEs:
+        "Ficha Gripper (GSNP).pdf",
+
+    infoPdfEn:
+        "Gripper Sheet (GSNP).pdf",
+
+    plansPdf:
+        "Gripper Neumatico Planos(GSNP).pdf",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Gripper Neumático",
+
+            summary:
+                "Gripper neumático de movimiento paralelo diseñado para la sujeción y manipulación de piezas en sistemas automatizados.",
+
+            description:
+                "Gripper neumático desarrollado para procesos de sujeción y manipulación de piezas, orientado a proyectos de automatización, formación técnica y aplicaciones semiindustriales e industriales.",
+
+            features: [
+
+                "Accionamiento neumático de doble efecto.",
+
+                "Movimiento paralelo de las mordazas.",
+
+                "Diseño para sujeción repetitiva de piezas.",
+
+                "Integración en sistemas de automatización y manipulación."
+
+            ],
+
+            applications: [
+
+                "Manipulación repetitiva de piezas.",
+
+                "Estaciones de pick and place.",
+
+                "Automatización semiindustrial e industrial.",
+
+                "Integración en sistemas neumáticos de manipulación."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "material",
+            title:
+                "Pneumatic Gripper",
 
-                value: {
+            summary:
+                "Parallel-motion pneumatic gripper designed for gripping and handling parts in automated systems.",
 
-                    es:
-                        "Aluminio",
+            description:
+                "Pneumatic gripper developed for part gripping and handling processes, intended for automation projects, technical training and semi-industrial and industrial applications.",
 
-                    en:
-                        "Aluminum",
+            features: [
 
-                    zh:
-                        "铝"
+                "Double-acting pneumatic actuation.",
 
-                }
-            },
+                "Parallel jaw movement.",
 
-            {
-                key: "actuation",
+                "Designed for repetitive part gripping.",
 
-                value: {
+                "Integration into automation and manipulation systems."
 
-                    es:
-                        "Neumático de doble efecto",
+            ],
 
-                    en:
-                        "Double-acting pneumatic",
+            applications: [
 
-                    zh:
-                        "双作用气动"
+                "Repetitive part handling.",
 
-                }
-            },
+                "Pick-and-place stations.",
 
-            {
-                key: "pressure",
-                value: "0.1–0.7 MPa"
-            },
+                "Semi-industrial and industrial automation.",
 
-            {
-                key: "dof",
-                value: "1 GDL / DOF"
-            },
+                "Integration into pneumatic handling systems."
 
-            {
-                key: "weight",
-                value: "118 g"
-            },
+            ]
 
-            {
-                key: "opening",
+        },
 
-                value: {
 
-                    es:
-                        "Hasta 58 mm",
+        zh: {
 
-                    en:
-                        "Up to 58 mm",
+            title:
+                "气动夹爪",
 
-                    zh:
-                        "最大 58 mm"
+            summary:
+                "平行运动气动夹爪，适用于自动化系统中的工件夹持和操作。",
 
-                }
-            },
+            description:
+                "用于工件夹持和搬运过程的气动夹爪，适用于自动化项目、技术培训以及半工业和工业应用。",
 
-            {
-                key: "dimensions",
-                value: "67.4 × 31 × 23.7 mm"
-            }
+            features: [
 
-        ]
+                "双作用气动驱动。",
+
+                "夹爪平行运动。",
+
+                "适用于重复工件夹持。",
+
+                "可集成到自动化和搬运系统中。"
+
+            ],
+
+            applications: [
+
+                "重复工件搬运。",
+
+                "取放工作站。",
+
+                "半工业和工业自动化。",
+
+                "气动搬运系统集成。"
+
+            ]
+
+        }
 
     },
 
 
+    specs: [
 
-    {
+        {
+            key: "material",
 
-        code:
-            "GSSN6",
+            value: {
 
-        image:
-            "ventosa.png",
+                es:
+                    "Aluminio",
 
-        area:
-            "industry",
+                en:
+                    "Aluminum",
 
-        type:
-            "tools",
-
-        infoPdfEs:
-            "Ficha Herramienta (GSSN6).pdf",
-
-        infoPdfEn:
-            "Tool Sheet (GSSN6).pdf",
-
-        plansPdf:
-            "Vacuum Planos (GSSN6).pdf",
-
-
-        content: {
-
-            es: {
-
-                title:
-                    "Ventosa de Succión",
-
-                summary:
-                    "Herramienta de succión diseñada para sujetar y manipular objetos mediante vacío en aplicaciones de automatización.",
-
-                description:
-                    "Herramienta de manipulación por vacío desarrollada para sujetar piezas con superficies lisas mediante ventosas, permitiendo su integración en proyectos de robótica, automatización e ingeniería.",
-
-                features: [
-
-                    "Sujeción mediante vacío.",
-
-                    "Manipulación sin mordazas mecánicas.",
-
-                    "Contacto mediante ventosa.",
-
-                    "Diseño para integración como herramienta de manipulación en sistemas automatizados."
-
-                ],
-
-                applications: [
-
-                    "Manipulación de piezas con superficies lisas.",
-
-                    "Sistemas de pick and place por vacío.",
-
-                    "Automatización semiindustrial e industrial.",
-
-                    "Integración como herramienta terminal en sistemas robóticos."
-
-                ]
-
-            },
-
-
-            en: {
-
-                title:
-                    "Suction Cup",
-
-                summary:
-                    "Suction tool designed to grip and handle objects using vacuum in automation applications.",
-
-                description:
-                    "Vacuum handling tool developed to grip parts with smooth surfaces using suction cups, enabling integration into robotics, automation and engineering projects.",
-
-                features: [
-
-                    "Vacuum gripping.",
-
-                    "Handling without mechanical jaws.",
-
-                    "Suction-cup contact.",
-
-                    "Designed for integration as a handling tool in automated systems."
-
-                ],
-
-                applications: [
-
-                    "Handling parts with smooth surfaces.",
-
-                    "Vacuum pick-and-place systems.",
-
-                    "Semi-industrial and industrial automation.",
-
-                    "Integration as an end tool in robotic systems."
-
-                ]
-
-            },
-
-
-            zh: {
-
-                title:
-                    "真空吸盘",
-
-                summary:
-                    "利用真空吸附抓取和搬运物体的工具，适用于自动化应用。",
-
-                description:
-                    "采用吸盘对光滑表面工件进行真空吸附的搬运工具，可集成到机器人、自动化和工程项目中。",
-
-                features: [
-
-                    "真空吸附。",
-
-                    "无需机械夹爪即可搬运。",
-
-                    "采用吸盘接触工件。",
-
-                    "可作为自动化系统末端搬运工具。"
-
-                ],
-
-                applications: [
-
-                    "光滑表面工件搬运。",
-
-                    "真空取放系统。",
-
-                    "半工业和工业自动化。",
-
-                    "机器人末端工具集成。"
-
-                ]
+                zh:
+                    "铝"
 
             }
+        },
+
+        {
+            key: "actuation",
+
+            value: {
+
+                es:
+                    "Neumático de doble efecto",
+
+                en:
+                    "Double-acting pneumatic",
+
+                zh:
+                    "双作用气动"
+
+            }
+        },
+
+        {
+            key: "pressure",
+            value: "0.1–0.7 MPa"
+        },
+
+        {
+            key: "dof",
+            value: "1 GDL / DOF"
+        },
+
+        {
+            key: "weight",
+            value: "118 g"
+        },
+
+        {
+            key: "opening",
+
+            value: {
+
+                es:
+                    "Hasta 58 mm",
+
+                en:
+                    "Up to 58 mm",
+
+                zh:
+                    "最大 58 mm"
+
+            }
+        },
+
+        {
+            key: "dimensions",
+            value: "67.4 × 31 × 23.7 mm"
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   GSSN6
+========================================================== */
+
+{
+    code:
+        "GSSN6",
+
+    image:
+        "ventosa.png",
+
+    area:
+        "industry",
+
+    type:
+        "tools",
+
+    downloadMetric:
+        "plans",
+
+    infoPdfEs:
+        "Ficha Herramienta (GSSN6).pdf",
+
+    infoPdfEn:
+        "Tool Sheet (GSSN6).pdf",
+
+    plansPdf:
+        "Vacuum Planos (GSSN6).pdf",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Ventosa de Succión",
+
+            summary:
+                "Herramienta de succión diseñada para sujetar y manipular objetos mediante vacío en aplicaciones de automatización.",
+
+            description:
+                "Herramienta de manipulación por vacío desarrollada para sujetar piezas con superficies lisas mediante ventosas, permitiendo su integración en proyectos de robótica, automatización e ingeniería.",
+
+            features: [
+
+                "Sujeción mediante vacío.",
+
+                "Manipulación sin mordazas mecánicas.",
+
+                "Contacto mediante ventosa.",
+
+                "Diseño para integración como herramienta de manipulación en sistemas automatizados."
+
+            ],
+
+            applications: [
+
+                "Manipulación de piezas con superficies lisas.",
+
+                "Sistemas de pick and place por vacío.",
+
+                "Automatización semiindustrial e industrial.",
+
+                "Integración como herramienta terminal en sistemas robóticos."
+
+            ]
 
         },
 
 
-        specs: [
+        en: {
 
-            {
-                key: "material",
+            title:
+                "Suction Cup",
 
-                value: {
+            summary:
+                "Suction tool designed to grip and handle objects using vacuum in automation applications.",
 
-                    es:
-                        "Silicona, aluminio, latón y PETG+",
+            description:
+                "Vacuum handling tool developed to grip parts with smooth surfaces using suction cups, enabling integration into robotics, automation and engineering projects.",
 
-                    en:
-                        "Silicone, aluminum, brass and PETG+",
+            features: [
 
-                    zh:
-                        "硅胶、铝、黄铜和 PETG+"
+                "Vacuum gripping.",
 
-                }
-            },
+                "Handling without mechanical jaws.",
 
-            {
-                key: "compatibility",
+                "Suction-cup contact.",
 
-                value: {
+                "Designed for integration as a handling tool in automated systems."
 
-                    es:
-                        "Compatible con cualquier bomba de vacío",
+            ],
 
-                    en:
-                        "Compatible with any vacuum pump",
+            applications: [
 
-                    zh:
-                        "兼容各种真空泵"
+                "Handling parts with smooth surfaces.",
 
-                }
-            },
+                "Vacuum pick-and-place systems.",
 
-            {
-                key: "weight",
-                value: "52 g"
-            },
+                "Semi-industrial and industrial automation.",
 
-            {
-                key: "workingDiameter",
+                "Integration as an end tool in robotic systems."
 
-                value: {
+            ]
 
-                    es:
-                        "Hasta 20 mm",
+        },
 
-                    en:
-                        "Up to 20 mm",
 
-                    zh:
-                        "最大 20 mm"
+        zh: {
 
-                }
-            },
+            title:
+                "真空吸盘",
 
-            {
-                key: "packageDimensions",
-                value: "72 × 17 × 17 mm"
+            summary:
+                "利用真空吸附抓取和搬运物体的工具，适用于自动化应用。",
+
+            description:
+                "采用吸盘对光滑表面工件进行真空吸附的搬运工具，可集成到机器人、自动化和工程项目中。",
+
+            features: [
+
+                "真空吸附。",
+
+                "无需机械夹爪即可搬运。",
+
+                "采用吸盘接触工件。",
+
+                "可作为自动化系统末端搬运工具。"
+
+            ],
+
+            applications: [
+
+                "光滑表面工件搬运。",
+
+                "真空取放系统。",
+
+                "半工业和工业自动化。",
+
+                "机器人末端工具集成。"
+
+            ]
+
+        }
+
+    },
+
+
+    specs: [
+
+        {
+            key: "material",
+
+            value: {
+
+                es:
+                    "Silicona, aluminio, latón y PETG+",
+
+                en:
+                    "Silicone, aluminum, brass and PETG+",
+
+                zh:
+                    "硅胶、铝、黄铜和 PETG+"
+
             }
+        },
 
-        ]
+        {
+            key: "compatibility",
 
-    }
+            value: {
+
+                es:
+                    "Compatible con cualquier bomba de vacío",
+
+                en:
+                    "Compatible with any vacuum pump",
+
+                zh:
+                    "兼容各种真空泵"
+
+            }
+        },
+
+        {
+            key: "weight",
+            value: "52 g"
+        },
+
+        {
+            key: "workingDiameter",
+
+            value: {
+
+                es:
+                    "Hasta 20 mm",
+
+                en:
+                    "Up to 20 mm",
+
+                zh:
+                    "最大 20 mm"
+
+            }
+        },
+
+        {
+            key: "packageDimensions",
+            value: "72 × 17 × 17 mm"
+        }
+
+    ]
+}
 
 ];
 
@@ -6618,14 +6707,15 @@ function createListHTML(items) {
 
 
 /* =========================================================
-   FORMATO CONTADOR
+   FORMATO DEL CONTADOR
 ========================================================== */
 
 function getNumberLocale() {
 
 
     if (
-        currentLanguage === "en"
+        currentLanguage ===
+        "en"
     ) {
 
 
@@ -6635,7 +6725,8 @@ function getNumberLocale() {
 
 
     if (
-        currentLanguage === "zh"
+        currentLanguage ===
+        "zh"
     ) {
 
 
@@ -6684,7 +6775,41 @@ function formatDownloadCount(
 
 
 /* =========================================================
-   CREAR PRODUCTO
+   ÍCONO DE DESCARGA
+========================================================== */
+
+function downloadIconHTML() {
+
+
+    return `
+
+        <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+        >
+
+            <path
+                d="M12 3v12"
+            ></path>
+
+            <path
+                d="m7 10 5 5 5-5"
+            ></path>
+
+            <path
+                d="M5 21h14"
+            ></path>
+
+        </svg>
+
+    `;
+
+}
+
+
+
+/* =========================================================
+   PRODUCTO
 ========================================================== */
 
 function createProductHTML(product) {
@@ -6740,6 +6865,49 @@ function createProductHTML(product) {
 
 
 
+    const counterTitle =
+
+        product.downloadMetric ===
+            "stl"
+
+        ? t(
+            "stlDownloadsTitle"
+        )
+
+        : t(
+            "plansDownloadsTitle"
+        );
+
+
+
+    const productCounterHTML = `
+
+        <div
+            class="product-downloads"
+            title="${counterTitle}"
+        >
+
+            ${downloadIconHTML()}
+
+            <span
+                class="download-count-value"
+                data-download-count="${product.code}"
+            >
+
+                ${
+                    formatDownloadCount(
+                        product.code
+                    )
+                }
+
+            </span>
+
+        </div>
+
+    `;
+
+
+
     const secondaryImage =
 
         product.secondaryImage
@@ -6758,43 +6926,25 @@ function createProductHTML(product) {
 
 
     /*
-     * CONTADOR:
-     * Solamente aparece si existe ZIP / STL.
+     * Contador pequeño junto al botón de planos
+     * solamente cuando PLANOS es la descarga rastreada.
      */
 
-    const downloadCounterHTML =
+    const plansCounterHTML =
 
-        product.stlZip
+        product.downloadMetric ===
+            "plans"
 
         ? `
 
-            <div
-                class="product-downloads"
-                title="${t("downloadsTitle")}"
+            <span
+                class="resource-download-counter industry-download-counter"
+                title="${t("plansDownloadsTitle")}"
             >
 
-                <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                >
-
-                    <path
-                        d="M12 3v12"
-                    ></path>
-
-                    <path
-                        d="m7 10 5 5 5-5"
-                    ></path>
-
-                    <path
-                        d="M5 21h14"
-                    ></path>
-
-                </svg>
-
+                ${downloadIconHTML()}
 
                 <span
-                    class="product-download-count"
                     data-download-count="${product.code}"
                 >
 
@@ -6806,7 +6956,7 @@ function createProductHTML(product) {
 
                 </span>
 
-            </div>
+            </span>
 
         `
 
@@ -6814,10 +6964,12 @@ function createProductHTML(product) {
 
 
 
+    /*
+     * Archivos STL solo en Educación.
+     */
+
     const stlCard =
 
-        isEducation
-        &&
         product.stlZip
 
         ? `
@@ -6826,27 +6978,17 @@ function createProductHTML(product) {
 
 
                 <span class="resource-file-type">
-
                     ZIP / STL
-
                 </span>
 
 
                 <h4>
-
-                    ${t(
-                        "stlTitle"
-                    )}
-
+                    ${t("stlTitle")}
                 </h4>
 
 
                 <p>
-
-                    ${t(
-                        "stlDescription"
-                    )}
-
+                    ${t("stlDescription")}
                 </p>
 
 
@@ -6858,23 +7000,37 @@ function createProductHTML(product) {
                         type="button"
                         data-action="download-stl"
                     >
-
-                        ${t(
-                            "downloadStlZip"
-                        )}
-
+                        ${t("downloadStlZip")}
                     </button>
+
+
+                    <span
+                        class="resource-download-counter"
+                        title="${t("stlDownloadsTitle")}"
+                    >
+
+                        ${downloadIconHTML()}
+
+                        <span
+                            data-download-count="${product.code}"
+                        >
+
+                            ${
+                                formatDownloadCount(
+                                    product.code
+                                )
+                            }
+
+                        </span>
+
+                    </span>
 
 
                 </div>
 
 
                 <span class="stl-free">
-
-                    ${t(
-                        "freeStl"
-                    )}
-
+                    ${t("freeStl")}
                 </span>
 
 
@@ -6959,7 +7115,7 @@ function createProductHTML(product) {
                     </span>
 
 
-                    ${downloadCounterHTML}
+                    ${productCounterHTML}
 
 
                     <p>
@@ -7302,6 +7458,9 @@ function createProductHTML(product) {
                                         </button>
 
 
+                                        ${plansCounterHTML}
+
+
                                     </div>
 
 
@@ -7336,7 +7495,7 @@ function createProductHTML(product) {
 
 
 /* =========================================================
-   OBTENER PRODUCTO
+   OBTENER PRODUCTO POR CÓDIGO
 ========================================================== */
 
 function getProductByCode(code) {
@@ -7765,7 +7924,7 @@ document
 
 
 /* =========================================================
-   CONTADOR DE DESCARGAS ZIP / STL
+   CARGAR CONTADORES REALES
 ========================================================== */
 
 async function loadDownloadCounts() {
@@ -7830,7 +7989,7 @@ async function loadDownloadCounts() {
 
 
         console.warn(
-            "No se pudieron cargar los contadores STL:",
+            "No se pudieron cargar los contadores:",
             error
         );
 
@@ -7841,7 +8000,7 @@ async function loadDownloadCounts() {
 
 
 /* =========================================================
-   ACTUALIZAR CONTADORES
+   ACTUALIZAR TODOS LOS CONTADORES DUPLICADOS
 ========================================================== */
 
 function updateDownloadCounters() {
@@ -7875,10 +8034,10 @@ function updateDownloadCounters() {
 
 
 /* =========================================================
-   REGISTRAR DESCARGA STL
+   REGISTRAR UNA DESCARGA REAL
 ========================================================== */
 
-async function registerStlDownload(
+async function registerTrackedDownload(
     productCode
 ) {
 
@@ -7936,7 +8095,7 @@ async function registerStlDownload(
 
 
             throw new Error(
-                "No se pudo registrar la descarga STL."
+                "No se pudo registrar la descarga."
             );
 
         }
@@ -7967,7 +8126,7 @@ async function registerStlDownload(
 
 
         console.warn(
-            "No se pudo registrar la descarga STL:",
+            "No se pudo registrar la descarga:",
             error
         );
 
@@ -8089,12 +8248,12 @@ async function resolveFileSource(
             }
 
 
-        } catch (
-            error
-        ) {
+        } catch (error) {
 
 
-            /* probar siguiente archivo */
+            /*
+             * Probar el siguiente nombre.
+             */
 
 
         }
@@ -8109,7 +8268,7 @@ async function resolveFileSource(
 
 
 /* =========================================================
-   BOTONES RECURSOS
+   BOTONES DE RECURSOS
 ========================================================== */
 
 function configureResourceButtons() {
@@ -8162,8 +8321,8 @@ function configureResourceButtons() {
 
 
                         /* =========================================
-                           FICHA PDF
-                           NO CUENTA COMO DESCARGA STL
+                           FICHA GENERAL
+                           JAMÁS CUENTA DESCARGAS.
                         ========================================== */
 
                         if (
@@ -8210,7 +8369,9 @@ function configureResourceButtons() {
 
                         /* =========================================
                            PLANOS
-                           NO CUENTAN COMO DESCARGA STL
+
+                           Solo GSNP y GSSN6 cuentan al DESCARGAR.
+                           "Ver planos" nunca cuenta.
                         ========================================== */
 
                         if (
@@ -8237,7 +8398,18 @@ function configureResourceButtons() {
                             }
 
 
-                            performFileAction(
+                            const shouldCount =
+
+                                action ===
+                                    "download-plans"
+
+                                &&
+
+                                product.downloadMetric ===
+                                    "plans";
+
+
+                            performTrackedFileAction(
 
                                 product.plansPdf,
 
@@ -8246,7 +8418,11 @@ function configureResourceButtons() {
 
                                 ? "view"
 
-                                : "download"
+                                : "download",
+
+                                product.code,
+
+                                shouldCount
 
                             );
 
@@ -8258,8 +8434,9 @@ function configureResourceButtons() {
 
 
                         /* =========================================
-                           STL / ZIP
-                           ESTA ES LA ÚNICA DESCARGA CONTABILIZADA
+                           ZIP / STL
+
+                           Estos sí cuentan en Educación.
                         ========================================== */
 
                         if (
@@ -8281,13 +8458,19 @@ function configureResourceButtons() {
                             }
 
 
-                            downloadStlFile(
+                            performTrackedFileAction(
 
                                 product.stlZip,
 
-                                product.code
+                                "download",
+
+                                product.code,
+
+                                product.downloadMetric ===
+                                    "stl"
 
                             );
+
 
                         }
 
@@ -8303,7 +8486,7 @@ function configureResourceButtons() {
 
 
 /* =========================================================
-   MODAL
+   MODAL DE IDIOMA
 ========================================================== */
 
 function openDocumentModal() {
@@ -8455,11 +8638,15 @@ document
                         null;
 
 
-                    await performFileAction(
+                    await performTrackedFileAction(
 
                         source,
 
-                        mode
+                        mode,
+
+                        null,
+
+                        false
 
                     );
 
@@ -8497,14 +8684,14 @@ document
 
 
 /* =========================================================
-   VER / DESCARGAR PDF
-
-   ESTA FUNCIÓN NO MODIFICA NINGÚN CONTADOR.
+   EJECUTAR ARCHIVO
 ========================================================== */
 
-async function performFileAction(
+async function performTrackedFileAction(
     source,
-    mode
+    mode,
+    productCode = null,
+    shouldCount = false
 ) {
 
 
@@ -8542,6 +8729,13 @@ async function performFileAction(
 
     }
 
+
+
+    /*
+     * VER ARCHIVO.
+     *
+     * Nunca registra descarga.
+     */
 
     if (
         mode ===
@@ -8559,10 +8753,34 @@ async function performFileAction(
     }
 
 
+
+    /*
+     * DESCARGAR ARCHIVO.
+     */
+
     if (
         mode ===
         "download"
     ) {
+
+
+        /*
+         * Solo se registra cuando
+         * shouldCount === true.
+         */
+
+        if (
+            shouldCount
+            &&
+            productCode
+        ) {
+
+
+            registerTrackedDownload(
+                productCode
+            );
+
+        }
 
 
         downloadFile(
@@ -8570,74 +8788,6 @@ async function performFileAction(
         );
 
     }
-
-}
-
-
-
-/* =========================================================
-   DESCARGAR STL
-
-   ESTA ES LA ÚNICA FUNCIÓN QUE SUMA +1.
-========================================================== */
-
-async function downloadStlFile(
-    source,
-    productCode
-) {
-
-
-    if (
-        !hasFileSource(
-            source
-        )
-    ) {
-
-
-        showUnavailable();
-
-
-        return;
-
-    }
-
-
-    const file =
-
-        await resolveFileSource(
-            source
-        );
-
-
-    if (
-        !file
-    ) {
-
-
-        showUnavailable();
-
-
-        return;
-
-    }
-
-
-    /*
-     * Registramos +1 solamente aquí.
-     */
-
-    registerStlDownload(
-        productCode
-    );
-
-
-    /*
-     * Después iniciamos la descarga ZIP.
-     */
-
-    downloadFile(
-        file
-    );
 
 }
 
@@ -8721,7 +8871,7 @@ function downloadFile(file) {
 
 
 /* =========================================================
-   NO DISPONIBLE
+   ARCHIVO NO DISPONIBLE
 ========================================================== */
 
 function showUnavailable() {
