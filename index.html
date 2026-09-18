@@ -385,17 +385,15 @@
         ========================================== */
 
         .hero {
-            min-height: 470px;
+            min-height: 650px;
 
-            padding: 28px 1.2% 24px;
+            padding: 85px 7% 55px;
 
             display: grid;
 
-            grid-template-columns: minmax(0, 40%) minmax(0, 60%);
+            grid-template-columns: 1fr 1fr;
 
             align-items: center;
-
-            gap: 0;
 
             position: relative;
 
@@ -404,8 +402,6 @@
 
         .hero-content {
             max-width: 650px;
-
-            padding-right: 28px;
 
             position: relative;
 
@@ -528,21 +524,30 @@
         ========================================== */
 
         .robot-area {
-            width: 100%;
-            min-width: 0;
-            height: 440px;
-            min-height: 440px;
+            min-height: 480px;
 
             display: flex;
 
-            align-items: stretch;
-            justify-content: stretch;
+            align-items: center;
+            justify-content: center;
 
             position: relative;
         }
 
         .background-word {
-            display: none;
+            position: absolute;
+
+            font-size: clamp(100px, 12vw, 210px);
+
+            font-weight: 900;
+
+            font-style: italic;
+
+            color: #f0f2f5;
+
+            z-index: 0;
+
+            user-select: none;
         }
 
         .robot-placeholder {
@@ -580,18 +585,19 @@
         .hero-slider {
             position: relative;
             z-index: 2;
-            width: 100%;
-            max-width: none;
-            height: 100%;
+            width: 135%;
+            max-width: 1050px;
+            height: 600px;
             overflow: hidden;
-            border-radius: 18px;
+            border-radius: 24px;
             background: white;
-            box-shadow: none;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
         }
 
         .hero-slider:hover {
-            transform: none;
-            box-shadow: none;
+            transform: translateY(-5px);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.13);
         }
 
         .hero-slide {
@@ -599,10 +605,9 @@
             inset: 0;
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            object-position: center;
+            object-fit: contain;
             opacity: 0;
-            transform: scale(1.01);
+            transform: scale(1.015);
             transition: opacity 1.2s ease, transform 1.2s ease;
         }
 
@@ -1270,16 +1275,10 @@
             .hero {
                 grid-template-columns: 1fr;
 
-                padding: 60px 6% 45px;
-            }
-
-            .hero-content {
-                padding-right: 0;
+                padding-top: 65px;
             }
 
             .robot-area {
-                height: auto;
-                min-height: 0;
                 margin-top: 40px;
             }
 
@@ -1445,10 +1444,7 @@
 
         @media (max-width: 900px) {
             .hero-slider {
-                width: 100%;
-                max-width: 760px;
-                height: auto;
-                aspect-ratio: 16 / 9;
+                max-width: 680px;
                 margin: 0 auto;
             }
         }
@@ -1456,13 +1452,8 @@
         @media (max-width: 550px) {
             .hero-slider {
                 width: 100%;
-                height: auto;
                 border-radius: 16px;
                 aspect-ratio: 4 / 3;
-            }
-
-            .hero-slide {
-                object-fit: cover;
             }
         }
 
@@ -1719,6 +1710,7 @@
 
 
         <div class="robot-area">
+
 
 
             <div class="hero-slider">
