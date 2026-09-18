@@ -647,6 +647,114 @@
 
             margin-bottom: 38px;
 
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1fr)
+                auto;
+
+            align-items: center;
+
+            gap: 42px;
+
+        }
+
+
+        .catalog-header-copy {
+
+            min-width: 0;
+
+        }
+
+
+        .marketplace-logos {
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: flex-end;
+
+            gap: 16px;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .marketplace-logo-card {
+
+            width: 170px;
+            height: 82px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            overflow: hidden;
+
+            background: white;
+
+            border:
+                1px solid
+                #e0e4e9;
+
+            border-radius: 16px;
+
+            box-shadow:
+                0 7px 20px
+                rgba(0, 0, 0, 0.035);
+
+            transition:
+                transform 0.25s,
+                border-color 0.25s,
+                box-shadow 0.25s;
+
+        }
+
+
+        .marketplace-logo-card:hover {
+
+            transform:
+                translateY(-3px);
+
+            border-color:
+                #c9d3df;
+
+            box-shadow:
+                0 11px 26px
+                rgba(0, 0, 0, 0.07);
+
+        }
+
+
+        .marketplace-logo-card img {
+
+            display: block;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            transform:
+                scale(1.72);
+
+            transform-origin: center;
+
+            pointer-events: none;
+
+            user-select: none;
+
+        }
+
+
+        .marketplace-logo-card.alibaba img {
+
+            transform:
+                scale(1.58);
+
         }
 
 
@@ -2170,6 +2278,24 @@
 
         @media (max-width: 950px) {
 
+            .catalog-header {
+
+                grid-template-columns:
+                    1fr;
+
+                gap: 24px;
+
+            }
+
+
+            .marketplace-logos {
+
+                justify-content:
+                    flex-start;
+
+            }
+
+
             nav {
 
                 display: none;
@@ -2231,6 +2357,21 @@
 
 
         @media (max-width: 650px) {
+
+            .marketplace-logos {
+
+                gap: 10px;
+
+            }
+
+
+            .marketplace-logo-card {
+
+                width: 145px;
+                height: 72px;
+
+            }
+
 
             header {
 
@@ -2714,27 +2855,60 @@
 
     <div class="catalog-header">
 
-        <span
-            class="catalog-label"
-            data-i18n="catalogLabel"
+        <div class="catalog-header-copy">
+
+            <span
+                class="catalog-label"
+                data-i18n="catalogLabel"
+            >
+                CATÁLOGO SRC
+            </span>
+
+
+            <h2
+                data-i18n="catalogTitle"
+            >
+                Nuestros productos
+            </h2>
+
+
+            <p
+                data-i18n="catalogDescription"
+            >
+                Explora el catálogo utilizando los filtros por área de aplicación
+                y tipo de producto.
+            </p>
+
+        </div>
+
+
+        <div
+            class="marketplace-logos"
+            aria-label="Marketplaces"
         >
-            CATÁLOGO SRC
-        </span>
+
+            <div
+                class="marketplace-logo-card mercadolibre"
+                title="Mercado Libre"
+            >
+                <img
+                    src="mercadolibreimagen.png"
+                    alt="Mercado Libre"
+                >
+            </div>
 
 
-        <h2
-            data-i18n="catalogTitle"
-        >
-            Nuestros productos
-        </h2>
+            <div
+                class="marketplace-logo-card alibaba"
+                title="Alibaba"
+            >
+                <img
+                    src="alibabaimagen.png"
+                    alt="Alibaba"
+                >
+            </div>
 
-
-        <p
-            data-i18n="catalogDescription"
-        >
-            Explora el catálogo utilizando los filtros por área de aplicación
-            y tipo de producto.
-        </p>
+        </div>
 
     </div>
 
