@@ -403,9 +403,19 @@
         }
 
         .hero-content {
+            width: 100%;
             max-width: 650px;
 
+            padding-left: 48px;
             padding-right: 28px;
+
+            min-height: 540px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            justify-self: center;
 
             position: relative;
 
@@ -425,7 +435,7 @@
 
             font-size: 13px;
 
-            margin-bottom: 25px;
+            margin-bottom: 31px;
         }
 
         .small-title::before {
@@ -454,8 +464,8 @@
 
             line-height: 1;
 
-            margin-top: 10px;
-            margin-bottom: 28px;
+            margin-top: 14px;
+            margin-bottom: 34px;
 
             color: var(--black);
         }
@@ -480,7 +490,7 @@
 
             gap: 22px;
 
-            margin-top: 38px;
+            margin-top: 44px;
         }
 
         .btn-primary,
@@ -1276,7 +1286,10 @@
             }
 
             .hero-content {
+                padding-left: 0;
                 padding-right: 0;
+                min-height: 0;
+                display: block;
             }
 
             .robot-area {
