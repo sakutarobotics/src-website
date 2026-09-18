@@ -673,18 +673,21 @@
 
             align-items: center;
 
-            justify-content: flex-end;
+            justify-content: flex-start;
 
             gap: 16px;
 
             flex-wrap: wrap;
+
+            transform:
+                translateX(-28px);
 
         }
 
 
         .marketplace-logo-card {
 
-            width: 170px;
+            width: 182px;
             height: 82px;
 
             display: flex;
@@ -733,15 +736,13 @@
 
             display: block;
 
-            width: 100%;
-            height: 100%;
+            width: auto;
+            height: auto;
+
+            max-width: 84%;
+            max-height: 58px;
 
             object-fit: contain;
-
-            transform:
-                scale(1.72);
-
-            transform-origin: center;
 
             pointer-events: none;
 
@@ -752,8 +753,8 @@
 
         .marketplace-logo-card.alibaba img {
 
-            transform:
-                scale(1.58);
+            max-width: 92%;
+            max-height: 54px;
 
         }
 
@@ -2292,6 +2293,9 @@
 
                 justify-content:
                     flex-start;
+
+                transform:
+                    none;
 
             }
 
