@@ -1870,6 +1870,61 @@
         }
 
 
+        .resource-grid.software-grid {
+
+            grid-template-columns:
+                minmax(0, 1fr);
+
+            max-width: 620px;
+
+        }
+
+
+        .software-card {
+
+            border-color:
+                var(--industry-border);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f5fbf8
+                );
+
+        }
+
+
+        .software-card
+        .resource-file-type {
+
+            background:
+                var(--industry-soft);
+
+            color:
+                var(--industry);
+
+        }
+
+
+        .software-card
+        .resource-button.primary {
+
+            background:
+                var(--industry);
+
+        }
+
+
+        .software-card
+        .resource-button.primary:hover {
+
+            background:
+                #1d6749;
+
+        }
+
+
         .resource-card {
 
             background: white;
@@ -3126,6 +3181,16 @@
                     Componentes y accesorios
                 </button>
 
+
+                <button
+                    class="filter-button type-filter"
+                    type="button"
+                    data-type-filter="software"
+                    data-i18n="typeSoftware"
+                >
+                    Software
+                </button>
+
             </div>
 
         </div>
@@ -3325,6 +3390,9 @@ const translations = {
         typeComponents:
             "Componentes y accesorios",
 
+        typeSoftware:
+            "Software",
+
         educationCategory:
             "Educación e investigación",
 
@@ -3410,7 +3478,25 @@ const translations = {
             "Descargas del archivo ZIP / STL",
 
         plansDownloadsTitle:
-            "Descargas de planos"
+            "Descargas de planos",
+
+        softwareResourcesTitle:
+            "Descarga de software",
+
+        softwareResourcesDescription:
+            "Descarga la versión oficial del software de control para Pioneer SRP350.",
+
+        softwareDownloadTitle:
+            "Pioneer SRP350 Control Software",
+
+        softwareDownloadDescription:
+            "Paquete ZIP con el software V10.1 para Windows y el archivo README con instrucciones y requisitos.",
+
+        downloadSoftware:
+            "Descargar software",
+
+        softwareDownloadsTitle:
+            "Descargas del software"
 
     },
 
@@ -3486,6 +3572,9 @@ const translations = {
 
         typeComponents:
             "Components and accessories",
+
+        typeSoftware:
+            "Software",
 
         educationCategory:
             "Education and research",
@@ -3572,7 +3661,25 @@ const translations = {
             "ZIP / STL file downloads",
 
         plansDownloadsTitle:
-            "Drawing downloads"
+            "Drawing downloads",
+
+        softwareResourcesTitle:
+            "Software download",
+
+        softwareResourcesDescription:
+            "Download the official control software for Pioneer SRP350.",
+
+        softwareDownloadTitle:
+            "Pioneer SRP350 Control Software",
+
+        softwareDownloadDescription:
+            "ZIP package with V10.1 software for Windows and a README file with instructions and requirements.",
+
+        downloadSoftware:
+            "Download software",
+
+        softwareDownloadsTitle:
+            "Software downloads"
 
     },
 
@@ -3648,6 +3755,9 @@ const translations = {
 
         typeComponents:
             "组件与配件",
+
+        typeSoftware:
+            "软件",
 
         educationCategory:
             "教育与科研",
@@ -3734,7 +3844,25 @@ const translations = {
             "ZIP / STL 文件下载次数",
 
         plansDownloadsTitle:
-            "图纸下载次数"
+            "图纸下载次数",
+
+        softwareResourcesTitle:
+            "软件下载",
+
+        softwareResourcesDescription:
+            "下载 Pioneer SRP350 官方控制软件。",
+
+        softwareDownloadTitle:
+            "Pioneer SRP350 控制软件",
+
+        softwareDownloadDescription:
+            "ZIP 软件包，包含适用于 Windows 的 V10.1 软件以及带有说明和系统要求的 README 文件。",
+
+        downloadSoftware:
+            "下载软件",
+
+        softwareDownloadsTitle:
+            "软件下载次数"
 
     }
 
@@ -3824,7 +3952,31 @@ const specificationLabels = {
             "Rango de movimiento",
 
         pressure:
-            "Presión de trabajo"
+            "Presión de trabajo",
+
+        softwareVersion:
+            "Versión",
+
+        platform:
+            "Plataforma",
+
+        operatingSystem:
+            "Sistema operativo",
+
+        processor:
+            "Procesador",
+
+        ram:
+            "Memoria RAM",
+
+        storage:
+            "Almacenamiento",
+
+        connection:
+            "Conexión",
+
+        compatibleHardware:
+            "Hardware compatible"
 
     },
 
@@ -3904,7 +4056,31 @@ const specificationLabels = {
             "Motion range",
 
         pressure:
-            "Working pressure"
+            "Working pressure",
+
+        softwareVersion:
+            "Version",
+
+        platform:
+            "Platform",
+
+        operatingSystem:
+            "Operating system",
+
+        processor:
+            "Processor",
+
+        ram:
+            "RAM",
+
+        storage:
+            "Storage",
+
+        connection:
+            "Connection",
+
+        compatibleHardware:
+            "Compatible hardware"
 
     },
 
@@ -3984,7 +4160,31 @@ const specificationLabels = {
             "运动范围",
 
         pressure:
-            "工作压力"
+            "工作压力",
+
+        softwareVersion:
+            "版本",
+
+        platform:
+            "平台",
+
+        operatingSystem:
+            "操作系统",
+
+        processor:
+            "处理器",
+
+        ram:
+            "内存",
+
+        storage:
+            "存储空间",
+
+        connection:
+            "连接方式",
+
+        compatibleHardware:
+            "兼容硬件"
 
     }
 
@@ -4206,6 +4406,207 @@ const products = [
         {
             key: "weight",
             value: "5.25 kg"
+        }
+
+    ]
+},
+
+
+
+/* =========================================================
+   SRP350SW - SOFTWARE PIONEER
+========================================================== */
+
+{
+    code:
+        "SRP350SW",
+
+    image:
+        "software_srp350.png",
+
+    area:
+        "industry",
+
+    type:
+        "software",
+
+    downloadMetric:
+        "software",
+
+    softwareZip:
+        "https://github.com/sakutarobotics/src-website/releases/download/srp350-v10.1/zip_software_srp350.zip",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Pioneer SRP350 Control Software",
+
+            summary:
+                "Software oficial V10.1 para la operación, configuración y supervisión del robot Pioneer SRP350.",
+
+            description:
+                "Pioneer SRP350 Control Software es la interfaz desarrollada por Sakuta Robotics Company para la operación, configuración y supervisión del robot Pioneer SRP350. Permite controlar movimientos, ejecutar rutinas y trayectorias, realizar el procedimiento de HOME, supervisar entradas y sensores y utilizar las funciones disponibles del sistema de automatización.",
+
+            features: [
+
+                "Control manual, posicionamiento de articulaciones y procedimiento automático de HOME.",
+
+                "Ejecución de movimientos programados, trayectorias y rutinas automáticas.",
+
+                "Visualización del estado del robot y supervisión de entradas y sensores.",
+
+                "Soporte para aplicaciones Pick & Place y rutinas incluidas en el sistema."
+
+            ],
+
+            applications: [
+
+                "Operación y configuración del Pioneer SRP350.",
+
+                "Programación y ejecución de movimientos y trayectorias.",
+
+                "Supervisión del sistema durante procesos automatizados.",
+
+                "Pruebas, ajustes y aplicaciones Pick & Place."
+
+            ]
+
+        },
+
+
+        en: {
+
+            title:
+                "Pioneer SRP350 Control Software",
+
+            summary:
+                "Official V10.1 software for operation, configuration and monitoring of the Pioneer SRP350 robot.",
+
+            description:
+                "Pioneer SRP350 Control Software is the interface developed by Sakuta Robotics Company for the operation, configuration and monitoring of the Pioneer SRP350 robot. It allows users to control robot movements, execute routines and trajectories, perform the HOME procedure, monitor inputs and sensors, and use the available automation system functions.",
+
+            features: [
+
+                "Manual control, joint positioning and automatic HOME procedure.",
+
+                "Execution of programmed movements, trajectories and automatic routines.",
+
+                "Robot status visualization and input and sensor monitoring.",
+
+                "Support for Pick & Place applications and routines included in the system."
+
+            ],
+
+            applications: [
+
+                "Operation and configuration of Pioneer SRP350.",
+
+                "Programming and execution of movements and trajectories.",
+
+                "System monitoring during automated processes.",
+
+                "Testing, adjustments and Pick & Place applications."
+
+            ]
+
+        },
+
+
+        zh: {
+
+            title:
+                "Pioneer SRP350 控制软件",
+
+            summary:
+                "用于 Pioneer SRP350 机器人操作、配置和监控的官方 V10.1 软件。",
+
+            description:
+                "Pioneer SRP350 Control Software 是 Sakuta Robotics Company 为 Pioneer SRP350 机器人开发的操作、配置和监控界面。该软件可控制机器人运动、执行程序和轨迹、完成 HOME 回零流程、监控输入与传感器，并使用自动化系统的可用功能。",
+
+            features: [
+
+                "支持手动控制、关节定位和自动 HOME 回零流程。",
+
+                "支持程序运动、轨迹和自动例程的执行。",
+
+                "可显示机器人状态并监控输入与传感器。",
+
+                "支持 Pick & Place 应用以及系统内置例程。"
+
+            ],
+
+            applications: [
+
+                "Pioneer SRP350 的操作与配置。",
+
+                "运动与轨迹的编程和执行。",
+
+                "自动化流程中的系统监控。",
+
+                "测试、调整与 Pick & Place 应用。"
+
+            ]
+
+        }
+
+    },
+
+
+    specs: [
+
+        {
+            key: "softwareVersion",
+            value: "10.1"
+        },
+
+        {
+            key: "platform",
+            value: "Windows"
+        },
+
+        {
+            key: "operatingSystem",
+            value: {
+                es: "Windows 10 de 64 bits o superior",
+                en: "Windows 10 64-bit or later",
+                zh: "Windows 10 64 位或更高版本"
+            }
+        },
+
+        {
+            key: "processor",
+            value: "Intel Core i3 / AMD Ryzen 3 o equivalente"
+        },
+
+        {
+            key: "ram",
+            value: {
+                es: "4 GB mínimo / 8 GB recomendado",
+                en: "4 GB minimum / 8 GB recommended",
+                zh: "最低 4 GB / 建议 8 GB"
+            }
+        },
+
+        {
+            key: "storage",
+            value: {
+                es: "200 MB libres como mínimo",
+                en: "At least 200 MB free",
+                zh: "至少 200 MB 可用空间"
+            }
+        },
+
+        {
+            key: "connection",
+            value: "USB"
+        },
+
+        {
+            key: "compatibleHardware",
+            value: "Pioneer SRP350"
         }
 
     ]
@@ -7351,10 +7752,428 @@ function downloadIconHTML() {
 
 
 /* =========================================================
+   PRODUCTO DE SOFTWARE
+========================================================== */
+
+function createSoftwareProductHTML(product) {
+
+
+    const content =
+
+        product.content[
+            currentLanguage
+        ]
+
+        ||
+
+        product.content.es;
+
+
+    const productCounterHTML = `
+
+        <div
+            class="product-downloads"
+            title="${t("softwareDownloadsTitle")}"
+        >
+
+            ${downloadIconHTML()}
+
+            <span
+                class="download-count-value"
+                data-download-count="${product.code}"
+            >
+
+                ${
+                    formatDownloadCount(
+                        product.code
+                    )
+                }
+
+            </span>
+
+        </div>
+
+    `;
+
+
+    const softwareCounterHTML = `
+
+        <span
+            class="resource-download-counter industry-download-counter"
+            title="${t("softwareDownloadsTitle")}"
+        >
+
+            ${downloadIconHTML()}
+
+            <span
+                data-download-count="${product.code}"
+            >
+
+                ${
+                    formatDownloadCount(
+                        product.code
+                    )
+                }
+
+            </span>
+
+        </span>
+
+    `;
+
+
+    return `
+
+        <article
+            class="product-item"
+
+            data-code="${product.code}"
+
+            data-area="${product.area}"
+
+            data-type="${product.type}"
+        >
+
+
+            <div
+                class="product-toggle"
+
+                tabindex="0"
+
+                role="button"
+
+                aria-expanded="false"
+            >
+
+
+                <div class="product-image">
+
+                    <img
+                        src="${product.image}"
+                        alt="${content.title}"
+                    >
+
+                </div>
+
+
+
+                <div class="product-summary">
+
+
+                    <div class="badges">
+
+
+                        <span class="area-badge">
+
+                            ${t("industryCategory")}
+
+                        </span>
+
+
+                        <span class="type-badge">
+
+                            ${t("typeSoftware")}
+
+                        </span>
+
+
+                    </div>
+
+
+
+                    <h2>
+
+                        ${content.title}
+
+                    </h2>
+
+
+                    <span class="product-code">
+
+                        ${product.code}
+
+                    </span>
+
+
+                    ${productCounterHTML}
+
+
+                    <p>
+
+                        ${content.summary}
+
+                    </p>
+
+
+                </div>
+
+
+
+                <div class="expand-control">
+
+
+                    <span>
+
+                        ${t("viewDetails")}
+
+                    </span>
+
+
+                    <span class="circle-arrow">
+
+                        ↓
+
+                    </span>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="product-details">
+
+
+                <div class="product-details-inner">
+
+
+                    <div class="product-details-content">
+
+
+                        <div class="details-main">
+
+
+                            <div class="details-information">
+
+
+                                <div class="information-block">
+
+
+                                    <h3>
+
+                                        ${t("descriptionTitle")}
+
+                                    </h3>
+
+
+                                    <p class="detail-text">
+
+                                        ${content.description}
+
+                                    </p>
+
+
+                                </div>
+
+
+
+                                <div class="information-block">
+
+
+                                    <h4>
+
+                                        ${t("featuresTitle")}
+
+                                    </h4>
+
+
+                                    <ul class="detail-list">
+
+                                        ${
+                                            createListHTML(
+                                                content.features
+                                            )
+                                        }
+
+                                    </ul>
+
+
+                                </div>
+
+
+
+                                <div class="information-block">
+
+
+                                    <h4>
+
+                                        ${t("specificationsTitle")}
+
+                                    </h4>
+
+
+                                    <div class="spec-list">
+
+                                        ${
+                                            createSpecificationsHTML(
+                                                product
+                                            )
+                                        }
+
+                                    </div>
+
+
+                                </div>
+
+
+
+                                <div class="information-block">
+
+
+                                    <h4>
+
+                                        ${t("applicationsTitle")}
+
+                                    </h4>
+
+
+                                    <ul class="detail-list">
+
+                                        ${
+                                            createListHTML(
+                                                content.applications
+                                            )
+                                        }
+
+                                    </ul>
+
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="details-media">
+
+
+                                <img
+                                    src="${product.image}"
+                                    alt="${content.title}"
+                                >
+
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="resources">
+
+
+                            <h3>
+
+                                ${t("softwareResourcesTitle")}
+
+                            </h3>
+
+
+                            <p class="resources-description">
+
+                                ${t("softwareResourcesDescription")}
+
+                            </p>
+
+
+
+                            <div
+                                class="resource-grid software-grid"
+                            >
+
+
+                                <div class="resource-card software-card">
+
+
+                                    <span class="resource-file-type">
+
+                                        ZIP
+
+                                    </span>
+
+
+                                    <h4>
+
+                                        ${t("softwareDownloadTitle")}
+
+                                    </h4>
+
+
+                                    <p>
+
+                                        ${t("softwareDownloadDescription")}
+
+                                    </p>
+
+
+                                    <div class="resource-actions">
+
+
+                                        <button
+                                            class="resource-button primary"
+                                            type="button"
+                                            data-action="download-software"
+                                        >
+
+                                            ${t("downloadSoftware")}
+
+                                        </button>
+
+
+                                        ${softwareCounterHTML}
+
+
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+
+        </article>
+
+    `;
+
+}
+
+
+
+/* =========================================================
    PRODUCTO
 ========================================================== */
 
 function createProductHTML(product) {
+
+
+    if (
+        product.type ===
+        "software"
+    ) {
+
+
+        return createSoftwareProductHTML(
+            product
+        );
+
+    }
 
 
     const content =
@@ -7399,7 +8218,10 @@ function createProductHTML(product) {
             t("typeTools"),
 
         components:
-            t("typeComponents")
+            t("typeComponents"),
+
+        software:
+            t("typeSoftware")
 
     }[
         product.type
@@ -8965,6 +9787,51 @@ function configureResourceButtons() {
                                 product.code,
 
                                 shouldCount
+
+                            );
+
+
+                            return;
+
+                        }
+
+
+
+                        /* =========================================
+                           SOFTWARE
+
+                           La descarga del ZIP sí cuenta.
+                        ========================================== */
+
+                        if (
+                            action ===
+                            "download-software"
+                        ) {
+
+
+                            if (
+                                !product.softwareZip
+                            ) {
+
+
+                                showUnavailable();
+
+
+                                return;
+
+                            }
+
+
+                            performTrackedFileAction(
+
+                                product.softwareZip,
+
+                                "download",
+
+                                product.code,
+
+                                product.downloadMetric ===
+                                    "software"
 
                             );
 
