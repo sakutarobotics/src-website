@@ -4026,13 +4026,8 @@ const products = [
     infoPdfEn:
         "carta SRP350 ingles.pdf",
 
-    plansPdf: [
-        "SRP350_Especificaciones_y_Dimensiones(1).pdf",
-        "SRP350_Especificaciones_y_Dimensiones.pdf",
-        "SRP350_Especificaciones_y_Dimensiones (1).pdf",
-        "SRP350 Especificaciones y Dimensiones(1).pdf",
-        "SRP350 Especificaciones y Dimensiones.pdf"
-    ],
+    plansPdf:
+        "/SRP350_Especificaciones_y_Dimensiones.pdf",
 
 
     content: {
@@ -9259,9 +9254,13 @@ async function performTrackedFileAction(
 
     const file =
 
-        await resolveFileSource(
+        Array.isArray(source)
+
+        ? await resolveFileSource(
             source
-        );
+        )
+
+        : source;
 
 
     if (
