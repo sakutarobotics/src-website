@@ -12,7 +12,8 @@ const VALID_PRODUCTS = new Set([
     "S135KC",
     "GSNP",
     "GSSN6",
-    "SRP350"
+    "SRP350",
+    "SRP350SW"
 ]);
 
 
