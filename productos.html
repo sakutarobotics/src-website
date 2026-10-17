@@ -3751,6 +3751,24 @@ const specificationLabels = {
 
     es: {
 
+        architecture:
+            "Arquitectura",
+
+        payload:
+            "Carga útil",
+
+        maxReach:
+            "Alcance máximo",
+
+        repeatability:
+            "Repetibilidad",
+
+        maxSpeed:
+            "Velocidad máxima",
+
+        toolStroke:
+            "Recorrido vertical de Tool",
+
         material:
             "Material",
 
@@ -3813,6 +3831,24 @@ const specificationLabels = {
 
     en: {
 
+        architecture:
+            "Architecture",
+
+        payload:
+            "Payload",
+
+        maxReach:
+            "Maximum reach",
+
+        repeatability:
+            "Repeatability",
+
+        maxSpeed:
+            "Maximum speed",
+
+        toolStroke:
+            "Vertical Tool stroke",
+
         material:
             "Material",
 
@@ -3874,6 +3910,24 @@ const specificationLabels = {
 
 
     zh: {
+
+        architecture:
+            "结构",
+
+        payload:
+            "负载",
+
+        maxReach:
+            "最大工作半径",
+
+        repeatability:
+            "重复定位精度",
+
+        maxSpeed:
+            "最大速度",
+
+        toolStroke:
+            "Tool 垂直行程",
 
         material:
             "材料",
@@ -3943,6 +3997,219 @@ const specificationLabels = {
 ========================================================== */
 
 const products = [
+
+
+
+/* =========================================================
+   SRP350 - PIONEER
+========================================================== */
+
+{
+    code:
+        "SRP350",
+
+    image:
+        "srp350_producto.png",
+
+    area:
+        "industry",
+
+    type:
+        "robots",
+
+    downloadMetric:
+        "plans",
+
+    infoPdfEs:
+        "carta SRP350 espanol.pdf",
+
+    infoPdfEn:
+        "carta SRP350 ingles.pdf",
+
+    plansPdf:
+        "SRP350_Especificaciones_y_Dimensiones(1).pdf",
+
+
+    content: {
+
+        es: {
+
+            title:
+                "Pioneer SRP350",
+
+            summary:
+                "Robot SCARA 5R para automatización ligera y semiindustrial, orientado a tareas de manipulación, posicionamiento y procesos automatizados.",
+
+            description:
+                "Pioneer SRP350 es un sistema robótico SCARA 5R desarrollado por SRC para aplicaciones de automatización ligera y semiindustrial. Su diseño está orientado a tareas de manipulación, posicionamiento y ejecución de procesos automatizados, integrando control de movimiento y una arquitectura compacta para proyectos de robótica y automatización.",
+
+            features: [
+
+                "Arquitectura SCARA 5R con 3 GDL.",
+
+                "Carga útil de 500 g y alcance máximo de 353 mm.",
+
+                "Repetibilidad de ±0.2 mm y velocidad máxima de 124°/s.",
+
+                "Trayectorias MoveJ / MoveL / MoveC y paro de emergencia físico + software."
+
+            ],
+
+            applications: [
+
+                "Manipulación y posicionamiento de piezas.",
+
+                "Automatización ligera y semiindustrial.",
+
+                "Prácticas de programación, control y robótica.",
+
+                "Desarrollo e integración de procesos automatizados."
+
+            ]
+
+        },
+
+
+        en: {
+
+            title:
+                "Pioneer SRP350",
+
+            summary:
+                "SCARA 5R robot for light and semi-industrial automation, designed for handling, positioning and automated processes.",
+
+            description:
+                "Pioneer SRP350 is a SCARA 5R robotic system developed by SRC for light and semi-industrial automation applications. It is designed for handling, positioning and automated processes, integrating motion control with a compact architecture for robotics and automation projects.",
+
+            features: [
+
+                "SCARA 5R architecture with 3 DOF.",
+
+                "500 g payload and 353 mm maximum reach.",
+
+                "±0.2 mm repeatability and 124°/s maximum speed.",
+
+                "MoveJ / MoveL / MoveC trajectories and physical + software emergency stop."
+
+            ],
+
+            applications: [
+
+                "Part handling and positioning.",
+
+                "Light and semi-industrial automation.",
+
+                "Programming, control and robotics practice.",
+
+                "Development and integration of automated processes."
+
+            ]
+
+        },
+
+
+        zh: {
+
+            title:
+                "Pioneer SRP350",
+
+            summary:
+                "面向轻型和半工业自动化的 SCARA 5R 机器人，适用于搬运、定位和自动化流程。",
+
+            description:
+                "Pioneer SRP350 是 SRC 开发的 SCARA 5R 机器人系统，面向轻型和半工业自动化应用。其设计适用于工件搬运、定位和自动化流程，并将运动控制与紧凑型机器人结构相结合，可用于机器人和自动化项目。",
+
+            features: [
+
+                "SCARA 5R 架构，3 个自由度。",
+
+                "500 g 负载，最大工作半径 353 mm。",
+
+                "重复定位精度 ±0.2 mm，最大速度 124°/s。",
+
+                "支持 MoveJ / MoveL / MoveC 轨迹，并配备硬件 + 软件紧急停止。"
+
+            ],
+
+            applications: [
+
+                "工件搬运与定位。",
+
+                "轻型和半工业自动化。",
+
+                "编程、控制与机器人实践。",
+
+                "自动化流程开发与集成。"
+
+            ]
+
+        }
+
+    },
+
+
+    specs: [
+
+        {
+            key: "architecture",
+            value: "SCARA 5R"
+        },
+
+        {
+            key: "dof",
+            value: {
+                es: "3 GDL",
+                en: "3 DOF",
+                zh: "3 自由度"
+            }
+        },
+
+        {
+            key: "payload",
+            value: "500 g"
+        },
+
+        {
+            key: "maxReach",
+            value: "353 mm"
+        },
+
+        {
+            key: "repeatability",
+            value: "±0.2 mm"
+        },
+
+        {
+            key: "maxSpeed",
+            value: "124°/s"
+        },
+
+        {
+            key: "toolStroke",
+            value: "12 mm"
+        },
+
+        {
+            key: "voltage",
+            value: "24 VDC"
+        },
+
+        {
+            key: "material",
+            value: {
+                es: "PETG / Nylon / Aluminio",
+                en: "PETG / Nylon / Aluminum",
+                zh: "PETG / 尼龙 / 铝"
+            }
+        },
+
+        {
+            key: "weight",
+            value: "5.25 kg"
+        }
+
+    ]
+},
 
 
 /* =========================================================
